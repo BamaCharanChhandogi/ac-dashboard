@@ -1,10 +1,10 @@
-# Electoral Analytics & Constituency Intelligence Platform
+# AC Dashboard — Electoral Analytics & Constituency Intelligence Platform
 ## Component Architecture & System Design
 
 ---
 
 ### Repository & Implementation
-* **GitHub Repository:** [https://github.com/BamaCharanChhandogi/constituency-intelligence-dashboard](https://github.com/BamaCharanChhandogi/constituency-intelligence-dashboard)
+* **GitHub Repository:** [https://github.com/BamaCharanChhandogi/ac-dashboard](https://github.com/BamaCharanChhandogi/ac-dashboard)
 * **Status:** Frontend Component Architecture & UI Arsenal Development
 
 ---
