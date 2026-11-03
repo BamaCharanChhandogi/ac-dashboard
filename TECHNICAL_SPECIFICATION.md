@@ -2,7 +2,7 @@
 
 ## Executive Summary
 
-This document specifies the technical architecture, data contracts, component decomposition, and ingestion pipeline for building a scalable, automated electoral intelligence platform (similar to IndiaVotes.com). 
+This document specifies the technical architecture, data contracts, component decomposition, and ingestion pipeline for building a scalable, automated electoral intelligence platform. 
 
 The goal of this platform is to take raw, multi-source election and electoral roll data stored in **Microsoft OneDrive** (Excel workbooks, CSV files, and GeoJSON shapes) and dynamically generate unified, interactive constituency dashboards identical in quality, functionality, and styling to the reference implementation (**AC17 Sanquelim Electoral Roll Dashboard**).
 
@@ -102,7 +102,7 @@ In the reference dashboard, all visual components are hydrated client-side from 
 
 ## 2. Component Breakdown: Reusable vs Variable
 
-To build a platform like IndiaVotes where any constituency can be rendered on demand, the codebase must be split into **Reusable UI Engine Components** (the presentation framework) and **Variable Components / Props** (the constituency-specific data).
+To build a centralized platform where any constituency can be rendered on demand, the codebase must be split into **Reusable UI Engine Components** (the presentation framework) and **Variable Components / Props** (the constituency-specific data).
 
 ```
 +-----------------------------------------------------------------------------------+
@@ -479,6 +479,6 @@ Below is the exact schema for each file and how it maps to the dashboard compone
 | **Phase 1: Component Library** | Modular React/TypeScript versions of the reference dashboard's cards, charts, maps, and modals. | Establishes the reusable presentation foundation. |
 | **Phase 2: Ingestion Pipeline** | Python ETL service reading OneDrive sheets and producing `constituency_data.json`. | Eliminates manual HTML/JSON assembly. |
 | **Phase 3: Spatial Engine** | Automated GeoJSON to SVG Voronoi partitioning module. | Automates booth-level map generation for any AC in India. |
-| **Phase 4: Scaled Deployment** | Multi-constituency directory page with state and district search filters. | Full platform operational at national scale (IndiaVotes capability). |
+| **Phase 4: Scaled Deployment** | Multi-constituency directory page with state and district search filters. | Full platform operational at national scale. |
 
 By following this specification, the development team can turn what was previously a bespoke, handcrafted static dashboard into a fully automated, cloud-native political intelligence engine.
