@@ -102,39 +102,24 @@ In the reference dashboard, all visual components are hydrated client-side from 
 
 ## 2. Component Breakdown: Reusable vs Variable
 
-To build a centralized platform where any constituency can be rendered on demand, the codebase must be split into **Reusable UI Engine Components** (the presentation framework) and **Variable Components / Props** (the constituency-specific data).
+To build a centralized platform where any constituency can be rendered on demand, the system is separated into two clean layers:
 
-```
-+-----------------------------------------------------------------------------------+
-|                        REUSABLE COMPONENT FRAMEWORK                               |
-|                                                                                   |
-|  +-----------------------------------------------------------------------------+  |
-|  | LetterheadHeader Component                                                  |  |
-|  +-----------------------------------------------------------------------------+  |
-|  | KPIGrid & MetricTile Components                                             |  |
-|  +-----------------------------------------------------------------------------+  |
-|  | DonutChart / HorizontalBar / DivergingPyramid SVG Charts                    |  |
-|  +-----------------------------------------------------------------------------+  |
-|  | VoronoiBoothMap & VillageChoroplethMap Vector Engines                       |  |
-|  +-----------------------------------------------------------------------------+  |
-|  | SearchablePaginatedTable Component (Virtual Scrolling, Badge Formatters)    |  |
-|  +-----------------------------------------------------------------------------+  |
-|  | ModalDialog System (BoothModal, VillageModal, FamilyModal, SurveyModal)      |  |
-|  +-----------------------------------------------------------------------------+  |
-+-----------------------------------------------------------------------------------+
-                                         ^
-                                         | Injects Clean Props
-+-----------------------------------------------------------------------------------+
-|                    VARIABLE CONSTITUENCY DATA PAYLOAD                             |
-|                                                                                   |
-|  * Constituency Metadata (AC Number, Name, District, PC Name)                     |
-|  * Geographic Vector Geometries (Boundaries, Polling Station Lat/Long)             |
-|  * Electoral Roll Records (27k - 300k Electors, Household Clusters, Deltas)      |
-|  * Historical Form 20 Election Returns (Candidate Votes, Turnout)                 |
-|  * Political Leadership Profiles (Candidate dossiers, photos, portfolios)        |
-|  * Field & Telephonic Survey Responses (Ratings, grievances, sentiment quotes)    |
-+-----------------------------------------------------------------------------------+
-```
+1. **Reusable Component Framework (Frontend Engine):**
+   - Letterhead and Key Metric Tiles
+   - SVG Demographic Charts (Donuts, Age Bars, Diverging Pyramid)
+   - Geospatial Vector Engines (Booth Voronoi Map, Village Boundary Map)
+   - Searchable Data Tables (Booths, Churn Logs, Family Directory)
+   - Interactive Modal Dialogs (Booth History, Household Rosters, Survey Details)
+
+2. **Variable Constituency Data (Injected Props):**
+   - Administrative Metadata (AC Number, Name, State, District, Sub-district)
+   - Geographic Boundaries (Constituency outline, village/ward polygons, booth GPS coordinates)
+   - Electoral Roll Records (Voter details, age/gender aggregates, household groups)
+   - Election Results (Form 20 booth tallies and historical trends)
+   - Incumbent Profiles (MLA/MP details, victory margins, portfolios)
+   - Citizen Survey Responses (Ratings, local issue tags, voter feedback)
+
+---
 
 ### 2.1 Reusable Components (Fixed Code & UI Templates)
 
@@ -393,82 +378,29 @@ Below is the exact schema for each file and how it maps to the dashboard compone
 
 ---
 
-## 4. System Architecture: From OneDrive to Dynamic Frontend
+## 4. End-to-End Data Pipeline
 
-```
-+---------------------------------------------------------------------------------------------------+
-| 1. RAW DATA TIER: Microsoft OneDrive / SharePoint                                                 |
-|                                                                                                   |
-|   Constituency Folders:                                                                           |
-|   /constituencies/GOA_AC17_Sanquelim/       /constituencies/UP_AC300_Varanasi/   ... (4,123 ACs)  |
-|   - 01_metadata.xlsx                        - 01_metadata.xlsx                                    |
-|   - 02_electoral_roll.csv                   - 02_electoral_roll.csv                               |
-|   - 07_form20_results.xlsx                  - 07_form20_results.xlsx                              |
-|   - 09_survey_ivrs.xlsx                     - 09_survey_ivrs.xlsx                                 |
-+---------------------------------------------------------------------------------------------------+
-                                         |
-                                         | Microsoft Graph API Webhooks (Delta Query on file save)
-                                         v
-+---------------------------------------------------------------------------------------------------+
-| 2. INGESTION & PIPELINE WORKER (Python / Node.js FastAPI Worker)                                  |
-|                                                                                                   |
-|   +--------------------------------------------------------------------------------------------+  |
-|   | Schema Validation & Sanitization (Pydantic / Zod: verifies EPIC IDs, sums, Part Numbers)   |  |
-|   +--------------------------------------------------------------------------------------------+  |
-|   | Spatial Geometry Processor (GeoJSON -> SVG paths, Booth Voronoi clipping & label anchors)  |  |
-|   +--------------------------------------------------------------------------------------------+  |
-|   | Statistical Aggregator (Gender, Age cohorts, Family clustering, Deletion rates, Form 20)   |  |
-|   +--------------------------------------------------------------------------------------------+  |
-|   | JSON Compiler (Compiles and minifies 28 root keys into AC17_data.json)                     |  |
-|   +--------------------------------------------------------------------------------------------+  |
-+---------------------------------------------------------------------------------------------------+
-                                         |
-                                         | Uploads static JSON & triggers CDN cache invalidation
-                                         v
-+---------------------------------------------------------------------------------------------------+
-| 3. STORAGE & DISTRIBUTION TIER: Object Storage + Global Edge CDN                                  |
-|                                                                                                   |
-|   Cloudflare R2 / AWS S3:                                                                         |
-|   https://cdn.electionplatform.com/data/goa/ac17-sanquelim.json (Compressed Brotli/Gzip)          |
-|   https://cdn.electionplatform.com/data/directory.json (AC index list)                            |
-+---------------------------------------------------------------------------------------------------+
-                                         |
-                                         | High-speed Edge Delivery (< 80ms worldwide)
-                                         v
-+---------------------------------------------------------------------------------------------------+
-| 4. DYNAMIC FRONTEND (Next.js / React / Client-Side SPA)                                           |
-|                                                                                                   |
-|   Dynamic Route: https://platform.com/:state/:constituency-slug                                   |
-|   1. Loads reusable UI Shell (Letterhead, Subnav, KPI cards, Chart skeletons, Map viewports)      |
-|   2. Fetches lightweight JSON payload for the requested AC                                       |
-|   3. Hydrates Reusable Components dynamically using standard React Props                          |
-|   4. Provides client-side instant search, map layer toggling, and interactive modal dialogs       |
-+---------------------------------------------------------------------------------------------------+
-```
+The system operates as a straightforward 4-stage pipeline that converts raw files into interactive dashboard views:
 
-### 4.1 Step-by-Step Data Flow
+### Step 1: Input Data Storage
+- Each constituency has a dedicated folder containing the standardized Excel, CSV, and GeoJSON files.
+- Analysts update election returns, voter roll revisions, or survey responses by saving files directly into the folder.
 
-1. **Content Authoring**:
-   - Election analysts update Excel sheets (Form 20 vote counts, candidate info) or upload newly extracted Electoral Roll CSVs directly into OneDrive.
-2. **Change Detection (Webhook)**:
-   - Microsoft Graph API webhook fires upon file creation or edit.
-   - The worker service identifies which constituency folder was modified.
-3. **Automated Pipeline Execution**:
-   - The ingestion worker reads the Excel/CSV sheets using `pandas` / `openpyxl`.
-   - Runs data validation: Checks that Part numbers match, voter counts reconcile with the progression stages, and candidate vote shares sum to 100%.
-   - Runs spatial calculations:
-     - Converts village boundary coordinates into SVG path coordinates.
-     - Performs Voronoi partitioning around booth GPS seeds clipped to the outer village borders.
-     - Runs pole-of-inaccessibility algorithms (`polygonVisualCenter`) to calculate collision-free label placements.
-   - Aggregates family households and survey scores.
-   - Outputs the final minified `constituency_data.json`.
-4. **Cloud Storage & CDN Edge**:
-   - The compiled JSON is pushed to Cloudflare R2 / AWS S3.
-   - A cache purge request is sent to Cloudflare CDN, making updates live in under 30 seconds.
-5. **Dynamic Frontend Rendering**:
-   - When a user visits `platform.com/goa/ac17-sanquelim`, the Next.js/React application fetches `/data/goa/ac17-sanquelim.json`.
-   - The single reusable page template maps `data.acDetails` to the header, `data.rollProgression` to the timeline card, `data.boothCells` to the Voronoi SVG map, and `data.changes` to the virtualized search table.
-   - The user experiences a rich, bespoke, lightning-fast dashboard without a single line of custom frontend code written for that constituency.
+### Step 2: Processing & Aggregation
+- An automated worker reads the raw files upon update.
+- **Validation:** Checks part numbers, confirms voter counts tally, and validates candidate vote totals.
+- **Calculations:** Groups voters into age brackets and family units, computes SIR addition/deletion percentages, and calculates booth victory margins.
+- **Spatial Processing:** Converts boundary coordinates into web-optimized SVG paths and generates booth partition cells.
+- **Output:** Produces a single, lightweight JSON payload (`constituency_data.json`) containing all computed aggregates.
+
+### Step 3: Cloud Storage & CDN Distribution
+- The compiled JSON is uploaded to cloud object storage.
+- Cached globally on a Content Delivery Network (CDN) to ensure fast load times across desktop and mobile devices.
+
+### Step 4: Dynamic Frontend Rendering
+- The client-side application uses one universal dashboard layout.
+- The browser URL determines which constituency data file to fetch (e.g., `/goa/ac17-sanquelim` fetches `ac17-sanquelim.json`).
+- Reusable UI modules hydrate their charts, maps, and tables directly from the fetched data with zero custom coding required per seat.
 
 ---
 
