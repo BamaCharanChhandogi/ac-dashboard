@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { 
   Building2, 
   ChevronDown, 
@@ -22,7 +22,7 @@ export default function TopNav({
   const [copied, setCopied] = useState(false);
 
   // Close dropdown on Escape key
-  React.useEffect(() => {
+  useEffect(() => {
     const handleKeyDown = (e) => {
       if (e.key === 'Escape') setDropdownOpen(false);
     };
