@@ -2,12 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
 import SectionHeader from './components/SectionHeader';
 import KPICards from './components/KPICards';
-import PopulationPyramid from './components/PopulationPyramid';
-import GenderVoteShare from './components/GenderVoteShare';
-import BoothMap from './components/BoothMap';
-import VoterRollStepper from './components/VoterRollStepper';
-import KeyMetrics from './components/KeyMetrics';
-import BoothAlerts from './components/BoothAlerts';
+import LeadershipDossier from './components/LeadershipDossier';
 
 export default function App() {
   const [currentSlug, setCurrentSlug] = useState('ac09-porvorim');
@@ -69,12 +64,12 @@ export default function App() {
 
   return (
     <div className="flex h-screen overflow-hidden bg-[#F8FAFC]">
-      {/* Left Sidebar */}
+      {/* Left Sidebar Navigation with authentic Parliament graphic */}
       <Sidebar activeSection={sidebarSection} onNavigate={setSidebarSection} />
 
-      {/* Main Content Area (No top header bar, directly begins with content) */}
+      {/* Main Content Area: Strictly Section 1 (Constituency Overview & Master KPIs) */}
       <main className="flex-1 lg:ml-[230px] flex flex-col h-full overflow-y-auto">
-        {/* Section Header: Title + Dropdown on Left, Tab Pills on Right */}
+        {/* Section 1 - Part A: Letterhead, Selector & Tab Pills */}
         <SectionHeader
           data={data}
           activeTab={activeTab}
@@ -83,22 +78,11 @@ export default function App() {
           onSelectAC={setCurrentSlug}
         />
 
-        {/* KPI Metric Cards Row (6 Cards) */}
+        {/* Section 1 - Part B: Master Electoral KPI Strip (Page 2 of PDF) */}
         <KPICards data={data} />
 
-        {/* Middle Bento Grid (3 Columns: Age-Gender Pyramid, Gender & Vote Share, Voronoi Booth Map) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 px-6 lg:px-8 pb-4">
-          <PopulationPyramid data={data} />
-          <GenderVoteShare data={data} />
-          <BoothMap data={data} />
-        </div>
-
-        {/* Bottom Bento Grid (3 Columns: Voter Roll Status Stepper, Key Electoral Metrics, Recent Booth Alerts) */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 px-6 lg:px-8 pb-8">
-          <VoterRollStepper data={data} />
-          <KeyMetrics data={data} />
-          <BoothAlerts data={data} />
-        </div>
+        {/* Section 1 - Part C: Elected Leadership Dossier - Sitting MLA & MP (Page 1 of PDF) */}
+        <LeadershipDossier data={data} />
       </main>
     </div>
   );
