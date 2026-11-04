@@ -10,20 +10,31 @@ import {
   Lightbulb,
   Menu,
   X,
+  Compass,
 } from 'lucide-react';
+import ConstituencySwitcher from './ConstituencySwitcher';
 
-const NAV_ITEMS = [
-  { id: 'dashboard',      label: 'Dashboard',        icon: LayoutDashboard },
-  { id: 'constituencies', label: 'Constituencies',   icon: MapPin },
-  { id: 'booth',          label: 'Booth Analysis',   icon: BarChart3 },
-  { id: 'voter-rolls',    label: 'Voter Rolls',      icon: ScrollText },
-  { id: 'demographics',   label: 'Demographics',     icon: Users },
-  { id: 'results',        label: 'Election Results', icon: Vote },
-  { id: 'reports',        label: 'Reports',          icon: FileText },
-  { id: 'insights',       label: 'Insights',         icon: Lightbulb },
+const ANALYTICAL_NAV_ITEMS = [
+  { id: 'dashboard',   label: 'Overview',            icon: LayoutDashboard },
+  { id: 'booth',       label: 'Booth Analysis',      icon: BarChart3 },
+  { id: 'voter-rolls', label: 'Voter Rolls',         icon: ScrollText },
+  { id: 'demographics',label: 'Demographics',        icon: Users },
+  { id: 'results',     label: 'Election Results',    icon: Vote },
+  { id: 'insights',    label: 'Village Insights',    icon: Lightbulb },
+  { id: 'reports',     label: 'Intelligence Dossier',icon: FileText },
 ];
 
-export default function Sidebar({ activeSection = 'dashboard', onNavigate }) {
+const DIRECTORY_NAV_ITEMS = [
+  { id: 'constituencies', label: 'All Constituencies', icon: Compass },
+];
+
+export default function Sidebar({
+  activeSection = 'dashboard',
+  onNavigate,
+  currentSlug,
+  directory,
+  onSelectAC,
+}) {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const handleNav = (id) => {
@@ -50,31 +61,31 @@ export default function Sidebar({ activeSection = 'dashboard', onNavigate }) {
         />
       )}
 
-      {/* Sidebar Container matching media_1793789065466_25ac374c.png */}
+      {/* Sidebar Container */}
       <aside
         className={`
           fixed top-0 left-0 h-screen z-50
           bg-gradient-to-b from-[#08132B] via-[#0A1633] to-[#0E1E42]
           border-r border-slate-800/40
-          flex flex-col w-[230px]
+          flex flex-col w-[240px]
           ${mobileOpen ? 'translate-x-0' : '-translate-x-full'}
           lg:translate-x-0 transition-transform duration-200
         `}
       >
         {/* Brand Header */}
-        <div className="flex items-center px-5 h-[76px] border-b border-white/5">
+        <div className="flex items-center px-5 h-[72px] border-b border-white/5 flex-shrink-0">
           <div className="flex items-center gap-3 min-w-0">
             {/* Red CC Badge */}
-            <div className="w-9 h-9 rounded-xl bg-[#D32F2F] flex items-center justify-center shadow-md shadow-red-900/30 flex-shrink-0">
-              <span className="text-white font-extrabold text-[13px] tracking-tight">CC</span>
+            <div className="w-8 h-8 rounded-xl bg-[#D32F2F] flex items-center justify-center shadow-md shadow-red-900/30 flex-shrink-0">
+              <span className="text-white font-extrabold text-[12px] tracking-tight">CC</span>
             </div>
             <div className="min-w-0">
-              <h1 className="text-white font-bold text-[13px] leading-tight tracking-wider uppercase">
+              <h1 className="text-white font-bold text-[12.5px] leading-tight tracking-wider uppercase">
                 CORPORATE
                 <br />
                 CHANAKYA
               </h1>
-              <p className="text-slate-400 text-[8.5px] leading-tight font-semibold tracking-widest uppercase mt-0.5">
+              <p className="text-slate-400 text-[8px] leading-tight font-semibold tracking-widest uppercase mt-0.5">
                 ELECTORAL INTELLIGENCE
               </p>
             </div>
@@ -89,48 +100,96 @@ export default function Sidebar({ activeSection = 'dashboard', onNavigate }) {
           </button>
         </div>
 
-        {/* Navigation Items */}
-        <nav className="flex-1 py-4 px-3 space-y-1 overflow-y-auto">
-          {NAV_ITEMS.map(({ id, label, icon: Icon }) => {
-            const isActive = activeSection === id;
-            return (
-              <button
-                key={id}
-                onClick={() => handleNav(id)}
-                className={`
-                  w-full flex items-center gap-3 rounded-xl text-[13px] font-medium
-                  transition-all duration-150 px-3.5 py-2.5
-                  ${isActive
-                    ? 'bg-[#2563EB] text-white shadow-md shadow-blue-600/30 font-semibold'
-                    : 'text-slate-300/80 hover:text-white hover:bg-white/5'
-                  }
-                `}
-              >
-                <Icon
-                  size={17}
-                  strokeWidth={isActive ? 2.2 : 1.7}
-                  className={isActive ? 'text-white' : 'text-slate-400'}
-                />
-                <span className="truncate">{label}</span>
-              </button>
-            );
-          })}
+        {/* Global Persistent Constituency Switcher (Searchable 100+ Seats) */}
+        <div className="border-b border-white/5 flex-shrink-0">
+          <ConstituencySwitcher
+            currentSlug={currentSlug}
+            directory={directory}
+            onSelectAC={onSelectAC}
+          />
+        </div>
+
+        {/* Navigation Sections */}
+        <nav className="flex-1 py-3 px-3 space-y-4 overflow-y-auto">
+          {/* Active Constituency Scope */}
+          <div>
+            <p className="px-3 pb-1 text-[9.5px] font-bold uppercase tracking-wider text-slate-400/70">
+              Constituency Scope
+            </p>
+            <div className="space-y-1">
+              {ANALYTICAL_NAV_ITEMS.map(({ id, label, icon: Icon }) => {
+                const isActive = activeSection === id;
+                return (
+                  <button
+                    key={id}
+                    onClick={() => handleNav(id)}
+                    className={`
+                      w-full flex items-center gap-3 rounded-xl text-[12.5px] font-medium
+                      transition-all duration-150 px-3 py-2 cursor-pointer
+                      ${
+                        isActive
+                          ? 'bg-[#2563EB] text-white shadow-md shadow-blue-600/30 font-semibold'
+                          : 'text-slate-300/80 hover:text-white hover:bg-white/5'
+                      }
+                    `}
+                  >
+                    <Icon
+                      size={16}
+                      strokeWidth={isActive ? 2.2 : 1.7}
+                      className={isActive ? 'text-white' : 'text-slate-400'}
+                    />
+                    <span className="truncate">{label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
+          {/* Cross-Constituency Directory */}
+          <div className="pt-2 border-t border-white/5">
+            <p className="px-3 pb-1 text-[9.5px] font-bold uppercase tracking-wider text-slate-400/70">
+              Nationwide Benchmark
+            </p>
+            <div className="space-y-1">
+              {DIRECTORY_NAV_ITEMS.map(({ id, label, icon: Icon }) => {
+                const isActive = activeSection === id;
+                return (
+                  <button
+                    key={id}
+                    onClick={() => handleNav(id)}
+                    className={`
+                      w-full flex items-center gap-3 rounded-xl text-[12.5px] font-medium
+                      transition-all duration-150 px-3 py-2 cursor-pointer
+                      ${
+                        isActive
+                          ? 'bg-[#2563EB] text-white shadow-md shadow-blue-600/30 font-semibold'
+                          : 'text-slate-300/80 hover:text-white hover:bg-white/5'
+                      }
+                    `}
+                  >
+                    <Icon
+                      size={16}
+                      strokeWidth={isActive ? 2.2 : 1.7}
+                      className={isActive ? 'text-white' : 'text-slate-400'}
+                    />
+                    <span className="truncate">{label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          </div>
         </nav>
 
-        {/* Subtle Wave Graphics / Ambient Glow at bottom */}
-        <div className="mt-auto p-4 opacity-40 pointer-events-none select-none">
-          <svg viewBox="0 0 200 40" className="w-full h-8">
-            <path
-              d="M0 25 Q 50 10, 100 25 T 200 25 L 200 40 L 0 40 Z"
-              fill="#1E40AF"
-              fillOpacity="0.4"
-            />
-            <path
-              d="M0 30 Q 60 18, 120 30 T 200 30 L 200 40 L 0 40 Z"
-              fill="#3B82F6"
-              fillOpacity="0.3"
-            />
-          </svg>
+        {/* Ambient Footer */}
+        <div className="p-3 border-t border-white/5 flex-shrink-0">
+          <div className="bg-white/[0.04] rounded-xl p-2.5 border border-white/5 text-center">
+            <p className="text-[10px] font-semibold text-slate-300">
+              Goa Assembly Revision 2026
+            </p>
+            <p className="text-[9px] text-slate-500 mt-0.5">
+              50 Polling Stations • SIR Synchronized
+            </p>
+          </div>
         </div>
       </aside>
     </>

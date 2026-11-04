@@ -15,6 +15,7 @@ export default function App() {
     return params.get('ac') || 'ac17-sanquelim';
   });
   const [data, setData] = useState(null);
+  const [directory, setDirectory] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [activeSection, setActiveSection] = useState(() => {
@@ -27,6 +28,22 @@ export default function App() {
     window.location.hash = section;
   };
 
+  const handleSelectAC = (slug) => {
+    setCurrentSlug(slug);
+    const url = new URL(window.location.href);
+    url.searchParams.set('ac', slug);
+    window.history.replaceState({}, '', url);
+  };
+
+  // Fetch nationwide directory registry on mount
+  useEffect(() => {
+    fetch('/data/directory.json')
+      .then((res) => (res.ok ? res.json() : null))
+      .then((dir) => setDirectory(dir))
+      .catch((err) => console.warn('Could not load directory.json:', err));
+  }, []);
+
+  // Fetch active constituency data
   useEffect(() => {
     setLoading(true);
     setError(null);
@@ -64,7 +81,7 @@ export default function App() {
           <h2 className="text-[16px] font-bold text-slate-800 mb-1">Failed to Load Dataset</h2>
           <p className="text-slate-500 text-[12px] mb-4">{error}</p>
           <button
-            onClick={() => setCurrentSlug('ac17-sanquelim')}
+            onClick={() => handleSelectAC('ac17-sanquelim')}
             className="px-4 py-2 bg-[#2563EB] text-white text-[12px] font-semibold rounded-lg hover:bg-blue-700 transition-colors"
           >
             Reset to Sanquelim (AC 17)
@@ -76,24 +93,32 @@ export default function App() {
 
   return (
     <div className="flex h-screen overflow-hidden bg-[#DFE6F0]">
-      {/* Left Sidebar Navigation */}
-      <Sidebar activeSection={activeSection} onNavigate={handleNavigate} />
+      {/* Left Sidebar Navigation with Persistent Global Switcher */}
+      <Sidebar
+        activeSection={activeSection}
+        onNavigate={handleNavigate}
+        currentSlug={currentSlug}
+        directory={directory}
+        onSelectAC={handleSelectAC}
+      />
 
       {/* Main Content Area */}
-      <main className="flex-1 lg:ml-[230px] flex flex-col h-full overflow-y-auto bg-[#DFE6F0]">
+      <main className="flex-1 lg:ml-[240px] flex flex-col h-full overflow-y-auto bg-[#DFE6F0]">
         {activeSection === 'dashboard' && (
           <ConstituencyOverview
             data={data}
             currentSlug={currentSlug}
-            onSelectAC={setCurrentSlug}
+            onSelectAC={handleSelectAC}
+            directory={directory}
           />
         )}
 
         {activeSection === 'constituencies' && (
           <ConstituenciesView
             currentSlug={currentSlug}
+            directory={directory}
             onSelectAC={(slug) => {
-              setCurrentSlug(slug);
+              handleSelectAC(slug);
               setActiveSection('dashboard');
             }}
           />

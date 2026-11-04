@@ -160,160 +160,221 @@ export default function BoothAnalysisView({ data }) {
           </div>
         </div>
 
-        {/* High-Contrast Organic Spatial Map Canvas (Matching media_1793792399680_6581f137.png) */}
-        <div className="w-full bg-[#131913] rounded-xl border border-slate-800 relative overflow-hidden flex items-center justify-center p-3 select-none">
-          <svg
-            viewBox={sanquelimMapData.viewBox || '80 100 455 440'}
-            className="w-full h-auto max-h-[560px]"
-            preserveAspectRatio="xMidYMid meet"
-          >
-            <defs>
-              <filter id="villageTextGlow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="1" stdDeviation="1.5" floodColor="#000000" floodOpacity="0.9" />
-              </filter>
-            </defs>
+        {/* High-Contrast Spatial Map Canvas (Matching media_1793792399680_6581f137.png) */}
+        <div className="w-full bg-[#131913] rounded-xl border border-slate-800 relative overflow-hidden flex items-center justify-center p-3 select-none min-h-[380px]">
+          {isSanquelim ? (
+            <svg
+              viewBox={sanquelimMapData.viewBox || '80 100 455 440'}
+              className="w-full h-auto max-h-[560px]"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <filter id="villageTextGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="1" stdDeviation="1.5" floodColor="#000000" floodOpacity="0.9" />
+                </filter>
+              </defs>
 
-            {/* 1. Outer Border Glow / Halo */}
-            <path
-              d={sanquelimMapData.outerBorder}
-              fill="none"
-              stroke="#6B7280"
-              strokeWidth="4"
-              strokeLinejoin="round"
-              strokeLinecap="round"
-              className="opacity-80"
-            />
+              {/* 1. Outer Border Glow / Halo */}
+              <path
+                d={sanquelimMapData.outerBorder}
+                fill="none"
+                stroke="#6B7280"
+                strokeWidth="4"
+                strokeLinejoin="round"
+                strokeLinecap="round"
+                className="opacity-80"
+              />
 
-            {/* 2. 50 Booth Polygonal Choropleth Cells */}
-            <g id="booth-cells">
-              {sanquelimMapData.booths.map((b) => {
-                const isSelected = selectedBoothNumber === b.number;
-                const isHovered = hoveredBooth?.number === b.number;
+              {/* 2. 50 Booth Polygonal Choropleth Cells */}
+              <g id="booth-cells">
+                {sanquelimMapData.booths.map((b) => {
+                  const isSelected = selectedBoothNumber === b.number;
+                  const isHovered = hoveredBooth?.number === b.number;
 
-                // Color calculation
-                let cellFill = b.color;
-                if (b.number === 5) cellFill = '#991B1B'; // Deep Crimson Red
-                else if (b.number === 7 || b.number === 41) cellFill = '#D97706'; // Amber Yellow
-                else cellFill = '#15803D'; // Rich Forest Green
+                  // Color calculation
+                  let cellFill = b.color;
+                  if (b.number === 5) cellFill = '#991B1B'; // Deep Crimson Red
+                  else if (b.number === 7 || b.number === 41) cellFill = '#D97706'; // Amber Yellow
+                  else cellFill = '#15803D'; // Rich Forest Green
 
-                return (
+                  return (
+                    <path
+                      key={`poly-${b.number}`}
+                      d={b.path}
+                      fill={cellFill}
+                      stroke={isSelected ? '#FACC15' : isHovered ? '#FFFFFF' : '#111827'}
+                      strokeWidth={isSelected ? '2.8' : isHovered ? '2.2' : '1.1'}
+                      className="transition-colors duration-150 cursor-pointer"
+                      onClick={() => handleBoothClick(b.number)}
+                      onMouseEnter={(e) => handleMouseEnter(b, e)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  );
+                })}
+              </g>
+
+              {/* 3. Village Boundaries (Dark Thick Separators) */}
+              <g id="village-borders" className="pointer-events-none">
+                {sanquelimMapData.villageBorders.map((vPath, i) => (
                   <path
-                    key={`poly-${b.number}`}
-                    d={b.path}
-                    fill={cellFill}
-                    stroke={isSelected ? '#FACC15' : isHovered ? '#FFFFFF' : '#111827'}
-                    strokeWidth={isSelected ? '2.8' : isHovered ? '2.2' : '1.1'}
-                    className="transition-colors duration-150 cursor-pointer"
-                    onClick={() => handleBoothClick(b.number)}
-                    onMouseEnter={(e) => handleMouseEnter(b, e)}
-                    onMouseLeave={handleMouseLeave}
+                    key={`vborder-${i}`}
+                    d={vPath}
+                    fill="none"
+                    stroke="#0B120B"
+                    strokeWidth="2.2"
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
+                    className="opacity-95"
                   />
-                );
-              })}
-            </g>
+                ))}
+              </g>
 
-            {/* 3. Village Boundaries (Dark Thick Separators) */}
-            <g id="village-borders" className="pointer-events-none">
-              {sanquelimMapData.villageBorders.map((vPath, i) => (
-                <path
-                  key={`vborder-${i}`}
-                  d={vPath}
-                  fill="none"
-                  stroke="#0B120B"
-                  strokeWidth="2.2"
-                  strokeLinejoin="round"
-                  strokeLinecap="round"
-                  className="opacity-95"
-                />
-              ))}
-            </g>
+              {/* 4. Booth Badges (Circles with Numbers) */}
+              <g id="booth-badges" className="cursor-pointer">
+                {sanquelimMapData.booths.map((b) => {
+                  const isSelected = selectedBoothNumber === b.number;
+                  const isHovered = hoveredBooth?.number === b.number;
 
-            {/* 4. Booth Badges (Circles with Numbers) */}
-            <g id="booth-badges" className="cursor-pointer">
-              {sanquelimMapData.booths.map((b) => {
-                const isSelected = selectedBoothNumber === b.number;
-                const isHovered = hoveredBooth?.number === b.number;
+                  let badgeFill = b.color;
+                  if (b.number === 5) badgeFill = '#991B1B';
+                  else if (b.number === 7 || b.number === 41) badgeFill = '#D97706';
+                  else badgeFill = '#15803D';
 
-                let badgeFill = b.color;
-                if (b.number === 5) badgeFill = '#991B1B';
-                else if (b.number === 7 || b.number === 41) badgeFill = '#D97706';
-                else badgeFill = '#15803D';
+                  return (
+                    <g
+                      key={`badge-${b.number}`}
+                      onClick={() => handleBoothClick(b.number)}
+                      onMouseEnter={(e) => handleMouseEnter(b, e)}
+                      onMouseLeave={handleMouseLeave}
+                    >
+                      {/* Dashed outer ring for Booth 10 */}
+                      {b.isDashed && (
+                        <circle
+                          cx={b.cx}
+                          cy={b.cy}
+                          r="9.5"
+                          fill="none"
+                          stroke="#FFFFFF"
+                          strokeWidth="1.2"
+                          strokeDasharray="2,2"
+                        />
+                      )}
 
-                return (
-                  <g
-                    key={`badge-${b.number}`}
-                    onClick={() => handleBoothClick(b.number)}
-                    onMouseEnter={(e) => handleMouseEnter(b, e)}
-                    onMouseLeave={handleMouseLeave}
-                  >
-                    {/* Dashed outer ring for Booth 10 */}
-                    {b.isDashed && (
+                      {/* Badge Circle */}
                       <circle
                         cx={b.cx}
                         cy={b.cy}
-                        r="9.5"
-                        fill="none"
-                        stroke="#FFFFFF"
-                        strokeWidth="1.2"
-                        strokeDasharray="2,2"
+                        r="6.8"
+                        fill={badgeFill}
+                        stroke={isSelected ? '#FACC15' : '#FFFFFF'}
+                        strokeWidth={isSelected ? '2.2' : '1.1'}
+                        className="transition-transform duration-150"
                       />
-                    )}
 
-                    {/* Badge Circle */}
-                    <circle
-                      cx={b.cx}
-                      cy={b.cy}
-                      r="6.8"
-                      fill={badgeFill}
-                      stroke={isSelected ? '#FACC15' : '#FFFFFF'}
-                      strokeWidth={isSelected ? '2.2' : '1.1'}
-                      className="transition-transform duration-150"
-                    />
+                      {/* Booth Number Text */}
+                      <text
+                        x={b.cx}
+                        y={b.cy + 2.5}
+                        textAnchor="middle"
+                        fill="#FFFFFF"
+                        fontSize="6.5"
+                        fontWeight="bold"
+                        fontFamily="system-ui, sans-serif"
+                        className="pointer-events-none select-none"
+                      >
+                        {b.number}
+                      </text>
+                    </g>
+                  );
+                })}
+              </g>
 
-                    {/* Booth Number Text */}
-                    <text
-                      x={b.cx}
-                      y={b.cy + 2.5}
-                      textAnchor="middle"
-                      fill={b.number === 7 ? '#FFFFFF' : '#FFFFFF'}
-                      fontSize="6.5"
-                      fontWeight="bold"
-                      fontFamily="system-ui, sans-serif"
-                      className="pointer-events-none select-none"
+              {/* 5. Village Labels (Bold White Font with Black Stroke Halo matching media_1793792399680_6581f137.png) */}
+              <g id="village-labels" className="pointer-events-none select-none">
+                {sanquelimMapData.villages.map((v) => (
+                  <text
+                    key={`vlabel-${v.name}`}
+                    x={v.x}
+                    y={v.y}
+                    textAnchor="middle"
+                    fill="#FFFFFF"
+                    stroke="#000000"
+                    strokeWidth="2.8"
+                    paintOrder="stroke fill"
+                    fontSize="12.5"
+                    fontWeight="900"
+                    letterSpacing="0.01em"
+                    fontFamily="system-ui, -apple-system, sans-serif"
+                    filter="url(#villageTextGlow)"
+                  >
+                    {v.name}
+                  </text>
+                ))}
+              </g>
+            </svg>
+          ) : (
+            /* Scalable Spatial Grid for Any Constituency in India */
+            <div className="w-full flex flex-col justify-center items-center py-6 px-4">
+              <div className="mb-4 text-center">
+                <span className="px-3 py-1 rounded-full text-[11px] font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                  AC {meta.ac_no} • {meta.ac_name} Spatial Polling Layout ({rawBooths.length} Stations)
+                </span>
+                <p className="text-slate-400 text-[11.5px] mt-1">
+                  Interactive polling stations and Form-20 lean breakdown across constituent villages
+                </p>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3.5 w-full max-w-5xl">
+                {rawBooths.map((b) => {
+                  const bNum = Number(b.part_no || b.number);
+                  const isSelected = selectedBoothNumber === bNum;
+                  const status = b.category || (b.margin_pct >= 10 ? 'Safe' : b.margin_pct <= -10 ? 'Weak' : 'Battle Ground');
+                  const color = status === 'Weak' ? '#991B1B' : status === 'Battle Ground' ? '#D97706' : '#15803D';
+
+                  return (
+                    <div
+                      key={bNum}
+                      onClick={() => handleBoothClick(bNum)}
+                      className={`p-3.5 rounded-xl border text-left cursor-pointer transition-all ${
+                        isSelected
+                          ? 'bg-blue-600/30 border-blue-400 ring-2 ring-blue-500/50 shadow-lg'
+                          : 'bg-white/[0.04] border-white/10 hover:bg-white/[0.08] hover:border-white/20'
+                      }`}
                     >
-                      {b.number}
-                    </text>
-                  </g>
-                );
-              })}
-            </g>
+                      <div className="flex items-center justify-between mb-2">
+                        <span
+                          className="w-6 h-6 rounded-full flex items-center justify-center text-[10.5px] font-extrabold text-white shadow-xs"
+                          style={{ backgroundColor: color }}
+                        >
+                          {bNum}
+                        </span>
+                        <span
+                          className="text-[10px] font-bold px-2 py-0.5 rounded"
+                          style={{ color, backgroundColor: `${color}25` }}
+                        >
+                          {status}
+                        </span>
+                      </div>
 
-            {/* 5. Village Labels (Bold White Font with Black Stroke Halo matching media_1793792399680_6581f137.png) */}
-            <g id="village-labels" className="pointer-events-none select-none">
-              {sanquelimMapData.villages.map((v) => (
-                <text
-                  key={`vlabel-${v.name}`}
-                  x={v.x}
-                  y={v.y}
-                  textAnchor="middle"
-                  fill="#FFFFFF"
-                  stroke="#000000"
-                  strokeWidth="2.8"
-                  paintOrder="stroke fill"
-                  fontSize="12.5"
-                  fontWeight="900"
-                  letterSpacing="0.01em"
-                  fontFamily="system-ui, -apple-system, sans-serif"
-                  filter="url(#villageTextGlow)"
-                >
-                  {v.name}
-                </text>
-              ))}
-            </g>
-          </svg>
+                      <p className="text-white text-[12.5px] font-bold truncate mb-1" title={b.station_name}>
+                        {b.station_name}
+                      </p>
+
+                      <div className="flex items-center justify-between text-[11px] text-slate-400 pt-1 border-t border-white/5">
+                        <span className="truncate">{b.village || 'Station'}</span>
+                        <span className="text-white font-bold tabular-nums">
+                          {formatIndianNumber(b.voters)} voters
+                        </span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          )}
 
           {/* Interactive Floating Hover Card Tooltip */}
-          {hoveredBooth && (
+          {hoveredBooth && isSanquelim && (
             <div
               className="absolute pointer-events-none z-30 bg-slate-900/95 text-white border border-slate-700 rounded-xl px-3.5 py-2.5 shadow-2xl backdrop-blur-md text-left text-[11px] min-w-[220px]"
               style={{

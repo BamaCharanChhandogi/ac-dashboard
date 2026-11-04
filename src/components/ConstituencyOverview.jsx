@@ -8,7 +8,7 @@ const AVAILABLE_ACS = [
   { slug: 'ac10-aldona',    name: 'AC 10 • Aldona',    state: 'GOA', district: 'NORTH GOA', taluka: 'BARDEZ' },
 ];
 
-export default function ConstituencyOverview({ data, currentSlug, onSelectAC }) {
+export default function ConstituencyOverview({ data, currentSlug, onSelectAC, directory }) {
   const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
   const dropdownRef = React.useRef(null);
 
@@ -23,7 +23,27 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC }) 
   }, []);
 
   const meta = data?.meta || {};
-  const currentAC = AVAILABLE_ACS.find(ac => ac.slug === currentSlug) || AVAILABLE_ACS[0];
+
+  // Flatten available ACs from dynamic directory
+  const availableACs = React.useMemo(() => {
+    if (!directory) return AVAILABLE_ACS;
+    const list = [];
+    const stateName = directory.state || 'Goa';
+    (directory.parliamentary_constituencies || []).forEach(pc => {
+      (pc.assembly_constituencies || []).forEach(ac => {
+        list.push({
+          slug: ac.slug,
+          name: `AC ${String(ac.ac_no).padStart(2, '0')} • ${ac.ac_name}`,
+          state: stateName.toUpperCase(),
+          district: (ac.district || 'NORTH GOA').toUpperCase(),
+          taluka: (ac.taluka || '').toUpperCase(),
+        });
+      });
+    });
+    return list.length > 0 ? list : AVAILABLE_ACS;
+  }, [directory]);
+
+  const currentAC = availableACs.find(ac => ac.slug === currentSlug) || availableACs[0];
   const totalVoters = meta.total_voters || 27265;
   const totalBooths = meta.total_booths || 50;
   const villagesCount = meta.constituent_areas?.length || 9;
@@ -129,7 +149,7 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC }) 
                   Select Constituency
                 </div>
                 <div className="py-1">
-                  {AVAILABLE_ACS.map(ac => {
+                  {availableACs.map(ac => {
                     const isSelected = ac.slug === currentSlug;
                     return (
                       <button
