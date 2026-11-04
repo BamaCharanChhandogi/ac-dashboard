@@ -1,0 +1,213 @@
+import React from 'react';
+import { formatIndianNumber } from '../utils/formatters';
+
+const ASSEMBLY_HISTORY = [
+  { year: '2022', party: 'BJP', pct: 48.27, winner: 'Dr. Pramod Sawant', runnerUp: 'Dharmesh Saglani (INC)', margin: '+2.6%' },
+  { year: '2017', party: 'BJP', pct: 42.44, winner: 'Dr. Pramod Sawant', runnerUp: 'Dharmesh Saglani (INC)', margin: '+8.5%' },
+  { year: '2012', party: 'BJP', pct: 66.10, winner: 'Dr. Pramod Sawant', runnerUp: 'Pratap Gauns (INC)', margin: '+32.1%' },
+  { year: '2008*', party: 'INC', pct: 42.78, winner: 'Pratap Gauns', runnerUp: 'BJP', margin: '+4.2%' },
+];
+
+const PARLIAMENT_HISTORY = [
+  { year: '2024', party: 'BJP', pct: 56.43, winner: 'Shripad Yesso Naik', margin: '+25.44%' },
+  { year: '2019', party: 'BJP', pct: 57.12, winner: 'Shripad Yesso Naik', margin: '+23.6%' },
+  { year: '2014', party: 'BJP', pct: 58.51, winner: 'Shripad Yesso Naik', margin: '+32.1%' },
+  { year: '2009', party: 'BJP', pct: 47.10, winner: 'Shripad Yesso Naik', margin: '+12.4%' },
+  { year: '2004', party: 'BJP', pct: 56.84, winner: 'Shripad Yesso Naik', margin: '+15.2%' },
+  { year: '1999', party: 'BJP', pct: 54.96, winner: 'Shripad Yesso Naik', margin: '+11.8%' },
+];
+
+export default function ElectionResultsView({ data }) {
+  const meta = data?.meta || {};
+  const leaders = data?.leaders || {};
+  const mla = leaders.mla;
+  const mp = leaders.mp;
+
+  return (
+    <div className="px-8 py-7 space-y-6 max-w-[1360px]">
+      {/* Title */}
+      <div>
+        <h2 className="font-serif text-[26px] font-bold text-slate-900 tracking-tight">
+          Current MLA & MP • Election Retrospective
+        </h2>
+        <p className="text-[12.5px] text-slate-500 font-medium mt-0.5">
+          Elected leadership dossier, historical state assembly trends, and parliamentary performance across {meta.ac_name || 'Sanquelim'}
+        </p>
+      </div>
+
+      {/* Sitting MLA & MP Profile Cards (Matching PDF Page 3) */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {/* Sitting MLA Card */}
+        {mla && (
+          <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs flex flex-col justify-between">
+            <div>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">
+                SITTING MLA · {meta.ac_name ? meta.ac_name.toUpperCase() : 'SANQUELIM'} AC
+              </p>
+              <div className="flex items-start gap-4 mb-4">
+                <img
+                  src={mla.photo_url || 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=256'}
+                  alt={mla.name}
+                  className="w-16 h-16 rounded-xl object-cover border-2 border-orange-500 shadow-xs flex-shrink-0"
+                />
+                <div>
+                  <h3 className="font-serif text-[22px] font-bold text-slate-900 leading-tight">
+                    {mla.name}
+                  </h3>
+                  <p className="text-[13px] font-semibold text-orange-600 mt-0.5">
+                    {mla.party_name || 'Bharatiya Janata Party (BJP)'}
+                  </p>
+                  <p className="text-[11.5px] text-slate-400 mt-0.5">
+                    {mla.portfolio || 'Chief Minister of Goa'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Vote share and margin row */}
+              <div className="grid grid-cols-2 gap-4 bg-slate-50 rounded-xl p-3.5 border border-slate-100">
+                <div>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase">Vote Share, 2022</p>
+                  <p className="text-[22px] font-extrabold text-slate-900 tabular-nums leading-tight mt-0.5">
+                    {mla.vote_pct}%
+                  </p>
+                  <p className="text-[11px] text-slate-400 tabular-nums">
+                    {formatIndianNumber(mla.votes)} votes
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase">Margin over runner-up</p>
+                  <p className="text-[22px] font-extrabold text-teal-700 tabular-nums leading-tight mt-0.5">
+                    +{formatIndianNumber(mla.margin_votes)}
+                  </p>
+                  <p className="text-[11px] text-slate-400">
+                    {mla.margin_pct}% · over {mla.runner_up}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Sitting MP Card */}
+        {mp && (
+          <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs flex flex-col justify-between">
+            <div>
+              <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">
+                SITTING MP · NORTH GOA PC
+              </p>
+              <div className="flex items-start gap-4 mb-4">
+                <img
+                  src={mp.photo_url || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256'}
+                  alt={mp.name}
+                  className="w-16 h-16 rounded-xl object-cover border-2 border-orange-500 shadow-xs flex-shrink-0"
+                />
+                <div>
+                  <h3 className="font-serif text-[22px] font-bold text-slate-900 leading-tight">
+                    {mp.name}
+                  </h3>
+                  <p className="text-[13px] font-semibold text-orange-600 mt-0.5">
+                    {mp.party_name || 'Bharatiya Janata Party (BJP)'}
+                  </p>
+                  <p className="text-[11.5px] text-slate-400 mt-0.5">
+                    {mp.portfolio || 'Union Minister of State for Power & New and Renewable Energy'}
+                  </p>
+                </div>
+              </div>
+
+              {/* Vote share and margin row */}
+              <div className="grid grid-cols-2 gap-4 bg-slate-50 rounded-xl p-3.5 border border-slate-100">
+                <div>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase">Vote Share, 2024</p>
+                  <p className="text-[22px] font-extrabold text-slate-900 tabular-nums leading-tight mt-0.5">
+                    {mp.vote_pct}%
+                  </p>
+                  <p className="text-[11px] text-slate-400 tabular-nums">
+                    {formatIndianNumber(mp.votes)} votes
+                  </p>
+                </div>
+                <div>
+                  <p className="text-[10px] font-bold text-slate-400 uppercase">Margin over runner-up</p>
+                  <p className="text-[22px] font-extrabold text-teal-700 tabular-nums leading-tight mt-0.5">
+                    +{formatIndianNumber(mp.margin_votes)}
+                  </p>
+                  <p className="text-[11px] text-slate-400">
+                    {mp.margin_pct}% · over {mp.runner_up}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+
+      {/* Assembly Across Elections (Matching PDF Page 3) */}
+      <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
+        <h3 className="font-serif text-[18px] font-bold text-slate-900 mb-1">
+          Assembly — {meta.ac_name || 'Sanquelim'} across elections
+        </h3>
+        <p className="text-[11.5px] text-slate-400 font-medium mb-4">
+          Winning party's own vote share; gap to runner-up. Sanquelim as delimited today has existed since the 2008 by-election.
+        </p>
+
+        <div className="overflow-x-auto">
+          <table className="w-full text-[12px] text-left">
+            <thead>
+              <tr className="border-b border-slate-200 text-slate-400 font-bold uppercase text-[10px] tracking-wider">
+                <th className="pb-3 pr-4">ELECTION</th>
+                <th className="pb-3 px-4">WINNING PARTY</th>
+                <th className="pb-3 px-4">LEAD CANDIDATE</th>
+                <th className="pb-3 px-4 text-right">VOTE SHARE</th>
+                <th className="pb-3 pl-4 text-right">VICTORY MARGIN</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100">
+              {ASSEMBLY_HISTORY.map((row) => (
+                <tr key={row.year} className="hover:bg-slate-50/70 transition-colors">
+                  <td className="py-3 pr-4 font-bold text-slate-900">
+                    {row.year}
+                  </td>
+                  <td className="py-3 px-4">
+                    <span className={`px-2 py-0.5 rounded text-[11px] font-extrabold ${row.party === 'BJP' ? 'bg-orange-100 text-orange-800' : 'bg-blue-100 text-blue-800'}`}>
+                      {row.party}
+                    </span>
+                  </td>
+                  <td className="py-3 px-4 font-medium text-slate-800">
+                    {row.winner}
+                  </td>
+                  <td className="py-3 px-4 text-right font-extrabold text-slate-900 tabular-nums">
+                    {row.pct}%
+                  </td>
+                  <td className="py-3 pl-4 text-right font-bold text-teal-700 tabular-nums">
+                    {row.margin}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      {/* Parliament Across Elections (Matching PDF Page 4) */}
+      <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
+        <h3 className="font-serif text-[18px] font-bold text-slate-900 mb-1">
+          Parliament — North Goa across elections
+        </h3>
+        <p className="text-[11.5px] text-slate-400 font-medium mb-4">
+          Sanquelim sits inside the North Goa Lok Sabha constituency (1999–2024 results).
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {PARLIAMENT_HISTORY.map((item) => (
+            <div key={item.year} className="bg-slate-50 rounded-xl p-3 border border-slate-100 text-center">
+              <p className="text-[11px] font-bold text-slate-400 uppercase">{item.year}</p>
+              <p className="text-[18px] font-extrabold text-slate-900 tabular-nums mt-1 leading-none">{item.pct}%</p>
+              <span className="inline-block px-1.5 py-0.5 rounded text-[10px] font-extrabold bg-orange-100 text-orange-800 mt-2">
+                {item.party}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
