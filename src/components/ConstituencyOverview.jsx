@@ -30,49 +30,68 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC }) 
   const totalFamilies = meta.total_families || 6041;
   const villages = meta.constituent_areas || [];
 
-  // 5-Stage Stepper data matching media_1793789065466_25ac374c.png
-  const steps = [
-    {
-      label: 'Draft Roll',
-      date: 'DEC 2025',
-      count: meta.ac_no === 17 ? 27206 : Math.round(totalVoters * 0.994),
-      delta: '—',
-      deltaType: 'neutral',
-      isCompleted: false,
-    },
-    {
-      label: 'Final Draft',
-      date: 'FEB 2026',
-      count: meta.ac_no === 17 ? 27089 : Math.round(totalVoters * 0.990),
-      delta: meta.ac_no === 17 ? '−117' : '−90',
-      deltaType: 'negative',
-      isCompleted: false,
-    },
-    {
-      label: 'Supplement 2',
-      date: 'APR 2026',
-      count: meta.ac_no === 17 ? 27145 : Math.round(totalVoters * 0.994),
-      delta: meta.ac_no === 17 ? '+56' : '+85',
-      deltaType: 'positive',
-      isCompleted: false,
-    },
-    {
-      label: 'Supplement 3',
-      date: 'JUL 2026',
-      count: totalVoters,
-      delta: meta.ac_no === 17 ? '+120' : '+142',
-      deltaType: 'positive',
-      isCompleted: false,
-    },
-    {
-      label: 'Supplement 4',
-      date: 'OCT 2026',
-      count: totalVoters,
-      delta: '0',
-      deltaType: 'neutral',
-      isCompleted: true,
-    },
-  ];
+  // Dynamic 5-Stage Stepper mapped from data.roll_progression (All revisions completed up to latest)
+  const rawProgression = data?.roll_progression || [];
+  const steps = React.useMemo(() => {
+    if (rawProgression.length > 0) {
+      return rawProgression.map((p, idx) => {
+        const isLatest = idx === rawProgression.length - 1;
+        const net = p.net_growth;
+        let delta = '—';
+        let deltaType = 'neutral';
+        if (net != null && idx > 0) {
+          if (net > 0) {
+            delta = `+${net}`;
+            deltaType = 'positive';
+          } else if (net < 0) {
+            delta = `−${Math.abs(net)}`;
+            deltaType = 'negative';
+          } else {
+            delta = '0';
+            deltaType = 'neutral';
+          }
+        }
+
+        let label = p.stage_name;
+        let date = '2026';
+        if (p.stage_name.includes('Draft Roll')) {
+          label = 'Draft Roll';
+          date = 'DEC 2025';
+        } else if (p.stage_name.includes('Final Draft')) {
+          label = 'Final Draft';
+          date = 'FEB 2026';
+        } else if (p.stage_name.includes('Supplement-2') || p.stage_name.includes('Supplement 2')) {
+          label = 'Supplement 2';
+          date = 'APR 2026';
+        } else if (p.stage_name.includes('Supplement-3') || p.stage_name.includes('Supplement 3')) {
+          label = 'Supplement 3';
+          date = 'JUL 2026';
+        } else if (p.stage_name.includes('Supplement-4') || p.stage_name.includes('Supplement 4')) {
+          label = 'Supplement 4';
+          date = 'OCT 2026';
+        }
+
+        return {
+          label,
+          date,
+          count: p.total_electors,
+          delta,
+          deltaType,
+          isCompleted: true, // Marked completed
+          isLatest,
+        };
+      });
+    }
+
+    // Default 5-stage progression
+    return [
+      { label: 'Draft Roll', date: 'DEC 2025', count: meta.ac_no === 17 ? 27206 : Math.round(totalVoters * 0.994), delta: '—', deltaType: 'neutral', isCompleted: true, isLatest: false },
+      { label: 'Final Draft', date: 'FEB 2026', count: meta.ac_no === 17 ? 27089 : Math.round(totalVoters * 0.990), delta: meta.ac_no === 17 ? '−117' : '−90', deltaType: 'negative', isCompleted: true, isLatest: false },
+      { label: 'Supplement 2', date: 'APR 2026', count: meta.ac_no === 17 ? 27145 : Math.round(totalVoters * 0.994), delta: meta.ac_no === 17 ? '+56' : '+85', deltaType: 'positive', isCompleted: true, isLatest: false },
+      { label: 'Supplement 3', date: 'JUL 2026', count: totalVoters, delta: meta.ac_no === 17 ? '+120' : '+142', deltaType: 'positive', isCompleted: true, isLatest: false },
+      { label: 'Supplement 4', date: 'OCT 2026', count: totalVoters, delta: '0', deltaType: 'neutral', isCompleted: true, isLatest: true },
+    ];
+  }, [rawProgression, meta.ac_no, totalVoters]);
 
   const avgVotersPerBooth = Math.round(totalVoters / (totalBooths || 1));
   const avgVotersPerFamily = (totalVoters / (totalFamilies || 1)).toFixed(1);
@@ -219,19 +238,36 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC }) 
         </div>
 
         {/* Connected Stepper Line */}
-        <div className="relative px-4 pb-2">
-          {/* Background Connecting Blue Line */}
-          <div className="absolute top-[11px] left-12 right-12 h-[2.5px] bg-[#3B82F6]" />
+        <div className="relative px-2 pb-2">
+          {/* Background Connecting Blue Line: strictly starts at node 0 center and ends at last node center */}
+          {steps.length > 1 && (
+            <div
+              className="absolute top-[11px] h-[2.5px] bg-[#3B82F6]"
+              style={{
+                left: `${100 / (steps.length * 2)}%`,
+                right: `${100 / (steps.length * 2)}%`,
+              }}
+            />
+          )}
 
-          {/* Stepper Nodes Grid */}
-          <div className="relative grid grid-cols-2 sm:grid-cols-5 gap-6 text-center">
+          {/* Stepper Nodes Grid: exactly matching steps.length columns */}
+          <div
+            className="relative grid gap-4 text-center"
+            style={{
+              gridTemplateColumns: `repeat(${steps.length}, minmax(0, 1fr))`,
+            }}
+          >
             {steps.map((step, idx) => (
               <div key={idx} className="flex flex-col items-center">
                 {/* Node Circle */}
                 <div className="mb-3.5 z-10 flex items-center justify-center h-6">
-                  {step.isCompleted ? (
+                  {step.isLatest ? (
                     <div className="w-6 h-6 rounded-full bg-[#10B981] text-white flex items-center justify-center shadow-sm">
                       <Check size={13} strokeWidth={3} />
+                    </div>
+                  ) : step.isCompleted ? (
+                    <div className="w-5 h-5 rounded-full bg-[#2563EB] text-white flex items-center justify-center shadow-xs">
+                      <Check size={11} strokeWidth={3} />
                     </div>
                   ) : (
                     <div className="w-5 h-5 rounded-full border-[3px] border-[#2563EB] bg-white shadow-xs" />
@@ -241,7 +277,7 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC }) 
                 {/* Stage Tag Pill */}
                 <span
                   className={`px-3 py-0.5 rounded-md text-[11px] font-bold tracking-tight mb-1.5 ${
-                    step.isCompleted
+                    step.isLatest
                       ? 'bg-[#D1FAE5] text-[#065F46]'
                       : 'bg-[#EFF6FF] text-[#1E40AF]'
                   }`}

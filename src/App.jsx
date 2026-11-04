@@ -10,7 +10,10 @@ import ReportsView from './components/ReportsView';
 import InsightsView from './components/InsightsView';
 
 export default function App() {
-  const [currentSlug, setCurrentSlug] = useState('ac17-sanquelim');
+  const [currentSlug, setCurrentSlug] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('ac') || 'ac17-sanquelim';
+  });
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
