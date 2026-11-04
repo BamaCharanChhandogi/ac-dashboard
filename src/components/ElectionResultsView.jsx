@@ -17,6 +17,67 @@ const PARLIAMENT_HISTORY = [
   { year: '1999', party: 'BJP', pct: 54.96, winner: 'Shripad Yesso Naik', margin: '+11.8%' },
 ];
 
+const CANDIDATE_VOTE_SHARES = [
+  {
+    type: 'ASSEMBLY ELECTIONS',
+    elections: [
+      {
+        year: '2022 Assembly',
+        bars: [
+          { name: 'Dr. Pramod Sawant', party: 'BJP', pct: 48.3, color: '#EA580C' },
+          { name: 'Dharmesh Saglani', party: 'INC', pct: 45.6, color: '#0284C7' },
+          { name: 'Others', party: 'Others', pct: 6.1, color: '#94A3B8' },
+        ],
+      },
+      {
+        year: '2017 Assembly',
+        bars: [
+          { name: 'Dr. Pramod Sawant', party: 'BJP', pct: 43.0, color: '#EA580C' },
+          { name: 'Dharmesh Saglani', party: 'INC', pct: 33.9, color: '#0284C7' },
+          { name: 'Suresh Amonkar', party: 'GSM', pct: 16.4, color: '#16A34A' },
+          { name: 'Others', party: 'Others', pct: 6.7, color: '#94A3B8' },
+        ],
+      },
+      {
+        year: '2012 Assembly',
+        bars: [
+          { name: 'Pramod Sawant', party: 'BJP', pct: 66.0, color: '#EA580C' },
+          { name: 'Pratap Gauns', party: 'INC', pct: 34.0, color: '#0284C7' },
+        ],
+      },
+    ],
+  },
+  {
+    type: 'PARLIAMENT (LOK SABHA) ELECTIONS IN SANQUELIM BOOTHS',
+    elections: [
+      {
+        year: '2024 Lok Sabha',
+        bars: [
+          { name: 'Shripad Yesso Naik', party: 'BJP', pct: 80.0, color: '#EA580C' },
+          { name: 'Ramakant Khalap', party: 'INC', pct: 15.1, color: '#0284C7' },
+          { name: 'Tukaram Bharat Parab', party: 'RGP', pct: 4.0, color: '#7C3AED' },
+        ],
+      },
+      {
+        year: '2019 Lok Sabha',
+        bars: [
+          { name: 'Shripad Yesso Naik', party: 'BJP', pct: 64.9, color: '#EA580C' },
+          { name: 'Girish Chodankar', party: 'INC', pct: 33.5, color: '#0284C7' },
+          { name: 'Others', party: 'Others', pct: 1.6, color: '#94A3B8' },
+        ],
+      },
+      {
+        year: '2014 Lok Sabha',
+        bars: [
+          { name: 'Shripad Yesso Naik', party: 'BJP', pct: 68.2, color: '#EA580C' },
+          { name: 'Ravi Naik', party: 'INC', pct: 26.4, color: '#0284C7' },
+          { name: 'Others', party: 'Others', pct: 5.4, color: '#94A3B8' },
+        ],
+      },
+    ],
+  },
+];
+
 export default function ElectionResultsView({ data }) {
   const meta = data?.meta || {};
   const leaders = data?.leaders || {};
@@ -138,6 +199,61 @@ export default function ElectionResultsView({ data }) {
             </div>
           </div>
         )}
+      </div>
+
+      {/* Candidate Vote Share by Election Horizontal Stacked Bars (Matching PDF Page 4 & 5) */}
+      <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
+        <h3 className="font-serif text-[18px] font-bold text-slate-900 mb-1">
+          Candidate Vote Share by Election
+        </h3>
+        <p className="text-[11.5px] text-slate-500 font-medium mb-6">
+          AC-wide valid vote share, actual Sanquelim-booth totals for each election. Top candidates by vote share are labelled under each bar.
+        </p>
+
+        <div className="space-y-8">
+          {CANDIDATE_VOTE_SHARES.map((block, bi) => (
+            <div key={bi} className="space-y-4">
+              <p className="text-[11px] font-bold tracking-wider text-slate-400 uppercase">
+                {block.type}
+              </p>
+
+              <div className="space-y-5">
+                {block.elections.map((elec, ei) => (
+                  <div key={ei} className="space-y-1.5">
+                    <p className="font-serif font-bold text-slate-900 text-[14px]">
+                      {elec.year}
+                    </p>
+
+                    {/* Stacked Progress Bar */}
+                    <div className="h-6 w-full rounded-md overflow-hidden flex bg-slate-100 shadow-xs">
+                      {elec.bars.map((b, idx) => (
+                        <div
+                          key={idx}
+                          style={{ width: `${b.pct}%`, backgroundColor: b.color }}
+                          className="h-full flex items-center justify-center text-[10px] font-bold text-white tabular-nums"
+                          title={`${b.name} (${b.party}): ${b.pct}%`}
+                        >
+                          {b.pct > 12 ? `${b.pct}%` : ''}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Candidate Labels */}
+                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-[11px] text-slate-600 font-medium">
+                      {elec.bars.map((b, idx) => (
+                        <div key={idx} className="flex items-center gap-1.5">
+                          <span className="w-2 h-2 rounded-full" style={{ backgroundColor: b.color }} />
+                          <span className="font-bold text-slate-800">{b.name}</span>
+                          <span className="text-slate-400">· {b.party} {b.pct}%</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Assembly Across Elections (Matching PDF Page 3) */}

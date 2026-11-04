@@ -37,7 +37,7 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-[#F8FAFC]">
+      <div className="h-screen flex items-center justify-center bg-[#DFE6F0]">
         <div className="text-center">
           <div className="w-8 h-8 border-2 border-[#2563EB] border-t-transparent rounded-full animate-spin mx-auto mb-3" />
           <p className="text-slate-600 text-[13px] font-semibold">Loading Electoral Intelligence…</p>
@@ -48,7 +48,7 @@ export default function App() {
 
   if (error) {
     return (
-      <div className="h-screen flex items-center justify-center bg-[#F8FAFC] p-4">
+      <div className="h-screen flex items-center justify-center bg-[#DFE6F0] p-4">
         <div className="text-center max-w-md bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
           <h2 className="text-[16px] font-bold text-slate-800 mb-1">Failed to Load Dataset</h2>
           <p className="text-slate-500 text-[12px] mb-4">{error}</p>
@@ -64,12 +64,12 @@ export default function App() {
   }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#F8FAFC]">
+    <div className="flex h-screen overflow-hidden bg-[#DFE6F0]">
       {/* Left Sidebar Navigation */}
       <Sidebar activeSection={activeSection} onNavigate={setActiveSection} />
 
       {/* Main Content Area */}
-      <main className="flex-1 lg:ml-[230px] flex flex-col h-full overflow-y-auto">
+      <main className="flex-1 lg:ml-[230px] flex flex-col h-full overflow-y-auto bg-[#DFE6F0]">
         {activeSection === 'dashboard' && (
           <ConstituencyOverview
             data={data}
