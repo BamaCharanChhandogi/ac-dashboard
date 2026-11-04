@@ -1,15 +1,6 @@
 import React from 'react';
 import { ChevronDown } from 'lucide-react';
 
-const TABS = [
-  { id: 'overview',     label: 'Overview' },
-  { id: 'booth',        label: 'Booth' },
-  { id: 'voter-roll',   label: 'Voter Roll' },
-  { id: 'demographics', label: 'Demographics' },
-  { id: 'results',      label: 'Results' },
-  { id: 'insights',     label: 'Insights' },
-];
-
 const AVAILABLE_ACS = [
   { slug: 'ac09-porvorim', name: 'Porvorim (AC 09)', state: 'Goa', district: 'North Goa', pc: 'North Goa PC' },
   { slug: 'ac10-aldona',   name: 'Aldona (AC 10)',   state: 'Goa', district: 'North Goa', pc: 'North Goa PC' },
@@ -18,8 +9,6 @@ const AVAILABLE_ACS = [
 
 export default function SectionHeader({
   data,
-  activeTab = 'overview',
-  onTabChange,
   currentSlug = 'ac09-porvorim',
   onSelectAC,
 }) {
@@ -28,7 +17,7 @@ export default function SectionHeader({
   return (
     <div className="px-6 lg:px-8 pt-6 pb-2">
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
-        {/* Left: Constituency Title & Breadcrumb metadata */}
+        {/* Constituency Title & Administrative Hierarchy */}
         <div>
           <div className="flex items-center gap-2 mb-1">
             <span className="text-[11px] font-bold text-slate-400 tracking-wider uppercase">
@@ -72,28 +61,6 @@ export default function SectionHeader({
             {meta.district ? ` • ${meta.district} District` : ''}
             {meta.taluka ? ` • ${meta.taluka} Taluka` : ''}
           </p>
-        </div>
-
-        {/* Right: Tab pills (Matching PolIntel exact layout) */}
-        <div className="flex items-center gap-1.5 self-start md:self-auto overflow-x-auto pb-1 md:pb-0">
-          {TABS.map(({ id, label }) => {
-            const isActive = activeTab === id;
-            return (
-              <button
-                key={id}
-                onClick={() => onTabChange?.(id)}
-                className={`
-                  px-4 py-2 rounded-lg text-[13px] transition-all whitespace-nowrap
-                  ${isActive
-                    ? 'bg-blue-600 text-white font-semibold shadow-xs'
-                    : 'text-slate-600 hover:text-slate-900 hover:bg-slate-200/60 font-medium'
-                  }
-                `}
-              >
-                {label}
-              </button>
-            );
-          })}
         </div>
       </div>
     </div>

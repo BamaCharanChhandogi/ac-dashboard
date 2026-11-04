@@ -10,7 +10,6 @@ export default function App() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [sidebarSection, setSidebarSection] = useState('dashboard');
-  const [activeTab, setActiveTab] = useState('overview');
 
   useEffect(() => {
     setLoading(true);
@@ -69,11 +68,9 @@ export default function App() {
 
       {/* Main Content Area: Strictly Section 1 (Constituency Overview & Master KPIs) */}
       <main className="flex-1 lg:ml-[230px] flex flex-col h-full overflow-y-auto">
-        {/* Section 1 - Part A: Letterhead, Selector & Tab Pills */}
+        {/* Section 1 - Part A: Letterhead, Administrative Hierarchy & Constituency Selector */}
         <SectionHeader
           data={data}
-          activeTab={activeTab}
-          onTabChange={setActiveTab}
           currentSlug={currentSlug}
           onSelectAC={setCurrentSlug}
         />
