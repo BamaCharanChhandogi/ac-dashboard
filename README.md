@@ -1,26 +1,18 @@
-# Electoral Analytics & Constituency Intelligence Platform
+# AC Dashboard
 
-Frontend component library and architecture for scalable electoral roll analytics and constituency dashboards.
+An enterprise-grade, serverless Electoral Analytics and Constituency Intelligence Platform.
 
-## Architecture & Documentation
-- **Full Architecture & Technical Specification:** [`TECHNICAL_SPECIFICATION.md`](./TECHNICAL_SPECIFICATION.md)
-- **Google Doc Architectural Blueprint:** [https://docs.google.com/document/d/1ZnRWRI4-_9XS_VavXqz9G2ow6NI9cVB4fcBnwuDXUNs/edit](https://docs.google.com/document/d/1ZnRWRI4-_9XS_VavXqz9G2ow6NI9cVB4fcBnwuDXUNs/edit)
+## Master Documentation & Specifications
+All technical specifications, universal data schemas, business rules, and implementation roadmaps are consolidated into a single master document:
+* 📘 **Technical Specification & Implementation Plan:** [`TECHNICAL_SPECIFICATION.md`](./TECHNICAL_SPECIFICATION.md)
+* 📄 **Google Doc Architecture Document:** [https://docs.google.com/document/d/1ZnRWRI4-_9XS_VavXqz9G2ow6NI9cVB4fcBnwuDXUNs/edit](https://docs.google.com/document/d/1ZnRWRI4-_9XS_VavXqz9G2ow6NI9cVB4fcBnwuDXUNs/edit)
 
-## UI Component Segments
-1. **Constituency Header & Electors Badge** (`/src/components/header`)
-2. **Roll Revision Progress Tracker** (`/src/components/revision-tracker`)
-3. **Demographic Distribution Modules** (`/src/components/demographics`)
-   - Gender Split Donut Chart
-   - Age Cohort Bars
-   - Diverging Age & Gender Population Pyramid
-4. **Legislative Leadership Dossier (MLA & MP)** (`/src/components/leadership`)
-5. **Historical Election Trackers** (`/src/components/elections-history`)
-6. **Spatial Geospatial Mapping** (`/src/components/maps`)
-   - Form 20 Polling Booth Margin Map
-   - Village Political Lean Map
-   - Citizen Survey Thematic Map
-7. **Searchable Directory Tables** (`/src/components/tables`)
-   - Polling Station Directory
-   - Voter Churn Audit (Deletions, Additions, Modifications)
-   - Household Clusters
-8. **Citizen Sentiment & Issue Analytics** (`/src/components/survey`)
+## Core Architecture
+* **Ingestion:** Raw Excel/CSV files in Cloud Storage (OneDrive / Drive) -> Automated Python compiler
+* **Delivery:** Static JSON datasets (< 250 KB per AC) served over Global Edge CDN
+* **Frontend:** Reusable, zero-server React + Vite + Tailwind client application
+
+## Standardized Constituencies Supported
+* **AC09 — Porvorim** (39 Polling Booths, 23,947 Electors)
+* **AC10 — Aldona** (41 Polling Booths, 25,541 Electors)
+* **AC17 — Sanquelim** (50 Polling Booths, 27,265 Electors)
