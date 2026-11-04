@@ -1,0 +1,285 @@
+{
+  "meta": {
+    "ac_no": 10,
+    "ac_name": "Aldona",
+    "slug": "ac10-aldona",
+    "state": "Goa",
+    "district": "North Goa",
+    "taluka": "Bardez",
+    "reservation": "General",
+    "pc_no": 1,
+    "pc_name": "North Goa",
+    "total_voters": 25541,
+    "total_booths": 41,
+    "total_families": 5890,
+    "sir_deleted": 512,
+    "sir_added": 580,
+    "sir_modified": 260,
+    "constituent_areas": [
+      "Aldona", "Moira", "Bastora", "Ucassaim", "Nachinola", 
+      "Pomburpa", "Corjuem", "Calvim", "Quitla", "Moira East"
+    ],
+    "urban_rural_split": {
+      "urban_pct": 22.0,
+      "rural_pct": 78.0,
+      "area_type": "Village Panchayats & Rurban Wards"
+    }
+  },
+  "kpis": {
+    "ac_no": "AC 10",
+    "segment": "Bardez Sub-District",
+    "pc_info": "1 - North Goa PC",
+    "state": "Goa State",
+    "best_ac_party": {
+      "party": "INC",
+      "pct": "41.2%",
+      "year": "2022 Assembly"
+    },
+    "best_pc_party": {
+      "party": "BJP",
+      "pct": "51.8%",
+      "year": "2024 Lok Sabha"
+    }
+  },
+  "roll_progression": [
+    {
+      "stage_order": 1,
+      "stage_name": "Draft Roll (Dec 2025)",
+      "total_electors": 25473,
+      "added_count": null,
+      "deleted_count": null,
+      "net_growth": 0
+    },
+    {
+      "stage_order": 2,
+      "stage_name": "Final Draft (Feb 2026)",
+      "total_electors": 25390,
+      "added_count": 327,
+      "deleted_count": 410,
+      "net_growth": -83
+    },
+    {
+      "stage_order": 3,
+      "stage_name": "Supplement-2 (April 2026)",
+      "total_electors": 25445,
+      "added_count": 88,
+      "deleted_count": 33,
+      "net_growth": 55
+    },
+    {
+      "stage_order": 4,
+      "stage_name": "Supplement-3 (July 2026)",
+      "total_electors": 25541,
+      "added_count": 165,
+      "deleted_count": 69,
+      "net_growth": 96
+    }
+  ],
+  "demographics": {
+    "gender": {
+      "female": { "count": 13280, "pct": 52.0 },
+      "male": { "count": 12260, "pct": 48.0 },
+      "third_gender": { "count": 1, "pct": 0.0 },
+      "unknown": { "count": 0, "pct": 0.0 },
+      "sex_ratio": 1083
+    },
+    "age_groups": [
+      { "cohort": "45-54", "count": 5580, "pct": 21.8, "male": 2670, "female": 2910 },
+      { "cohort": "25-34", "count": 4750, "pct": 18.6, "male": 2320, "female": 2430 },
+      { "cohort": "35-44", "count": 4570, "pct": 17.9, "male": 2240, "female": 2330 },
+      { "cohort": "55-64", "count": 4290, "pct": 16.8, "male": 2040, "female": 2250 },
+      { "cohort": "18-24", "count": 2860, "pct": 11.2, "male": 1490, "female": 1370 },
+      { "cohort": "65-74", "count": 2440, "pct": 9.6, "male": 1130, "female": 1310 },
+      { "cohort": "75+", "count": 1051, "pct": 4.1, "male": 370, "female": 681 }
+    ]
+  },
+  "leaders": {
+    "mla": {
+      "role": "SITTING MLA",
+      "constituency": "Aldona AC (AC 10)",
+      "name": "Adv. Carlos Alvares Ferreira",
+      "party": "INC",
+      "party_name": "Indian National Congress",
+      "vote_pct": 41.22,
+      "votes": 9320,
+      "margin_votes": 1823,
+      "margin_pct": 8.07,
+      "runner_up": "Glenn Ticlo (BJP)",
+      "portfolio": "MLA (Former Advocate General of Goa & Senior High Court Counsel)",
+      "age": 58,
+      "tenure": "1st Term (Since 2022)",
+      "photo_url": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&q=80&w=256"
+    },
+    "mp": {
+      "role": "SITTING MP",
+      "constituency": "North Goa PC (PC 1)",
+      "name": "Shripad Yesso Naik",
+      "party": "BJP",
+      "party_name": "Bharatiya Janata Party",
+      "vote_pct": 56.43,
+      "votes": 257326,
+      "margin_votes": 116015,
+      "margin_pct": 25.44,
+      "runner_up": "Ramakant Khalap (INC)",
+      "portfolio": "Union Minister of State for Power & New and Renewable Energy",
+      "age": 71,
+      "tenure": "6th Consecutive Term (Since 1999)",
+      "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256"
+    }
+  },
+  "elections": {
+    "vote_share_bars": {
+      "assembly": [
+        {
+          "election": "2022 Assembly",
+          "candidates": [
+            { "name": "Adv. Carlos Ferreira", "party": "INC", "pct": 41.2, "votes": 9320, "is_winner": true },
+            { "name": "Glenn Ticlo", "party": "BJP", "pct": 33.1, "votes": 7497, "is_winner": false },
+            { "name": "Rohan Kalangutkar", "party": "RGP", "pct": 14.8, "votes": 3345, "is_winner": false },
+            { "name": "Others", "party": "Others", "pct": 10.9, "votes": 2460, "is_winner": false }
+          ]
+        },
+        {
+          "election": "2017 Assembly",
+          "candidates": [
+            { "name": "Glenn Ticlo", "party": "BJP", "pct": 42.4, "votes": 9405, "is_winner": true },
+            { "name": "Amarnath Panjikar", "party": "INC", "pct": 31.3, "votes": 6940, "is_winner": false }
+          ]
+        },
+        {
+          "election": "2012 Assembly",
+          "candidates": [
+            { "name": "Glenn Ticlo", "party": "BJP", "pct": 53.6, "votes": 11315, "is_winner": true },
+            { "name": "Dayanand Narvekar", "party": "INC", "pct": 37.1, "votes": 7839, "is_winner": false }
+          ]
+        }
+      ],
+      "parliament": [
+        {
+          "election": "2024 Lok Sabha (PC in AC)",
+          "candidates": [
+            { "name": "Shripad Yesso Naik", "party": "BJP", "pct": 51.8, "votes": 11450, "is_winner": true },
+            { "name": "Ramakant Khalap", "party": "INC", "pct": 42.3, "votes": 9350, "is_winner": false },
+            { "name": "Others", "party": "Others", "pct": 5.9, "votes": 1300, "is_winner": false }
+          ]
+        },
+        {
+          "election": "2019 Lok Sabha",
+          "candidates": [
+            { "name": "Shripad Yesso Naik", "party": "BJP", "pct": 53.2, "votes": 11210, "is_winner": true },
+            { "name": "Girish Chodankar", "party": "INC", "pct": 43.1, "votes": 9080, "is_winner": false }
+          ]
+        }
+      ]
+    },
+    "trends_and_swing": {
+      "years": [2012, 2014, 2017, 2019, 2022, 2024],
+      "series": [
+        { "party": "BJP", "color": "#FF9933", "data": [53.6, 56.4, 42.4, 53.2, 33.1, 51.8] },
+        { "party": "INC", "color": "#1982C4", "data": [37.1, 38.2, 31.3, 43.1, 41.2, 42.3] },
+        { "party": "RGP / Regional", "color": "#7C3AED", "data": [0.0, 0.0, 11.2, 0.0, 14.8, 5.9] }
+      ],
+      "key_movements": [
+        {
+          "title": "2022 Congress Revival",
+          "delta": "+9.9 pp",
+          "is_positive": true,
+          "party": "INC",
+          "desc": "Carlos Ferreira reclaimed Aldona for Congress by defeating 2-term BJP MLA Glenn Ticlo."
+        },
+        {
+          "title": "RGP Vote Splitting",
+          "delta": "+14.8 pp",
+          "is_positive": true,
+          "party": "RGP",
+          "desc": "RGP captured 3,345 anti-incumbent youth votes in 2022."
+        }
+      ],
+      "takeaways": [
+        "Aldona is a swing constituency featuring high Catholic and traditional non-BJP vote blocks in Corjuem, Calvim, and Moira.",
+        "BJP maintains solid support in Bastora and Ucassaim, giving Shripad Naik an edge during parliamentary cycles.",
+        "The 2022 election demonstrated strong local candidate effect overturning party incumbency."
+      ]
+    },
+    "party_control_timeline": [
+      { "year": 2012, "type": "Assembly", "winner": "BJP", "party_code": "BJP", "lead": "Glenn Ticlo", "vote_pct": "53.6%" },
+      { "year": 2017, "type": "Assembly", "winner": "BJP", "party_code": "BJP", "lead": "Glenn Ticlo", "vote_pct": "42.4%" },
+      { "year": 2022, "type": "Assembly", "winner": "INC", "party_code": "INC", "lead": "Carlos Alvares Ferreira", "vote_pct": "41.2%" },
+      { "year": 2024, "type": "Lok Sabha", "winner": "BJP", "party_code": "BJP", "lead": "Shripad Yesso Naik", "vote_pct": "51.8%" }
+    ],
+    "candidate_returns": {
+      "assembly_2022": [
+        { "rank": 1, "name": "Adv. Carlos Ferreira", "party": "INC", "votes": 9320, "pct": 41.22, "status": "Winner", "margin": "+1823" },
+        { "rank": 2, "name": "Glenn Ticlo", "party": "BJP", "votes": 7497, "pct": 33.15, "status": "Runner-Up", "margin": "-1823" },
+        { "rank": 3, "name": "Rohan Kalangutkar", "party": "RGP", "votes": 3345, "pct": 14.79, "status": "Lost", "margin": "-5975" },
+        { "rank": 4, "name": "Mahesh Satelkar", "party": "AAP", "votes": 1280, "pct": 5.66, "status": "Lost", "margin": "-8040" },
+        { "rank": 5, "name": "None of the Above", "party": "NOTA", "votes": 265, "pct": 1.17, "status": "Lost", "margin": "-9055" }
+      ],
+      "parliament_2024": [
+        { "rank": 1, "name": "Shripad Yesso Naik", "party": "BJP", "votes": 11450, "pct": 51.80, "status": "Winner", "margin": "+2100" },
+        { "rank": 2, "name": "Ramakant Khalap", "party": "INC", "votes": 9350, "pct": 42.30, "status": "Runner-Up", "margin": "-2100" },
+        { "rank": 3, "name": "Tukaram Bharat Parab", "party": "RGP", "votes": 1050, "pct": 4.75, "status": "Lost", "margin": "-10400" }
+      ]
+    }
+  },
+  "spatial": {
+    "viewBox": "0 0 1186 760",
+    "villages": [
+      { "name": "Aldona Proper", "margin_pct": -12.4, "voters": 5420, "added": 120, "deleted": 85, "modified": 52, "category": "Weak", "cx": 610, "cy": 360, "r": 110 },
+      { "name": "Moira", "margin_pct": -8.5, "voters": 3620, "added": 80, "deleted": 60, "modified": 38, "category": "Battleground", "cx": 320, "cy": 280, "r": 90 },
+      { "name": "Bastora", "margin_pct": 14.8, "voters": 4120, "added": 95, "deleted": 70, "modified": 44, "category": "Safe", "cx": 240, "cy": 480, "r": 95 },
+      { "name": "Ucassaim", "margin_pct": 11.2, "voters": 2890, "added": 65, "deleted": 45, "modified": 30, "category": "Safe", "cx": 420, "cy": 490, "r": 85 },
+      { "name": "Nachinola", "margin_pct": 4.2, "voters": 2210, "added": 50, "deleted": 35, "modified": 24, "category": "Battleground", "cx": 460, "cy": 340, "r": 80 },
+      { "name": "Corjuem", "margin_pct": -18.6, "voters": 1940, "added": 40, "deleted": 30, "modified": 20, "category": "Weak", "cx": 860, "cy": 330, "r": 80 },
+      { "name": "Calvim", "margin_pct": -15.4, "voters": 1650, "added": 35, "deleted": 25, "modified": 18, "category": "Weak", "cx": 980, "cy": 440, "r": 75 },
+      { "name": "Pomburpa", "margin_pct": -6.2, "voters": 3691, "added": 95, "deleted": 60, "modified": 34, "category": "Battleground", "cx": 580, "cy": 560, "r": 90 }
+    ],
+    "booths": [
+      { "part_no": "1", "station_name": "St. Thomas High School, Aldona", "village": "Aldona Proper", "voters": 690, "added": 15, "deleted": 10, "families_count": 155, "margin_pct": -14.2, "winner": "INC", "category": "Weak", "x": 620, "y": 320 },
+      { "part_no": "2", "station_name": "Panchayat Hall, Moira", "village": "Moira", "voters": 620, "added": 12, "deleted": 8, "families_count": 140, "margin_pct": -6.8, "winner": "INC", "category": "Battleground", "x": 310, "y": 260 },
+      { "part_no": "3", "station_name": "Govt. Primary School, Bastora", "village": "Bastora", "voters": 710, "added": 18, "deleted": 12, "families_count": 160, "margin_pct": 16.5, "winner": "BJP", "category": "Safe", "x": 230, "y": 460 },
+      { "part_no": "4", "station_name": "Govt. Primary School, Corjuem", "village": "Corjuem", "voters": 540, "added": 11, "deleted": 9, "families_count": 120, "margin_pct": -21.0, "winner": "INC", "category": "Weak", "x": 880, "y": 320 }
+    ]
+  },
+  "families": [
+    {
+      "id": "fam_a1",
+      "surname": "Ferreira",
+      "head_name": "Carlos Ferreira",
+      "village": "Aldona Proper",
+      "house_no": "104",
+      "members_count": 12,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "members": [
+        { "name": "Carlos Ferreira", "age": 58, "gender": "Male", "epic": "ALD01001" },
+        { "name": "Anita Ferreira", "age": 54, "gender": "Female", "epic": "ALD01002" }
+      ]
+    },
+    {
+      "id": "fam_a2",
+      "surname": "D'Souza",
+      "head_name": "Manuel D'Souza",
+      "village": "Corjuem",
+      "house_no": "01",
+      "members_count": 16,
+      "is_cluster": true,
+      "cluster_tag": "Wada Compound Cluster",
+      "members": [
+        { "name": "Manuel D'Souza", "age": 64, "gender": "Male", "epic": "ALD02001" },
+        { "name": "Philomena D'Souza", "age": 60, "gender": "Female", "epic": "ALD02002" }
+      ]
+    }
+  ],
+  "churn_records": [
+    { "name": "Ashley Fernandes", "relation": "Francis Fernandes", "epic": "ALD031122", "village": "Aldona Proper", "booth": "1", "stage": "Final Roll", "kind": "deleted", "reason": "Shifted Abroad (NRI Status)" },
+    { "name": "Preeti Shirodkar", "relation": "Mahesh Shirodkar", "epic": "ALD041133", "village": "Bastora", "booth": "3", "stage": "Supplement-3", "kind": "added", "reason": "Fresh Young Elector (18 Yrs)" }
+  ],
+  "survey": {
+    "has_data": false,
+    "total_calls": 0,
+    "linked_calls": 0,
+    "status": "pending",
+    "message": "Field survey and IVRS interactive polling has not yet been conducted in Aldona (AC 10). Telephonic sample operations will be scheduled ahead of the upcoming election cycle."
+  }
+}

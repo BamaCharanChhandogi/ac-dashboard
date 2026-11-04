@@ -1,0 +1,50 @@
+{
+  "state": "Goa",
+  "parliamentary_constituencies": [
+    {
+      "pc_no": 1,
+      "pc_name": "North Goa",
+      "assembly_constituencies": [
+        {
+          "ac_no": 9,
+          "ac_name": "Porvorim",
+          "slug": "ac09-porvorim",
+          "dataFile": "data/ac09-porvorim.json",
+          "district": "North Goa",
+          "taluka": "Bardez",
+          "reservation": "General",
+          "total_voters": 23947,
+          "total_booths": 39,
+          "sitting_mla": "Rohan Khaunte (BJP)",
+          "has_survey": true
+        },
+        {
+          "ac_no": 10,
+          "ac_name": "Aldona",
+          "slug": "ac10-aldona",
+          "dataFile": "data/ac10-aldona.json",
+          "district": "North Goa",
+          "taluka": "Bardez",
+          "reservation": "General",
+          "total_voters": 25541,
+          "total_booths": 41,
+          "sitting_mla": "Carlos Alvares Ferreira (INC)",
+          "has_survey": false
+        },
+        {
+          "ac_no": 17,
+          "ac_name": "Sanquelim",
+          "slug": "ac17-sanquelim",
+          "dataFile": "data/ac17-sanquelim.json",
+          "district": "North Goa",
+          "taluka": "Bicholim",
+          "reservation": "General",
+          "total_voters": 27265,
+          "total_booths": 50,
+          "sitting_mla": "Dr. Pramod Sawant (BJP)",
+          "has_survey": true
+        }
+      ]
+    }
+  ]
+}
