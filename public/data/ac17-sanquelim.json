@@ -68,11 +68,19 @@
     },
     {
       "stage_order": 4,
-      "stage_name": "Supplement-3 (July 2026)",
+      "stage_name": "Supplement-3 (July 1)",
       "total_electors": 27265,
       "added_count": 205,
       "deleted_count": 85,
       "net_growth": 120
+    },
+    {
+      "stage_order": 5,
+      "stage_name": "Supplement-4 (Oct 1)",
+      "total_electors": 27265,
+      "added_count": 68,
+      "deleted_count": 68,
+      "net_growth": 0
     }
   ],
   "demographics": {

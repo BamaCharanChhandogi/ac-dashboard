@@ -68,22 +68,23 @@ export default function Sidebar({ activeSection = 'dashboard', onNavigate }) {
         <div className={`flex items-center px-4 h-[72px] ${collapsed ? 'justify-center' : 'justify-between'}`}>
           {!collapsed && (
             <div className="flex items-center gap-3 min-w-0">
-              {/* Isometric 3D polygon brand icon */}
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 via-cyan-500 to-indigo-500 flex items-center justify-center shadow-md shadow-blue-500/20 flex-shrink-0">
-                <div className="w-3.5 h-3.5 border-2 border-white rotate-45 rounded-[2px]" />
+              <div className="w-8 h-8 rounded-lg bg-[#991B1B] flex items-center justify-center shadow-md shadow-red-900/30 flex-shrink-0">
+                <span className="text-white font-extrabold text-[13px] tracking-tighter">CC</span>
               </div>
               <div className="min-w-0">
-                <h1 className="text-white font-bold text-[16px] leading-tight tracking-tight">PolIntel</h1>
-                <p className="text-slate-400 text-[9.5px] leading-tight font-medium truncate mt-0.5">
-                  Political Intelligence<br />& Electoral Analytics
+                <h1 className="text-white font-bold text-[13.5px] leading-tight tracking-tight uppercase truncate">
+                  Corporate Chanakya
+                </h1>
+                <p className="text-slate-400 text-[9px] leading-tight font-medium truncate mt-0.5 tracking-wider uppercase">
+                  Electoral Intelligence
                 </p>
               </div>
             </div>
           )}
 
           {collapsed && (
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-blue-600 via-cyan-500 to-indigo-500 flex items-center justify-center shadow-md">
-              <div className="w-3.5 h-3.5 border-2 border-white rotate-45 rounded-[2px]" />
+            <div className="w-8 h-8 rounded-lg bg-[#991B1B] flex items-center justify-center shadow-md">
+              <span className="text-white font-extrabold text-[13px]">CC</span>
             </div>
           )}
 
