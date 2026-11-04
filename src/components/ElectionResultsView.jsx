@@ -107,7 +107,7 @@ export default function ElectionResultsView({ data }) {
               </p>
               <div className="flex items-start gap-4 mb-4">
                 <img
-                  src={mla.photo_url || 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=256'}
+                  src={mla.photo_url || '/images/leaders/pramod-sawant.jpg'}
                   alt={mla.name}
                   className="w-16 h-16 rounded-xl object-cover border-2 border-orange-500 shadow-xs flex-shrink-0"
                 />
@@ -158,7 +158,7 @@ export default function ElectionResultsView({ data }) {
               </p>
               <div className="flex items-start gap-4 mb-4">
                 <img
-                  src={mp.photo_url || 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256'}
+                  src={mp.photo_url || '/images/leaders/shripad-naik.jpg'}
                   alt={mp.name}
                   className="w-16 h-16 rounded-xl object-cover border-2 border-orange-500 shadow-xs flex-shrink-0"
                 />

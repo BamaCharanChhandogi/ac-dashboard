@@ -9,7 +9,21 @@ const AVAILABLE_ACS = [
 ];
 
 export default function ConstituencyOverview({ data, currentSlug, onSelectAC }) {
+  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
+  const dropdownRef = React.useRef(null);
+
+  React.useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const meta = data?.meta || {};
+  const currentAC = AVAILABLE_ACS.find(ac => ac.slug === currentSlug) || AVAILABLE_ACS[0];
   const totalVoters = meta.total_voters || 27265;
   const totalBooths = meta.total_booths || 50;
   const villagesCount = meta.constituent_areas?.length || 9;
@@ -73,24 +87,62 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC }) 
             {meta.state ? meta.state.toUpperCase() : 'GOA'} &nbsp;/&nbsp; {meta.district ? meta.district.toUpperCase() : 'NORTH GOA'} &nbsp;/&nbsp; {meta.taluka ? meta.taluka.toUpperCase() : 'BICHOLIM'}
           </p>
 
-          {/* AC Title with Dropdown */}
-          <div className="flex items-center gap-2">
-            <div className="relative inline-flex items-center">
-              <select
-                value={currentSlug}
-                onChange={(e) => onSelectAC?.(e.target.value)}
-                className="font-serif text-[32px] md:text-[34px] font-bold text-slate-900 tracking-tight cursor-pointer outline-none bg-transparent appearance-none pr-8 hover:text-blue-600 transition-colors"
-              >
-                {AVAILABLE_ACS.map(ac => (
-                  <option key={ac.slug} value={ac.slug} className="font-sans text-[15px] font-normal text-slate-800">
-                    {ac.name}
-                  </option>
-                ))}
-              </select>
-              <div className="w-6 h-6 rounded-md border border-slate-300 flex items-center justify-center pointer-events-none ml-1 bg-white shadow-xs">
-                <ChevronDown size={14} className="text-slate-600" />
+          {/* AC Title with Sleek Custom React Dropdown */}
+          <div className="relative inline-flex items-center" ref={dropdownRef}>
+            <button
+              type="button"
+              onClick={() => setIsDropdownOpen(prev => !prev)}
+              className="group inline-flex items-center gap-2.5 text-left outline-none cursor-pointer"
+              aria-expanded={isDropdownOpen}
+              aria-haspopup="listbox"
+            >
+              <h1 className="font-serif text-[32px] md:text-[34px] font-bold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">
+                {currentAC.name}
+              </h1>
+              <span className="w-6 h-6 rounded-md border border-slate-300 flex items-center justify-center bg-white shadow-xs group-hover:border-blue-400 group-hover:bg-blue-50/50 transition-all">
+                <ChevronDown size={14} className={`text-slate-600 group-hover:text-blue-600 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-blue-600' : ''}`} />
+              </span>
+            </button>
+
+            {isDropdownOpen && (
+              <div className="absolute left-0 top-full mt-2 w-72 bg-white rounded-xl border border-slate-200/90 shadow-2xl z-50 py-1.5 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
+                <div className="px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100">
+                  Select Constituency
+                </div>
+                <div className="py-1">
+                  {AVAILABLE_ACS.map(ac => {
+                    const isSelected = ac.slug === currentSlug;
+                    return (
+                      <button
+                        key={ac.slug}
+                        type="button"
+                        onClick={() => {
+                          onSelectAC?.(ac.slug);
+                          setIsDropdownOpen(false);
+                        }}
+                        className={`w-full text-left px-3.5 py-2.5 flex items-center justify-between text-[13px] transition-colors cursor-pointer ${
+                          isSelected
+                            ? 'bg-blue-50/80 text-blue-700 font-bold'
+                            : 'text-slate-700 hover:bg-slate-50 font-medium'
+                        }`}
+                      >
+                        <div>
+                          <p className="font-serif font-bold text-[14px] leading-tight">
+                            {ac.name}
+                          </p>
+                          <p className="text-[11px] text-slate-400 font-sans mt-0.5">
+                            {ac.district} • {ac.taluka}
+                          </p>
+                        </div>
+                        {isSelected && (
+                          <Check size={16} className="text-blue-600 flex-shrink-0" />
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </div>
 

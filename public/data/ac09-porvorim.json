@@ -16,7 +16,9 @@
     "sir_added": 615,
     "sir_modified": 284,
     "constituent_areas": [
-      "Socorro", "Salvador do Mundo", "Penha-de-Franca"
+      "Socorro",
+      "Salvador do Mundo",
+      "Penha-de-Franca"
     ],
     "urban_rural_split": {
       "urban_pct": 65.0,
@@ -76,20 +78,74 @@
   ],
   "demographics": {
     "gender": {
-      "female": { "count": 12240, "pct": 51.1 },
-      "male": { "count": 11702, "pct": 48.9 },
-      "third_gender": { "count": 5, "pct": 0.0 },
-      "unknown": { "count": 0, "pct": 0.0 },
+      "female": {
+        "count": 12240,
+        "pct": 51.1
+      },
+      "male": {
+        "count": 11702,
+        "pct": 48.9
+      },
+      "third_gender": {
+        "count": 5,
+        "pct": 0.0
+      },
+      "unknown": {
+        "count": 0,
+        "pct": 0.0
+      },
       "sex_ratio": 1046
     },
     "age_groups": [
-      { "cohort": "45-54", "count": 5210, "pct": 21.8, "male": 2510, "female": 2700 },
-      { "cohort": "25-34", "count": 4530, "pct": 18.9, "male": 2240, "female": 2290 },
-      { "cohort": "35-44", "count": 4310, "pct": 18.0, "male": 2110, "female": 2200 },
-      { "cohort": "55-64", "count": 3980, "pct": 16.6, "male": 1920, "female": 2060 },
-      { "cohort": "18-24", "count": 2690, "pct": 11.2, "male": 1410, "female": 1280 },
-      { "cohort": "65-74", "count": 2250, "pct": 9.4, "male": 1080, "female": 1170 },
-      { "cohort": "75+", "count": 977, "pct": 4.1, "male": 432, "female": 545 }
+      {
+        "cohort": "45-54",
+        "count": 5210,
+        "pct": 21.8,
+        "male": 2510,
+        "female": 2700
+      },
+      {
+        "cohort": "25-34",
+        "count": 4530,
+        "pct": 18.9,
+        "male": 2240,
+        "female": 2290
+      },
+      {
+        "cohort": "35-44",
+        "count": 4310,
+        "pct": 18.0,
+        "male": 2110,
+        "female": 2200
+      },
+      {
+        "cohort": "55-64",
+        "count": 3980,
+        "pct": 16.6,
+        "male": 1920,
+        "female": 2060
+      },
+      {
+        "cohort": "18-24",
+        "count": 2690,
+        "pct": 11.2,
+        "male": 1410,
+        "female": 1280
+      },
+      {
+        "cohort": "65-74",
+        "count": 2250,
+        "pct": 9.4,
+        "male": 1080,
+        "female": 1170
+      },
+      {
+        "cohort": "75+",
+        "count": 977,
+        "pct": 4.1,
+        "male": 432,
+        "female": 545
+      }
     ]
   },
   "leaders": {
@@ -107,7 +163,7 @@
       "portfolio": "Minister for Tourism, Information Technology and Printing & Stationery",
       "age": 49,
       "tenure": "3rd Consecutive Term (Since 2012)",
-      "photo_url": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=256"
+      "photo_url": "/images/leaders/rohan-khaunte.jpg"
     },
     "mp": {
       "role": "SITTING MP",
@@ -123,7 +179,7 @@
       "portfolio": "Union Minister of State for Power & New and Renewable Energy",
       "age": 71,
       "tenure": "6th Consecutive Term (Since 1999)",
-      "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256"
+      "photo_url": "/images/leaders/shripad-naik.jpg"
     }
   },
   "elections": {
@@ -132,25 +188,79 @@
         {
           "election": "2022 Assembly",
           "candidates": [
-            { "name": "Rohan Khaunte", "party": "BJP", "pct": 55.2, "votes": 11714, "is_winner": true },
-            { "name": "Vikas Prabhu", "party": "IND", "pct": 17.7, "votes": 3764, "is_winner": false },
-            { "name": "Sandeep Vazarkar", "party": "AITC", "pct": 11.6, "votes": 2465, "is_winner": false },
-            { "name": "Others", "party": "Others", "pct": 15.5, "votes": 3292, "is_winner": false }
+            {
+              "name": "Rohan Khaunte",
+              "party": "BJP",
+              "pct": 55.2,
+              "votes": 11714,
+              "is_winner": true
+            },
+            {
+              "name": "Vikas Prabhu",
+              "party": "IND",
+              "pct": 17.7,
+              "votes": 3764,
+              "is_winner": false
+            },
+            {
+              "name": "Sandeep Vazarkar",
+              "party": "AITC",
+              "pct": 11.6,
+              "votes": 2465,
+              "is_winner": false
+            },
+            {
+              "name": "Others",
+              "party": "Others",
+              "pct": 15.5,
+              "votes": 3292,
+              "is_winner": false
+            }
           ]
         },
         {
           "election": "2017 Assembly",
           "candidates": [
-            { "name": "Rohan Khaunte", "party": "IND", "pct": 47.9, "votes": 11174, "is_winner": true },
-            { "name": "Guruprasad Pawaskar", "party": "BJP", "pct": 29.5, "votes": 6961, "is_winner": false },
-            { "name": "Rajesh Prabhu", "party": "AAP", "pct": 13.2, "votes": 3108, "is_winner": false }
+            {
+              "name": "Rohan Khaunte",
+              "party": "IND",
+              "pct": 47.9,
+              "votes": 11174,
+              "is_winner": true
+            },
+            {
+              "name": "Guruprasad Pawaskar",
+              "party": "BJP",
+              "pct": 29.5,
+              "votes": 6961,
+              "is_winner": false
+            },
+            {
+              "name": "Rajesh Prabhu",
+              "party": "AAP",
+              "pct": 13.2,
+              "votes": 3108,
+              "is_winner": false
+            }
           ]
         },
         {
           "election": "2012 Assembly",
           "candidates": [
-            { "name": "Rohan Khaunte", "party": "IND", "pct": 41.2, "votes": 7972, "is_winner": true },
-            { "name": "Govind Parwatkar", "party": "BJP", "pct": 36.5, "votes": 7071, "is_winner": false }
+            {
+              "name": "Rohan Khaunte",
+              "party": "IND",
+              "pct": 41.2,
+              "votes": 7972,
+              "is_winner": true
+            },
+            {
+              "name": "Govind Parwatkar",
+              "party": "BJP",
+              "pct": 36.5,
+              "votes": 7071,
+              "is_winner": false
+            }
           ]
         }
       ],
@@ -158,27 +268,103 @@
         {
           "election": "2024 Lok Sabha (PC in AC)",
           "candidates": [
-            { "name": "Shripad Yesso Naik", "party": "BJP", "pct": 63.4, "votes": 13410, "is_winner": true },
-            { "name": "Ramakant Khalap", "party": "INC", "pct": 29.8, "votes": 6303, "is_winner": false },
-            { "name": "Others", "party": "Others", "pct": 6.8, "votes": 1438, "is_winner": false }
+            {
+              "name": "Shripad Yesso Naik",
+              "party": "BJP",
+              "pct": 63.4,
+              "votes": 13410,
+              "is_winner": true
+            },
+            {
+              "name": "Ramakant Khalap",
+              "party": "INC",
+              "pct": 29.8,
+              "votes": 6303,
+              "is_winner": false
+            },
+            {
+              "name": "Others",
+              "party": "Others",
+              "pct": 6.8,
+              "votes": 1438,
+              "is_winner": false
+            }
           ]
         },
         {
           "election": "2019 Lok Sabha",
           "candidates": [
-            { "name": "Shripad Yesso Naik", "party": "BJP", "pct": 59.2, "votes": 12180, "is_winner": true },
-            { "name": "Girish Chodankar", "party": "INC", "pct": 37.1, "votes": 7635, "is_winner": false },
-            { "name": "Others", "party": "Others", "pct": 3.7, "votes": 761, "is_winner": false }
+            {
+              "name": "Shripad Yesso Naik",
+              "party": "BJP",
+              "pct": 59.2,
+              "votes": 12180,
+              "is_winner": true
+            },
+            {
+              "name": "Girish Chodankar",
+              "party": "INC",
+              "pct": 37.1,
+              "votes": 7635,
+              "is_winner": false
+            },
+            {
+              "name": "Others",
+              "party": "Others",
+              "pct": 3.7,
+              "votes": 761,
+              "is_winner": false
+            }
           ]
         }
       ]
     },
     "trends_and_swing": {
-      "years": [2012, 2014, 2017, 2019, 2022, 2024],
+      "years": [
+        2012,
+        2014,
+        2017,
+        2019,
+        2022,
+        2024
+      ],
       "series": [
-        { "party": "BJP", "color": "#FF9933", "data": [36.5, 62.1, 29.5, 59.2, 55.2, 63.4] },
-        { "party": "INC", "color": "#1982C4", "data": [22.3, 31.4, 8.4, 37.1, 8.2, 29.8] },
-        { "party": "Independent / Khaunte", "color": "#10B981", "data": [41.2, 0.0, 47.9, 0.0, 0.0, 0.0] }
+        {
+          "party": "BJP",
+          "color": "#FF9933",
+          "data": [
+            36.5,
+            62.1,
+            29.5,
+            59.2,
+            55.2,
+            63.4
+          ]
+        },
+        {
+          "party": "INC",
+          "color": "#1982C4",
+          "data": [
+            22.3,
+            31.4,
+            8.4,
+            37.1,
+            8.2,
+            29.8
+          ]
+        },
+        {
+          "party": "Independent / Khaunte",
+          "color": "#10B981",
+          "data": [
+            41.2,
+            0.0,
+            47.9,
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
       ],
       "key_movements": [
         {
@@ -203,38 +389,220 @@
       ]
     },
     "party_control_timeline": [
-      { "year": 2012, "type": "Assembly", "winner": "IND", "party_code": "IND", "lead": "Rohan Khaunte", "vote_pct": "41.2%" },
-      { "year": 2017, "type": "Assembly", "winner": "IND", "party_code": "IND", "lead": "Rohan Khaunte", "vote_pct": "47.9%" },
-      { "year": 2022, "type": "Assembly", "winner": "BJP", "party_code": "BJP", "lead": "Rohan Khaunte", "vote_pct": "55.2%" },
-      { "year": 2024, "type": "Lok Sabha", "winner": "BJP", "party_code": "BJP", "lead": "Shripad Yesso Naik", "vote_pct": "63.4%" }
+      {
+        "year": 2012,
+        "type": "Assembly",
+        "winner": "IND",
+        "party_code": "IND",
+        "lead": "Rohan Khaunte",
+        "vote_pct": "41.2%"
+      },
+      {
+        "year": 2017,
+        "type": "Assembly",
+        "winner": "IND",
+        "party_code": "IND",
+        "lead": "Rohan Khaunte",
+        "vote_pct": "47.9%"
+      },
+      {
+        "year": 2022,
+        "type": "Assembly",
+        "winner": "BJP",
+        "party_code": "BJP",
+        "lead": "Rohan Khaunte",
+        "vote_pct": "55.2%"
+      },
+      {
+        "year": 2024,
+        "type": "Lok Sabha",
+        "winner": "BJP",
+        "party_code": "BJP",
+        "lead": "Shripad Yesso Naik",
+        "vote_pct": "63.4%"
+      }
     ],
     "candidate_returns": {
       "assembly_2022": [
-        { "rank": 1, "name": "Rohan Khaunte", "party": "BJP", "votes": 11714, "pct": 55.16, "status": "Winner", "margin": "+7950" },
-        { "rank": 2, "name": "Vikas Prabhu", "party": "IND", "votes": 3764, "pct": 17.72, "status": "Runner-Up", "margin": "-7950" },
-        { "rank": 3, "name": "Sandeep Vazarkar", "party": "AITC", "votes": 2465, "pct": 11.60, "status": "Lost", "margin": "-9249" },
-        { "rank": 4, "name": "Ritesh Chodankar", "party": "AAP", "votes": 1920, "pct": 9.04, "status": "Lost", "margin": "-9794" },
-        { "rank": 5, "name": "None of the Above", "party": "NOTA", "votes": 372, "pct": 1.75, "status": "Lost", "margin": "-11342" }
+        {
+          "rank": 1,
+          "name": "Rohan Khaunte",
+          "party": "BJP",
+          "votes": 11714,
+          "pct": 55.16,
+          "status": "Winner",
+          "margin": "+7950"
+        },
+        {
+          "rank": 2,
+          "name": "Vikas Prabhu",
+          "party": "IND",
+          "votes": 3764,
+          "pct": 17.72,
+          "status": "Runner-Up",
+          "margin": "-7950"
+        },
+        {
+          "rank": 3,
+          "name": "Sandeep Vazarkar",
+          "party": "AITC",
+          "votes": 2465,
+          "pct": 11.6,
+          "status": "Lost",
+          "margin": "-9249"
+        },
+        {
+          "rank": 4,
+          "name": "Ritesh Chodankar",
+          "party": "AAP",
+          "votes": 1920,
+          "pct": 9.04,
+          "status": "Lost",
+          "margin": "-9794"
+        },
+        {
+          "rank": 5,
+          "name": "None of the Above",
+          "party": "NOTA",
+          "votes": 372,
+          "pct": 1.75,
+          "status": "Lost",
+          "margin": "-11342"
+        }
       ],
       "parliament_2024": [
-        { "rank": 1, "name": "Shripad Yesso Naik", "party": "BJP", "votes": 13410, "pct": 63.40, "status": "Winner", "margin": "+7107" },
-        { "rank": 2, "name": "Ramakant Khalap", "party": "INC", "votes": 6303, "pct": 29.80, "status": "Runner-Up", "margin": "-7107" },
-        { "rank": 3, "name": "Tukaram Bharat Parab", "party": "RGP", "votes": 1150, "pct": 5.44, "status": "Lost", "margin": "-12260" }
+        {
+          "rank": 1,
+          "name": "Shripad Yesso Naik",
+          "party": "BJP",
+          "votes": 13410,
+          "pct": 63.4,
+          "status": "Winner",
+          "margin": "+7107"
+        },
+        {
+          "rank": 2,
+          "name": "Ramakant Khalap",
+          "party": "INC",
+          "votes": 6303,
+          "pct": 29.8,
+          "status": "Runner-Up",
+          "margin": "-7107"
+        },
+        {
+          "rank": 3,
+          "name": "Tukaram Bharat Parab",
+          "party": "RGP",
+          "votes": 1150,
+          "pct": 5.44,
+          "status": "Lost",
+          "margin": "-12260"
+        }
       ]
     }
   },
   "spatial": {
     "viewBox": "0 0 1186 1220",
     "villages": [
-      { "name": "Socorro", "margin_pct": 38.2, "voters": 9840, "added": 245, "deleted": 190, "modified": 112, "category": "Safe", "cx": 590, "cy": 320, "r": 180 },
-      { "name": "Salvador do Mundo", "margin_pct": 34.5, "voters": 7250, "added": 185, "deleted": 140, "modified": 88, "category": "Safe", "cx": 480, "cy": 680, "r": 160 },
-      { "name": "Penha-de-Franca", "margin_pct": 28.1, "voters": 6857, "added": 185, "deleted": 148, "modified": 84, "category": "Safe", "cx": 680, "cy": 980, "r": 150 }
+      {
+        "name": "Socorro",
+        "margin_pct": 38.2,
+        "voters": 9840,
+        "added": 245,
+        "deleted": 190,
+        "modified": 112,
+        "category": "Safe",
+        "cx": 590,
+        "cy": 320,
+        "r": 180
+      },
+      {
+        "name": "Salvador do Mundo",
+        "margin_pct": 34.5,
+        "voters": 7250,
+        "added": 185,
+        "deleted": 140,
+        "modified": 88,
+        "category": "Safe",
+        "cx": 480,
+        "cy": 680,
+        "r": 160
+      },
+      {
+        "name": "Penha-de-Franca",
+        "margin_pct": 28.1,
+        "voters": 6857,
+        "added": 185,
+        "deleted": 148,
+        "modified": 84,
+        "category": "Safe",
+        "cx": 680,
+        "cy": 980,
+        "r": 150
+      }
     ],
     "booths": [
-      { "part_no": "1", "station_name": "Govt. Primary School, Socorro", "village": "Socorro", "voters": 680, "added": 18, "deleted": 12, "families_count": 150, "margin_pct": 36.2, "winner": "BJP", "category": "Safe", "x": 520, "y": 210 },
-      { "part_no": "2", "station_name": "Panchayat Hall, Socorro (North)", "village": "Socorro", "voters": 740, "added": 22, "deleted": 15, "families_count": 165, "margin_pct": 38.0, "winner": "BJP", "category": "Safe", "x": 610, "y": 240 },
-      { "part_no": "22", "station_name": "Govt. High School Penha-de-Franca (Booth 22 = 22 + 22A Auxiliary)", "village": "Penha-de-Franca", "voters": 1340, "added": 38, "deleted": 24, "families_count": 298, "margin_pct": 27.4, "winner": "BJP", "category": "Safe", "x": 670, "y": 920, "is_clubbed": true, "original_parts": ["22", "22A"] },
-      { "part_no": "39", "station_name": "Community Centre, Salvador do Mundo", "village": "Salvador do Mundo", "voters": 610, "added": 14, "deleted": 8, "families_count": 132, "margin_pct": 32.1, "winner": "BJP", "category": "Safe", "x": 490, "y": 720 }
+      {
+        "part_no": "1",
+        "station_name": "Govt. Primary School, Socorro",
+        "village": "Socorro",
+        "voters": 680,
+        "added": 18,
+        "deleted": 12,
+        "families_count": 150,
+        "margin_pct": 36.2,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 520,
+        "y": 210
+      },
+      {
+        "part_no": "2",
+        "station_name": "Panchayat Hall, Socorro (North)",
+        "village": "Socorro",
+        "voters": 740,
+        "added": 22,
+        "deleted": 15,
+        "families_count": 165,
+        "margin_pct": 38.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 610,
+        "y": 240
+      },
+      {
+        "part_no": "22",
+        "station_name": "Govt. High School Penha-de-Franca (Booth 22 = 22 + 22A Auxiliary)",
+        "village": "Penha-de-Franca",
+        "voters": 1340,
+        "added": 38,
+        "deleted": 24,
+        "families_count": 298,
+        "margin_pct": 27.4,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 670,
+        "y": 920,
+        "is_clubbed": true,
+        "original_parts": [
+          "22",
+          "22A"
+        ]
+      },
+      {
+        "part_no": "39",
+        "station_name": "Community Centre, Salvador do Mundo",
+        "village": "Salvador do Mundo",
+        "voters": 610,
+        "added": 14,
+        "deleted": 8,
+        "families_count": 132,
+        "margin_pct": 32.1,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 490,
+        "y": 720
+      }
     ]
   },
   "families": [
@@ -248,9 +616,24 @@
       "is_cluster": true,
       "cluster_tag": "Wada Compound Cluster",
       "members": [
-        { "name": "Francis Pinto", "age": 62, "gender": "Male", "epic": "POR01001" },
-        { "name": "Maria Pinto", "age": 59, "gender": "Female", "epic": "POR01002" },
-        { "name": "Anthony Pinto", "age": 34, "gender": "Male", "epic": "POR01003" }
+        {
+          "name": "Francis Pinto",
+          "age": 62,
+          "gender": "Male",
+          "epic": "POR01001"
+        },
+        {
+          "name": "Maria Pinto",
+          "age": 59,
+          "gender": "Female",
+          "epic": "POR01002"
+        },
+        {
+          "name": "Anthony Pinto",
+          "age": 34,
+          "gender": "Male",
+          "epic": "POR01003"
+        }
       ]
     },
     {
@@ -263,15 +646,52 @@
       "is_cluster": true,
       "cluster_tag": "Joint Family Unit",
       "members": [
-        { "name": "Girish Kamat", "age": 58, "gender": "Male", "epic": "POR02001" },
-        { "name": "Ananya Kamat", "age": 54, "gender": "Female", "epic": "POR02002" }
+        {
+          "name": "Girish Kamat",
+          "age": 58,
+          "gender": "Male",
+          "epic": "POR02001"
+        },
+        {
+          "name": "Ananya Kamat",
+          "age": 54,
+          "gender": "Female",
+          "epic": "POR02002"
+        }
       ]
     }
   ],
   "churn_records": [
-    { "name": "Anil Kerkar", "relation": "Govind Kerkar", "epic": "POR032112", "village": "Socorro", "booth": "1", "stage": "Final Roll", "kind": "deleted", "reason": "Shifted to Panaji" },
-    { "name": "Nisha D'Souza", "relation": "David D'Souza", "epic": "POR041123", "village": "Penha-de-Franca", "booth": "22", "stage": "Supplement-3", "kind": "added", "reason": "Form 6 Fresh Voter" },
-    { "name": "Vikram Salgaonkar", "relation": "Rajan Salgaonkar", "epic": "POR051234", "village": "Salvador do Mundo", "booth": "39", "stage": "Final Roll", "kind": "modified", "reason": "Address Rectification" }
+    {
+      "name": "Anil Kerkar",
+      "relation": "Govind Kerkar",
+      "epic": "POR032112",
+      "village": "Socorro",
+      "booth": "1",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Shifted to Panaji"
+    },
+    {
+      "name": "Nisha D'Souza",
+      "relation": "David D'Souza",
+      "epic": "POR041123",
+      "village": "Penha-de-Franca",
+      "booth": "22",
+      "stage": "Supplement-3",
+      "kind": "added",
+      "reason": "Form 6 Fresh Voter"
+    },
+    {
+      "name": "Vikram Salgaonkar",
+      "relation": "Rajan Salgaonkar",
+      "epic": "POR051234",
+      "village": "Salvador do Mundo",
+      "booth": "39",
+      "stage": "Final Roll",
+      "kind": "modified",
+      "reason": "Address Rectification"
+    }
   ],
   "survey": {
     "has_data": true,
@@ -285,43 +705,127 @@
         "title": "Govt / Overall Performance",
         "answered_count": 820,
         "categories": [
-          { "label": "Good", "pct": 58.2, "color": "#16A34A" },
-          { "label": "Excellent", "pct": 14.5, "color": "#2563EB" },
-          { "label": "Cannot Say", "pct": 12.3, "color": "#94A3B8" },
-          { "label": "Fair", "pct": 9.2, "color": "#EAB308" },
-          { "label": "Unsatisfied", "pct": 5.8, "color": "#DC2626" }
+          {
+            "label": "Good",
+            "pct": 58.2,
+            "color": "#16A34A"
+          },
+          {
+            "label": "Excellent",
+            "pct": 14.5,
+            "color": "#2563EB"
+          },
+          {
+            "label": "Cannot Say",
+            "pct": 12.3,
+            "color": "#94A3B8"
+          },
+          {
+            "label": "Fair",
+            "pct": 9.2,
+            "color": "#EAB308"
+          },
+          {
+            "label": "Unsatisfied",
+            "pct": 5.8,
+            "color": "#DC2626"
+          }
         ]
       },
       "cm": {
         "title": "CM Performance (State Level)",
         "answered_count": 710,
         "categories": [
-          { "label": "Good", "pct": 54.0, "color": "#16A34A" },
-          { "label": "Excellent", "pct": 12.0, "color": "#2563EB" },
-          { "label": "Fair", "pct": 14.0, "color": "#EAB308" },
-          { "label": "Cannot Say", "pct": 11.0, "color": "#94A3B8" },
-          { "label": "Unsatisfied", "pct": 9.0, "color": "#DC2626" }
+          {
+            "label": "Good",
+            "pct": 54.0,
+            "color": "#16A34A"
+          },
+          {
+            "label": "Excellent",
+            "pct": 12.0,
+            "color": "#2563EB"
+          },
+          {
+            "label": "Fair",
+            "pct": 14.0,
+            "color": "#EAB308"
+          },
+          {
+            "label": "Cannot Say",
+            "pct": 11.0,
+            "color": "#94A3B8"
+          },
+          {
+            "label": "Unsatisfied",
+            "pct": 9.0,
+            "color": "#DC2626"
+          }
         ]
       },
       "mla": {
         "title": "MLA Local Performance (Rohan Khaunte)",
         "answered_count": 612,
         "categories": [
-          { "label": "Excellent", "pct": 38.5, "color": "#2563EB" },
-          { "label": "Good", "pct": 46.2, "color": "#16A34A" },
-          { "label": "Fair", "pct": 8.1, "color": "#EAB308" },
-          { "label": "Unsatisfied", "pct": 4.2, "color": "#DC2626" },
-          { "label": "Cannot Say", "pct": 3.0, "color": "#94A3B8" }
+          {
+            "label": "Excellent",
+            "pct": 38.5,
+            "color": "#2563EB"
+          },
+          {
+            "label": "Good",
+            "pct": 46.2,
+            "color": "#16A34A"
+          },
+          {
+            "label": "Fair",
+            "pct": 8.1,
+            "color": "#EAB308"
+          },
+          {
+            "label": "Unsatisfied",
+            "pct": 4.2,
+            "color": "#DC2626"
+          },
+          {
+            "label": "Cannot Say",
+            "pct": 3.0,
+            "color": "#94A3B8"
+          }
         ]
       }
     },
     "issues": [
-      { "issue": "Traffic Management & Highway Access", "count": 180, "pct": 32.5 },
-      { "issue": "Drinking Water Supply Pipeline", "count": 110, "pct": 19.8 },
-      { "issue": "Drainage & Monsoon Waterlogging", "count": 92, "pct": 16.6 },
-      { "issue": "Garbage & Waste Disposal", "count": 74, "pct": 13.3 },
-      { "issue": "Power Fluctuations", "count": 45, "pct": 8.1 },
-      { "issue": "Other Issues", "count": 54, "pct": 9.7 }
+      {
+        "issue": "Traffic Management & Highway Access",
+        "count": 180,
+        "pct": 32.5
+      },
+      {
+        "issue": "Drinking Water Supply Pipeline",
+        "count": 110,
+        "pct": 19.8
+      },
+      {
+        "issue": "Drainage & Monsoon Waterlogging",
+        "count": 92,
+        "pct": 16.6
+      },
+      {
+        "issue": "Garbage & Waste Disposal",
+        "count": 74,
+        "pct": 13.3
+      },
+      {
+        "issue": "Power Fluctuations",
+        "count": 45,
+        "pct": 8.1
+      },
+      {
+        "issue": "Other Issues",
+        "count": 54,
+        "pct": 9.7
+      }
     ]
   }
 }

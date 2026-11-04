@@ -16,8 +16,15 @@
     "sir_added": 693,
     "sir_modified": 330,
     "constituent_areas": [
-      "Sanquelim", "Arvalem", "Cudnem", "Navelim", "Amona", 
-      "Surla", "Velguem", "Pale", "Cotombi"
+      "Sanquelim",
+      "Arvalem",
+      "Cudnem",
+      "Navelim",
+      "Amona",
+      "Surla",
+      "Velguem",
+      "Pale",
+      "Cotombi"
     ],
     "urban_rural_split": {
       "urban_pct": 31.1,
@@ -85,20 +92,74 @@
   ],
   "demographics": {
     "gender": {
-      "female": { "count": 13915, "pct": 51.0 },
-      "male": { "count": 13350, "pct": 49.0 },
-      "third_gender": { "count": 0, "pct": 0.0 },
-      "unknown": { "count": 0, "pct": 0.0 },
+      "female": {
+        "count": 13915,
+        "pct": 51.0
+      },
+      "male": {
+        "count": 13350,
+        "pct": 49.0
+      },
+      "third_gender": {
+        "count": 0,
+        "pct": 0.0
+      },
+      "unknown": {
+        "count": 0,
+        "pct": 0.0
+      },
       "sex_ratio": 1042
     },
     "age_groups": [
-      { "cohort": "45-54", "count": 5947, "pct": 21.8, "male": 2800, "female": 3147 },
-      { "cohort": "25-34", "count": 5084, "pct": 18.6, "male": 2537, "female": 2547 },
-      { "cohort": "35-44", "count": 4892, "pct": 17.9, "male": 2414, "female": 2478 },
-      { "cohort": "55-64", "count": 4543, "pct": 16.7, "male": 2216, "female": 2327 },
-      { "cohort": "18-24", "count": 3153, "pct": 11.6, "male": 1655, "female": 1498 },
-      { "cohort": "65-74", "count": 2560, "pct": 9.4, "male": 1254, "female": 1306 },
-      { "cohort": "75+", "count": 1086, "pct": 4.0, "male": 474, "female": 612 }
+      {
+        "cohort": "45-54",
+        "count": 5947,
+        "pct": 21.8,
+        "male": 2800,
+        "female": 3147
+      },
+      {
+        "cohort": "25-34",
+        "count": 5084,
+        "pct": 18.6,
+        "male": 2537,
+        "female": 2547
+      },
+      {
+        "cohort": "35-44",
+        "count": 4892,
+        "pct": 17.9,
+        "male": 2414,
+        "female": 2478
+      },
+      {
+        "cohort": "55-64",
+        "count": 4543,
+        "pct": 16.7,
+        "male": 2216,
+        "female": 2327
+      },
+      {
+        "cohort": "18-24",
+        "count": 3153,
+        "pct": 11.6,
+        "male": 1655,
+        "female": 1498
+      },
+      {
+        "cohort": "65-74",
+        "count": 2560,
+        "pct": 9.4,
+        "male": 1254,
+        "female": 1306
+      },
+      {
+        "cohort": "75+",
+        "count": 1086,
+        "pct": 4.0,
+        "male": 474,
+        "female": 612
+      }
     ]
   },
   "leaders": {
@@ -116,7 +177,7 @@
       "portfolio": "Chief Minister of Goa (Home, Finance, Personnel & Education)",
       "age": 51,
       "tenure": "3rd Consecutive Term (Since 2012)",
-      "photo_url": "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=256"
+      "photo_url": "/images/leaders/pramod-sawant.jpg"
     },
     "mp": {
       "role": "SITTING MP",
@@ -132,7 +193,7 @@
       "portfolio": "Union Minister of State for Power & New and Renewable Energy",
       "age": 71,
       "tenure": "6th Consecutive Term (Since 1999)",
-      "photo_url": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=256"
+      "photo_url": "/images/leaders/shripad-naik.jpg"
     }
   },
   "elections": {
@@ -141,25 +202,79 @@
         {
           "election": "2022 Assembly",
           "candidates": [
-            { "name": "Dr. Pramod Sawant", "party": "BJP", "pct": 48.3, "votes": 12250, "is_winner": true },
-            { "name": "Dharmesh Saglani", "party": "INC", "pct": 45.6, "votes": 11584, "is_winner": false },
-            { "name": "Others / Independent", "party": "Others", "pct": 6.1, "votes": 1547, "is_winner": false }
+            {
+              "name": "Dr. Pramod Sawant",
+              "party": "BJP",
+              "pct": 48.3,
+              "votes": 12250,
+              "is_winner": true
+            },
+            {
+              "name": "Dharmesh Saglani",
+              "party": "INC",
+              "pct": 45.6,
+              "votes": 11584,
+              "is_winner": false
+            },
+            {
+              "name": "Others / Independent",
+              "party": "Others",
+              "pct": 6.1,
+              "votes": 1547,
+              "is_winner": false
+            }
           ]
         },
         {
           "election": "2017 Assembly",
           "candidates": [
-            { "name": "Dr. Pramod Sawant", "party": "BJP", "pct": 43.0, "votes": 10058, "is_winner": true },
-            { "name": "Dharmesh Saglani", "party": "INC", "pct": 33.9, "votes": 7927, "is_winner": false },
-            { "name": "Suresh Amonkar", "party": "GSM", "pct": 16.4, "votes": 3831, "is_winner": false },
-            { "name": "Others", "party": "Others", "pct": 6.7, "votes": 1566, "is_winner": false }
+            {
+              "name": "Dr. Pramod Sawant",
+              "party": "BJP",
+              "pct": 43.0,
+              "votes": 10058,
+              "is_winner": true
+            },
+            {
+              "name": "Dharmesh Saglani",
+              "party": "INC",
+              "pct": 33.9,
+              "votes": 7927,
+              "is_winner": false
+            },
+            {
+              "name": "Suresh Amonkar",
+              "party": "GSM",
+              "pct": 16.4,
+              "votes": 3831,
+              "is_winner": false
+            },
+            {
+              "name": "Others",
+              "party": "Others",
+              "pct": 6.7,
+              "votes": 1566,
+              "is_winner": false
+            }
           ]
         },
         {
           "election": "2012 Assembly",
           "candidates": [
-            { "name": "Pramod Sawant", "party": "BJP", "pct": 66.1, "votes": 14255, "is_winner": true },
-            { "name": "Pratap Gauns", "party": "INC", "pct": 33.9, "votes": 7337, "is_winner": false }
+            {
+              "name": "Pramod Sawant",
+              "party": "BJP",
+              "pct": 66.1,
+              "votes": 14255,
+              "is_winner": true
+            },
+            {
+              "name": "Pratap Gauns",
+              "party": "INC",
+              "pct": 33.9,
+              "votes": 7337,
+              "is_winner": false
+            }
           ]
         }
       ],
@@ -167,36 +282,140 @@
         {
           "election": "2024 Lok Sabha (PC in AC)",
           "candidates": [
-            { "name": "Shripad Yesso Naik", "party": "BJP", "pct": 80.0, "votes": 18240, "is_winner": true },
-            { "name": "Ramakant Khalap", "party": "INC", "pct": 15.1, "votes": 3442, "is_winner": false },
-            { "name": "Tukaram Bharat Parab", "party": "RGP", "pct": 4.0, "votes": 912, "is_winner": false },
-            { "name": "Others", "party": "Others", "pct": 0.9, "votes": 205, "is_winner": false }
+            {
+              "name": "Shripad Yesso Naik",
+              "party": "BJP",
+              "pct": 80.0,
+              "votes": 18240,
+              "is_winner": true
+            },
+            {
+              "name": "Ramakant Khalap",
+              "party": "INC",
+              "pct": 15.1,
+              "votes": 3442,
+              "is_winner": false
+            },
+            {
+              "name": "Tukaram Bharat Parab",
+              "party": "RGP",
+              "pct": 4.0,
+              "votes": 912,
+              "is_winner": false
+            },
+            {
+              "name": "Others",
+              "party": "Others",
+              "pct": 0.9,
+              "votes": 205,
+              "is_winner": false
+            }
           ]
         },
         {
           "election": "2019 Lok Sabha",
           "candidates": [
-            { "name": "Shripad Yesso Naik", "party": "BJP", "pct": 64.9, "votes": 14667, "is_winner": true },
-            { "name": "Girish Chodankar", "party": "INC", "pct": 33.5, "votes": 7571, "is_winner": false },
-            { "name": "Others", "party": "Others", "pct": 1.6, "votes": 361, "is_winner": false }
+            {
+              "name": "Shripad Yesso Naik",
+              "party": "BJP",
+              "pct": 64.9,
+              "votes": 14667,
+              "is_winner": true
+            },
+            {
+              "name": "Girish Chodankar",
+              "party": "INC",
+              "pct": 33.5,
+              "votes": 7571,
+              "is_winner": false
+            },
+            {
+              "name": "Others",
+              "party": "Others",
+              "pct": 1.6,
+              "votes": 361,
+              "is_winner": false
+            }
           ]
         },
         {
           "election": "2014 Lok Sabha",
           "candidates": [
-            { "name": "Shripad Yesso Naik", "party": "BJP", "pct": 68.2, "votes": 14867, "is_winner": true },
-            { "name": "Ravi Naik", "party": "INC", "pct": 26.4, "votes": 5755, "is_winner": false },
-            { "name": "Others", "party": "Others", "pct": 5.4, "votes": 1177, "is_winner": false }
+            {
+              "name": "Shripad Yesso Naik",
+              "party": "BJP",
+              "pct": 68.2,
+              "votes": 14867,
+              "is_winner": true
+            },
+            {
+              "name": "Ravi Naik",
+              "party": "INC",
+              "pct": 26.4,
+              "votes": 5755,
+              "is_winner": false
+            },
+            {
+              "name": "Others",
+              "party": "Others",
+              "pct": 5.4,
+              "votes": 1177,
+              "is_winner": false
+            }
           ]
         }
       ]
     },
     "trends_and_swing": {
-      "years": [2008, 2012, 2014, 2017, 2019, 2022, 2024],
+      "years": [
+        2008,
+        2012,
+        2014,
+        2017,
+        2019,
+        2022,
+        2024
+      ],
       "series": [
-        { "party": "BJP", "color": "#FF9933", "data": [39.2, 66.1, 68.2, 43.0, 64.9, 48.3, 80.0] },
-        { "party": "INC", "color": "#1982C4", "data": [42.8, 33.9, 26.4, 33.9, 33.5, 45.6, 15.1] },
-        { "party": "Others / Regional", "color": "#7C3AED", "data": [18.0, 0.0, 5.4, 23.1, 1.6, 6.1, 4.9] }
+        {
+          "party": "BJP",
+          "color": "#FF9933",
+          "data": [
+            39.2,
+            66.1,
+            68.2,
+            43.0,
+            64.9,
+            48.3,
+            80.0
+          ]
+        },
+        {
+          "party": "INC",
+          "color": "#1982C4",
+          "data": [
+            42.8,
+            33.9,
+            26.4,
+            33.9,
+            33.5,
+            45.6,
+            15.1
+          ]
+        },
+        {
+          "party": "Others / Regional",
+          "color": "#7C3AED",
+          "data": [
+            18.0,
+            0.0,
+            5.4,
+            23.1,
+            1.6,
+            6.1,
+            4.9
+          ]
+        }
       ],
       "key_movements": [
         {
@@ -222,98 +441,954 @@
         }
       ],
       "takeaways": [
-        "Sanquelim displays strong split-ticket voting behavior: parliamentary contests yield 65%–80% BJP surges, whereas assembly elections are vigorously contested (2.6% margin in 2022).",
+        "Sanquelim displays strong split-ticket voting behavior: parliamentary contests yield 65%\u201380% BJP surges, whereas assembly elections are vigorously contested (2.6% margin in 2022).",
         "Cotombi, Surla, and Navelim represent solid fortress villages with >35% BJP margins consistently across all cycles.",
         "RGP captured 4.0% vote share in 2024 Lok Sabha, indicating emerging alternative regional presence."
       ]
     },
     "party_control_timeline": [
-      { "year": 2008, "type": "Assembly By-Poll", "winner": "INC", "party_code": "INC", "lead": "Pratap Gauns", "vote_pct": "42.78%" },
-      { "year": 2012, "type": "General Assembly", "winner": "BJP", "party_code": "BJP", "lead": "Dr. Pramod Sawant", "vote_pct": "66.08%" },
-      { "year": 2017, "type": "General Assembly", "winner": "BJP", "party_code": "BJP", "lead": "Dr. Pramod Sawant", "vote_pct": "42.44%" },
-      { "year": 2022, "type": "General Assembly", "winner": "BJP", "party_code": "BJP", "lead": "Dr. Pramod Sawant", "vote_pct": "48.27%" },
-      { "year": 2024, "type": "Lok Sabha (AC Polling)", "winner": "BJP", "party_code": "BJP", "lead": "Shripad Yesso Naik", "vote_pct": "80.00%" }
+      {
+        "year": 2008,
+        "type": "Assembly By-Poll",
+        "winner": "INC",
+        "party_code": "INC",
+        "lead": "Pratap Gauns",
+        "vote_pct": "42.78%"
+      },
+      {
+        "year": 2012,
+        "type": "General Assembly",
+        "winner": "BJP",
+        "party_code": "BJP",
+        "lead": "Dr. Pramod Sawant",
+        "vote_pct": "66.08%"
+      },
+      {
+        "year": 2017,
+        "type": "General Assembly",
+        "winner": "BJP",
+        "party_code": "BJP",
+        "lead": "Dr. Pramod Sawant",
+        "vote_pct": "42.44%"
+      },
+      {
+        "year": 2022,
+        "type": "General Assembly",
+        "winner": "BJP",
+        "party_code": "BJP",
+        "lead": "Dr. Pramod Sawant",
+        "vote_pct": "48.27%"
+      },
+      {
+        "year": 2024,
+        "type": "Lok Sabha (AC Polling)",
+        "winner": "BJP",
+        "party_code": "BJP",
+        "lead": "Shripad Yesso Naik",
+        "vote_pct": "80.00%"
+      }
     ],
     "candidate_returns": {
       "assembly_2022": [
-        { "rank": 1, "name": "Dr. Pramod Sawant", "party": "BJP", "votes": 12250, "pct": 48.27, "status": "Winner", "margin": "+666" },
-        { "rank": 2, "name": "Dharmesh Saglani", "party": "INC", "votes": 11584, "pct": 45.64, "status": "Runner-Up", "margin": "-666" },
-        { "rank": 3, "name": "Sujesh Sanzgiri", "party": "RGP", "votes": 907, "pct": 3.57, "status": "Lost", "margin": "-11343" },
-        { "rank": 4, "name": "Manoj Parab", "party": "AAP", "votes": 352, "pct": 1.39, "status": "Lost", "margin": "-11898" },
-        { "rank": 5, "name": "None of the Above", "party": "NOTA", "votes": 288, "pct": 1.13, "status": "Lost", "margin": "-11962" }
+        {
+          "rank": 1,
+          "name": "Dr. Pramod Sawant",
+          "party": "BJP",
+          "votes": 12250,
+          "pct": 48.27,
+          "status": "Winner",
+          "margin": "+666"
+        },
+        {
+          "rank": 2,
+          "name": "Dharmesh Saglani",
+          "party": "INC",
+          "votes": 11584,
+          "pct": 45.64,
+          "status": "Runner-Up",
+          "margin": "-666"
+        },
+        {
+          "rank": 3,
+          "name": "Sujesh Sanzgiri",
+          "party": "RGP",
+          "votes": 907,
+          "pct": 3.57,
+          "status": "Lost",
+          "margin": "-11343"
+        },
+        {
+          "rank": 4,
+          "name": "Manoj Parab",
+          "party": "AAP",
+          "votes": 352,
+          "pct": 1.39,
+          "status": "Lost",
+          "margin": "-11898"
+        },
+        {
+          "rank": 5,
+          "name": "None of the Above",
+          "party": "NOTA",
+          "votes": 288,
+          "pct": 1.13,
+          "status": "Lost",
+          "margin": "-11962"
+        }
       ],
       "parliament_2024": [
-        { "rank": 1, "name": "Shripad Yesso Naik", "party": "BJP", "votes": 18240, "pct": 80.00, "status": "Winner", "margin": "+14798" },
-        { "rank": 2, "name": "Ramakant Khalap", "party": "INC", "votes": 3442, "pct": 15.10, "status": "Runner-Up", "margin": "-14798" },
-        { "rank": 3, "name": "Tukaram Bharat Parab", "party": "RGP", "votes": 912, "pct": 4.00, "status": "Lost", "margin": "-17328" },
-        { "rank": 4, "name": "None of the Above", "party": "NOTA", "votes": 205, "pct": 0.90, "status": "Lost", "margin": "-18035" }
+        {
+          "rank": 1,
+          "name": "Shripad Yesso Naik",
+          "party": "BJP",
+          "votes": 18240,
+          "pct": 80.0,
+          "status": "Winner",
+          "margin": "+14798"
+        },
+        {
+          "rank": 2,
+          "name": "Ramakant Khalap",
+          "party": "INC",
+          "votes": 3442,
+          "pct": 15.1,
+          "status": "Runner-Up",
+          "margin": "-14798"
+        },
+        {
+          "rank": 3,
+          "name": "Tukaram Bharat Parab",
+          "party": "RGP",
+          "votes": 912,
+          "pct": 4.0,
+          "status": "Lost",
+          "margin": "-17328"
+        },
+        {
+          "rank": 4,
+          "name": "None of the Above",
+          "party": "NOTA",
+          "votes": 205,
+          "pct": 0.9,
+          "status": "Lost",
+          "margin": "-18035"
+        }
       ]
     }
   },
   "spatial": {
     "viewBox": "0 0 1186 920",
     "villages": [
-      { "name": "Cotombi", "margin_pct": 43.4, "voters": 483, "added": 9, "deleted": 11, "modified": 5, "category": "Safe", "cx": 1020, "cy": 320, "r": 65 },
-      { "name": "Surla", "margin_pct": 39.6, "voters": 3163, "added": 72, "deleted": 42, "modified": 46, "category": "Safe", "cx": 880, "cy": 250, "r": 95 },
-      { "name": "Navelim", "margin_pct": 35.6, "voters": 2285, "added": 40, "deleted": 39, "modified": 22, "category": "Safe", "cx": 440, "cy": 480, "r": 85 },
-      { "name": "Amona", "margin_pct": 35.1, "voters": 2621, "added": 86, "deleted": 27, "modified": 36, "category": "Safe", "cx": 320, "cy": 660, "r": 90 },
-      { "name": "Cudnem", "margin_pct": 35.0, "voters": 2742, "added": 84, "deleted": 44, "modified": 36, "category": "Safe", "cx": 520, "cy": 320, "r": 90 },
-      { "name": "Arvalem", "margin_pct": 32.9, "voters": 2095, "added": 52, "deleted": 52, "modified": 34, "category": "Safe", "cx": 700, "cy": 420, "r": 85 },
-      { "name": "Pale", "margin_pct": 30.1, "voters": 4431, "added": 83, "deleted": 66, "modified": 41, "category": "Safe", "cx": 860, "cy": 620, "r": 110 },
-      { "name": "Velguem", "margin_pct": 25.6, "voters": 1599, "added": 36, "deleted": 37, "modified": 18, "category": "Safe", "cx": 740, "cy": 760, "r": 80 },
-      { "name": "Sanquelim", "margin_pct": 20.7, "voters": 8480, "added": 231, "deleted": 316, "modified": 92, "category": "Safe", "cx": 360, "cy": 220, "r": 130 }
+      {
+        "name": "Cotombi",
+        "margin_pct": 43.4,
+        "voters": 483,
+        "added": 9,
+        "deleted": 11,
+        "modified": 5,
+        "category": "Safe",
+        "cx": 1020,
+        "cy": 320,
+        "r": 65
+      },
+      {
+        "name": "Surla",
+        "margin_pct": 39.6,
+        "voters": 3163,
+        "added": 72,
+        "deleted": 42,
+        "modified": 46,
+        "category": "Safe",
+        "cx": 880,
+        "cy": 250,
+        "r": 95
+      },
+      {
+        "name": "Navelim",
+        "margin_pct": 35.6,
+        "voters": 2285,
+        "added": 40,
+        "deleted": 39,
+        "modified": 22,
+        "category": "Safe",
+        "cx": 440,
+        "cy": 480,
+        "r": 85
+      },
+      {
+        "name": "Amona",
+        "margin_pct": 35.1,
+        "voters": 2621,
+        "added": 86,
+        "deleted": 27,
+        "modified": 36,
+        "category": "Safe",
+        "cx": 320,
+        "cy": 660,
+        "r": 90
+      },
+      {
+        "name": "Cudnem",
+        "margin_pct": 35.0,
+        "voters": 2742,
+        "added": 84,
+        "deleted": 44,
+        "modified": 36,
+        "category": "Safe",
+        "cx": 520,
+        "cy": 320,
+        "r": 90
+      },
+      {
+        "name": "Arvalem",
+        "margin_pct": 32.9,
+        "voters": 2095,
+        "added": 52,
+        "deleted": 52,
+        "modified": 34,
+        "category": "Safe",
+        "cx": 700,
+        "cy": 420,
+        "r": 85
+      },
+      {
+        "name": "Pale",
+        "margin_pct": 30.1,
+        "voters": 4431,
+        "added": 83,
+        "deleted": 66,
+        "modified": 41,
+        "category": "Safe",
+        "cx": 860,
+        "cy": 620,
+        "r": 110
+      },
+      {
+        "name": "Velguem",
+        "margin_pct": 25.6,
+        "voters": 1599,
+        "added": 36,
+        "deleted": 37,
+        "modified": 18,
+        "category": "Safe",
+        "cx": 740,
+        "cy": 760,
+        "r": 80
+      },
+      {
+        "name": "Sanquelim",
+        "margin_pct": 20.7,
+        "voters": 8480,
+        "added": 231,
+        "deleted": 316,
+        "modified": 92,
+        "category": "Safe",
+        "cx": 360,
+        "cy": 220,
+        "r": 130
+      }
     ],
     "booths": [
-      { "part_no": "1", "station_name": "Govt. Primary School Kharekhajan, Virdi", "village": "Sanquelim", "voters": 399, "added": 9, "deleted": 1, "families_count": 83, "margin_pct": 18.5, "winner": "BJP", "category": "Safe", "x": 220, "y": 140 },
-      { "part_no": "2", "station_name": "Govt Primary School Deulwada Virdi", "village": "Sanquelim", "voters": 729, "added": 16, "deleted": 4, "families_count": 160, "margin_pct": 22.0, "winner": "BJP", "category": "Safe", "x": 280, "y": 160 },
-      { "part_no": "3", "station_name": "Laxmibai G.Sanzgiri Memorial School, New wada", "village": "Sanquelim", "voters": 687, "added": 17, "deleted": 15, "families_count": 145, "margin_pct": 14.2, "winner": "BJP", "category": "Safe", "x": 340, "y": 150 },
-      { "part_no": "4", "station_name": "Progress High School, Sanquelim", "village": "Sanquelim", "voters": 508, "added": 12, "deleted": 12, "families_count": 105, "margin_pct": 19.8, "winner": "BJP", "category": "Safe", "x": 400, "y": 170 },
-      { "part_no": "5", "station_name": "Govt. Higher Secondary School (West Wing)", "village": "Sanquelim", "voters": 511, "added": 12, "deleted": 39, "families_count": 104, "margin_pct": 21.4, "winner": "BJP", "category": "Safe", "x": 310, "y": 210 },
-      { "part_no": "6", "station_name": "Govt. Higher Scondary School (East Wing)", "village": "Sanquelim", "voters": 578, "added": 25, "deleted": 23, "families_count": 126, "margin_pct": 24.5, "winner": "BJP", "category": "Safe", "x": 370, "y": 215 },
-      { "part_no": "7", "station_name": "Multipurpose Hall, Sanquelim", "village": "Sanquelim", "voters": 719, "added": 10, "deleted": 58, "families_count": 159, "margin_pct": 16.9, "winner": "BJP", "category": "Safe", "x": 430, "y": 220 },
-      { "part_no": "8", "station_name": "Govt. Primary School Maulinguem South", "village": "Sanquelim", "voters": 469, "added": 10, "deleted": 9, "families_count": 99, "margin_pct": 26.1, "winner": "BJP", "category": "Safe", "x": 260, "y": 270 },
-      { "part_no": "9", "station_name": "Govt. College of Arts, Science & Commerce", "village": "Sanquelim", "voters": 779, "added": 37, "deleted": 13, "families_count": 199, "margin_pct": 28.3, "winner": "BJP", "category": "Safe", "x": 330, "y": 280 },
-      { "part_no": "10", "station_name": "Ravindra Bhavan, Sanquelim", "village": "Sanquelim", "voters": 698, "added": 16, "deleted": 35, "families_count": 189, "margin_pct": 20.2, "winner": "BJP", "category": "Safe", "x": 390, "y": 280 },
-      { "part_no": "11", "station_name": "Anganwadi Center, Housing Board Colony", "village": "Sanquelim", "voters": 610, "added": 24, "deleted": 31, "families_count": 166, "margin_pct": 18.0, "winner": "BJP", "category": "Safe", "x": 450, "y": 275 },
-      { "part_no": "12", "station_name": "Govt. Primary School (West Wing), Near Rudreshwar", "village": "Sanquelim", "voters": 800, "added": 27, "deleted": 45, "families_count": 191, "margin_pct": 22.8, "winner": "BJP", "category": "Safe", "x": 300, "y": 340 },
-      { "part_no": "13", "station_name": "Govt. Primary School (East Wing), Near Rudreshwar", "village": "Sanquelim", "voters": 677, "added": 16, "deleted": 31, "families_count": 161, "margin_pct": 21.0, "winner": "BJP", "category": "Safe", "x": 360, "y": 345 },
-      { "part_no": "14", "station_name": "Govt. Primary School Pratapnagar, Arvalem", "village": "Arvalem", "voters": 742, "added": 20, "deleted": 20, "families_count": 176, "margin_pct": 34.0, "winner": "BJP", "category": "Safe", "x": 650, "y": 380 },
-      { "part_no": "15", "station_name": "Govt. Primary School (South Wing), Varche Arvalem", "village": "Arvalem", "voters": 602, "added": 23, "deleted": 24, "families_count": 128, "margin_pct": 31.5, "winner": "BJP", "category": "Safe", "x": 710, "y": 400 },
-      { "part_no": "16", "station_name": "Govt Primary School (North Wing), Varche Arvalem", "village": "Arvalem", "voters": 699, "added": 9, "deleted": 8, "families_count": 129, "margin_pct": 33.2, "winner": "BJP", "category": "Safe", "x": 760, "y": 420 },
-      { "part_no": "17", "station_name": "Govt. Primary School, Dingnem", "village": "Cudnem", "voters": 465, "added": 9, "deleted": 15, "families_count": 106, "margin_pct": 36.4, "winner": "BJP", "category": "Safe", "x": 480, "y": 310 },
-      { "part_no": "18", "station_name": "Govt. Primary School, Falwadi Kudne", "village": "Cudnem", "voters": 522, "added": 13, "deleted": 4, "families_count": 105, "margin_pct": 38.0, "winner": "BJP", "category": "Safe", "x": 530, "y": 330 },
-      { "part_no": "19", "station_name": "Village Panchayat Office, Kudne", "village": "Cudnem", "voters": 507, "added": 18, "deleted": 10, "families_count": 115, "margin_pct": 33.1, "winner": "BJP", "category": "Safe", "x": 580, "y": 350 },
-      { "part_no": "20", "station_name": "Govt. Primary School (West Wing), Gaonkarwada", "village": "Cudnem", "voters": 498, "added": 23, "deleted": 5, "families_count": 101, "margin_pct": 32.5, "winner": "BJP", "category": "Safe", "x": 510, "y": 380 },
-      { "part_no": "21", "station_name": "Govt. Primary School (East Wing), Gaonkarwada", "village": "Cudnem", "voters": 706, "added": 21, "deleted": 10, "families_count": 154, "margin_pct": 36.2, "winner": "BJP", "category": "Safe", "x": 560, "y": 400 },
-      { "part_no": "22", "station_name": "Govt. Primary School Gaonkarwada, Navelim", "village": "Navelim", "voters": 585, "added": 14, "deleted": 24, "families_count": 137, "margin_pct": 35.8, "winner": "BJP", "category": "Safe", "x": 410, "y": 460 },
-      { "part_no": "23", "station_name": "Govt. High School Gaonkarwada, Navelim", "village": "Navelim", "voters": 724, "added": 11, "deleted": 5, "families_count": 167, "margin_pct": 37.1, "winner": "BJP", "category": "Safe", "x": 460, "y": 480 },
-      { "part_no": "24", "station_name": "Govt. Primary School Fanaswadi, Navelim", "village": "Navelim", "voters": 448, "added": 6, "deleted": 3, "families_count": 97, "margin_pct": 34.0, "winner": "BJP", "category": "Safe", "x": 420, "y": 520 },
-      { "part_no": "25", "station_name": "Govt. Primary School Maina, Navelim", "village": "Navelim", "voters": 489, "added": 9, "deleted": 7, "families_count": 95, "margin_pct": 36.0, "winner": "BJP", "category": "Safe", "x": 480, "y": 540 },
-      { "part_no": "26", "station_name": "Govt. Primary School (North Wing), Kharwada", "village": "Amona", "voters": 369, "added": 13, "deleted": 4, "families_count": 72, "margin_pct": 32.0, "winner": "BJP", "category": "Safe", "x": 280, "y": 620 },
-      { "part_no": "27", "station_name": "Govt. Primary School (South Wing), Kharwada", "village": "Amona", "voters": 489, "added": 8, "deleted": 4, "families_count": 107, "margin_pct": 34.5, "winner": "BJP", "category": "Safe", "x": 330, "y": 640 },
-      { "part_no": "28", "station_name": "Govt. Primary School, Near V. P Office (North)", "village": "Amona", "voters": 327, "added": 12, "deleted": 4, "families_count": 73, "margin_pct": 36.8, "winner": "BJP", "category": "Safe", "x": 300, "y": 680 },
-      { "part_no": "29", "station_name": "Govt. Primary School, Near V. P Office (South)", "village": "Amona", "voters": 699, "added": 33, "deleted": 11, "families_count": 150, "margin_pct": 37.4, "winner": "BJP", "category": "Safe", "x": 350, "y": 700 },
-      { "part_no": "30", "station_name": "Gram Panchayat Vachanalaya, Ambedkarwada", "village": "Amona", "voters": 710, "added": 20, "deleted": 4, "families_count": 136, "margin_pct": 35.0, "winner": "BJP", "category": "Safe", "x": 320, "y": 740 },
-      { "part_no": "31", "station_name": "Govt. Primary School, Tarwada, Surla", "village": "Surla", "voters": 455, "added": 10, "deleted": 12, "families_count": 100, "margin_pct": 40.2, "winner": "BJP", "category": "Safe", "x": 820, "y": 210 },
-      { "part_no": "32", "station_name": "Govt. Primary School, Khadchal, Surla", "village": "Surla", "voters": 432, "added": 5, "deleted": 6, "families_count": 98, "margin_pct": 38.6, "winner": "BJP", "category": "Safe", "x": 880, "y": 210 },
-      { "part_no": "33", "station_name": "Govt. Primary School, Khodgini, Surla", "village": "Surla", "voters": 436, "added": 11, "deleted": 6, "families_count": 102, "margin_pct": 41.5, "winner": "BJP", "category": "Safe", "x": 930, "y": 220 },
-      { "part_no": "34", "station_name": "Govt. Primary School, Bayem, Surla", "village": "Surla", "voters": 637, "added": 18, "deleted": 11, "families_count": 145, "margin_pct": 39.0, "winner": "BJP", "category": "Safe", "x": 850, "y": 260 },
-      { "part_no": "35", "station_name": "Govt. Primary School (East Wing), Ghadiwada", "village": "Surla", "voters": 325, "added": 5, "deleted": 3, "families_count": 74, "margin_pct": 37.8, "winner": "BJP", "category": "Safe", "x": 900, "y": 270 },
-      { "part_no": "36", "station_name": "Govt. Primary School (West Wing), Ghadiwada", "village": "Surla", "voters": 499, "added": 16, "deleted": 2, "families_count": 122, "margin_pct": 40.8, "winner": "BJP", "category": "Safe", "x": 940, "y": 290 },
-      { "part_no": "37", "station_name": "Tagore High School, Tishem, Surla", "village": "Surla", "voters": 337, "added": 7, "deleted": 2, "families_count": 82, "margin_pct": 39.4, "winner": "BJP", "category": "Safe", "x": 870, "y": 320 },
-      { "part_no": "38", "station_name": "Bharti Bandodkar Primary School, Velguem", "village": "Velguem", "voters": 445, "added": 10, "deleted": 12, "families_count": 114, "margin_pct": 24.2, "winner": "BJP", "category": "Safe", "x": 710, "y": 740 },
-      { "part_no": "39", "station_name": "Govt. Primary & Middle School (North Wing)", "village": "Velguem", "voters": 617, "added": 15, "deleted": 16, "families_count": 151, "margin_pct": 26.5, "winner": "BJP", "category": "Safe", "x": 760, "y": 760 },
-      { "part_no": "40", "station_name": "Govt. Primary & Middle School (South Wing)", "village": "Velguem", "voters": 500, "added": 11, "deleted": 9, "families_count": 108, "margin_pct": 25.8, "winner": "BJP", "category": "Safe", "x": 780, "y": 800 },
-      { "part_no": "41", "station_name": "Govt. Primary School, Chinchwada Pale", "village": "Pale", "voters": 309, "added": 4, "deleted": 12, "families_count": 68, "margin_pct": 28.0, "winner": "BJP", "category": "Safe", "x": 820, "y": 580 },
-      { "part_no": "42", "station_name": "Govt. Primary School, Navarwada Pale", "village": "Pale", "voters": 435, "added": 14, "deleted": 1, "families_count": 100, "margin_pct": 31.0, "winner": "BJP", "category": "Safe", "x": 860, "y": 590 },
-      { "part_no": "43", "station_name": "Govt. Primary School, Ambeshiwada, Pale", "village": "Pale", "voters": 334, "added": 1, "deleted": 2, "families_count": 82, "margin_pct": 29.5, "winner": "BJP", "category": "Safe", "x": 900, "y": 600 },
-      { "part_no": "44", "station_name": "Govt. Primary School, Ambegal, Pale", "village": "Pale", "voters": 727, "added": 10, "deleted": 18, "families_count": 181, "margin_pct": 33.5, "winner": "BJP", "category": "Safe", "x": 830, "y": 640 },
-      { "part_no": "45", "station_name": "Govt. Primary School, Talewada, Pale", "village": "Pale", "voters": 475, "added": 8, "deleted": 1, "families_count": 119, "margin_pct": 30.0, "winner": "BJP", "category": "Safe", "x": 880, "y": 650 },
-      { "part_no": "46", "station_name": "Shri Navdurga High School, Ambegal Pale", "village": "Pale", "voters": 445, "added": 8, "deleted": 1, "families_count": 109, "margin_pct": 32.2, "winner": "BJP", "category": "Safe", "x": 920, "y": 660 },
-      { "part_no": "47", "station_name": "Govt. Primary School, Kothambi Pale", "village": "Cotombi", "voters": 472, "added": 9, "deleted": 11, "families_count": 88, "margin_pct": 43.4, "winner": "BJP", "category": "Safe", "x": 1010, "y": 320 },
-      { "part_no": "48", "station_name": "Govt. Primary School, Khajan, Surla", "village": "Pale", "voters": 502, "added": 9, "deleted": 3, "families_count": 106, "margin_pct": 27.5, "winner": "BJP", "category": "Safe", "x": 850, "y": 700 },
-      { "part_no": "49", "station_name": "Govt. Primary School, Rumad, Surla", "village": "Pale", "voters": 569, "added": 16, "deleted": 21, "families_count": 124, "margin_pct": 29.0, "winner": "BJP", "category": "Safe", "x": 890, "y": 720 },
-      { "part_no": "50", "station_name": "Govt. Primary School, Bhamai Pale", "village": "Pale", "voters": 569, "added": 13, "deleted": 7, "families_count": 146, "margin_pct": 30.5, "winner": "BJP", "category": "Safe", "x": 940, "y": 730 }
+      {
+        "part_no": "1",
+        "station_name": "Govt. Primary School Kharekhajan, Virdi",
+        "village": "Sanquelim",
+        "voters": 399,
+        "added": 9,
+        "deleted": 1,
+        "families_count": 83,
+        "margin_pct": 18.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 220,
+        "y": 140
+      },
+      {
+        "part_no": "2",
+        "station_name": "Govt Primary School Deulwada Virdi",
+        "village": "Sanquelim",
+        "voters": 729,
+        "added": 16,
+        "deleted": 4,
+        "families_count": 160,
+        "margin_pct": 22.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 280,
+        "y": 160
+      },
+      {
+        "part_no": "3",
+        "station_name": "Laxmibai G.Sanzgiri Memorial School, New wada",
+        "village": "Sanquelim",
+        "voters": 687,
+        "added": 17,
+        "deleted": 15,
+        "families_count": 145,
+        "margin_pct": 14.2,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 340,
+        "y": 150
+      },
+      {
+        "part_no": "4",
+        "station_name": "Progress High School, Sanquelim",
+        "village": "Sanquelim",
+        "voters": 508,
+        "added": 12,
+        "deleted": 12,
+        "families_count": 105,
+        "margin_pct": 19.8,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 400,
+        "y": 170
+      },
+      {
+        "part_no": "5",
+        "station_name": "Govt. Higher Secondary School (West Wing)",
+        "village": "Sanquelim",
+        "voters": 511,
+        "added": 12,
+        "deleted": 39,
+        "families_count": 104,
+        "margin_pct": 21.4,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 310,
+        "y": 210
+      },
+      {
+        "part_no": "6",
+        "station_name": "Govt. Higher Scondary School (East Wing)",
+        "village": "Sanquelim",
+        "voters": 578,
+        "added": 25,
+        "deleted": 23,
+        "families_count": 126,
+        "margin_pct": 24.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 370,
+        "y": 215
+      },
+      {
+        "part_no": "7",
+        "station_name": "Multipurpose Hall, Sanquelim",
+        "village": "Sanquelim",
+        "voters": 719,
+        "added": 10,
+        "deleted": 58,
+        "families_count": 159,
+        "margin_pct": 16.9,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 430,
+        "y": 220
+      },
+      {
+        "part_no": "8",
+        "station_name": "Govt. Primary School Maulinguem South",
+        "village": "Sanquelim",
+        "voters": 469,
+        "added": 10,
+        "deleted": 9,
+        "families_count": 99,
+        "margin_pct": 26.1,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 260,
+        "y": 270
+      },
+      {
+        "part_no": "9",
+        "station_name": "Govt. College of Arts, Science & Commerce",
+        "village": "Sanquelim",
+        "voters": 779,
+        "added": 37,
+        "deleted": 13,
+        "families_count": 199,
+        "margin_pct": 28.3,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 330,
+        "y": 280
+      },
+      {
+        "part_no": "10",
+        "station_name": "Ravindra Bhavan, Sanquelim",
+        "village": "Sanquelim",
+        "voters": 698,
+        "added": 16,
+        "deleted": 35,
+        "families_count": 189,
+        "margin_pct": 20.2,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 390,
+        "y": 280
+      },
+      {
+        "part_no": "11",
+        "station_name": "Anganwadi Center, Housing Board Colony",
+        "village": "Sanquelim",
+        "voters": 610,
+        "added": 24,
+        "deleted": 31,
+        "families_count": 166,
+        "margin_pct": 18.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 450,
+        "y": 275
+      },
+      {
+        "part_no": "12",
+        "station_name": "Govt. Primary School (West Wing), Near Rudreshwar",
+        "village": "Sanquelim",
+        "voters": 800,
+        "added": 27,
+        "deleted": 45,
+        "families_count": 191,
+        "margin_pct": 22.8,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 300,
+        "y": 340
+      },
+      {
+        "part_no": "13",
+        "station_name": "Govt. Primary School (East Wing), Near Rudreshwar",
+        "village": "Sanquelim",
+        "voters": 677,
+        "added": 16,
+        "deleted": 31,
+        "families_count": 161,
+        "margin_pct": 21.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 360,
+        "y": 345
+      },
+      {
+        "part_no": "14",
+        "station_name": "Govt. Primary School Pratapnagar, Arvalem",
+        "village": "Arvalem",
+        "voters": 742,
+        "added": 20,
+        "deleted": 20,
+        "families_count": 176,
+        "margin_pct": 34.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 650,
+        "y": 380
+      },
+      {
+        "part_no": "15",
+        "station_name": "Govt. Primary School (South Wing), Varche Arvalem",
+        "village": "Arvalem",
+        "voters": 602,
+        "added": 23,
+        "deleted": 24,
+        "families_count": 128,
+        "margin_pct": 31.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 710,
+        "y": 400
+      },
+      {
+        "part_no": "16",
+        "station_name": "Govt Primary School (North Wing), Varche Arvalem",
+        "village": "Arvalem",
+        "voters": 699,
+        "added": 9,
+        "deleted": 8,
+        "families_count": 129,
+        "margin_pct": 33.2,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 760,
+        "y": 420
+      },
+      {
+        "part_no": "17",
+        "station_name": "Govt. Primary School, Dingnem",
+        "village": "Cudnem",
+        "voters": 465,
+        "added": 9,
+        "deleted": 15,
+        "families_count": 106,
+        "margin_pct": 36.4,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 480,
+        "y": 310
+      },
+      {
+        "part_no": "18",
+        "station_name": "Govt. Primary School, Falwadi Kudne",
+        "village": "Cudnem",
+        "voters": 522,
+        "added": 13,
+        "deleted": 4,
+        "families_count": 105,
+        "margin_pct": 38.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 530,
+        "y": 330
+      },
+      {
+        "part_no": "19",
+        "station_name": "Village Panchayat Office, Kudne",
+        "village": "Cudnem",
+        "voters": 507,
+        "added": 18,
+        "deleted": 10,
+        "families_count": 115,
+        "margin_pct": 33.1,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 580,
+        "y": 350
+      },
+      {
+        "part_no": "20",
+        "station_name": "Govt. Primary School (West Wing), Gaonkarwada",
+        "village": "Cudnem",
+        "voters": 498,
+        "added": 23,
+        "deleted": 5,
+        "families_count": 101,
+        "margin_pct": 32.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 510,
+        "y": 380
+      },
+      {
+        "part_no": "21",
+        "station_name": "Govt. Primary School (East Wing), Gaonkarwada",
+        "village": "Cudnem",
+        "voters": 706,
+        "added": 21,
+        "deleted": 10,
+        "families_count": 154,
+        "margin_pct": 36.2,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 560,
+        "y": 400
+      },
+      {
+        "part_no": "22",
+        "station_name": "Govt. Primary School Gaonkarwada, Navelim",
+        "village": "Navelim",
+        "voters": 585,
+        "added": 14,
+        "deleted": 24,
+        "families_count": 137,
+        "margin_pct": 35.8,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 410,
+        "y": 460
+      },
+      {
+        "part_no": "23",
+        "station_name": "Govt. High School Gaonkarwada, Navelim",
+        "village": "Navelim",
+        "voters": 724,
+        "added": 11,
+        "deleted": 5,
+        "families_count": 167,
+        "margin_pct": 37.1,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 460,
+        "y": 480
+      },
+      {
+        "part_no": "24",
+        "station_name": "Govt. Primary School Fanaswadi, Navelim",
+        "village": "Navelim",
+        "voters": 448,
+        "added": 6,
+        "deleted": 3,
+        "families_count": 97,
+        "margin_pct": 34.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 420,
+        "y": 520
+      },
+      {
+        "part_no": "25",
+        "station_name": "Govt. Primary School Maina, Navelim",
+        "village": "Navelim",
+        "voters": 489,
+        "added": 9,
+        "deleted": 7,
+        "families_count": 95,
+        "margin_pct": 36.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 480,
+        "y": 540
+      },
+      {
+        "part_no": "26",
+        "station_name": "Govt. Primary School (North Wing), Kharwada",
+        "village": "Amona",
+        "voters": 369,
+        "added": 13,
+        "deleted": 4,
+        "families_count": 72,
+        "margin_pct": 32.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 280,
+        "y": 620
+      },
+      {
+        "part_no": "27",
+        "station_name": "Govt. Primary School (South Wing), Kharwada",
+        "village": "Amona",
+        "voters": 489,
+        "added": 8,
+        "deleted": 4,
+        "families_count": 107,
+        "margin_pct": 34.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 330,
+        "y": 640
+      },
+      {
+        "part_no": "28",
+        "station_name": "Govt. Primary School, Near V. P Office (North)",
+        "village": "Amona",
+        "voters": 327,
+        "added": 12,
+        "deleted": 4,
+        "families_count": 73,
+        "margin_pct": 36.8,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 300,
+        "y": 680
+      },
+      {
+        "part_no": "29",
+        "station_name": "Govt. Primary School, Near V. P Office (South)",
+        "village": "Amona",
+        "voters": 699,
+        "added": 33,
+        "deleted": 11,
+        "families_count": 150,
+        "margin_pct": 37.4,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 350,
+        "y": 700
+      },
+      {
+        "part_no": "30",
+        "station_name": "Gram Panchayat Vachanalaya, Ambedkarwada",
+        "village": "Amona",
+        "voters": 710,
+        "added": 20,
+        "deleted": 4,
+        "families_count": 136,
+        "margin_pct": 35.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 320,
+        "y": 740
+      },
+      {
+        "part_no": "31",
+        "station_name": "Govt. Primary School, Tarwada, Surla",
+        "village": "Surla",
+        "voters": 455,
+        "added": 10,
+        "deleted": 12,
+        "families_count": 100,
+        "margin_pct": 40.2,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 820,
+        "y": 210
+      },
+      {
+        "part_no": "32",
+        "station_name": "Govt. Primary School, Khadchal, Surla",
+        "village": "Surla",
+        "voters": 432,
+        "added": 5,
+        "deleted": 6,
+        "families_count": 98,
+        "margin_pct": 38.6,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 880,
+        "y": 210
+      },
+      {
+        "part_no": "33",
+        "station_name": "Govt. Primary School, Khodgini, Surla",
+        "village": "Surla",
+        "voters": 436,
+        "added": 11,
+        "deleted": 6,
+        "families_count": 102,
+        "margin_pct": 41.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 930,
+        "y": 220
+      },
+      {
+        "part_no": "34",
+        "station_name": "Govt. Primary School, Bayem, Surla",
+        "village": "Surla",
+        "voters": 637,
+        "added": 18,
+        "deleted": 11,
+        "families_count": 145,
+        "margin_pct": 39.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 850,
+        "y": 260
+      },
+      {
+        "part_no": "35",
+        "station_name": "Govt. Primary School (East Wing), Ghadiwada",
+        "village": "Surla",
+        "voters": 325,
+        "added": 5,
+        "deleted": 3,
+        "families_count": 74,
+        "margin_pct": 37.8,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 900,
+        "y": 270
+      },
+      {
+        "part_no": "36",
+        "station_name": "Govt. Primary School (West Wing), Ghadiwada",
+        "village": "Surla",
+        "voters": 499,
+        "added": 16,
+        "deleted": 2,
+        "families_count": 122,
+        "margin_pct": 40.8,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 940,
+        "y": 290
+      },
+      {
+        "part_no": "37",
+        "station_name": "Tagore High School, Tishem, Surla",
+        "village": "Surla",
+        "voters": 337,
+        "added": 7,
+        "deleted": 2,
+        "families_count": 82,
+        "margin_pct": 39.4,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 870,
+        "y": 320
+      },
+      {
+        "part_no": "38",
+        "station_name": "Bharti Bandodkar Primary School, Velguem",
+        "village": "Velguem",
+        "voters": 445,
+        "added": 10,
+        "deleted": 12,
+        "families_count": 114,
+        "margin_pct": 24.2,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 710,
+        "y": 740
+      },
+      {
+        "part_no": "39",
+        "station_name": "Govt. Primary & Middle School (North Wing)",
+        "village": "Velguem",
+        "voters": 617,
+        "added": 15,
+        "deleted": 16,
+        "families_count": 151,
+        "margin_pct": 26.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 760,
+        "y": 760
+      },
+      {
+        "part_no": "40",
+        "station_name": "Govt. Primary & Middle School (South Wing)",
+        "village": "Velguem",
+        "voters": 500,
+        "added": 11,
+        "deleted": 9,
+        "families_count": 108,
+        "margin_pct": 25.8,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 780,
+        "y": 800
+      },
+      {
+        "part_no": "41",
+        "station_name": "Govt. Primary School, Chinchwada Pale",
+        "village": "Pale",
+        "voters": 309,
+        "added": 4,
+        "deleted": 12,
+        "families_count": 68,
+        "margin_pct": 28.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 820,
+        "y": 580
+      },
+      {
+        "part_no": "42",
+        "station_name": "Govt. Primary School, Navarwada Pale",
+        "village": "Pale",
+        "voters": 435,
+        "added": 14,
+        "deleted": 1,
+        "families_count": 100,
+        "margin_pct": 31.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 860,
+        "y": 590
+      },
+      {
+        "part_no": "43",
+        "station_name": "Govt. Primary School, Ambeshiwada, Pale",
+        "village": "Pale",
+        "voters": 334,
+        "added": 1,
+        "deleted": 2,
+        "families_count": 82,
+        "margin_pct": 29.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 900,
+        "y": 600
+      },
+      {
+        "part_no": "44",
+        "station_name": "Govt. Primary School, Ambegal, Pale",
+        "village": "Pale",
+        "voters": 727,
+        "added": 10,
+        "deleted": 18,
+        "families_count": 181,
+        "margin_pct": 33.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 830,
+        "y": 640
+      },
+      {
+        "part_no": "45",
+        "station_name": "Govt. Primary School, Talewada, Pale",
+        "village": "Pale",
+        "voters": 475,
+        "added": 8,
+        "deleted": 1,
+        "families_count": 119,
+        "margin_pct": 30.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 880,
+        "y": 650
+      },
+      {
+        "part_no": "46",
+        "station_name": "Shri Navdurga High School, Ambegal Pale",
+        "village": "Pale",
+        "voters": 445,
+        "added": 8,
+        "deleted": 1,
+        "families_count": 109,
+        "margin_pct": 32.2,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 920,
+        "y": 660
+      },
+      {
+        "part_no": "47",
+        "station_name": "Govt. Primary School, Kothambi Pale",
+        "village": "Cotombi",
+        "voters": 472,
+        "added": 9,
+        "deleted": 11,
+        "families_count": 88,
+        "margin_pct": 43.4,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 1010,
+        "y": 320
+      },
+      {
+        "part_no": "48",
+        "station_name": "Govt. Primary School, Khajan, Surla",
+        "village": "Pale",
+        "voters": 502,
+        "added": 9,
+        "deleted": 3,
+        "families_count": 106,
+        "margin_pct": 27.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 850,
+        "y": 700
+      },
+      {
+        "part_no": "49",
+        "station_name": "Govt. Primary School, Rumad, Surla",
+        "village": "Pale",
+        "voters": 569,
+        "added": 16,
+        "deleted": 21,
+        "families_count": 124,
+        "margin_pct": 29.0,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 890,
+        "y": 720
+      },
+      {
+        "part_no": "50",
+        "station_name": "Govt. Primary School, Bhamai Pale",
+        "village": "Pale",
+        "voters": 569,
+        "added": 13,
+        "deleted": 7,
+        "families_count": 146,
+        "margin_pct": 30.5,
+        "winner": "BJP",
+        "category": "Safe",
+        "x": 940,
+        "y": 730
+      }
     ]
   },
   "families": [
@@ -327,14 +1402,54 @@
       "is_cluster": true,
       "cluster_tag": "Wada Compound Cluster",
       "members": [
-        { "name": "Swapna Somnath Naik", "age": 51, "gender": "Female", "epic": "BGP012111" },
-        { "name": "Navnita Navin Naik", "age": 52, "gender": "Female", "epic": "BGP012112" },
-        { "name": "Ravindra Nara Naik", "age": 56, "gender": "Male", "epic": "BGP012113" },
-        { "name": "Rakhee Ravindra Naik", "age": 51, "gender": "Female", "epic": "BGP012114" },
-        { "name": "Shivram Nara Naik", "age": 62, "gender": "Male", "epic": "BGP012115" },
-        { "name": "Somnath Nara Naik", "age": 58, "gender": "Male", "epic": "BGP012116" },
-        { "name": "Shubham Somnath Naik", "age": 28, "gender": "Male", "epic": "BGP012117" },
-        { "name": "Pooja Ravindra Naik", "age": 26, "gender": "Female", "epic": "BGP012118" }
+        {
+          "name": "Swapna Somnath Naik",
+          "age": 51,
+          "gender": "Female",
+          "epic": "BGP012111"
+        },
+        {
+          "name": "Navnita Navin Naik",
+          "age": 52,
+          "gender": "Female",
+          "epic": "BGP012112"
+        },
+        {
+          "name": "Ravindra Nara Naik",
+          "age": 56,
+          "gender": "Male",
+          "epic": "BGP012113"
+        },
+        {
+          "name": "Rakhee Ravindra Naik",
+          "age": 51,
+          "gender": "Female",
+          "epic": "BGP012114"
+        },
+        {
+          "name": "Shivram Nara Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "BGP012115"
+        },
+        {
+          "name": "Somnath Nara Naik",
+          "age": 58,
+          "gender": "Male",
+          "epic": "BGP012116"
+        },
+        {
+          "name": "Shubham Somnath Naik",
+          "age": 28,
+          "gender": "Male",
+          "epic": "BGP012117"
+        },
+        {
+          "name": "Pooja Ravindra Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "BGP012118"
+        }
       ]
     },
     {
@@ -347,11 +1462,36 @@
       "is_cluster": true,
       "cluster_tag": "Joint Family Unit",
       "members": [
-        { "name": "Kamlakant Naik", "age": 63, "gender": "Male", "epic": "BGP014521" },
-        { "name": "Pratima Naik", "age": 59, "gender": "Female", "epic": "BGP014522" },
-        { "name": "Pritesh Naik", "age": 35, "gender": "Male", "epic": "BGP014523" },
-        { "name": "Navita Naik", "age": 30, "gender": "Female", "epic": "BGP014524" },
-        { "name": "Rohan Naik", "age": 32, "gender": "Male", "epic": "BGP014525" }
+        {
+          "name": "Kamlakant Naik",
+          "age": 63,
+          "gender": "Male",
+          "epic": "BGP014521"
+        },
+        {
+          "name": "Pratima Naik",
+          "age": 59,
+          "gender": "Female",
+          "epic": "BGP014522"
+        },
+        {
+          "name": "Pritesh Naik",
+          "age": 35,
+          "gender": "Male",
+          "epic": "BGP014523"
+        },
+        {
+          "name": "Navita Naik",
+          "age": 30,
+          "gender": "Female",
+          "epic": "BGP014524"
+        },
+        {
+          "name": "Rohan Naik",
+          "age": 32,
+          "gender": "Male",
+          "epic": "BGP014525"
+        }
       ]
     },
     {
@@ -364,10 +1504,30 @@
       "is_cluster": true,
       "cluster_tag": "Joint Family Unit",
       "members": [
-        { "name": "Devidas Sakharam Naik", "age": 53, "gender": "Male", "epic": "BGP018901" },
-        { "name": "Avinash Sakharam Naik", "age": 49, "gender": "Male", "epic": "BGP018902" },
-        { "name": "Priyanka Naik", "age": 49, "gender": "Female", "epic": "BGP018903" },
-        { "name": "Sujata Naik", "age": 49, "gender": "Female", "epic": "BGP018904" }
+        {
+          "name": "Devidas Sakharam Naik",
+          "age": 53,
+          "gender": "Male",
+          "epic": "BGP018901"
+        },
+        {
+          "name": "Avinash Sakharam Naik",
+          "age": 49,
+          "gender": "Male",
+          "epic": "BGP018902"
+        },
+        {
+          "name": "Priyanka Naik",
+          "age": 49,
+          "gender": "Female",
+          "epic": "BGP018903"
+        },
+        {
+          "name": "Sujata Naik",
+          "age": 49,
+          "gender": "Female",
+          "epic": "BGP018904"
+        }
       ]
     },
     {
@@ -380,11 +1540,36 @@
       "is_cluster": true,
       "cluster_tag": "Joint Family Unit",
       "members": [
-        { "name": "Suresh Parab", "age": 55, "gender": "Male", "epic": "BGP022101" },
-        { "name": "Siddhi Parab", "age": 51, "gender": "Female", "epic": "BGP022102" },
-        { "name": "Gurudas Parab", "age": 51, "gender": "Male", "epic": "BGP022103" },
-        { "name": "Radhika Parab", "age": 51, "gender": "Female", "epic": "BGP022104" },
-        { "name": "Hema Parab", "age": 51, "gender": "Female", "epic": "BGP022105" }
+        {
+          "name": "Suresh Parab",
+          "age": 55,
+          "gender": "Male",
+          "epic": "BGP022101"
+        },
+        {
+          "name": "Siddhi Parab",
+          "age": 51,
+          "gender": "Female",
+          "epic": "BGP022102"
+        },
+        {
+          "name": "Gurudas Parab",
+          "age": 51,
+          "gender": "Male",
+          "epic": "BGP022103"
+        },
+        {
+          "name": "Radhika Parab",
+          "age": 51,
+          "gender": "Female",
+          "epic": "BGP022104"
+        },
+        {
+          "name": "Hema Parab",
+          "age": 51,
+          "gender": "Female",
+          "epic": "BGP022105"
+        }
       ]
     },
     {
@@ -397,11 +1582,36 @@
       "is_cluster": true,
       "cluster_tag": "Joint Family Unit",
       "members": [
-        { "name": "Ashok Sinari", "age": 64, "gender": "Male", "epic": "IIT010201" },
-        { "name": "Sulakshana Sinari", "age": 59, "gender": "Female", "epic": "IIT010202" },
-        { "name": "Sanjana Sinari", "age": 48, "gender": "Female", "epic": "IIT010203" },
-        { "name": "Sanjay Sinari", "age": 40, "gender": "Male", "epic": "IIT010204" },
-        { "name": "Jagdish Sinari", "age": 39, "gender": "Male", "epic": "IIT010205" }
+        {
+          "name": "Ashok Sinari",
+          "age": 64,
+          "gender": "Male",
+          "epic": "IIT010201"
+        },
+        {
+          "name": "Sulakshana Sinari",
+          "age": 59,
+          "gender": "Female",
+          "epic": "IIT010202"
+        },
+        {
+          "name": "Sanjana Sinari",
+          "age": 48,
+          "gender": "Female",
+          "epic": "IIT010203"
+        },
+        {
+          "name": "Sanjay Sinari",
+          "age": 40,
+          "gender": "Male",
+          "epic": "IIT010204"
+        },
+        {
+          "name": "Jagdish Sinari",
+          "age": 39,
+          "gender": "Male",
+          "epic": "IIT010205"
+        }
       ]
     },
     {
@@ -414,11 +1624,36 @@
       "is_cluster": true,
       "cluster_tag": "Joint Family Unit",
       "members": [
-        { "name": "Tukaram Gawas", "age": 67, "gender": "Male", "epic": "IIT014501" },
-        { "name": "Sugandhi Gawas", "age": 58, "gender": "Female", "epic": "IIT014502" },
-        { "name": "Ashok Gawas", "age": 55, "gender": "Male", "epic": "IIT014503" },
-        { "name": "Rajshri Gawas", "age": 53, "gender": "Female", "epic": "IIT014504" },
-        { "name": "Sahadev Gawas", "age": 52, "gender": "Male", "epic": "IIT014505" }
+        {
+          "name": "Tukaram Gawas",
+          "age": 67,
+          "gender": "Male",
+          "epic": "IIT014501"
+        },
+        {
+          "name": "Sugandhi Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT014502"
+        },
+        {
+          "name": "Ashok Gawas",
+          "age": 55,
+          "gender": "Male",
+          "epic": "IIT014503"
+        },
+        {
+          "name": "Rajshri Gawas",
+          "age": 53,
+          "gender": "Female",
+          "epic": "IIT014504"
+        },
+        {
+          "name": "Sahadev Gawas",
+          "age": 52,
+          "gender": "Male",
+          "epic": "IIT014505"
+        }
       ]
     },
     {
@@ -431,11 +1666,36 @@
       "is_cluster": true,
       "cluster_tag": "Joint Family Unit",
       "members": [
-        { "name": "Laxman Gawas", "age": 68, "gender": "Male", "epic": "IIT018901" },
-        { "name": "Jemini Gawas", "age": 57, "gender": "Female", "epic": "IIT018902" },
-        { "name": "Bhanudas Gawas", "age": 54, "gender": "Male", "epic": "IIT018903" },
-        { "name": "Ajay Gawas", "age": 49, "gender": "Male", "epic": "IIT018904" },
-        { "name": "Satish Gawas", "age": 43, "gender": "Male", "epic": "IIT018905" }
+        {
+          "name": "Laxman Gawas",
+          "age": 68,
+          "gender": "Male",
+          "epic": "IIT018901"
+        },
+        {
+          "name": "Jemini Gawas",
+          "age": 57,
+          "gender": "Female",
+          "epic": "IIT018902"
+        },
+        {
+          "name": "Bhanudas Gawas",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT018903"
+        },
+        {
+          "name": "Ajay Gawas",
+          "age": 49,
+          "gender": "Male",
+          "epic": "IIT018904"
+        },
+        {
+          "name": "Satish Gawas",
+          "age": 43,
+          "gender": "Male",
+          "epic": "IIT018905"
+        }
       ]
     },
     {
@@ -448,30 +1708,190 @@
       "is_cluster": true,
       "cluster_tag": "Joint Family Unit",
       "members": [
-        { "name": "Suresh Mane", "age": 66, "gender": "Male", "epic": "YPS011201" },
-        { "name": "Deelip Mane", "age": 63, "gender": "Male", "epic": "YPS011202" },
-        { "name": "Mohan Mane", "age": 59, "gender": "Male", "epic": "YPS011203" },
-        { "name": "Saraswati Mane", "age": 57, "gender": "Female", "epic": "YPS011204" },
-        { "name": "Shoba Mane", "age": 49, "gender": "Female", "epic": "YPS011205" }
+        {
+          "name": "Suresh Mane",
+          "age": 66,
+          "gender": "Male",
+          "epic": "YPS011201"
+        },
+        {
+          "name": "Deelip Mane",
+          "age": 63,
+          "gender": "Male",
+          "epic": "YPS011202"
+        },
+        {
+          "name": "Mohan Mane",
+          "age": 59,
+          "gender": "Male",
+          "epic": "YPS011203"
+        },
+        {
+          "name": "Saraswati Mane",
+          "age": 57,
+          "gender": "Female",
+          "epic": "YPS011204"
+        },
+        {
+          "name": "Shoba Mane",
+          "age": 49,
+          "gender": "Female",
+          "epic": "YPS011205"
+        }
       ]
     }
   ],
   "churn_records": [
-    { "name": "Anil Rathod", "relation": "Thavarappa Rathod", "epic": "REX0321679", "village": "Sanquelim", "booth": "1", "stage": "Final Roll", "kind": "deleted", "reason": "Shifted/Change of Residence" },
-    { "name": "Bhagirathi Rayu Naik", "relation": "Rayu Naik", "epic": "BGP0130740", "village": "Sanquelim", "booth": "2", "stage": "Final Roll", "kind": "deleted", "reason": "Expired" },
-    { "name": "Rima Kamat", "relation": "Keshav Kamat", "epic": "IIT0328096", "village": "Sanquelim", "booth": "2", "stage": "Supplement-2", "kind": "deleted", "reason": "Shifted/Change of Residence" },
-    { "name": "Jyoti Kamlakant Chari", "relation": "Kamlakant Chari", "epic": "IIT0408294", "village": "Sanquelim", "booth": "2", "stage": "Final Roll", "kind": "deleted", "reason": "Shifted/Change of Residence" },
-    { "name": "Devki Bablo Jalmi", "relation": "Bablo Jalmi", "epic": "IIT0409185", "village": "Sanquelim", "booth": "2", "stage": "Final Roll", "kind": "deleted", "reason": "Expired" },
-    { "name": "Sanjana Manjrekar", "relation": "Krishna Manjrekar", "epic": "BGP1217157", "village": "Sanquelim", "booth": "3", "stage": "Final Roll", "kind": "deleted", "reason": "Shifted/Change of Residence" },
-    { "name": "Mohan Naik", "relation": "Vighanesh Naik", "epic": "BGP1218130", "village": "Sanquelim", "booth": "3", "stage": "Final Roll", "kind": "deleted", "reason": "Disqualified" },
-    { "name": "Madhavi Dixit", "relation": "Krishna Dixit", "epic": "BGP1230333", "village": "Sanquelim", "booth": "3", "stage": "Final Roll", "kind": "deleted", "reason": "Disqualified" },
-    { "name": "Pritesh Sawant", "relation": "Prabhakar Sawant", "epic": "IIT0330357", "village": "Sanquelim", "booth": "3", "stage": "Final Roll", "kind": "deleted", "reason": "Disqualified" },
-    { "name": "Sanjana Kanekar", "relation": "Sandeep Kanekar", "epic": "IIT0337444", "village": "Sanquelim", "booth": "3", "stage": "Supplement-3", "kind": "deleted", "reason": "Shifted/Change of Residence" },
-    { "name": "Sunita Dessai", "relation": "Mahesh Dessai", "epic": "BGP1441209", "village": "Arvalem", "booth": "14", "stage": "Supplement-2", "kind": "added", "reason": "New Registration (Form 6)" },
-    { "name": "Gaurav Bandodkar", "relation": "Ramesh Bandodkar", "epic": "IIT0491021", "village": "Arvalem", "booth": "15", "stage": "Supplement-3", "kind": "added", "reason": "Youth Elector (18 Yrs)" },
-    { "name": "Deepa Gaonkar", "relation": "Suraj Gaonkar", "epic": "IIT0512891", "village": "Pale", "booth": "44", "stage": "Supplement-3", "kind": "added", "reason": "Marriage Shift-In (Form 6)" },
-    { "name": "Kavita Parab", "relation": "Ulhas Parab", "epic": "BGP0821940", "village": "Cotombi", "booth": "47", "stage": "Final Roll", "kind": "modified", "reason": "Name / DOB Correction (Form 8)" },
-    { "name": "Rajesh Kudnekar", "relation": "Dattaram Kudnekar", "epic": "IIT0299104", "village": "Cudnem", "booth": "19", "stage": "Supplement-2", "kind": "modified", "reason": "Address Update (Form 8)" }
+    {
+      "name": "Anil Rathod",
+      "relation": "Thavarappa Rathod",
+      "epic": "REX0321679",
+      "village": "Sanquelim",
+      "booth": "1",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Shifted/Change of Residence"
+    },
+    {
+      "name": "Bhagirathi Rayu Naik",
+      "relation": "Rayu Naik",
+      "epic": "BGP0130740",
+      "village": "Sanquelim",
+      "booth": "2",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Expired"
+    },
+    {
+      "name": "Rima Kamat",
+      "relation": "Keshav Kamat",
+      "epic": "IIT0328096",
+      "village": "Sanquelim",
+      "booth": "2",
+      "stage": "Supplement-2",
+      "kind": "deleted",
+      "reason": "Shifted/Change of Residence"
+    },
+    {
+      "name": "Jyoti Kamlakant Chari",
+      "relation": "Kamlakant Chari",
+      "epic": "IIT0408294",
+      "village": "Sanquelim",
+      "booth": "2",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Shifted/Change of Residence"
+    },
+    {
+      "name": "Devki Bablo Jalmi",
+      "relation": "Bablo Jalmi",
+      "epic": "IIT0409185",
+      "village": "Sanquelim",
+      "booth": "2",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Expired"
+    },
+    {
+      "name": "Sanjana Manjrekar",
+      "relation": "Krishna Manjrekar",
+      "epic": "BGP1217157",
+      "village": "Sanquelim",
+      "booth": "3",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Shifted/Change of Residence"
+    },
+    {
+      "name": "Mohan Naik",
+      "relation": "Vighanesh Naik",
+      "epic": "BGP1218130",
+      "village": "Sanquelim",
+      "booth": "3",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Disqualified"
+    },
+    {
+      "name": "Madhavi Dixit",
+      "relation": "Krishna Dixit",
+      "epic": "BGP1230333",
+      "village": "Sanquelim",
+      "booth": "3",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Disqualified"
+    },
+    {
+      "name": "Pritesh Sawant",
+      "relation": "Prabhakar Sawant",
+      "epic": "IIT0330357",
+      "village": "Sanquelim",
+      "booth": "3",
+      "stage": "Final Roll",
+      "kind": "deleted",
+      "reason": "Disqualified"
+    },
+    {
+      "name": "Sanjana Kanekar",
+      "relation": "Sandeep Kanekar",
+      "epic": "IIT0337444",
+      "village": "Sanquelim",
+      "booth": "3",
+      "stage": "Supplement-3",
+      "kind": "deleted",
+      "reason": "Shifted/Change of Residence"
+    },
+    {
+      "name": "Sunita Dessai",
+      "relation": "Mahesh Dessai",
+      "epic": "BGP1441209",
+      "village": "Arvalem",
+      "booth": "14",
+      "stage": "Supplement-2",
+      "kind": "added",
+      "reason": "New Registration (Form 6)"
+    },
+    {
+      "name": "Gaurav Bandodkar",
+      "relation": "Ramesh Bandodkar",
+      "epic": "IIT0491021",
+      "village": "Arvalem",
+      "booth": "15",
+      "stage": "Supplement-3",
+      "kind": "added",
+      "reason": "Youth Elector (18 Yrs)"
+    },
+    {
+      "name": "Deepa Gaonkar",
+      "relation": "Suraj Gaonkar",
+      "epic": "IIT0512891",
+      "village": "Pale",
+      "booth": "44",
+      "stage": "Supplement-3",
+      "kind": "added",
+      "reason": "Marriage Shift-In (Form 6)"
+    },
+    {
+      "name": "Kavita Parab",
+      "relation": "Ulhas Parab",
+      "epic": "BGP0821940",
+      "village": "Cotombi",
+      "booth": "47",
+      "stage": "Final Roll",
+      "kind": "modified",
+      "reason": "Name / DOB Correction (Form 8)"
+    },
+    {
+      "name": "Rajesh Kudnekar",
+      "relation": "Dattaram Kudnekar",
+      "epic": "IIT0299104",
+      "village": "Cudnem",
+      "booth": "19",
+      "stage": "Supplement-2",
+      "kind": "modified",
+      "reason": "Address Update (Form 8)"
+    }
   ],
   "survey": {
     "has_data": true,
@@ -485,45 +1905,137 @@
         "title": "Govt / Overall Performance",
         "answered_count": 735,
         "categories": [
-          { "label": "Good", "pct": 52.7, "color": "#16A34A" },
-          { "label": "Cannot Say", "pct": 16.5, "color": "#94A3B8" },
-          { "label": "Unsatisfied", "pct": 15.5, "color": "#DC2626" },
-          { "label": "Fair", "pct": 10.6, "color": "#EAB308" },
-          { "label": "Excellent", "pct": 4.8, "color": "#2563EB" }
+          {
+            "label": "Good",
+            "pct": 52.7,
+            "color": "#16A34A"
+          },
+          {
+            "label": "Cannot Say",
+            "pct": 16.5,
+            "color": "#94A3B8"
+          },
+          {
+            "label": "Unsatisfied",
+            "pct": 15.5,
+            "color": "#DC2626"
+          },
+          {
+            "label": "Fair",
+            "pct": 10.6,
+            "color": "#EAB308"
+          },
+          {
+            "label": "Excellent",
+            "pct": 4.8,
+            "color": "#2563EB"
+          }
         ]
       },
       "cm": {
         "title": "CM Performance (Dr. Pramod Sawant)",
         "answered_count": 604,
         "categories": [
-          { "label": "Good", "pct": 53.0, "color": "#16A34A" },
-          { "label": "Cannot Say", "pct": 15.4, "color": "#94A3B8" },
-          { "label": "Fair", "pct": 10.9, "color": "#EAB308" },
-          { "label": "Unsatisfied", "pct": 10.6, "color": "#DC2626" },
-          { "label": "Excellent", "pct": 10.1, "color": "#2563EB" }
+          {
+            "label": "Good",
+            "pct": 53.0,
+            "color": "#16A34A"
+          },
+          {
+            "label": "Cannot Say",
+            "pct": 15.4,
+            "color": "#94A3B8"
+          },
+          {
+            "label": "Fair",
+            "pct": 10.9,
+            "color": "#EAB308"
+          },
+          {
+            "label": "Unsatisfied",
+            "pct": 10.6,
+            "color": "#DC2626"
+          },
+          {
+            "label": "Excellent",
+            "pct": 10.1,
+            "color": "#2563EB"
+          }
         ]
       },
       "mla": {
         "title": "MLA Local Performance",
         "answered_count": 489,
         "categories": [
-          { "label": "Good", "pct": 55.0, "color": "#16A34A" },
-          { "label": "Cannot Say", "pct": 16.2, "color": "#94A3B8" },
-          { "label": "Unsatisfied", "pct": 11.7, "color": "#DC2626" },
-          { "label": "Fair", "pct": 11.0, "color": "#EAB308" },
-          { "label": "Excellent", "pct": 6.1, "color": "#2563EB" }
+          {
+            "label": "Good",
+            "pct": 55.0,
+            "color": "#16A34A"
+          },
+          {
+            "label": "Cannot Say",
+            "pct": 16.2,
+            "color": "#94A3B8"
+          },
+          {
+            "label": "Unsatisfied",
+            "pct": 11.7,
+            "color": "#DC2626"
+          },
+          {
+            "label": "Fair",
+            "pct": 11.0,
+            "color": "#EAB308"
+          },
+          {
+            "label": "Excellent",
+            "pct": 6.1,
+            "color": "#2563EB"
+          }
         ]
       }
     },
     "issues": [
-      { "issue": "Roads & Drainage", "count": 152, "pct": 27.7 },
-      { "issue": "Drinking Water Supply", "count": 85, "pct": 15.5 },
-      { "issue": "Employment / Youth Jobs", "count": 76, "pct": 13.9 },
-      { "issue": "Price Rise / Inflation", "count": 55, "pct": 10.0 },
-      { "issue": "Healthcare / PHC Facilities", "count": 34, "pct": 6.2 },
-      { "issue": "Electricity & Street Lighting", "count": 19, "pct": 3.5 },
-      { "issue": "Multiple Combined Issues", "count": 19, "pct": 3.5 },
-      { "issue": "Other Local Civic Matters", "count": 108, "pct": 19.7 }
+      {
+        "issue": "Roads & Drainage",
+        "count": 152,
+        "pct": 27.7
+      },
+      {
+        "issue": "Drinking Water Supply",
+        "count": 85,
+        "pct": 15.5
+      },
+      {
+        "issue": "Employment / Youth Jobs",
+        "count": 76,
+        "pct": 13.9
+      },
+      {
+        "issue": "Price Rise / Inflation",
+        "count": 55,
+        "pct": 10.0
+      },
+      {
+        "issue": "Healthcare / PHC Facilities",
+        "count": 34,
+        "pct": 6.2
+      },
+      {
+        "issue": "Electricity & Street Lighting",
+        "count": 19,
+        "pct": 3.5
+      },
+      {
+        "issue": "Multiple Combined Issues",
+        "count": 19,
+        "pct": 3.5
+      },
+      {
+        "issue": "Other Local Civic Matters",
+        "count": 108,
+        "pct": 19.7
+      }
     ]
   }
 }

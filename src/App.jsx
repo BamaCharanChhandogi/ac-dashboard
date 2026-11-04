@@ -14,7 +14,15 @@ export default function App() {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [activeSection, setActiveSection] = useState('dashboard');
+  const [activeSection, setActiveSection] = useState(() => {
+    const params = new URLSearchParams(window.location.search);
+    return params.get('tab') || window.location.hash.replace('#', '') || 'dashboard';
+  });
+
+  const handleNavigate = (section) => {
+    setActiveSection(section);
+    window.location.hash = section;
+  };
 
   useEffect(() => {
     setLoading(true);
@@ -66,7 +74,7 @@ export default function App() {
   return (
     <div className="flex h-screen overflow-hidden bg-[#DFE6F0]">
       {/* Left Sidebar Navigation */}
-      <Sidebar activeSection={activeSection} onNavigate={setActiveSection} />
+      <Sidebar activeSection={activeSection} onNavigate={handleNavigate} />
 
       {/* Main Content Area */}
       <main className="flex-1 lg:ml-[230px] flex flex-col h-full overflow-y-auto bg-[#DFE6F0]">
