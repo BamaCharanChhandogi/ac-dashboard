@@ -25,4 +25,7 @@ dist-ssr
 
 # Scratch / Temporary files
 scratch/
+scripts/cache_*/
+scripts/*.html
+scripts/*.xlsx
 

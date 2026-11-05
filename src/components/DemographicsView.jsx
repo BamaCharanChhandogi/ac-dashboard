@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { formatIndianNumber } from '../utils/formatters';
 
 export default function DemographicsView({ data }) {
@@ -10,16 +10,30 @@ export default function DemographicsView({ data }) {
 
   const femaleCount = gender.female?.count || Math.round(totalVoters * 0.51);
   const maleCount = gender.male?.count || Math.round(totalVoters * 0.49);
-  const sexRatio = gender.sex_ratio || 1042;
+  const sexRatio = gender.sex_ratio || Math.round((femaleCount / (maleCount || 1)) * 1000);
+
+  const femalePct = gender.female?.pct != null
+    ? Number(gender.female.pct).toFixed(1)
+    : ((femaleCount / (totalVoters || 1)) * 100).toFixed(1);
+  const malePct = gender.male?.pct != null
+    ? Number(gender.male.pct).toFixed(1)
+    : ((maleCount / (totalVoters || 1)) * 100).toFixed(1);
+
+  // SVG Circumference for r=60 is 2 * PI * 60 ≈ 376.99
+  const CIRCUMFERENCE = 377;
+  const femaleDash = Math.round((parseFloat(femalePct) / 100) * CIRCUMFERENCE);
+  const maleDash = CIRCUMFERENCE - femaleDash;
 
   // Age group distribution
-  const sortedAgeGroups = [...ageGroups].sort((a, b) => {
-    const ageA = parseInt(a.cohort) || 0;
-    const ageB = parseInt(b.cohort) || 0;
-    return ageB - ageA;
-  });
+  const sortedAgeGroups = useMemo(() => {
+    return [...ageGroups].sort((a, b) => {
+      const ageA = parseInt(a.cohort) || 0;
+      const ageB = parseInt(b.cohort) || 0;
+      return ageB - ageA;
+    });
+  }, [ageGroups]);
 
-  const maxAgeCount = Math.max(...sortedAgeGroups.map(g => Math.max(g.male || 0, g.female || 0)), 3500);
+  const maxAgeCount = Math.max(...sortedAgeGroups.map((g) => Math.max(g.male || 0, g.female || 0)), 3500);
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
@@ -29,7 +43,7 @@ export default function DemographicsView({ data }) {
           Gender & Age Composition
         </h2>
         <p className="text-[12.5px] text-slate-500 font-medium mt-0.5">
-          Currently active electors only (Supplement-4, latest stage) — matches the {formatIndianNumber(totalVoters)} figure used throughout this dashboard.
+          Currently active electors only (Supplement-4, latest stage) — matches the {formatIndianNumber(totalVoters)} figure used throughout this dashboard across {meta.ac_name || 'Sanquelim'}.
         </p>
       </div>
 
@@ -58,7 +72,7 @@ export default function DemographicsView({ data }) {
         </div>
       </div>
 
-      {/* Bento Grid: Gender Split Donut & Age Cohorts Split (Matching PDF Page 2) */}
+      {/* Bento Grid: Gender Split Donut & Age Cohorts Split */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Card 1: Gender Split Donut */}
         <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs flex flex-col justify-between">
@@ -66,28 +80,34 @@ export default function DemographicsView({ data }) {
             <h3 className="font-serif text-[18px] font-bold text-slate-900 mb-1">
               Gender Split
             </h3>
-            <p className="text-[11.5px] text-slate-400 font-medium mb-6">All electors on record</p>
+            <p className="text-[11.5px] text-slate-400 font-medium mb-6">All electors on record in {meta.ac_name || 'Sanquelim'}</p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-8 py-4">
               {/* Donut SVG */}
               <div className="relative w-44 h-44 flex-shrink-0">
                 <svg viewBox="0 0 160 160" className="w-full h-full -rotate-90">
                   <circle cx="80" cy="80" r="60" fill="none" stroke="#F1F5F9" strokeWidth="18" />
-                  {/* Female Arc 51% */}
+                  {/* Female Arc */}
                   <circle
-                    cx="80" cy="80" r="60" fill="none"
+                    cx="80"
+                    cy="80"
+                    r="60"
+                    fill="none"
                     stroke="#EC4899"
                     strokeWidth="18"
-                    strokeDasharray="192 377"
+                    strokeDasharray={`${femaleDash} ${CIRCUMFERENCE}`}
                     strokeDashoffset="0"
                   />
-                  {/* Male Arc 49% */}
+                  {/* Male Arc */}
                   <circle
-                    cx="80" cy="80" r="60" fill="none"
+                    cx="80"
+                    cy="80"
+                    r="60"
+                    fill="none"
                     stroke="#2563EB"
                     strokeWidth="18"
-                    strokeDasharray="185 377"
-                    strokeDashoffset="-192"
+                    strokeDasharray={`${maleDash} ${CIRCUMFERENCE}`}
+                    strokeDashoffset={String(-femaleDash)}
                   />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -108,8 +128,12 @@ export default function DemographicsView({ data }) {
                     <span className="text-[13px] font-bold text-slate-800">Female</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-[14px] font-extrabold text-slate-900 tabular-nums mr-2">51.0%</span>
-                    <span className="text-[12px] text-slate-400 tabular-nums">{formatIndianNumber(femaleCount)}</span>
+                    <span className="text-[14px] font-extrabold text-slate-900 tabular-nums mr-2">
+                      {femalePct}%
+                    </span>
+                    <span className="text-[12px] text-slate-400 tabular-nums">
+                      {formatIndianNumber(femaleCount)}
+                    </span>
                   </div>
                 </div>
 
@@ -119,8 +143,12 @@ export default function DemographicsView({ data }) {
                     <span className="text-[13px] font-bold text-slate-800">Male</span>
                   </div>
                   <div className="text-right">
-                    <span className="text-[14px] font-extrabold text-slate-900 tabular-nums mr-2">49.0%</span>
-                    <span className="text-[12px] text-slate-400 tabular-nums">{formatIndianNumber(maleCount)}</span>
+                    <span className="text-[14px] font-extrabold text-slate-900 tabular-nums mr-2">
+                      {malePct}%
+                    </span>
+                    <span className="text-[12px] text-slate-400 tabular-nums">
+                      {formatIndianNumber(maleCount)}
+                    </span>
                   </div>
                 </div>
               </div>
@@ -161,7 +189,7 @@ export default function DemographicsView({ data }) {
         </div>
       </div>
 
-      {/* Mirrored Diverging Male vs. Female Population Pyramid (Matching PDF Page 3) */}
+      {/* Mirrored Diverging Male vs. Female Population Pyramid */}
       <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
         <h3 className="font-serif text-[18px] font-bold text-slate-900 mb-1">
           Age Group by Gender
@@ -175,15 +203,15 @@ export default function DemographicsView({ data }) {
           {sortedAgeGroups.map((g) => {
             const maleWidth = ((g.male || 0) / maxAgeCount) * 100;
             const femaleWidth = ((g.female || 0) / maxAgeCount) * 100;
-            const malePct = ((g.male || 0) / (maleCount || 1) * 100).toFixed(1);
-            const femalePct = ((g.female || 0) / (femaleCount || 1) * 100).toFixed(1);
+            const mCohortPct = (((g.male || 0) / (maleCount || 1)) * 100).toFixed(1);
+            const fCohortPct = (((g.female || 0) / (femaleCount || 1)) * 100).toFixed(1);
 
             return (
               <div key={g.cohort} className="flex items-center gap-3 h-6 text-[11px]">
                 {/* Left Side: Male count + Bar */}
                 <div className="flex-1 flex items-center justify-end gap-2">
                   <span className="text-slate-400 tabular-nums text-[11px] font-medium hidden sm:inline">
-                    {formatIndianNumber(g.male)} ({malePct}%)
+                    {formatIndianNumber(g.male)} ({mCohortPct}%)
                   </span>
                   <div
                     className="h-5 bg-[#2563EB] rounded-l-[3px] transition-all duration-300"
@@ -203,7 +231,7 @@ export default function DemographicsView({ data }) {
                     style={{ width: `${Math.max(femaleWidth, 4)}%` }}
                   />
                   <span className="text-slate-400 tabular-nums text-[11px] font-medium hidden sm:inline">
-                    {formatIndianNumber(g.female)} ({femalePct}%)
+                    {formatIndianNumber(g.female)} ({fCohortPct}%)
                   </span>
                 </div>
               </div>
@@ -215,11 +243,11 @@ export default function DemographicsView({ data }) {
         <div className="flex items-center justify-center gap-8 pt-4 border-t border-slate-100 text-[12px] font-semibold">
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-[#2563EB]" />
-            <span className="text-slate-700">Male: {formatIndianNumber(maleCount)} (49.0%)</span>
+            <span className="text-slate-700">Male: {formatIndianNumber(maleCount)} ({malePct}%)</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-3 h-3 rounded-full bg-[#EC4899]" />
-            <span className="text-slate-700">Female: {formatIndianNumber(femaleCount)} (51.0%)</span>
+            <span className="text-slate-700">Female: {formatIndianNumber(femaleCount)} ({femalePct}%)</span>
           </div>
         </div>
       </div>

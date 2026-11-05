@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { formatIndianNumber } from '../utils/formatters';
 
-const ASSEMBLY_HISTORY = [
+const SANQUELIM_ASSEMBLY_HISTORY = [
   { year: '2022', party: 'BJP', pct: 48.27, winner: 'Dr. Pramod Sawant', runnerUp: 'Dharmesh Saglani (INC)', margin: '+2.6%' },
   { year: '2017', party: 'BJP', pct: 42.44, winner: 'Dr. Pramod Sawant', runnerUp: 'Dharmesh Saglani (INC)', margin: '+8.5%' },
   { year: '2012', party: 'BJP', pct: 66.10, winner: 'Dr. Pramod Sawant', runnerUp: 'Pratap Gauns (INC)', margin: '+32.1%' },
@@ -17,7 +17,7 @@ const PARLIAMENT_HISTORY = [
   { year: '1999', party: 'BJP', pct: 54.96, winner: 'Shripad Yesso Naik', margin: '+11.8%' },
 ];
 
-const CANDIDATE_VOTE_SHARES = [
+const SANQUELIM_VOTE_SHARES = [
   {
     type: 'ASSEMBLY ELECTIONS',
     elections: [
@@ -48,7 +48,7 @@ const CANDIDATE_VOTE_SHARES = [
     ],
   },
   {
-    type: 'PARLIAMENT (LOK SABHA) ELECTIONS IN SANQUELIM BOOTHS',
+    type: 'PARLIAMENT (LOK SABHA) ELECTIONS IN CONSTITUENCY BOOTHS',
     elections: [
       {
         year: '2024 Lok Sabha',
@@ -78,11 +78,82 @@ const CANDIDATE_VOTE_SHARES = [
   },
 ];
 
+const PARTY_COLORS = {
+  BJP: '#EA580C',
+  INC: '#0284C7',
+  RGP: '#7C3AED',
+  GSM: '#16A34A',
+  IND: '#10B981',
+  AITC: '#0D9488',
+  AAP: '#0284C7',
+  NOTA: '#64748B',
+  Others: '#94A3B8',
+};
+
 export default function ElectionResultsView({ data }) {
   const meta = data?.meta || {};
   const leaders = data?.leaders || {};
+  const elections = data?.elections || {};
   const mla = leaders.mla;
   const mp = leaders.mp;
+
+  // Assembly historical returns
+  const assemblyHistory = useMemo(() => {
+    if (meta.slug === 'ac10-aldona' || meta.ac_no === 10) {
+      return [
+        { year: '2022', party: 'INC', pct: 41.22, winner: 'Adv. Carlos Ferreira', runnerUp: 'Glenn Ticlo (BJP)', margin: '+8.07%' },
+        { year: '2017', party: 'BJP', pct: 42.44, winner: 'Glenn Ticlo', runnerUp: 'Amarnath Panjikar (INC)', margin: '+11.1%' },
+        { year: '2012', party: 'BJP', pct: 53.60, winner: 'Glenn Ticlo', runnerUp: 'Dayanand Narvekar (INC)', margin: '+16.5%' },
+      ];
+    }
+    if (meta.slug === 'ac09-porvorim' || meta.ac_no === 9) {
+      return [
+        { year: '2022', party: 'BJP', pct: 55.16, winner: 'Rohan Khaunte', runnerUp: 'Vikas Prabhu (IND)', margin: '+37.44%' },
+        { year: '2017', party: 'IND', pct: 47.90, winner: 'Rohan Khaunte', runnerUp: 'Guruprasad Pawaskar (BJP)', margin: '+18.4%' },
+        { year: '2012', party: 'IND', pct: 41.20, winner: 'Rohan Khaunte', runnerUp: 'Govind Parvatkar (BJP)', margin: '+18.9%' },
+      ];
+    }
+    return SANQUELIM_ASSEMBLY_HISTORY;
+  }, [meta.slug, meta.ac_no]);
+
+  // Candidate vote shares blocks
+  const voteShareBlocks = useMemo(() => {
+    if (elections?.vote_share_bars) {
+      const blocks = [];
+      if (elections.vote_share_bars.assembly) {
+        blocks.push({
+          type: 'ASSEMBLY ELECTIONS',
+          elections: elections.vote_share_bars.assembly.map((elec) => ({
+            year: elec.election,
+            bars: elec.candidates.map((c) => ({
+              name: c.name,
+              party: c.party,
+              pct: c.pct,
+              color: PARTY_COLORS[c.party] || '#94A3B8',
+            })),
+          })),
+        });
+      }
+      if (elections.vote_share_bars.parliament) {
+        blocks.push({
+          type: `PARLIAMENT (LOK SABHA) ELECTIONS IN ${meta.ac_name ? meta.ac_name.toUpperCase() : 'CONSTITUENCY'} BOOTHS`,
+          elections: elections.vote_share_bars.parliament.map((elec) => ({
+            year: elec.election,
+            bars: elec.candidates.map((c) => ({
+              name: c.name,
+              party: c.party,
+              pct: c.pct,
+              color: PARTY_COLORS[c.party] || '#94A3B8',
+            })),
+          })),
+        });
+      }
+      if (blocks.length > 0) return blocks;
+    }
+    return SANQUELIM_VOTE_SHARES;
+  }, [elections, meta.ac_name]);
+
+  const isIncMla = mla?.party === 'INC';
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
@@ -96,7 +167,7 @@ export default function ElectionResultsView({ data }) {
         </p>
       </div>
 
-      {/* Sitting MLA & MP Profile Cards (Matching PDF Page 3) */}
+      {/* Sitting MLA & MP Profile Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Sitting MLA Card */}
         {mla && (
@@ -107,19 +178,21 @@ export default function ElectionResultsView({ data }) {
               </p>
               <div className="flex items-start gap-4 mb-4">
                 <img
-                  src={mla.photo_url || '/images/leaders/pramod-sawant.jpg'}
+                  src={mla.photo_url || (isIncMla ? '/images/leaders/carlos-ferreira.jpg' : '/images/leaders/pramod-sawant.jpg')}
                   alt={mla.name}
-                  className="w-16 h-16 rounded-xl object-cover border-2 border-orange-500 shadow-xs flex-shrink-0"
+                  className={`w-16 h-16 rounded-xl object-cover border-2 shadow-xs flex-shrink-0 ${
+                    isIncMla ? 'border-sky-500' : 'border-orange-500'
+                  }`}
                 />
                 <div>
                   <h3 className="font-serif text-[22px] font-bold text-slate-900 leading-tight">
                     {mla.name}
                   </h3>
-                  <p className="text-[13px] font-semibold text-orange-600 mt-0.5">
-                    {mla.party_name || 'Bharatiya Janata Party (BJP)'}
+                  <p className={`text-[13px] font-semibold mt-0.5 ${isIncMla ? 'text-sky-700' : 'text-orange-600'}`}>
+                    {mla.party_name || (isIncMla ? 'Indian National Congress (INC)' : 'Bharatiya Janata Party (BJP)')}
                   </p>
                   <p className="text-[11.5px] text-slate-400 mt-0.5">
-                    {mla.portfolio || 'Chief Minister of Goa'}
+                    {mla.portfolio || (isIncMla ? 'MLA (Former Advocate General of Goa)' : 'Chief Minister of Goa')}
                   </p>
                 </div>
               </div>
@@ -154,7 +227,7 @@ export default function ElectionResultsView({ data }) {
           <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs flex flex-col justify-between">
             <div>
               <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3">
-                SITTING MP · NORTH GOA PC
+                SITTING MP · {meta.pc_name ? `${meta.pc_name.toUpperCase()} PC` : 'NORTH GOA PC'}
               </p>
               <div className="flex items-start gap-4 mb-4">
                 <img
@@ -201,17 +274,17 @@ export default function ElectionResultsView({ data }) {
         )}
       </div>
 
-      {/* Candidate Vote Share by Election Horizontal Stacked Bars (Matching PDF Page 4 & 5) */}
+      {/* Candidate Vote Share by Election Horizontal Stacked Bars */}
       <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
         <h3 className="font-serif text-[18px] font-bold text-slate-900 mb-1">
           Candidate Vote Share by Election
         </h3>
         <p className="text-[11.5px] text-slate-500 font-medium mb-6">
-          AC-wide valid vote share, actual Sanquelim-booth totals for each election. Top candidates by vote share are labelled under each bar.
+          AC-wide valid vote share and candidate returns for {meta.ac_name || 'Sanquelim'}. Top candidates by vote share are labelled under each bar.
         </p>
 
         <div className="space-y-8">
-          {CANDIDATE_VOTE_SHARES.map((block, bi) => (
+          {voteShareBlocks.map((block, bi) => (
             <div key={bi} className="space-y-4">
               <p className="text-[11px] font-bold tracking-wider text-slate-400 uppercase">
                 {block.type}
@@ -256,13 +329,13 @@ export default function ElectionResultsView({ data }) {
         </div>
       </div>
 
-      {/* Assembly Across Elections (Matching PDF Page 3) */}
+      {/* Assembly Across Elections */}
       <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
         <h3 className="font-serif text-[18px] font-bold text-slate-900 mb-1">
           Assembly — {meta.ac_name || 'Sanquelim'} across elections
         </h3>
         <p className="text-[11.5px] text-slate-400 font-medium mb-4">
-          Winning party's own vote share; gap to runner-up. Sanquelim as delimited today has existed since the 2008 by-election.
+          Winning party's own vote share and victory margin across recent assembly elections in {meta.ac_name || 'Sanquelim'}.
         </p>
 
         <div className="overflow-x-auto">
@@ -277,13 +350,21 @@ export default function ElectionResultsView({ data }) {
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100">
-              {ASSEMBLY_HISTORY.map((row) => (
+              {assemblyHistory.map((row) => (
                 <tr key={row.year} className="hover:bg-slate-50/70 transition-colors">
                   <td className="py-3 pr-4 font-bold text-slate-900">
                     {row.year}
                   </td>
                   <td className="py-3 px-4">
-                    <span className={`px-2 py-0.5 rounded text-[11px] font-extrabold ${row.party === 'BJP' ? 'bg-orange-100 text-orange-800' : 'bg-blue-100 text-blue-800'}`}>
+                    <span
+                      className={`px-2 py-0.5 rounded text-[11px] font-extrabold ${
+                        row.party === 'BJP'
+                          ? 'bg-orange-100 text-orange-800'
+                          : row.party === 'INC'
+                          ? 'bg-blue-100 text-blue-800'
+                          : 'bg-emerald-100 text-emerald-800'
+                      }`}
+                    >
                       {row.party}
                     </span>
                   </td>
@@ -303,13 +384,13 @@ export default function ElectionResultsView({ data }) {
         </div>
       </div>
 
-      {/* Parliament Across Elections (Matching PDF Page 4) */}
+      {/* Parliament Across Elections */}
       <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
         <h3 className="font-serif text-[18px] font-bold text-slate-900 mb-1">
           Parliament — North Goa across elections
         </h3>
         <p className="text-[11.5px] text-slate-400 font-medium mb-4">
-          Sanquelim sits inside the North Goa Lok Sabha constituency (1999–2024 results).
+          {meta.ac_name || 'Sanquelim'} sits inside the North Goa Lok Sabha constituency (1999–2024 results).
         </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
