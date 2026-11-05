@@ -134,71 +134,71 @@ export default function BoothAnalysisView({ data }) {
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
       {/* 1. Header Title */}
       <div>
-        <h2 className="font-serif text-[26px] font-bold text-slate-900 tracking-tight">
+        <h2 className="font-serif text-[26px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
           Booth Analysis & Polling Stations Roster
         </h2>
-        <p className="text-[12.5px] text-slate-500 font-medium mt-0.5">
+        <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
           Electoral geography, spatial margins, and 100% verified booth roster across {meta.ac_name || 'Sanquelim'}
         </p>
       </div>
 
       {/* 2. Top 4 KPI Strip */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">TOTAL BOOTHS</p>
-          <p className="text-[26px] font-bold text-[#1E3A8A] tabular-nums leading-none">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">TOTAL BOOTHS</p>
+          <p className="text-[26px] font-bold text-[#1E3A8A] dark:text-blue-400 tabular-nums leading-none">
             {rawBooths.length || meta.total_booths || 50}
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#0D9488]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">ACTIVE VOTERS</p>
-          <p className="text-[26px] font-bold text-[#0F766E] tabular-nums leading-none">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#0D9488]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">ACTIVE VOTERS</p>
+          <p className="text-[26px] font-bold text-[#0F766E] dark:text-teal-400 tabular-nums leading-none">
             {formatIndianNumber(meta.total_voters || 27265)}
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#16A34A]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">ADDED (ALL STAGES)</p>
-          <p className="text-[26px] font-bold text-[#16A34A] tabular-nums leading-none">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#16A34A]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">ADDED (ALL STAGES)</p>
+          <p className="text-[26px] font-bold text-[#16A34A] dark:text-emerald-400 tabular-nums leading-none">
             {formatIndianNumber(meta.sir_added || 693)}
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#DC2626]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">DELETED (ALL STAGES)</p>
-          <p className="text-[26px] font-bold text-[#DC2626] tabular-nums leading-none">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#DC2626]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">DELETED (ALL STAGES)</p>
+          <p className="text-[26px] font-bold text-[#DC2626] dark:text-rose-400 tabular-nums leading-none">
             {formatIndianNumber(meta.sir_deleted || 634)}
           </p>
         </div>
       </div>
 
       {/* 3. Universal High-Contrast Spatial Vector Map for EVERY Constituency */}
-      <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
+      <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="font-serif text-[18px] font-bold text-slate-900">
+              <h3 className="font-serif text-[18px] font-bold text-slate-900 dark:text-slate-100">
                 Booth-level Form-20 Election Retrospective
               </h3>
               {selectedBoothNumber && (
                 <button
                   type="button"
                   onClick={() => setSelectedBoothNumber(null)}
-                  className="inline-flex items-center gap-1 text-[11px] font-bold bg-blue-50 text-blue-700 px-2.5 py-0.5 rounded-full hover:bg-blue-100 transition-colors cursor-pointer"
+                  className="inline-flex items-center gap-1 text-[11px] font-bold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 px-2.5 py-0.5 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors cursor-pointer"
                 >
                   <span>Booth #{selectedBoothNumber} selected</span>
                   <X size={12} />
                 </button>
               )}
             </div>
-            <p className="text-[11.5px] text-slate-500 font-medium mt-0.5">
+            <p className="text-[11.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
               Overall = each booth's own average BJP margin across all elections with a real figure for that booth.
             </p>
           </div>
 
           {/* Election Filter Pills */}
-          <div className="flex flex-wrap gap-1 bg-slate-100 p-1 rounded-lg text-[11px] font-semibold">
+          <div className="flex flex-wrap gap-1 bg-slate-100 dark:bg-slate-800 p-1 rounded-lg text-[11px] font-semibold">
             {ELECTION_OPTIONS.map((elec) => (
               <button
                 key={elec}
@@ -206,8 +206,8 @@ export default function BoothAnalysisView({ data }) {
                 onClick={() => setSelectedElection(elec)}
                 className={`px-2.5 py-1 rounded-md transition-all cursor-pointer ${
                   selectedElection === elec
-                    ? 'bg-white text-slate-900 shadow-xs font-bold'
-                    : 'text-slate-500 hover:text-slate-800'
+                    ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-slate-100 shadow-xs font-bold'
+                    : 'text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200'
                 }`}
               >
                 {elec}
@@ -416,21 +416,21 @@ export default function BoothAnalysisView({ data }) {
         </div>
 
         {/* Legend (Safe, Battle Ground, Weak matching PDF Page 6) */}
-        <div className="flex flex-wrap items-center gap-6 mt-4 text-[12px] font-semibold text-slate-600">
+        <div className="flex flex-wrap items-center gap-6 mt-4 text-[12px] font-semibold text-slate-600 dark:text-slate-300">
           <div className="flex items-center gap-2">
-            <span className="w-3.5 h-3.5 rounded-full bg-[#15803D] border border-white shadow-xs" />
+            <span className="w-3.5 h-3.5 rounded-full bg-[#15803D] border border-white dark:border-slate-800 shadow-xs" />
             <span>Safe (BJP margin ≥10%)</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-3.5 h-3.5 rounded-full bg-[#D97706] border border-white shadow-xs" />
+            <span className="w-3.5 h-3.5 rounded-full bg-[#D97706] border border-white dark:border-slate-800 shadow-xs" />
             <span>Battle Ground (within 10%)</span>
           </div>
           <div className="flex items-center gap-2">
-            <span className="w-3.5 h-3.5 rounded-full bg-[#991B1B] border border-white shadow-xs" />
+            <span className="w-3.5 h-3.5 rounded-full bg-[#991B1B] border border-white dark:border-slate-800 shadow-xs" />
             <span>Weak (BJP trails by 10%+)</span>
           </div>
           {selectedBoothNumber && (
-            <div className="ml-auto text-[11px] text-blue-600 font-bold">
+            <div className="ml-auto text-[11px] text-blue-600 dark:text-blue-400 font-bold">
               Showing filtered results for Booth #{selectedBoothNumber}
             </div>
           )}
@@ -438,13 +438,13 @@ export default function BoothAnalysisView({ data }) {
       </div>
 
       {/* 4. Full Booths Table Roster (100% Synced) */}
-      <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
+      <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
           <div>
-            <h3 className="font-serif text-[18px] font-bold text-slate-900">
+            <h3 className="font-serif text-[18px] font-bold text-slate-900 dark:text-slate-100">
               Booths in this Constituency
             </h3>
-            <p className="text-[11.5px] text-slate-400 font-medium">
+            <p className="text-[11.5px] text-slate-400 dark:text-slate-500 font-medium">
               Showing {filteredBooths.length} verified polling stations
               {selectedBoothNumber && ` (Filtered by Booth #${selectedBoothNumber})`}
             </p>
@@ -453,13 +453,13 @@ export default function BoothAnalysisView({ data }) {
           <div className="flex flex-wrap items-center gap-3">
             {/* Search Input */}
             <div className="relative">
-              <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
+              <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
               <input
                 type="text"
                 placeholder="Search station or part no..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-8 pr-3 py-1.5 text-[12px] border border-slate-200 rounded-lg outline-none focus:border-blue-500 w-52 bg-white"
+                className="pl-8 pr-3 py-1.5 text-[12px] border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:border-blue-500 w-52 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500"
               />
             </div>
 
@@ -468,17 +468,17 @@ export default function BoothAnalysisView({ data }) {
               <button
                 type="button"
                 onClick={() => setIsVillageDropdownOpen(!isVillageDropdownOpen)}
-                className="inline-flex items-center justify-between gap-2 text-[12px] border border-slate-200 rounded-lg px-3 py-1.5 bg-white text-slate-700 hover:border-slate-300 transition-colors cursor-pointer min-w-[130px]"
+                className="inline-flex items-center justify-between gap-2 text-[12px] border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-1.5 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 transition-colors cursor-pointer min-w-[130px]"
               >
                 <span>{selectedVillage === 'All' ? 'All Villages' : selectedVillage}</span>
                 <ChevronDown
                   size={14}
-                  className={`text-slate-400 transition-transform ${isVillageDropdownOpen ? 'rotate-180' : ''}`}
+                  className={`text-slate-400 dark:text-slate-500 transition-transform ${isVillageDropdownOpen ? 'rotate-180' : ''}`}
                 />
               </button>
 
               {isVillageDropdownOpen && (
-                <div className="absolute right-0 top-full mt-1 w-44 bg-white rounded-xl border border-slate-200 shadow-xl z-30 py-1 max-h-56 overflow-y-auto">
+                <div className="absolute right-0 top-full mt-1 w-44 bg-white dark:bg-slate-900 rounded-xl border border-slate-200 dark:border-slate-800 shadow-xl z-30 py-1 max-h-56 overflow-y-auto">
                   {uniqueVillages.map((v) => {
                     const isSelected = selectedVillage === v;
                     return (
@@ -490,11 +490,11 @@ export default function BoothAnalysisView({ data }) {
                           setIsVillageDropdownOpen(false);
                         }}
                         className={`w-full text-left px-3 py-1.5 text-[12px] flex items-center justify-between cursor-pointer ${
-                          isSelected ? 'bg-blue-50 text-blue-700 font-bold' : 'text-slate-700 hover:bg-slate-50'
+                          isSelected ? 'bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-bold' : 'text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800'
                         }`}
                       >
                         <span>{v === 'All' ? 'All Villages' : v}</span>
-                        {isSelected && <Check size={14} className="text-blue-600" />}
+                        {isSelected && <Check size={14} className="text-blue-600 dark:text-blue-400" />}
                       </button>
                     );
                   })}
@@ -511,7 +511,7 @@ export default function BoothAnalysisView({ data }) {
                   setSelectedVillage('All');
                   setSearchTerm('');
                 }}
-                className="text-[11px] font-semibold text-slate-500 hover:text-slate-800 underline cursor-pointer"
+                className="text-[11px] font-semibold text-slate-500 dark:text-slate-400 hover:text-slate-800 dark:hover:text-slate-200 underline cursor-pointer"
               >
                 Reset filters
               </button>
@@ -523,7 +523,7 @@ export default function BoothAnalysisView({ data }) {
         <div className="overflow-x-auto">
           <table className="w-full text-[12px] text-left">
             <thead>
-              <tr className="border-b border-slate-200 text-slate-400 font-bold uppercase text-[10px] tracking-wider">
+              <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-500 font-bold uppercase text-[10px] tracking-wider">
                 <th className="pb-3 pr-4">BOOTH</th>
                 <th className="pb-3 px-4">POLLING STATION</th>
                 <th className="pb-3 px-4">VILLAGE</th>
@@ -534,7 +534,7 @@ export default function BoothAnalysisView({ data }) {
                 <th className="pb-3 pl-4 text-right">STATUS</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
               {filteredBooths.map((b) => {
                 const bNum = Number(b.part_no || b.number);
                 const isSelected = selectedBoothNumber === bNum;
@@ -557,36 +557,36 @@ export default function BoothAnalysisView({ data }) {
                     key={b.part_no || b.number}
                     onClick={() => handleBoothClick(bNum)}
                     className={`transition-colors cursor-pointer ${
-                      isSelected ? 'bg-blue-50/70 font-semibold' : 'hover:bg-slate-50/70'
+                      isSelected ? 'bg-blue-50/70 dark:bg-blue-950/50 font-semibold' : 'hover:bg-slate-50/70 dark:hover:bg-slate-800/50'
                     }`}
                   >
-                    <td className="py-3 pr-4 font-bold text-slate-900 tabular-nums">
+                    <td className="py-3 pr-4 font-bold text-slate-900 dark:text-slate-100 tabular-nums">
                       <span
                         className={`inline-block w-6 h-6 rounded-full text-center leading-6 text-[11px] ${
                           isSelected
                             ? 'bg-blue-600 text-white font-bold'
-                            : 'bg-slate-100 text-slate-800 font-semibold'
+                            : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold'
                         }`}
                       >
                         {b.part_no || b.number}
                       </span>
                     </td>
-                    <td className="py-3 px-4 text-slate-800 font-medium">
+                    <td className="py-3 px-4 text-slate-800 dark:text-slate-200 font-medium">
                       {b.station_name}
                     </td>
-                    <td className="py-3 px-4 text-slate-600 font-medium">
+                    <td className="py-3 px-4 text-slate-600 dark:text-slate-400 font-medium">
                       {b.village}
                     </td>
-                    <td className="py-3 px-4 text-right font-bold text-slate-900 tabular-nums">
+                    <td className="py-3 px-4 text-right font-bold text-slate-900 dark:text-slate-100 tabular-nums">
                       {formatIndianNumber(b.voters)}
                     </td>
-                    <td className="py-3 px-4 text-right font-semibold text-teal-700 tabular-nums">
+                    <td className="py-3 px-4 text-right font-semibold text-teal-700 dark:text-teal-400 tabular-nums">
                       {b.added != null ? `+${b.added}` : '—'}
                     </td>
-                    <td className="py-3 px-4 text-right font-semibold text-rose-600 tabular-nums">
+                    <td className="py-3 px-4 text-right font-semibold text-rose-600 dark:text-rose-400 tabular-nums">
                       {b.deleted != null ? `−${b.deleted}` : '—'}
                     </td>
-                    <td className="py-3 px-4 text-right font-semibold text-slate-700 tabular-nums">
+                    <td className="py-3 px-4 text-right font-semibold text-slate-700 dark:text-slate-300 tabular-nums">
                       {b.margin_pct != null
                         ? `${b.margin_pct > 0 ? '+' : ''}${b.margin_pct}%`
                         : '—'}
@@ -595,10 +595,10 @@ export default function BoothAnalysisView({ data }) {
                       <span
                         className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide ${
                           status === 'Weak'
-                            ? 'bg-rose-100 text-rose-700'
+                            ? 'bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300'
                             : status === 'Battle Ground' || status === 'Battleground'
-                            ? 'bg-amber-100 text-amber-800'
-                            : 'bg-emerald-100 text-emerald-800'
+                            ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300'
+                            : 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300'
                         }`}
                       >
                         {status}

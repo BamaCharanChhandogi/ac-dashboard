@@ -150,25 +150,25 @@ export default function ConstituencySwitcher({
 
       {/* Floating Popover Menu (Scalable for 100+ Constituencies) */}
       {isOpen && (
-        <div className="absolute left-3 right-3 top-full mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200/90 z-50 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150 w-[300px] lg:w-[320px]">
+        <div className="absolute left-3 right-3 top-full mt-2 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 z-50 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150 w-[300px] lg:w-[320px]">
           {/* Header & Search */}
-          <div className="p-3 bg-slate-50 border-b border-slate-100">
+          <div className="p-3 bg-slate-50 dark:bg-slate-900/90 border-b border-slate-100 dark:border-slate-800">
             <div className="flex items-center justify-between mb-2">
-              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
+              <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
                 Switch Constituency ({allConstituencies.length} Available)
               </span>
             </div>
 
             {/* Search Input */}
             <div className="relative">
-              <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400" />
+              <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
               <input
                 ref={searchInputRef}
                 type="text"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 placeholder="Search AC name, no, district..."
-                className="w-full pl-8 pr-3 py-1.5 text-[12px] bg-white border border-slate-200 rounded-lg outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-slate-800 placeholder-slate-400"
+                className="w-full pl-8 pr-3 py-1.5 text-[12px] bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-lg outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500"
               />
             </div>
 
@@ -183,7 +183,7 @@ export default function ConstituencySwitcher({
                     className={`px-2 py-0.5 rounded text-[10px] font-bold whitespace-nowrap cursor-pointer ${
                       selectedState === st
                         ? 'bg-blue-600 text-white'
-                        : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-100'
+                        : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-750'
                     }`}
                   >
                     {st}
@@ -194,9 +194,9 @@ export default function ConstituencySwitcher({
           </div>
 
           {/* Constituencies List */}
-          <div className="max-h-[300px] overflow-y-auto divide-y divide-slate-100 py-1">
+          <div className="max-h-[300px] overflow-y-auto divide-y divide-slate-100 dark:divide-slate-800 py-1">
             {filteredList.length === 0 ? (
-              <div className="p-4 text-center text-slate-400 text-[12px]">
+              <div className="p-4 text-center text-slate-400 dark:text-slate-500 text-[12px]">
                 No constituency found for "{searchTerm}"
               </div>
             ) : (
@@ -209,8 +209,8 @@ export default function ConstituencySwitcher({
                     onClick={() => handleSelect(ac.slug)}
                     className={`w-full text-left p-3 flex items-start justify-between gap-2.5 transition-colors cursor-pointer ${
                       isSelected
-                        ? 'bg-blue-50/80 hover:bg-blue-50'
-                        : 'hover:bg-slate-50'
+                        ? 'bg-blue-50/80 dark:bg-blue-950/50 hover:bg-blue-50 dark:hover:bg-blue-900/60'
+                        : 'hover:bg-slate-50 dark:hover:bg-slate-800/60'
                     }`}
                   >
                     <div className="min-w-0 flex-1">
@@ -219,23 +219,23 @@ export default function ConstituencySwitcher({
                           className={`px-1.5 py-0.5 rounded text-[10px] font-extrabold tabular-nums ${
                             isSelected
                               ? 'bg-blue-600 text-white'
-                              : 'bg-slate-200 text-slate-700'
+                              : 'bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
                           }`}
                         >
                           AC {ac.ac_no}
                         </span>
-                        <p className="font-serif font-bold text-[13.5px] text-slate-900 truncate">
+                        <p className="font-serif font-bold text-[13.5px] text-slate-900 dark:text-slate-100 truncate">
                           {ac.ac_name}
                         </p>
                       </div>
 
-                      <p className="text-[11px] text-slate-500 font-medium truncate">
+                      <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium truncate">
                         {ac.district} • {ac.taluka || ac.state}
                       </p>
 
                       {ac.sitting_mla && (
-                        <p className="text-[10.5px] text-slate-400 mt-0.5 truncate flex items-center gap-1">
-                          <User size={10} className="text-slate-400" />
+                        <p className="text-[10.5px] text-slate-400 dark:text-slate-500 mt-0.5 truncate flex items-center gap-1">
+                          <User size={10} className="text-slate-400 dark:text-slate-500" />
                           <span>{ac.sitting_mla}</span>
                         </p>
                       )}
@@ -247,7 +247,7 @@ export default function ConstituencySwitcher({
                           <Check size={12} strokeWidth={3} />
                         </div>
                       ) : (
-                        <span className="text-[10px] font-bold text-slate-400 tabular-nums">
+                        <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 tabular-nums">
                           {ac.total_voters ? `${formatIndianNumber(ac.total_voters)} voters` : ''}
                         </span>
                       )}
@@ -259,8 +259,8 @@ export default function ConstituencySwitcher({
           </div>
 
           {/* Popover Footer */}
-          <div className="p-2 bg-slate-50 border-t border-slate-100 text-center">
-            <span className="text-[10px] text-slate-400 font-medium">
+          <div className="p-2 bg-slate-50 dark:bg-slate-900/90 border-t border-slate-100 dark:border-slate-800 text-center">
+            <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
               Corporate Chanakya • Multi-Constituency Engine
             </span>
           </div>

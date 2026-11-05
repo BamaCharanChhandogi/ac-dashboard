@@ -65,10 +65,10 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-[#DFE6F0]">
+      <div className="h-screen flex items-center justify-center bg-[#DFE6F0] dark:bg-[#0B1120]">
         <div className="text-center">
-          <div className="w-8 h-8 border-2 border-[#2563EB] border-t-transparent rounded-full animate-spin mx-auto mb-3" />
-          <p className="text-slate-600 text-[13px] font-semibold">Loading Electoral Intelligence…</p>
+          <div className="w-8 h-8 border-2 border-[#2563EB] dark:border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
+          <p className="text-slate-600 dark:text-slate-300 text-[13px] font-semibold">Loading Electoral Intelligence…</p>
         </div>
       </div>
     );
@@ -76,10 +76,10 @@ export default function App() {
 
   if (error) {
     return (
-      <div className="h-screen flex items-center justify-center bg-[#DFE6F0] p-4">
-        <div className="text-center max-w-md bg-white p-6 rounded-2xl border border-slate-200 shadow-sm">
-          <h2 className="text-[16px] font-bold text-slate-800 mb-1">Failed to Load Dataset</h2>
-          <p className="text-slate-500 text-[12px] mb-4">{error}</p>
+      <div className="h-screen flex items-center justify-center bg-[#DFE6F0] dark:bg-[#0B1120] p-4">
+        <div className="text-center max-w-md bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+          <h2 className="text-[16px] font-bold text-slate-800 dark:text-slate-100 mb-1">Failed to Load Dataset</h2>
+          <p className="text-slate-500 dark:text-slate-400 text-[12px] mb-4">{error}</p>
           <button
             onClick={() => handleSelectAC('ac17-sanquelim')}
             className="px-4 py-2 bg-[#2563EB] text-white text-[12px] font-semibold rounded-lg hover:bg-blue-700 transition-colors"
@@ -92,7 +92,7 @@ export default function App() {
   }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#DFE6F0]">
+    <div className="flex h-screen overflow-hidden bg-[#DFE6F0] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 transition-colors duration-200">
       {/* Left Sidebar Navigation with Persistent Global Switcher */}
       <Sidebar
         activeSection={activeSection}
@@ -103,7 +103,7 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 lg:ml-[240px] flex flex-col h-full overflow-y-auto bg-[#DFE6F0]">
+      <main className="flex-1 lg:ml-[240px] flex flex-col h-full overflow-y-auto bg-[#DFE6F0] dark:bg-[#0B1120] transition-colors duration-200">
         {activeSection === 'dashboard' && (
           <ConstituencyOverview
             data={data}

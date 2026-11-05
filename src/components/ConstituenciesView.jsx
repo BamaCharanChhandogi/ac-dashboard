@@ -125,75 +125,75 @@ export default function ConstituenciesView({
       {/* 1. Header Title & Subtitle */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h2 className="font-serif text-[26px] font-bold text-slate-900 tracking-tight">
+          <h2 className="font-serif text-[26px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
             Nationwide Constituencies Directory
           </h2>
-          <p className="text-[12.5px] text-slate-500 font-medium mt-0.5">
+          <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
             Cross-constituency intelligence directory, comparative benchmarks, and multi-seat analysis across India
           </p>
         </div>
 
         {/* Global summary badge */}
-        <div className="bg-white rounded-xl border border-slate-200/90 px-4 py-2.5 shadow-xs flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-[13px]">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 px-4 py-2.5 shadow-xs flex items-center gap-3">
+          <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-[13px]">
             {constituencies.length}
           </div>
           <div>
-            <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider">Monitored Seats</p>
-            <p className="text-[13px] font-bold text-slate-900">{formatIndianNumber(totalElectorsCombined)} Electors</p>
+            <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Monitored Seats</p>
+            <p className="text-[13px] font-bold text-slate-900 dark:text-slate-100">{formatIndianNumber(totalElectorsCombined)} Electors</p>
           </div>
         </div>
       </div>
 
       {/* 2. Top Aggregate KPI Strip */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">MONITORED ACS</p>
-          <p className="text-[26px] font-bold text-[#1E3A8A] tabular-nums leading-none">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">MONITORED ACS</p>
+          <p className="text-[26px] font-bold text-[#1E3A8A] dark:text-blue-400 tabular-nums leading-none">
             {constituencies.length}
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#0D9488]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">TOTAL ELECTORS</p>
-          <p className="text-[26px] font-bold text-[#0F766E] tabular-nums leading-none">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#0D9488]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">TOTAL ELECTORS</p>
+          <p className="text-[26px] font-bold text-[#0F766E] dark:text-teal-400 tabular-nums leading-none">
             {formatIndianNumber(totalElectorsCombined)}
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#16A34A]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">TOTAL BOOTHS</p>
-          <p className="text-[26px] font-bold text-[#16A34A] tabular-nums leading-none">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#16A34A]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">TOTAL BOOTHS</p>
+          <p className="text-[26px] font-bold text-[#16A34A] dark:text-emerald-400 tabular-nums leading-none">
             {totalBoothsCombined}
           </p>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#EA580C]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">RULING / OPPOSITION</p>
-          <p className="text-[26px] font-bold text-[#EA580C] tabular-nums leading-none">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#EA580C]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">RULING / OPPOSITION</p>
+          <p className="text-[26px] font-bold text-[#EA580C] dark:text-orange-400 tabular-nums leading-none">
             2 / 1
           </p>
         </div>
       </div>
 
       {/* 3. Search & State Filter Bar */}
-      <div className="bg-white rounded-2xl border border-slate-200/90 p-4 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
         {/* Search */}
         <div className="relative w-full sm:w-80">
-          <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+          <Search size={15} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
           <input
             type="text"
             placeholder="Search by AC name, number, MLA, or district..."
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-9 pr-3 py-2 text-[12.5px] border border-slate-200 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-slate-800 placeholder-slate-400"
+            className="w-full pl-9 pr-3 py-2 text-[12.5px] border border-slate-200 dark:border-slate-700 rounded-xl outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-slate-800 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500 bg-white dark:bg-slate-800"
           />
         </div>
 
         {/* State filter pills if multiple states */}
         {states.length > 2 && (
           <div className="flex items-center gap-1.5 self-start sm:self-auto">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mr-1">State:</span>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 mr-1">State:</span>
             {states.map((st) => (
               <button
                 key={st}
@@ -202,7 +202,7 @@ export default function ConstituenciesView({
                 className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
                   selectedState === st
                     ? 'bg-blue-600 text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                 }`}
               >
                 {st}
@@ -211,7 +211,7 @@ export default function ConstituenciesView({
           </div>
         )}
 
-        <div className="text-[11px] font-semibold text-slate-400">
+        <div className="text-[11px] font-semibold text-slate-400 dark:text-slate-500">
           Showing {filteredACs.length} of {constituencies.length} Assembly Constituencies
         </div>
       </div>
@@ -225,11 +225,11 @@ export default function ConstituenciesView({
               key={ac.slug}
               onClick={() => onSelectAC(ac.slug)}
               className={`
-                bg-white rounded-2xl border p-6 shadow-xs cursor-pointer transition-all duration-200 relative group
+                bg-white dark:bg-[#111C35] rounded-2xl border p-6 shadow-xs cursor-pointer transition-all duration-200 relative group
                 ${
                   isSelected
-                    ? 'border-blue-600 ring-2 ring-blue-500/20 shadow-lg'
-                    : 'border-slate-200/90 hover:border-blue-300 hover:shadow-md'
+                    ? 'border-blue-600 dark:border-blue-500 ring-2 ring-blue-500/20 shadow-lg'
+                    : 'border-slate-200/90 dark:border-slate-800/80 hover:border-blue-300 dark:hover:border-blue-600 hover:shadow-md'
                 }
               `}
             >
@@ -238,77 +238,77 @@ export default function ConstituenciesView({
                 <span
                   className={`px-2.5 py-0.5 rounded-md text-[11px] font-bold tracking-tight ${
                     ac.party === 'BJP'
-                      ? 'bg-orange-100 text-orange-800'
+                      ? 'bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300'
                       : ac.party === 'INC'
-                      ? 'bg-sky-100 text-sky-800'
-                      : 'bg-slate-100 text-slate-700'
+                      ? 'bg-sky-100 dark:bg-sky-950/60 text-sky-800 dark:text-sky-300'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300'
                   }`}
                 >
                   {ac.party}
                 </span>
 
-                <span className="text-[11px] font-semibold text-slate-400">
+                <span className="text-[11px] font-semibold text-slate-400 dark:text-slate-500">
                   {ac.status}
                 </span>
               </div>
 
               {/* AC Title */}
               <div className="flex items-center gap-2 mb-1">
-                <span className="text-[12px] font-extrabold text-blue-600 bg-blue-50 px-2 py-0.5 rounded">
+                <span className="text-[12px] font-extrabold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded">
                   AC {ac.ac_no}
                 </span>
-                <h3 className="font-serif text-[21px] font-bold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">
+                <h3 className="font-serif text-[21px] font-bold text-slate-900 dark:text-slate-100 tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                   {ac.ac_name}
                 </h3>
               </div>
 
               {/* Subtitle */}
-              <p className="text-[11.5px] text-slate-500 font-medium mb-3">
+              <p className="text-[11.5px] text-slate-500 dark:text-slate-400 font-medium mb-3">
                 {ac.district} • {ac.taluka ? `${ac.taluka} Taluka` : ac.state}
               </p>
 
               {/* MLA Row */}
-              <div className="bg-slate-50 rounded-xl p-3 border border-slate-100 mb-4 text-[12px]">
-                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-0.5">
+              <div className="bg-slate-50 dark:bg-slate-900/90 rounded-xl p-3 border border-slate-100 dark:border-slate-800 mb-4 text-[12px]">
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-0.5">
                   Sitting MLA
                 </p>
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-slate-900">{ac.sitting_mla}</span>
-                  <span className="font-semibold text-teal-700 tabular-nums">{ac.margin}</span>
+                  <span className="font-bold text-slate-900 dark:text-slate-100">{ac.sitting_mla}</span>
+                  <span className="font-semibold text-teal-700 dark:text-teal-400 tabular-nums">{ac.margin}</span>
                 </div>
               </div>
 
               {/* Metrics Grid */}
-              <div className="grid grid-cols-3 gap-2 pt-3 border-t border-slate-100 text-center">
+              <div className="grid grid-cols-3 gap-2 pt-3 border-t border-slate-100 dark:border-slate-800 text-center">
                 <div>
-                  <p className="text-slate-400 font-semibold text-[10px] uppercase">Voters</p>
-                  <p className="text-[15px] font-extrabold text-slate-900 tabular-nums">
+                  <p className="text-slate-400 dark:text-slate-500 font-semibold text-[10px] uppercase">Voters</p>
+                  <p className="text-[15px] font-extrabold text-slate-900 dark:text-slate-100 tabular-nums">
                     {formatIndianNumber(ac.total_voters)}
                   </p>
                 </div>
                 <div>
-                  <p className="text-slate-400 font-semibold text-[10px] uppercase">Booths</p>
-                  <p className="text-[15px] font-extrabold text-slate-900 tabular-nums">
+                  <p className="text-slate-400 dark:text-slate-500 font-semibold text-[10px] uppercase">Booths</p>
+                  <p className="text-[15px] font-extrabold text-slate-900 dark:text-slate-100 tabular-nums">
                     {ac.total_booths}
                   </p>
                 </div>
                 <div>
-                  <p className="text-slate-400 font-semibold text-[10px] uppercase">Villages</p>
-                  <p className="text-[15px] font-extrabold text-slate-900 tabular-nums">
+                  <p className="text-slate-400 dark:text-slate-500 font-semibold text-[10px] uppercase">Villages</p>
+                  <p className="text-[15px] font-extrabold text-slate-900 dark:text-slate-100 tabular-nums">
                     {ac.villages}
                   </p>
                 </div>
               </div>
 
               {/* Action Link Footer */}
-              <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <div className="mt-4 pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
                 {isSelected ? (
-                  <span className="inline-flex items-center gap-1.5 text-[11.5px] font-bold text-blue-600">
+                  <span className="inline-flex items-center gap-1.5 text-[11.5px] font-bold text-blue-600 dark:text-blue-400">
                     <CheckCircle2 size={14} />
                     <span>Currently Active Dossier</span>
                   </span>
                 ) : (
-                  <span className="inline-flex items-center gap-1.5 text-[11.5px] font-semibold text-slate-500 group-hover:text-blue-600 transition-colors">
+                  <span className="inline-flex items-center gap-1.5 text-[11.5px] font-semibold text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                     <span>Open Comprehensive Dossier</span>
                     <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                   </span>

@@ -30,12 +30,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School Khareband, Socorro",
+      "station_name": "Vaadem V.P. Library, Soccoro Porvorim",
       "village": "Socorro",
-      "voters": 620,
+      "voters": 876,
       "margin_pct": 38.5,
-      "added": 15,
-      "deleted": 11
+      "added": 8,
+      "deleted": 26
     },
     {
       "number": 2,
@@ -45,12 +45,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Maina Socorro",
+      "station_name": "Govt. Primary School Carrem, Socorro, Porvorim (East Wing)",
       "village": "Socorro",
-      "voters": 580,
+      "voters": 485,
       "margin_pct": 42.1,
-      "added": 14,
-      "deleted": 10
+      "added": 16,
+      "deleted": 11
     },
     {
       "number": 3,
@@ -60,12 +60,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Panchayat Hall, Socorro (North)",
+      "station_name": "Govt. Primary School (West Wing) Garrem, Socorro, Porvorim",
       "village": "Socorro",
-      "voters": 690,
+      "voters": 768,
       "margin_pct": 36.4,
-      "added": 17,
-      "deleted": 12
+      "added": 7,
+      "deleted": 46
     },
     {
       "number": 4,
@@ -75,12 +75,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Panchayat Hall, Socorro (South)",
+      "station_name": "Govt. Primary School (North Wing) Arrarim, Socorro, - Porvorim",
       "village": "Socorro",
-      "voters": 710,
+      "voters": 738,
       "margin_pct": 35.8,
-      "added": 17,
-      "deleted": 13
+      "added": 4,
+      "deleted": 35
     },
     {
       "number": 5,
@@ -90,12 +90,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Community Hall, Vaddem Socorro",
+      "station_name": "Govt. Primary School (South Wing) Arrarim, Socorro, Porvorim",
       "village": "Socorro",
-      "voters": 640,
+      "voters": 794,
       "margin_pct": 39,
-      "added": 15,
-      "deleted": 12
+      "added": 9,
+      "deleted": 92
     },
     {
       "number": 6,
@@ -105,12 +105,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Zuarinagar Socorro",
+      "station_name": "Holy Family High School (1 North Wing), Socorro",
       "village": "Socorro",
-      "voters": 615,
+      "voters": 740,
       "margin_pct": 37.2,
-      "added": 15,
-      "deleted": 11
+      "added": 22,
+      "deleted": 81
     },
     {
       "number": 7,
@@ -120,12 +120,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "St. Rita High School, Maina (East)",
+      "station_name": "Holy Family High School (1 South Wing), Socorro",
       "village": "Socorro",
-      "voters": 655,
+      "voters": 913,
       "margin_pct": 31.4,
-      "added": 16,
-      "deleted": 12
+      "added": 45,
+      "deleted": 61
     },
     {
       "number": 8,
@@ -135,12 +135,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "St. Rita High School, Maina (West)",
+      "station_name": "Village Panchayat Sacarro (Table Tennis Room)",
       "village": "Socorro",
-      "voters": 670,
+      "voters": 762,
       "margin_pct": 33,
-      "added": 16,
-      "deleted": 12
+      "added": 12,
+      "deleted": 29
     },
     {
       "number": 9,
@@ -150,12 +150,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Ambirna Socorro",
+      "station_name": "Holy Family High School (South Wing) Socorro, Porvorim",
       "village": "Socorro",
-      "voters": 590,
+      "voters": 696,
       "margin_pct": 44.2,
-      "added": 14,
-      "deleted": 11
+      "added": 3,
+      "deleted": 50
     },
     {
       "number": 10,
@@ -165,12 +165,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": true,
-      "station_name": "Govt. High School, Porvorim (North)",
+      "station_name": "Village Panchayat Socorro (Ground Floor Hall’)",
       "village": "Socorro",
-      "voters": 720,
+      "voters": 800,
       "margin_pct": 28.5,
-      "added": 17,
-      "deleted": 13
+      "added": 29,
+      "deleted": 50
     },
     {
       "number": 11,
@@ -180,12 +180,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. High School, Porvorim (South)",
+      "station_name": "Govt. Primary School (North Wing) Zoswado, Socorro, Porvorim",
       "village": "Socorro",
-      "voters": 705,
+      "voters": 973,
       "margin_pct": 29.8,
-      "added": 17,
-      "deleted": 13
+      "added": 11,
+      "deleted": 32
     },
     {
       "number": 12,
@@ -195,12 +195,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Holy Family High School, Alto Porvorim (Room 1)",
+      "station_name": "Govt. Primary Schaal (South Wing) Zoswado, Socorro, Porvorim",
       "village": "Socorro",
-      "voters": 740,
+      "voters": 809,
       "margin_pct": 24.1,
-      "added": 18,
-      "deleted": 13
+      "added": 2,
+      "deleted": 93
     },
     {
       "number": 13,
@@ -210,12 +210,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Holy Family High School, Alto Porvorim (Room 2)",
+      "station_name": "O/o Asst. Engineer Electricity Dept. Sub Div II (North Wing), Porverim",
       "village": "Socorro",
-      "voters": 730,
+      "voters": 814,
       "margin_pct": 25.6,
-      "added": 18,
-      "deleted": 13
+      "added": 13,
+      "deleted": 26
     },
     {
       "number": 14,
@@ -225,12 +225,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Kite Institute Hall, Porvorim",
+      "station_name": "O/o Asst. Engineer Electricity Dept. Sub Div (South Wing), Porvorim",
       "village": "Socorro",
-      "voters": 605,
+      "voters": 382,
       "margin_pct": 34.7,
-      "added": 15,
-      "deleted": 11
+      "added": 5,
+      "deleted": 29
     },
     {
       "number": 15,
@@ -240,12 +240,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Anganwadi Centre, Devashri Greens",
+      "station_name": "Govt. Primary School (North Wing) Paitona, Porvorim",
       "village": "Socorro",
-      "voters": 560,
+      "voters": 935,
       "margin_pct": 40.5,
-      "added": 13,
-      "deleted": 10
+      "added": 9,
+      "deleted": 52
     },
     {
       "number": 16,
@@ -255,12 +255,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Carrem Socorro",
+      "station_name": "Govt. Primary School (South Wing) Paitona, Porvorim",
       "village": "Socorro",
-      "voters": 520,
+      "voters": 295,
       "margin_pct": 38,
-      "added": 12,
-      "deleted": 9
+      "added": 7,
+      "deleted": 5
     },
     {
       "number": 17,
@@ -270,12 +270,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Panchayat Ghar, Salvador do Mundo",
+      "station_name": "Alto Porvorim Sports & Cultural Club",
       "village": "Salvador do Mundo",
-      "voters": 680,
+      "voters": 949,
       "margin_pct": 36.2,
-      "added": 16,
-      "deleted": 12
+      "added": 4,
+      "deleted": 30
     },
     {
       "number": 18,
@@ -285,12 +285,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Salem",
+      "station_name": "Govt. Primary School, Quitla (North Wing) Porvorim",
       "village": "Salvador do Mundo",
-      "voters": 645,
+      "voters": 563,
       "margin_pct": 33.8,
-      "added": 15,
-      "deleted": 12
+      "added": 0,
+      "deleted": 8
     },
     {
       "number": 19,
@@ -300,12 +300,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Community Hall, Donwaddo",
+      "station_name": "Govt. Primary School, Quitla (South Wing) Porvorim",
       "village": "Salvador do Mundo",
-      "voters": 710,
+      "voters": 336,
       "margin_pct": 31,
-      "added": 17,
-      "deleted": 13
+      "added": 5,
+      "deleted": 3
     },
     {
       "number": 20,
@@ -315,12 +315,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Badem",
+      "station_name": "Sunandabai Bandodkar High School, Umbra Porvorim",
       "village": "Salvador do Mundo",
-      "voters": 595,
+      "voters": 663,
       "margin_pct": 37.4,
-      "added": 14,
-      "deleted": 11
+      "added": 0,
+      "deleted": 18
     },
     {
       "number": 21,
@@ -330,12 +330,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Our Lady of Piety Hall, Pilerne Border",
+      "station_name": "?1 - Government Primary & Secondary School (East Wing), Alto-Betim, Bardez-Goa",
       "village": "Salvador do Mundo",
-      "voters": 630,
+      "voters": 435,
       "margin_pct": 26.5,
-      "added": 15,
-      "deleted": 11
+      "added": 1,
+      "deleted": 32
     },
     {
       "number": 22,
@@ -345,12 +345,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. High School Penha/Salvador (Booth 22+22A)",
+      "station_name": "Government Primary & Secondary School (West Wing), Alto-Betim, Bardez-Goa",
       "village": "Salvador do Mundo",
-      "voters": 1340,
+      "voters": 184,
       "margin_pct": 27.4,
-      "added": 32,
-      "deleted": 24
+      "added": 1,
+      "deleted": 1
     },
     {
       "number": 23,
@@ -360,12 +360,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "St. Anne Institute, Torda (Room 1)",
+      "station_name": "District Institute of Education & Training (East Wing). Penha de Franca, Porvorim",
       "village": "Salvador do Mundo",
-      "voters": 660,
+      "voters": 681,
       "margin_pct": 39.1,
-      "added": 16,
-      "deleted": 12
+      "added": 19,
+      "deleted": 34
     },
     {
       "number": 24,
@@ -375,12 +375,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "St. Anne Institute, Torda (Room 2)",
+      "station_name": "District Institute of Education & Training (West Wing), Penha de Franca Porvorim",
       "village": "Salvador do Mundo",
-      "voters": 640,
+      "voters": 424,
       "margin_pct": 35,
-      "added": 15,
-      "deleted": 12
+      "added": 7,
+      "deleted": 7
     },
     {
       "number": 25,
@@ -390,12 +390,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Quitla",
+      "station_name": "Vidhya Probhodini Higher Secondary Education Alto Betim (West Wing), Porvorim",
       "village": "Salvador do Mundo",
-      "voters": 620,
+      "voters": 274,
       "margin_pct": 32.8,
-      "added": 15,
-      "deleted": 11
+      "added": 1,
+      "deleted": 28
     },
     {
       "number": 26,
@@ -405,12 +405,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Anganwadi Centre, Salvador West",
+      "station_name": "Vidhya Probhodini Higher Secondary Education Alto Betim (East Wing), Porvorim",
       "village": "Salvador do Mundo",
-      "voters": 570,
+      "voters": 716,
       "margin_pct": 38.6,
-      "added": 14,
-      "deleted": 10
+      "added": 0,
+      "deleted": 83
     },
     {
       "number": 27,
@@ -420,12 +420,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Community Hall, Khadki Salvador",
+      "station_name": "Dona Leonor Memarial High School (Formerly known as Acdil School), Alto Betim- Porvorim",
       "village": "Salvador do Mundo",
-      "voters": 660,
+      "voters": 593,
       "margin_pct": 34,
-      "added": 16,
-      "deleted": 12
+      "added": 1,
+      "deleted": 38
     },
     {
       "number": 28,
@@ -435,12 +435,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Panchayat Hall, Penha-de-Franca (North)",
+      "station_name": "Triumph High School South Wing Pundalik Nagar Porvorim",
       "village": "Penha-de-Franca",
-      "voters": 690,
+      "voters": 294,
       "margin_pct": 29.5,
-      "added": 17,
-      "deleted": 12
+      "added": 3,
+      "deleted": 6
     },
     {
       "number": 29,
@@ -450,12 +450,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Panchayat Hall, Penha-de-Franca (South)",
+      "station_name": "Sanjay School (West Wing Office Premises), Alto Betim- Porvorim",
       "village": "Penha-de-Franca",
-      "voters": 705,
+      "voters": 544,
       "margin_pct": 28,
-      "added": 17,
-      "deleted": 13
+      "added": 6,
+      "deleted": 18
     },
     {
       "number": 30,
@@ -465,12 +465,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Alto Betim",
+      "station_name": "Triumph High School, Pundalik Nagar, Porvorim",
       "village": "Penha-de-Franca",
-      "voters": 630,
+      "voters": 379,
       "margin_pct": 32.4,
-      "added": 15,
-      "deleted": 11
+      "added": 4,
+      "deleted": 17
     },
     {
       "number": 31,
@@ -480,12 +480,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "St. Anthony High School, Alto Guirim Border",
+      "station_name": "Sanjay School (North Wing Office Premises) Alto Betim",
       "village": "Penha-de-Franca",
-      "voters": 610,
+      "voters": 493,
       "margin_pct": 18.5,
-      "added": 15,
-      "deleted": 11
+      "added": 5,
+      "deleted": 16
     },
     {
       "number": 32,
@@ -495,12 +495,12 @@
       "category": "Battle Ground",
       "color": "#D97706",
       "isDashed": false,
-      "station_name": "Govt. High School, Brittona (North)",
+      "station_name": "Sanjay School (South Wing Office Premises) Alto Betim",
       "village": "Penha-de-Franca",
-      "voters": 715,
+      "voters": 540,
       "margin_pct": 8.2,
-      "added": 17,
-      "deleted": 13
+      "added": 1,
+      "deleted": 10
     },
     {
       "number": 33,
@@ -510,12 +510,12 @@
       "category": "Battle Ground",
       "color": "#D97706",
       "isDashed": false,
-      "station_name": "Govt. High School, Brittona (South)",
+      "station_name": "Village Panchayat Office, Penha de Franca",
       "village": "Penha-de-Franca",
-      "voters": 685,
+      "voters": 402,
       "margin_pct": 7.5,
-      "added": 16,
-      "deleted": 12
+      "added": 1,
+      "deleted": 3
     },
     {
       "number": 34,
@@ -525,12 +525,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Brittona Riverside",
+      "station_name": "Village Panchayat Hall , Penha De Franca",
       "village": "Penha-de-Franca",
-      "voters": 590,
+      "voters": 752,
       "margin_pct": 26.2,
-      "added": 14,
-      "deleted": 11
+      "added": 4,
+      "deleted": 41
     },
     {
       "number": 35,
@@ -540,12 +540,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Anganwadi Centre, Britona Vaddem",
+      "station_name": "Maritime Building, Virlosa Penhade Franca, Class Room No. 2",
       "village": "Penha-de-Franca",
-      "voters": 540,
+      "voters": 786,
       "margin_pct": 31.8,
-      "added": 13,
-      "deleted": 10
+      "added": 2,
+      "deleted": 56
     },
     {
       "number": 36,
@@ -555,12 +555,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Village Community Hall, Penha Proper",
+      "station_name": "Marine Slipway (Captain of Ports) Britona Malim, Penha de Franca",
       "village": "Penha-de-Franca",
-      "voters": 640,
+      "voters": 648,
       "margin_pct": 25,
-      "added": 15,
-      "deleted": 12
+      "added": 1,
+      "deleted": 34
     },
     {
       "number": 37,
@@ -570,12 +570,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Primary School, Mandovi Vista",
+      "station_name": "Govt. Primary School, (West Wing) Betim",
       "village": "Penha-de-Franca",
-      "voters": 605,
+      "voters": 564,
       "margin_pct": 33.1,
-      "added": 15,
-      "deleted": 11
+      "added": 1,
+      "deleted": 79
     },
     {
       "number": 38,
@@ -585,12 +585,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Technical High School, Porvorim",
+      "station_name": "Govt. Primary School, (East Wing) Betim",
       "village": "Penha-de-Franca",
-      "voters": 730,
+      "voters": 395,
       "margin_pct": 29.4,
-      "added": 18,
-      "deleted": 13
+      "added": 0,
+      "deleted": 43
     },
     {
       "number": 39,
@@ -600,12 +600,12 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Sports Complex Hall, Porvorim East",
+      "station_name": "Govt. Primary School, (North Wing) Betim",
       "village": "Penha-de-Franca",
-      "voters": 617,
+      "voters": 552,
       "margin_pct": 32.1,
-      "added": 15,
-      "deleted": 11
+      "added": 1,
+      "deleted": 82
     }
   ],
   "villages": [

@@ -122,7 +122,7 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           {/* Breadcrumb */}
-          <p className="text-[11px] font-bold tracking-widest text-[#2563EB] uppercase mb-1">
+          <p className="text-[11px] font-bold tracking-widest text-[#2563EB] dark:text-blue-400 uppercase mb-1">
             {meta.state ? meta.state.toUpperCase() : 'GOA'} &nbsp;/&nbsp; {meta.district ? meta.district.toUpperCase() : 'NORTH GOA'} &nbsp;/&nbsp; {meta.taluka ? meta.taluka.toUpperCase() : 'BICHOLIM'}
           </p>
 
@@ -135,17 +135,17 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
               aria-expanded={isDropdownOpen}
               aria-haspopup="listbox"
             >
-              <h1 className="font-serif text-[32px] md:text-[34px] font-bold text-slate-900 tracking-tight group-hover:text-blue-600 transition-colors">
+              <h1 className="font-serif text-[32px] md:text-[34px] font-bold text-slate-900 dark:text-slate-100 tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {currentAC.name}
               </h1>
-              <span className="w-6 h-6 rounded-md border border-slate-300 flex items-center justify-center bg-white shadow-xs group-hover:border-blue-400 group-hover:bg-blue-50/50 transition-all">
-                <ChevronDown size={14} className={`text-slate-600 group-hover:text-blue-600 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-blue-600' : ''}`} />
+              <span className="w-6 h-6 rounded-md border border-slate-300 dark:border-slate-700 flex items-center justify-center bg-white dark:bg-slate-800 shadow-xs group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:bg-blue-50/50 dark:group-hover:bg-slate-700 transition-all">
+                <ChevronDown size={14} className={`text-slate-600 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-blue-600 dark:text-blue-400' : ''}`} />
               </span>
             </button>
 
             {isDropdownOpen && (
-              <div className="absolute left-0 top-full mt-2 w-72 bg-white rounded-xl border border-slate-200/90 shadow-2xl z-50 py-1.5 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
-                <div className="px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 border-b border-slate-100">
+              <div className="absolute left-0 top-full mt-2 w-72 bg-white dark:bg-slate-900 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xl z-50 py-1.5 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
+                <div className="px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 border-b border-slate-100 dark:border-slate-800">
                   Select Constituency
                 </div>
                 <div className="py-1">
@@ -161,20 +161,20 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
                         }}
                         className={`w-full text-left px-3.5 py-2.5 flex items-center justify-between text-[13px] transition-colors cursor-pointer ${
                           isSelected
-                            ? 'bg-blue-50/80 text-blue-700 font-bold'
-                            : 'text-slate-700 hover:bg-slate-50 font-medium'
+                            ? 'bg-blue-50/80 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-bold'
+                            : 'text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium'
                         }`}
                       >
                         <div>
                           <p className="font-serif font-bold text-[14px] leading-tight">
                             {ac.name}
                           </p>
-                          <p className="text-[11px] text-slate-400 font-sans mt-0.5">
+                          <p className="text-[11px] text-slate-400 dark:text-slate-500 font-sans mt-0.5">
                             {ac.district} • {ac.taluka}
                           </p>
                         </div>
                         {isSelected && (
-                          <Check size={16} className="text-blue-600 flex-shrink-0" />
+                          <Check size={16} className="text-blue-600 dark:text-blue-400 flex-shrink-0" />
                         )}
                       </button>
                     );
@@ -186,50 +186,50 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
         </div>
 
         {/* Active Electors Card (Right Side) */}
-        <div className="bg-[#F0FDF4] border border-[#DCFCE7] rounded-xl px-5 py-3.5 shadow-xs sm:text-right min-w-[180px]">
-          <p className="text-[12px] font-bold text-slate-500 mb-0.5">
+        <div className="bg-[#F0FDF4] dark:bg-emerald-950/30 border border-[#DCFCE7] dark:border-emerald-800/50 rounded-xl px-5 py-3.5 shadow-xs sm:text-right min-w-[180px]">
+          <p className="text-[12px] font-bold text-slate-500 dark:text-slate-400 mb-0.5">
             Active Electors
           </p>
-          <p className="text-[32px] font-extrabold text-[#0D6E6E] tabular-nums leading-none tracking-tight">
+          <p className="text-[32px] font-extrabold text-[#0D6E6E] dark:text-emerald-400 tabular-nums leading-none tracking-tight">
             {formatIndianNumber(totalVoters)}
           </p>
         </div>
       </div>
 
       {/* 2. Metadata Card (5 Distinct Columns) */}
-      <div className="bg-white rounded-2xl border border-slate-200/90 p-5 shadow-xs">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-100 text-[12px]">
+      <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-100 dark:divide-slate-800 text-[12px]">
           <div className="pt-2 md:pt-0 md:pr-4">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">PC</p>
-            <p className="font-bold text-slate-900 text-[14px]">
+            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">PC</p>
+            <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">
               {meta.pc_no ? `${meta.pc_no} – ` : ''}{meta.pc_name || 'North Goa'}
             </p>
           </div>
 
           <div className="pt-2 md:pt-0 md:px-4">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">District</p>
-            <p className="font-bold text-slate-900 text-[14px]">
+            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">District</p>
+            <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">
               {meta.district || 'North Goa'}
             </p>
           </div>
 
           <div className="pt-2 md:pt-0 md:px-4">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Taluka</p>
-            <p className="font-bold text-slate-900 text-[14px]">
+            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Taluka</p>
+            <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">
               {meta.taluka || 'Bicholim'}
             </p>
           </div>
 
           <div className="pt-2 md:pt-0 md:px-4">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Reservation</p>
-            <p className="font-bold text-slate-900 text-[14px]">
+            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Reservation</p>
+            <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">
               {meta.reservation || 'General'}
             </p>
           </div>
 
           <div className="pt-2 md:pt-0 md:pl-4 col-span-2 md:col-span-1">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">Areas / Villages</p>
-            <p className="font-medium text-slate-700 text-[12px] leading-snug truncate" title={villages.join(', ')}>
+            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Areas / Villages</p>
+            <p className="font-medium text-slate-700 dark:text-slate-300 text-[12px] leading-snug truncate" title={villages.join(', ')}>
               {villages.join(', ')}
             </p>
           </div>
@@ -237,19 +237,19 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
       </div>
 
       {/* 3. Electoral Roll Movement Card (With Connected Stepper & Stability Badge) */}
-      <div className="bg-white rounded-2xl border border-slate-200/90 p-6 shadow-xs">
+      <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs">
         {/* Title & Badge */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-8">
           <div>
-            <h3 className="font-serif text-[22px] font-bold text-slate-900 tracking-tight leading-snug">
+            <h3 className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-snug">
               Electoral Roll Movement
             </h3>
-            <p className="text-[12.5px] text-slate-500 font-medium mt-0.5">
+            <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
               Voter roll progression across drafts and supplements — {meta.ac_name ? `AC ${meta.ac_no} ${meta.ac_name}` : 'AC 17 Sanquelim'}
             </p>
           </div>
 
-          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#ECFDF5] border border-[#A7F3D0] text-[#065F46] text-[12px] font-semibold self-start md:self-auto shadow-xs">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#ECFDF5] dark:bg-emerald-950/40 border border-[#A7F3D0] dark:border-emerald-800/60 text-[#065F46] dark:text-emerald-300 text-[12px] font-semibold self-start md:self-auto shadow-xs">
             <div className="w-4 h-4 rounded-full bg-[#10B981] text-white flex items-center justify-center flex-shrink-0">
               <Check size={11} strokeWidth={3} />
             </div>
@@ -262,7 +262,7 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
           {/* Background Connecting Blue Line: strictly starts at node 0 center and ends at last node center */}
           {steps.length > 1 && (
             <div
-              className="absolute top-[11px] h-[2.5px] bg-[#3B82F6]"
+              className="absolute top-[11px] h-[2.5px] bg-[#3B82F6] dark:bg-blue-500"
               style={{
                 left: `${100 / (steps.length * 2)}%`,
                 right: `${100 / (steps.length * 2)}%`,
@@ -290,7 +290,7 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
                       <Check size={11} strokeWidth={3} />
                     </div>
                   ) : (
-                    <div className="w-5 h-5 rounded-full border-[3px] border-[#2563EB] bg-white shadow-xs" />
+                    <div className="w-5 h-5 rounded-full border-[3px] border-[#2563EB] dark:border-blue-400 bg-white dark:bg-slate-900 shadow-xs" />
                   )}
                 </div>
 
@@ -298,20 +298,20 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
                 <span
                   className={`px-3 py-0.5 rounded-md text-[11px] font-bold tracking-tight mb-1.5 ${
                     step.isLatest
-                      ? 'bg-[#D1FAE5] text-[#065F46]'
-                      : 'bg-[#EFF6FF] text-[#1E40AF]'
+                      ? 'bg-[#D1FAE5] dark:bg-emerald-950/60 text-[#065F46] dark:text-emerald-300'
+                      : 'bg-[#EFF6FF] dark:bg-blue-950/60 text-[#1E40AF] dark:text-blue-300'
                   }`}
                 >
                   {step.label}
                 </span>
 
                 {/* Date */}
-                <p className="text-[10px] font-bold text-slate-400 tracking-wider uppercase mb-1.5">
+                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase mb-1.5">
                   {step.date}
                 </p>
 
                 {/* Electors Count */}
-                <p className="text-[24px] font-extrabold text-slate-900 tabular-nums leading-tight mb-1">
+                <p className="text-[24px] font-extrabold text-slate-900 dark:text-slate-100 tabular-nums leading-tight mb-1">
                   {formatIndianNumber(step.count)}
                 </p>
 
@@ -319,10 +319,10 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
                 <p
                   className={`text-[13px] font-bold tabular-nums ${
                     step.deltaType === 'positive'
-                      ? 'text-[#16A34A]'
+                      ? 'text-[#16A34A] dark:text-emerald-400'
                       : step.deltaType === 'negative'
-                      ? 'text-[#DC2626]'
-                      : 'text-slate-400'
+                      ? 'text-[#DC2626] dark:text-rose-400'
+                      : 'text-slate-400 dark:text-slate-500'
                   }`}
                 >
                   {step.delta}
@@ -336,41 +336,41 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
       {/* 4. Master Metric Cards Row (Left Accent Strips) */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {/* Card 1: ACTIVE ELECTORS */}
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
             ACTIVE ELECTORS
           </p>
-          <p className="text-[26px] font-bold text-[#1E3A8A] tabular-nums leading-none">
+          <p className="text-[26px] font-bold text-[#1E3A8A] dark:text-blue-400 tabular-nums leading-none">
             {formatIndianNumber(totalVoters)}
           </p>
         </div>
 
         {/* Card 2: HOUSEHOLD GROUPS */}
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#0D9488]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#0D9488]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
             HOUSEHOLD GROUPS
           </p>
-          <p className="text-[26px] font-bold text-[#0F766E] tabular-nums leading-none">
+          <p className="text-[26px] font-bold text-[#0F766E] dark:text-teal-400 tabular-nums leading-none">
             {formatIndianNumber(totalFamilies)}
           </p>
         </div>
 
         {/* Card 3: VILLAGES */}
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
             VILLAGES
           </p>
-          <p className="text-[26px] font-bold text-[#1E3A8A] tabular-nums leading-none">
+          <p className="text-[26px] font-bold text-[#1E3A8A] dark:text-blue-400 tabular-nums leading-none">
             {villagesCount}
           </p>
         </div>
 
         {/* Card 4: POLLING BOOTHS */}
-        <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
-          <p className="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#2563EB]">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
             POLLING BOOTHS
           </p>
-          <p className="text-[26px] font-bold text-[#1E3A8A] tabular-nums leading-none">
+          <p className="text-[26px] font-bold text-[#1E3A8A] dark:text-blue-400 tabular-nums leading-none">
             {totalBooths}
           </p>
         </div>
@@ -378,46 +378,46 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
 
       {/* 5. Constituency Signals Section */}
       <div className="space-y-3">
-        <h3 className="font-serif text-[22px] font-bold text-slate-900 tracking-tight">
+        <h3 className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
           Constituency Signals
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Signal 1: Roll Stability */}
-          <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#10B981]">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+          <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#10B981]">
+            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
               Roll Stability
             </p>
-            <p className="text-[18px] font-bold text-[#16A34A] leading-tight mb-1">
+            <p className="text-[18px] font-bold text-[#16A34A] dark:text-emerald-400 leading-tight mb-1">
               Stable
             </p>
-            <p className="text-[12px] text-slate-600 leading-relaxed font-normal">
+            <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               No net change since July ({formatIndianNumber(totalVoters)}). Roll movement is minimal and within normal range.
             </p>
           </div>
 
           {/* Signal 2: Booth Coverage */}
-          <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#3B82F6]">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+          <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#3B82F6]">
+            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
               Booth Coverage
             </p>
-            <p className="text-[18px] font-bold text-[#1E40AF] leading-tight mb-1">
+            <p className="text-[18px] font-bold text-[#1E40AF] dark:text-blue-400 leading-tight mb-1">
               {totalBooths} Booths
             </p>
-            <p className="text-[12px] text-slate-600 leading-relaxed font-normal">
+            <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               Coverage across {villagesCount} villages. Average ~{avgVotersPerBooth} electors per booth.
             </p>
           </div>
 
           {/* Signal 3: Household Concentration */}
-          <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs border-l-[4px] border-l-[#0D9488]">
-            <p className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mb-1">
+          <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs border-l-[4px] border-l-[#0D9488]">
+            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
               Household Concentration
             </p>
-            <p className="text-[18px] font-bold text-[#0F766E] leading-tight mb-1">
+            <p className="text-[18px] font-bold text-[#0F766E] dark:text-teal-400 leading-tight mb-1">
               {formatIndianNumber(totalFamilies)} Households
             </p>
-            <p className="text-[12px] text-slate-600 leading-relaxed font-normal">
+            <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal">
               Average ~{avgVotersPerFamily} electors per household.
             </p>
           </div>

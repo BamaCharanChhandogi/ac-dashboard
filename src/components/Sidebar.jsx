@@ -11,8 +11,12 @@ import {
   Menu,
   X,
   Compass,
+  Sun,
+  Moon,
+  Monitor,
 } from 'lucide-react';
 import ConstituencySwitcher from './ConstituencySwitcher';
+import { useTheme } from '../context/ThemeContext';
 
 const ANALYTICAL_NAV_ITEMS = [
   { id: 'dashboard',   label: 'Overview',            icon: LayoutDashboard },
@@ -36,6 +40,7 @@ export default function Sidebar({
   onSelectAC,
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
 
   const handleNav = (id) => {
     onNavigate?.(id);
@@ -179,6 +184,55 @@ export default function Sidebar({
             </div>
           </div>
         </nav>
+
+        {/* Theme Mode Segmented Switcher */}
+        <div className="px-3 py-2 border-t border-white/5 flex-shrink-0">
+          <div className="flex items-center justify-between text-[11px] text-slate-400 mb-1.5 px-1 font-medium">
+            <span>Appearance</span>
+            <span className="capitalize text-[10px] text-slate-400">{theme}</span>
+          </div>
+          <div className="grid grid-cols-3 gap-1 bg-white/[0.05] p-1 rounded-xl border border-white/5">
+            <button
+              type="button"
+              onClick={() => setTheme('light')}
+              className={`flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[11px] font-semibold transition-all cursor-pointer ${
+                theme === 'light'
+                  ? 'bg-white text-slate-900 shadow-sm'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+              title="Light Mode"
+            >
+              <Sun size={13} />
+              <span>Light</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setTheme('dark')}
+              className={`flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[11px] font-semibold transition-all cursor-pointer ${
+                theme === 'dark'
+                  ? 'bg-[#2563EB] text-white shadow-sm shadow-blue-500/30'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+              title="Dark Mode"
+            >
+              <Moon size={13} />
+              <span>Dark</span>
+            </button>
+            <button
+              type="button"
+              onClick={() => setTheme('system')}
+              className={`flex items-center justify-center gap-1.5 py-1.5 rounded-lg text-[11px] font-semibold transition-all cursor-pointer ${
+                theme === 'system'
+                  ? 'bg-white/20 text-white shadow-sm'
+                  : 'text-slate-400 hover:text-white hover:bg-white/5'
+              }`}
+              title="System Preference"
+            >
+              <Monitor size={13} />
+              <span>Auto</span>
+            </button>
+          </div>
+        </div>
 
         {/* Ambient Footer */}
         <div className="p-3 border-t border-white/5 flex-shrink-0">
