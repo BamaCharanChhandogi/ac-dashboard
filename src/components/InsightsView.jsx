@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useMemo } from 'react';
 import { Search } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 
-const VILLAGE_LEANS = [
+const SANQUELIM_VILLAGE_LEANS = [
   { village: 'Cotombi',   margin: '+43.4%', status: 'Safe (≥10%)', voters: 483 },
   { village: 'Surla',     margin: '+39.6%', status: 'Safe (≥10%)', voters: 3163 },
   { village: 'Navelim',   margin: '+35.6%', status: 'Safe (≥10%)', voters: 2285 },
@@ -14,7 +14,7 @@ const VILLAGE_LEANS = [
   { village: 'Sanquelim', margin: '+20.7%', status: 'Safe (≥10%)', voters: 8480 },
 ];
 
-const FAMILIES_SAMPLE = [
+const SANQUELIM_FAMILIES = [
   {
     head: 'Shivram Nara Naik family',
     village: 'Pale',
@@ -93,7 +93,27 @@ export default function InsightsView({ data }) {
   const meta = data?.meta || {};
   const [searchTerm, setSearchTerm] = useState('');
 
-  const filteredFamilies = FAMILIES_SAMPLE.filter(
+  const villageLeans = useMemo(() => {
+    if (data?.village_insights && data.village_insights.length > 0) {
+      return data.village_insights;
+    }
+    return SANQUELIM_VILLAGE_LEANS;
+  }, [data]);
+
+  const rawFamilies = useMemo(() => {
+    if (data?.families && data.families.length > 0) {
+      return data.families.map((f) => ({
+        head: f.head || `${f.surname} Family`,
+        village: f.village,
+        house: f.house || `House No. ${f.house_no}`,
+        membersCount: f.membersCount || f.members_count || f.members?.length || 10,
+        sample: f.sample || (f.members || []).slice(0, 4),
+      }));
+    }
+    return SANQUELIM_FAMILIES;
+  }, [data]);
+
+  const filteredFamilies = rawFamilies.filter(
     (f) =>
       f.head.toLowerCase().includes(searchTerm.toLowerCase()) ||
       f.village.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -122,7 +142,7 @@ export default function InsightsView({ data }) {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {VILLAGE_LEANS.map((item) => (
+          {villageLeans.map((item) => (
             <div key={item.village} className="bg-slate-50 dark:bg-slate-900/90 rounded-xl p-4 border border-slate-100 dark:border-slate-800 flex items-center justify-between">
               <div>
                 <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">{item.village}</p>

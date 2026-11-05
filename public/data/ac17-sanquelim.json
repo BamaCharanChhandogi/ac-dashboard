@@ -701,7 +701,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 220,
-        "y": 140
+        "y": 140,
+        "elections": {
+          "2012 AE": {
+            "margin": 26.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 27.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 12,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 21.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 22.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 18.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "2",
@@ -715,7 +767,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 280,
-        "y": 160
+        "y": 160,
+        "elections": {
+          "2012 AE": {
+            "margin": 31.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 33,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 14.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 25.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 14.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 26.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 22,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "3",
@@ -729,7 +833,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 340,
-        "y": 150
+        "y": 150,
+        "elections": {
+          "2012 AE": {
+            "margin": 20.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 21.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 9.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 16.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 16.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 17.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 14.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "4",
@@ -743,7 +899,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 400,
-        "y": 170
+        "y": 170,
+        "elections": {
+          "2012 AE": {
+            "margin": 28.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 29.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 12.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 22.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 18.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 24.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 19.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "5",
@@ -753,11 +961,63 @@
         "added": 12,
         "deleted": 39,
         "families_count": 104,
-        "margin_pct": 21.4,
+        "margin_pct": -2.8,
         "winner": "BJP",
-        "category": "Safe",
+        "category": "Weak",
         "x": 310,
-        "y": 210
+        "y": 210,
+        "elections": {
+          "2012 AE": {
+            "margin": 18.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 32.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -12.4,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "INC",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 6.8,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": -16.4,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "INC",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 5.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": -2.8,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "INC",
+            "isDashed": false
+          }
+        },
+        "color": "#991B1B"
       },
       {
         "part_no": "6",
@@ -771,7 +1031,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 370,
-        "y": 215
+        "y": 215,
+        "elections": {
+          "2012 AE": {
+            "margin": 35.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 36.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 4.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 28.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 29.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 24.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "7",
@@ -781,11 +1093,63 @@
         "added": 10,
         "deleted": 58,
         "families_count": 159,
-        "margin_pct": 16.9,
+        "margin_pct": 4.2,
         "winner": "BJP",
-        "category": "Safe",
+        "category": "Battle Ground",
         "x": 430,
-        "y": 220
+        "y": 220,
+        "elections": {
+          "2012 AE": {
+            "margin": 24.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 25.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -3.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "INC",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 19.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": -5.8,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "INC",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 20.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 4.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#D97706"
       },
       {
         "part_no": "8",
@@ -799,7 +1163,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 260,
-        "y": 270
+        "y": 270,
+        "elections": {
+          "2012 AE": {
+            "margin": 37.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 39.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 17,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 30,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 16.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 31.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 26.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "9",
@@ -813,7 +1229,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 330,
-        "y": 280
+        "y": 280,
+        "elections": {
+          "2012 AE": {
+            "margin": 41,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 42.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 18.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 32.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 18.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 34.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 28.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "10",
@@ -827,7 +1295,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 390,
-        "y": 280
+        "y": 280,
+        "elections": {
+          "2012 AE": {
+            "margin": 29.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "2014 LS": {
+            "margin": 30.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "2017 AE": {
+            "margin": 13.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "2019 LS": {
+            "margin": 23.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "2022 AE": {
+            "margin": 10.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "2024 LS": {
+            "margin": 24.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "Overall": {
+            "margin": 20.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "11",
@@ -841,7 +1361,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 450,
-        "y": 275
+        "y": 275,
+        "elections": {
+          "2012 AE": {
+            "margin": 26.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 27,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 11.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 20.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 22,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 18,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "12",
@@ -855,7 +1427,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 300,
-        "y": 340
+        "y": 340,
+        "elections": {
+          "2012 AE": {
+            "margin": 33.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 34.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 14.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 26.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 14.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 27.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 22.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "13",
@@ -869,7 +1493,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 360,
-        "y": 345
+        "y": 345,
+        "elections": {
+          "2012 AE": {
+            "margin": 30.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 31.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 13.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 24.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 16.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 25.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 21,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "14",
@@ -883,7 +1559,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 650,
-        "y": 380
+        "y": 380,
+        "elections": {
+          "2012 AE": {
+            "margin": 49.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 51,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 22.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 39.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 41.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 34,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "15",
@@ -897,7 +1625,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 710,
-        "y": 400
+        "y": 400,
+        "elections": {
+          "2012 AE": {
+            "margin": 45.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 47.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 20.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 36.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 38.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 31.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "16",
@@ -911,7 +1691,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 760,
-        "y": 420
+        "y": 420,
+        "elections": {
+          "2012 AE": {
+            "margin": 48.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 49.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 21.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 38.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 40.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 33.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "17",
@@ -925,7 +1757,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 480,
-        "y": 310
+        "y": 310,
+        "elections": {
+          "2012 AE": {
+            "margin": 52.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 54.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 23.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 41.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 44.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 36.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "18",
@@ -939,7 +1823,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 530,
-        "y": 330
+        "y": 330,
+        "elections": {
+          "2012 AE": {
+            "margin": 55.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 57,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 24.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 43.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 13.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 46.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 38,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "19",
@@ -953,7 +1889,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 580,
-        "y": 350
+        "y": 350,
+        "elections": {
+          "2012 AE": {
+            "margin": 48,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 49.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 21.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 38.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 40.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 33.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "20",
@@ -967,7 +1955,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 510,
-        "y": 380
+        "y": 380,
+        "elections": {
+          "2012 AE": {
+            "margin": 47.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 48.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 21.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 37.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 39.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 32.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "21",
@@ -981,7 +2021,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 560,
-        "y": 400
+        "y": 400,
+        "elections": {
+          "2012 AE": {
+            "margin": 52.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 54.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 23.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 41.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 44.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 36.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "22",
@@ -995,7 +2087,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 410,
-        "y": 460
+        "y": 460,
+        "elections": {
+          "2012 AE": {
+            "margin": 51.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 53.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 23.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 41.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 6.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 43.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 35.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "23",
@@ -1009,7 +2153,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 460,
-        "y": 480
+        "y": 480,
+        "elections": {
+          "2012 AE": {
+            "margin": 53.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 55.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 24.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 42.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 13,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 45.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 37.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "24",
@@ -1023,7 +2219,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 420,
-        "y": 520
+        "y": 520,
+        "elections": {
+          "2012 AE": {
+            "margin": 49.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 51,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 22.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 39.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 41.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 34,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "25",
@@ -1037,7 +2285,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 480,
-        "y": 540
+        "y": 540,
+        "elections": {
+          "2012 AE": {
+            "margin": 52.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 54,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 23.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 41.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 43.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 36,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "26",
@@ -1051,7 +2351,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 280,
-        "y": 620
+        "y": 620,
+        "elections": {
+          "2012 AE": {
+            "margin": 46.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 48,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 20.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 36.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 39,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 32,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "27",
@@ -1065,7 +2417,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 330,
-        "y": 640
+        "y": 640,
+        "elections": {
+          "2012 AE": {
+            "margin": 50,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 51.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 22.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 39.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 42.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 34.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "28",
@@ -1079,7 +2483,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 300,
-        "y": 680
+        "y": 680,
+        "elections": {
+          "2012 AE": {
+            "margin": 53.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 55.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 23.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 42.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 44.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 36.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "29",
@@ -1093,7 +2549,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 350,
-        "y": 700
+        "y": 700,
+        "elections": {
+          "2012 AE": {
+            "margin": 54.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 56.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 24.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 43,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 13.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 45.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 37.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "30",
@@ -1107,7 +2615,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 320,
-        "y": 740
+        "y": 740,
+        "elections": {
+          "2012 AE": {
+            "margin": 50.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 52.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 22.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 40.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 12.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 42.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 35,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "31",
@@ -1121,7 +2681,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 820,
-        "y": 210
+        "y": 210,
+        "elections": {
+          "2012 AE": {
+            "margin": 58.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 60.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 26.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 46.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 14.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 49,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 40.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "32",
@@ -1135,7 +2747,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 880,
-        "y": 210
+        "y": 210,
+        "elections": {
+          "2012 AE": {
+            "margin": 56,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 57.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 25.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 44.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 13.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 47.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 38.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "33",
@@ -1149,7 +2813,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 930,
-        "y": 220
+        "y": 220,
+        "elections": {
+          "2012 AE": {
+            "margin": 60.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 62.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 27,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 47.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 14.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 50.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 41.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "34",
@@ -1163,7 +2879,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 850,
-        "y": 260
+        "y": 260,
+        "elections": {
+          "2012 AE": {
+            "margin": 56.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 58.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 25.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 44.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 13.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 47.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 39,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "35",
@@ -1177,7 +2945,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 900,
-        "y": 270
+        "y": 270,
+        "elections": {
+          "2012 AE": {
+            "margin": 54.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 56.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 24.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 43.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 4.8,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 46.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 37.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "36",
@@ -1191,7 +3011,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 940,
-        "y": 290
+        "y": 290,
+        "elections": {
+          "2012 AE": {
+            "margin": 59.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 61.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 26.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 46.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 14.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 49.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 40.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "37",
@@ -1205,7 +3077,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 870,
-        "y": 320
+        "y": 320,
+        "elections": {
+          "2012 AE": {
+            "margin": 57.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 59.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 25.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 45.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 13.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 48.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 39.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "38",
@@ -1219,7 +3143,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 710,
-        "y": 740
+        "y": 740,
+        "elections": {
+          "2012 AE": {
+            "margin": 35.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 36.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 15.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 27.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 16.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 29.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 24.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "39",
@@ -1233,7 +3209,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 760,
-        "y": 760
+        "y": 760,
+        "elections": {
+          "2012 AE": {
+            "margin": 38.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 39.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 17.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 30.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 18.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 32.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 26.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "40",
@@ -1247,7 +3275,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 780,
-        "y": 800
+        "y": 800,
+        "elections": {
+          "2012 AE": {
+            "margin": 37.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 38.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 16.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 29.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 10.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 31.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 25.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "41",
@@ -1257,11 +3337,63 @@
         "added": 4,
         "deleted": 12,
         "families_count": 68,
-        "margin_pct": 28,
+        "margin_pct": 7.5,
         "winner": "BJP",
-        "category": "Safe",
+        "category": "Battle Ground",
         "x": 820,
-        "y": 580
+        "y": 580,
+        "elections": {
+          "2012 AE": {
+            "margin": 40.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 42,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 3.8,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 32.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 2.4,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 34.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 7.5,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#D97706"
       },
       {
         "part_no": "42",
@@ -1275,7 +3407,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 860,
-        "y": 590
+        "y": 590,
+        "elections": {
+          "2012 AE": {
+            "margin": 44.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 46.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 20.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 35.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 10.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 37.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 31,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "43",
@@ -1289,7 +3473,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 900,
-        "y": 600
+        "y": 600,
+        "elections": {
+          "2012 AE": {
+            "margin": 42.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 44.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 19.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 33.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 10.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 36,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 29.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "44",
@@ -1303,7 +3539,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 830,
-        "y": 640
+        "y": 640,
+        "elections": {
+          "2012 AE": {
+            "margin": 48.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 50.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 21.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 38.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 40.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 33.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "45",
@@ -1317,7 +3605,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 880,
-        "y": 650
+        "y": 650,
+        "elections": {
+          "2012 AE": {
+            "margin": 43.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 45,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 19.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 34.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 10.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 36.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 30,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "46",
@@ -1331,7 +3671,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 920,
-        "y": 660
+        "y": 660,
+        "elections": {
+          "2012 AE": {
+            "margin": 46.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 48.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 20.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 37,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 11.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 39.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 32.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "47",
@@ -1345,7 +3737,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 1010,
-        "y": 320
+        "y": 320,
+        "elections": {
+          "2012 AE": {
+            "margin": 62.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 65.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 28.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 49.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 15.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 52.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 43.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "48",
@@ -1359,7 +3803,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 850,
-        "y": 700
+        "y": 700,
+        "elections": {
+          "2012 AE": {
+            "margin": 39.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 41.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 17.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 31.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 16.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 33.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 27.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "49",
@@ -1373,7 +3869,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 890,
-        "y": 720
+        "y": 720,
+        "elections": {
+          "2012 AE": {
+            "margin": 42.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 43.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 18.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 33.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 10.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 35.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 29,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       },
       {
         "part_no": "50",
@@ -1387,7 +3935,59 @@
         "winner": "BJP",
         "category": "Safe",
         "x": 940,
-        "y": 730
+        "y": 730,
+        "elections": {
+          "2012 AE": {
+            "margin": 44.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 45.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": 19.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 35.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 10.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 37.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 30.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        },
+        "color": "#15803D"
       }
     ]
   },

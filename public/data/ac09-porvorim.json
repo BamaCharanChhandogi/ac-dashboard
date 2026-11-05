@@ -566,7 +566,58 @@
         "voters": 876,
         "margin_pct": 38.5,
         "added": 8,
-        "deleted": 26
+        "deleted": 26,
+        "elections": {
+          "2012 AE": {
+            "margin": -20,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 39.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -23.9,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 27.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 40.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 37.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 38.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 2,
@@ -581,7 +632,58 @@
         "voters": 485,
         "margin_pct": 42.1,
         "added": 16,
-        "deleted": 11
+        "deleted": 11,
+        "elections": {
+          "2012 AE": {
+            "margin": -21.9,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 42.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -26.1,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 30.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 44.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 41.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 42.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 3,
@@ -596,7 +698,58 @@
         "voters": 768,
         "margin_pct": 36.4,
         "added": 7,
-        "deleted": 46
+        "deleted": 46,
+        "elections": {
+          "2012 AE": {
+            "margin": -18.9,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 37.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -22.6,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 26.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 38.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 35.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 36.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 4,
@@ -611,7 +764,58 @@
         "voters": 738,
         "margin_pct": 35.8,
         "added": 4,
-        "deleted": 35
+        "deleted": 35,
+        "elections": {
+          "2012 AE": {
+            "margin": -18.6,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 36.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -22.2,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 25.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 37.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 35.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 35.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 5,
@@ -626,7 +830,58 @@
         "voters": 794,
         "margin_pct": 39,
         "added": 9,
-        "deleted": 92
+        "deleted": 92,
+        "elections": {
+          "2012 AE": {
+            "margin": -20.3,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 39.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -24.2,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 28.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 41,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 38.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 39,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 6,
@@ -641,7 +896,58 @@
         "voters": 740,
         "margin_pct": 37.2,
         "added": 22,
-        "deleted": 81
+        "deleted": 81,
+        "elections": {
+          "2012 AE": {
+            "margin": -19.3,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 37.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -23.1,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 26.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 39.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 36.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 37.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 7,
@@ -656,7 +962,58 @@
         "voters": 913,
         "margin_pct": 31.4,
         "added": 45,
-        "deleted": 61
+        "deleted": 61,
+        "elections": {
+          "2012 AE": {
+            "margin": -16.3,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 32,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -19.5,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 22.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 33,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 30.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 31.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 8,
@@ -671,7 +1028,58 @@
         "voters": 762,
         "margin_pct": 33,
         "added": 12,
-        "deleted": 29
+        "deleted": 29,
+        "elections": {
+          "2012 AE": {
+            "margin": -17.2,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 33.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -20.5,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 23.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 34.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 32.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 33,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 9,
@@ -686,7 +1094,58 @@
         "voters": 696,
         "margin_pct": 44.2,
         "added": 3,
-        "deleted": 50
+        "deleted": 50,
+        "elections": {
+          "2012 AE": {
+            "margin": -23,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 45.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -27.4,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 31.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 46.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 43.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 44.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 10,
@@ -701,7 +1160,58 @@
         "voters": 800,
         "margin_pct": 28.5,
         "added": 29,
-        "deleted": 50
+        "deleted": 50,
+        "elections": {
+          "2012 AE": {
+            "margin": -14.8,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": true
+          },
+          "2014 LS": {
+            "margin": 29.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "2017 AE": {
+            "margin": -17.7,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": true
+          },
+          "2019 LS": {
+            "margin": 20.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "2022 AE": {
+            "margin": 29.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "2024 LS": {
+            "margin": 27.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          },
+          "Overall": {
+            "margin": 28.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": true
+          }
+        }
       },
       {
         "number": 11,
@@ -716,7 +1226,58 @@
         "voters": 973,
         "margin_pct": 29.8,
         "added": 11,
-        "deleted": 32
+        "deleted": 32,
+        "elections": {
+          "2012 AE": {
+            "margin": -15.5,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 30.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -18.5,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 21.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 31.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 29.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 29.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 12,
@@ -731,7 +1292,58 @@
         "voters": 809,
         "margin_pct": 24.1,
         "added": 2,
-        "deleted": 93
+        "deleted": 93,
+        "elections": {
+          "2012 AE": {
+            "margin": -12.5,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 24.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -14.9,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 17.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 25.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 23.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 24.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 13,
@@ -746,7 +1358,58 @@
         "voters": 814,
         "margin_pct": 25.6,
         "added": 13,
-        "deleted": 26
+        "deleted": 26,
+        "elections": {
+          "2012 AE": {
+            "margin": -13.3,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 26.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -15.9,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 18.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 26.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 25.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 25.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 14,
@@ -761,7 +1424,58 @@
         "voters": 382,
         "margin_pct": 34.7,
         "added": 5,
-        "deleted": 29
+        "deleted": 29,
+        "elections": {
+          "2012 AE": {
+            "margin": -18,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 35.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -21.5,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 25,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 36.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 34,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 34.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 15,
@@ -776,7 +1490,58 @@
         "voters": 935,
         "margin_pct": 40.5,
         "added": 9,
-        "deleted": 52
+        "deleted": 52,
+        "elections": {
+          "2012 AE": {
+            "margin": -21.1,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 41.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -25.1,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 29.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 42.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 39.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 40.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 16,
@@ -791,7 +1556,58 @@
         "voters": 295,
         "margin_pct": 38,
         "added": 7,
-        "deleted": 5
+        "deleted": 5,
+        "elections": {
+          "2012 AE": {
+            "margin": -19.8,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 38.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -23.6,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 27.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 39.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 37.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 38,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 17,
@@ -806,7 +1622,58 @@
         "voters": 949,
         "margin_pct": 36.2,
         "added": 4,
-        "deleted": 30
+        "deleted": 30,
+        "elections": {
+          "2012 AE": {
+            "margin": -18.8,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 36.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -22.4,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 26.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 38,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 35.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 36.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 18,
@@ -821,7 +1688,58 @@
         "voters": 563,
         "margin_pct": 33.8,
         "added": 0,
-        "deleted": 8
+        "deleted": 8,
+        "elections": {
+          "2012 AE": {
+            "margin": -17.6,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 34.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -21,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 24.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 35.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 33.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 33.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 19,
@@ -836,7 +1754,58 @@
         "voters": 336,
         "margin_pct": 31,
         "added": 5,
-        "deleted": 3
+        "deleted": 3,
+        "elections": {
+          "2012 AE": {
+            "margin": -16.1,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 31.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -19.2,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 22.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 32.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 30.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 31,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 20,
@@ -851,7 +1820,58 @@
         "voters": 663,
         "margin_pct": 37.4,
         "added": 0,
-        "deleted": 18
+        "deleted": 18,
+        "elections": {
+          "2012 AE": {
+            "margin": -19.4,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 38.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -23.2,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 26.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 39.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 36.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 37.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 21,
@@ -866,7 +1886,58 @@
         "voters": 435,
         "margin_pct": 26.5,
         "added": 1,
-        "deleted": 32
+        "deleted": 32,
+        "elections": {
+          "2012 AE": {
+            "margin": -13.8,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 27,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -16.4,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 19.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 27.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 26,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 26.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 22,
@@ -881,7 +1952,58 @@
         "voters": 184,
         "margin_pct": 27.4,
         "added": 1,
-        "deleted": 1
+        "deleted": 1,
+        "elections": {
+          "2012 AE": {
+            "margin": -14.2,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 27.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -17,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 19.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 28.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 26.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 27.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 23,
@@ -896,7 +2018,58 @@
         "voters": 681,
         "margin_pct": 39.1,
         "added": 19,
-        "deleted": 34
+        "deleted": 34,
+        "elections": {
+          "2012 AE": {
+            "margin": -20.3,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 39.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -24.2,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 28.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 41.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 38.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 39.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 24,
@@ -911,7 +2084,58 @@
         "voters": 424,
         "margin_pct": 35,
         "added": 7,
-        "deleted": 7
+        "deleted": 7,
+        "elections": {
+          "2012 AE": {
+            "margin": -18.2,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 35.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -21.7,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 25.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 36.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 34.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 35,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 25,
@@ -926,7 +2150,58 @@
         "voters": 274,
         "margin_pct": 32.8,
         "added": 1,
-        "deleted": 28
+        "deleted": 28,
+        "elections": {
+          "2012 AE": {
+            "margin": -17.1,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 33.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -20.3,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 23.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 34.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 32.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 32.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 26,
@@ -941,7 +2216,58 @@
         "voters": 716,
         "margin_pct": 38.6,
         "added": 0,
-        "deleted": 83
+        "deleted": 83,
+        "elections": {
+          "2012 AE": {
+            "margin": -20.1,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 39.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -23.9,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 27.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 40.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 37.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 38.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 27,
@@ -956,7 +2282,58 @@
         "voters": 593,
         "margin_pct": 34,
         "added": 1,
-        "deleted": 38
+        "deleted": 38,
+        "elections": {
+          "2012 AE": {
+            "margin": -17.7,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 34.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -21.1,
+            "category": "Weak",
+            "color": "#991B1B",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 24.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 35.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 33.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 34,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 28,
@@ -971,7 +2348,58 @@
         "voters": 294,
         "margin_pct": 29.5,
         "added": 3,
-        "deleted": 6
+        "deleted": 6,
+        "elections": {
+          "2012 AE": {
+            "margin": -6.1,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 30.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -8.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 21.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 31,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 28.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 29.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 29,
@@ -986,7 +2414,58 @@
         "voters": 544,
         "margin_pct": 28,
         "added": 6,
-        "deleted": 18
+        "deleted": 18,
+        "elections": {
+          "2012 AE": {
+            "margin": -5.8,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 28.6,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -7.8,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 20.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 29.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 27.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 28,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 30,
@@ -1001,7 +2480,58 @@
         "voters": 379,
         "margin_pct": 32.4,
         "added": 4,
-        "deleted": 17
+        "deleted": 17,
+        "elections": {
+          "2012 AE": {
+            "margin": -6.7,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 33,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -9,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 23.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 34,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 31.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 32.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 31,
@@ -1016,7 +2546,58 @@
         "voters": 493,
         "margin_pct": 18.5,
         "added": 5,
-        "deleted": 16
+        "deleted": 16,
+        "elections": {
+          "2012 AE": {
+            "margin": -3.8,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 18.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -5.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 13.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 19.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 18.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 18.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 32,
@@ -1031,7 +2612,58 @@
         "voters": 540,
         "margin_pct": 8.2,
         "added": 1,
-        "deleted": 10
+        "deleted": 10,
+        "elections": {
+          "2012 AE": {
+            "margin": -1.7,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 26,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -2.3,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 6.5,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 8.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 28.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 8.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 33,
@@ -1046,7 +2678,58 @@
         "voters": 402,
         "margin_pct": 7.5,
         "added": 1,
-        "deleted": 3
+        "deleted": 3,
+        "elections": {
+          "2012 AE": {
+            "margin": -1.6,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 26,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -2.1,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 7.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 7.5,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 28.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 7.5,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 34,
@@ -1061,7 +2744,58 @@
         "voters": 752,
         "margin_pct": 26.2,
         "added": 4,
-        "deleted": 41
+        "deleted": 41,
+        "elections": {
+          "2012 AE": {
+            "margin": -5.4,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 26.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -7.3,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 18.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 27.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 25.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 26.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 35,
@@ -1076,7 +2810,58 @@
         "voters": 786,
         "margin_pct": 31.8,
         "added": 2,
-        "deleted": 56
+        "deleted": 56,
+        "elections": {
+          "2012 AE": {
+            "margin": -6.6,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 32.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -8.9,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 22.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 33.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 31.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 31.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 36,
@@ -1091,7 +2876,58 @@
         "voters": 648,
         "margin_pct": 25,
         "added": 1,
-        "deleted": 34
+        "deleted": 34,
+        "elections": {
+          "2012 AE": {
+            "margin": -5.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 25.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -7,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 18,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 26.3,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 24.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 25,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 37,
@@ -1106,7 +2942,58 @@
         "voters": 564,
         "margin_pct": 33.1,
         "added": 1,
-        "deleted": 79
+        "deleted": 79,
+        "elections": {
+          "2012 AE": {
+            "margin": -6.9,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 33.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -9.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 23.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 34.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 32.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 33.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 38,
@@ -1121,7 +3008,58 @@
         "voters": 395,
         "margin_pct": 29.4,
         "added": 0,
-        "deleted": 43
+        "deleted": 43,
+        "elections": {
+          "2012 AE": {
+            "margin": -6.1,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 30,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -8.2,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 21.2,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 30.9,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 28.8,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 29.4,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       },
       {
         "number": 39,
@@ -1136,62 +3074,491 @@
         "voters": 552,
         "margin_pct": 32.1,
         "added": 1,
-        "deleted": 82
+        "deleted": 82,
+        "elections": {
+          "2012 AE": {
+            "margin": -6.7,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2014 LS": {
+            "margin": 32.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2017 AE": {
+            "margin": -9,
+            "category": "Battle Ground",
+            "color": "#D97706",
+            "winner": "IND (Khaunte)",
+            "isDashed": false
+          },
+          "2019 LS": {
+            "margin": 23.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2022 AE": {
+            "margin": 33.7,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "2024 LS": {
+            "margin": 31.5,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          },
+          "Overall": {
+            "margin": 32.1,
+            "category": "Safe",
+            "color": "#15803D",
+            "winner": "BJP",
+            "isDashed": false
+          }
+        }
       }
     ]
   },
   "families": [
     {
-      "id": "fam_p1",
-      "surname": "Pinto",
-      "head_name": "Francis Pinto",
+      "id": "fam_pv_1",
+      "head": "Vazarkar Family",
+      "surname": "Vazarkar",
       "village": "Socorro",
-      "house_no": "01",
-      "members_count": 18,
-      "is_cluster": true,
-      "cluster_tag": "Wada Compound Cluster",
-      "members": [
+      "house": "House No. 1032",
+      "house_no": "1032",
+      "membersCount": 24,
+      "booth": 12,
+      "sample": [
         {
-          "name": "Francis Pinto",
-          "age": 62,
-          "gender": "Male",
-          "epic": "POR01001"
+          "name": "Subhash Vazarkar",
+          "age": 71,
+          "gender": "M",
+          "epic": "TMN0161182"
         },
         {
-          "name": "Maria Pinto",
-          "age": 59,
-          "gender": "Female",
-          "epic": "POR01002"
+          "name": "Suvarna Vazarkar",
+          "age": 66,
+          "gender": "F",
+          "epic": "BGW0974246"
         },
         {
-          "name": "Anthony Pinto",
-          "age": 34,
-          "gender": "Male",
-          "epic": "POR01003"
+          "name": "Shivdas Vazarkar",
+          "age": 66,
+          "gender": "M",
+          "epic": "TMN0317594"
+        },
+        {
+          "name": "Jayanth Vazarkar",
+          "age": 64,
+          "gender": "M",
+          "epic": "TMN0161190"
         }
       ]
     },
     {
-      "id": "fam_p2",
-      "surname": "Kamat",
-      "head_name": "Girish Kamat",
-      "village": "Penha-de-Franca",
-      "house_no": "114",
-      "members_count": 14,
-      "is_cluster": true,
-      "cluster_tag": "Joint Family Unit",
-      "members": [
+      "id": "fam_pv_2",
+      "head": "Kambli Family",
+      "surname": "Kambli",
+      "village": "Socorro",
+      "house": "House No. 355",
+      "house_no": "355",
+      "membersCount": 20,
+      "booth": 2,
+      "sample": [
         {
-          "name": "Girish Kamat",
-          "age": 58,
-          "gender": "Male",
-          "epic": "POR02001"
+          "name": "Chandrawati Kambli",
+          "age": 72,
+          "gender": "F",
+          "epic": "BGW0930107"
         },
         {
-          "name": "Ananya Kamat",
+          "name": "Subhash Govind Kambli",
+          "age": 66,
+          "gender": "M",
+          "epic": "TMN0322826"
+        },
+        {
+          "name": "Shubhangi Kambli",
+          "age": 65,
+          "gender": "F",
+          "epic": "TMN0322818"
+        },
+        {
+          "name": "Ranjana Kambli",
+          "age": 59,
+          "gender": "F",
+          "epic": "TMN0322834"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_3",
+      "head": "Shirodkar Family",
+      "surname": "Shirodkar",
+      "village": "Socorro",
+      "house": "House No. 1048",
+      "house_no": "1048",
+      "membersCount": 16,
+      "booth": 12,
+      "sample": [
+        {
+          "name": "Navso Jayaram Shirodkar",
+          "age": 72,
+          "gender": "M",
+          "epic": "BGW0974105"
+        },
+        {
+          "name": "Kashinath Jayaram Shirodkar",
+          "age": 69,
+          "gender": "M",
+          "epic": "TMN0310441"
+        },
+        {
+          "name": "Arati Arjun Shirodkar",
+          "age": 67,
+          "gender": "F",
+          "epic": "TMN0310466"
+        },
+        {
+          "name": "Prakash Mahadev Shirodkar",
+          "age": 62,
+          "gender": "M",
+          "epic": "TMN0310433"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_4",
+      "head": "Tamoskar Family",
+      "surname": "Tamoskar",
+      "village": "Penha-de-Franca",
+      "house": "House No. 245",
+      "house_no": "245",
+      "membersCount": 15,
+      "booth": 35,
+      "sample": [
+        {
+          "name": "Vasant Tamoskar",
+          "age": 85,
+          "gender": "M",
+          "epic": "TMN0142133"
+        },
+        {
+          "name": "Ramakant Tamoskar",
+          "age": 72,
+          "gender": "M",
+          "epic": "TMN0144907"
+        },
+        {
+          "name": "Suresh Tamoskar",
+          "age": 69,
+          "gender": "M",
+          "epic": "TMN0142182"
+        },
+        {
+          "name": "Ranjana Tamoskar",
+          "age": 69,
+          "gender": "F",
+          "epic": "TMN0144923"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_5",
+      "head": "Tari Family",
+      "surname": "Tari",
+      "village": "Salvador do Mundo",
+      "house": "House No. 216",
+      "house_no": "216",
+      "membersCount": 14,
+      "booth": 16,
+      "sample": [
+        {
+          "name": "Vijayamala Narayan Tari",
+          "age": 78,
+          "gender": "F",
+          "epic": "BGW4866711"
+        },
+        {
+          "name": "Vaman Narayan Tari",
+          "age": 61,
+          "gender": "M",
+          "epic": "BGW4505913"
+        },
+        {
+          "name": "Vividha Vaman Tari",
+          "age": 59,
+          "gender": "F",
+          "epic": "BGW4505814"
+        },
+        {
+          "name": "Gopal Narayan Tari",
+          "age": 56,
+          "gender": "M",
+          "epic": "BGW0753533"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_6",
+      "head": "Naik Family",
+      "surname": "Naik",
+      "village": "Salvador do Mundo",
+      "house": "House No. 516",
+      "house_no": "516",
+      "membersCount": 14,
+      "booth": 20,
+      "sample": [
+        {
+          "name": "Anandi Naik",
+          "age": 65,
+          "gender": "F",
+          "epic": "TMN0329078"
+        },
+        {
+          "name": "Bhagvant Ladu Naik",
+          "age": 61,
+          "gender": "M",
+          "epic": "TMN0305128"
+        },
+        {
+          "name": "Ashok Naik",
+          "age": 59,
+          "gender": "M",
+          "epic": "BGW0754135"
+        },
+        {
+          "name": "Bindiya Naik",
+          "age": 57,
+          "gender": "F",
+          "epic": "TMN0153015"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_7",
+      "head": "Fernandes Family",
+      "surname": "Fernandes",
+      "village": "Penha-de-Franca",
+      "house": "House No. 321",
+      "house_no": "321",
+      "membersCount": 14,
+      "booth": 35,
+      "sample": [
+        {
+          "name": "Maria Agusta Fernandes",
+          "age": 88,
+          "gender": "M",
+          "epic": "BGW0057158"
+        },
+        {
+          "name": "Romeo Fernandes",
+          "age": 67,
+          "gender": "M",
+          "epic": "TMN0315374"
+        },
+        {
+          "name": "Felix Fernandes",
+          "age": 65,
+          "gender": "M",
+          "epic": "TMN0315366"
+        },
+        {
+          "name": "Piedade Fernandes",
+          "age": 62,
+          "gender": "F",
+          "epic": "BGW0600080"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_8",
+      "head": "Fatarpekar Family",
+      "surname": "Fatarpekar",
+      "village": "Penha-de-Franca",
+      "house": "House No. 572",
+      "house_no": "572",
+      "membersCount": 14,
+      "booth": 37,
+      "sample": [
+        {
+          "name": "Devidas Krishnanath Fatarpekar",
+          "age": 71,
+          "gender": "M",
+          "epic": "BGW3186285"
+        },
+        {
+          "name": "Anandi Fatarpekar",
+          "age": 65,
+          "gender": "F",
+          "epic": "BGW0745687"
+        },
+        {
+          "name": "Subhash Digambar Fatarpekar",
+          "age": 61,
+          "gender": "M",
+          "epic": "TMN0313502"
+        },
+        {
+          "name": "Shashikant Digambar Fatarpekar",
+          "age": 60,
+          "gender": "M",
+          "epic": "TMN0313494"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_9",
+      "head": "Chari Family",
+      "surname": "Chari",
+      "village": "Socorro",
+      "house": "House No. 564",
+      "house_no": "564",
+      "membersCount": 13,
+      "booth": 4,
+      "sample": [
+        {
+          "name": "Harishchandra Babani Chari",
+          "age": 72,
+          "gender": "M",
+          "epic": "BGW0740738"
+        },
+        {
+          "name": "Vasudev Babani Chari",
+          "age": 61,
+          "gender": "M",
+          "epic": "TMN0053140"
+        },
+        {
+          "name": "Rajashri Harishchandra Chari",
+          "age": 61,
+          "gender": "F",
+          "epic": "TMN0055863"
+        },
+        {
+          "name": "Pandurang Babani Chari",
+          "age": 58,
+          "gender": "M",
+          "epic": "TMN0200337"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_10",
+      "head": "Ambre Family",
+      "surname": "Ambre",
+      "village": "Socorro",
+      "house": "House No. 614",
+      "house_no": "614",
+      "membersCount": 13,
+      "booth": 4,
+      "sample": [
+        {
+          "name": "Dadu Ambre",
+          "age": 82,
+          "gender": "M",
+          "epic": "BGW0199158"
+        },
+        {
+          "name": "Rajanikant R. Ambre",
+          "age": 79,
+          "gender": "M",
+          "epic": "TMN0055012"
+        },
+        {
+          "name": "Krishnabai Ambre",
+          "age": 73,
+          "gender": "F",
+          "epic": "BGW0199166"
+        },
+        {
+          "name": "Smita R. Ambre",
+          "age": 59,
+          "gender": "F",
+          "epic": "TMN0055004"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_11",
+      "head": "Mandrekar Family",
+      "surname": "Mandrekar",
+      "village": "Socorro",
+      "house": "House No. 960",
+      "house_no": "960",
+      "membersCount": 13,
+      "booth": 11,
+      "sample": [
+        {
+          "name": "Manohar Mandrekar",
+          "age": 78,
+          "gender": "M",
+          "epic": "TMN0150359"
+        },
+        {
+          "name": "Mohini Mandrekar",
+          "age": 71,
+          "gender": "F",
+          "epic": "TMN0150466"
+        },
+        {
+          "name": "Prabhakar Mandrekar",
+          "age": 69,
+          "gender": "M",
+          "epic": "TMN0149302"
+        },
+        {
+          "name": "Deepak Mandrekar",
           "age": 54,
-          "gender": "Female",
-          "epic": "POR02002"
+          "gender": "M",
+          "epic": "TMN0168393"
+        }
+      ]
+    },
+    {
+      "id": "fam_pv_12",
+      "head": "Harmalkar Family",
+      "surname": "Harmalkar",
+      "village": "Socorro",
+      "house": "House No. 332",
+      "house_no": "332",
+      "membersCount": 12,
+      "booth": 2,
+      "sample": [
+        {
+          "name": "Lakshdeep Harmalkar",
+          "age": 38,
+          "gender": "M",
+          "epic": "BGW0732289"
+        },
+        {
+          "name": "Sweta Harmalkar",
+          "age": 36,
+          "gender": "F",
+          "epic": "TRW0302950"
+        },
+        {
+          "name": "Vaishali Harmalkar",
+          "age": 31,
+          "gender": "F",
+          "epic": "XOR0322164"
+        },
+        {
+          "name": "Lakshita Harmalkar",
+          "age": 28,
+          "gender": "F",
+          "epic": "TMN0290213"
         }
       ]
     }
@@ -32651,6 +35018,29 @@
       "deleted": 628,
       "added": 59,
       "modified": 67
+    }
+  ],
+  "village_insights": [
+    {
+      "village": "Socorro",
+      "margin": "+38.2%",
+      "status": "Safe (≥10%)",
+      "voters": 9354,
+      "booths": 12
+    },
+    {
+      "village": "Salvador do Mundo",
+      "margin": "+34.5%",
+      "status": "Safe (≥10%)",
+      "voters": 4937,
+      "booths": 8
+    },
+    {
+      "village": "Penha-de-Franca",
+      "margin": "+28.1%",
+      "status": "Safe (≥10%)",
+      "voters": 9656,
+      "booths": 19
     }
   ]
 }

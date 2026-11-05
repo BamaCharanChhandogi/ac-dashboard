@@ -50,90 +50,396 @@
       "path": "M 699.02 330.51 L 613.11 313.46 L 608.48 297.71 L 675.86 80 L 709.38 80 L 709.38 321.97 L 699.02 330.51 Z",
       "cx": 675,
       "cy": 293,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "St. Thomas High School, Aldona (Room 1)",
       "village": "Aldona Proper",
       "voters": 690,
-      "margin_pct": -14.2,
+      "margin_pct": 7.8,
       "added": 17,
-      "deleted": 12
+      "deleted": 12,
+      "elections": {
+        "2012 AE": {
+          "margin": 26.1,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 29,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 14.9,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 0.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -14.2,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -9.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 2,
       "path": "M 770.89 333.24 L 709.38 321.97 L 709.38 80 L 780.28 80 L 791.61 119.09 L 775.56 329.28 L 770.89 333.24 Z",
       "cx": 743.75,
       "cy": 293,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "St. Thomas High School, Aldona (Room 2)",
       "village": "Aldona Proper",
       "voters": 710,
-      "margin_pct": -13.5,
+      "margin_pct": 7.7,
       "added": 17,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": 25.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 28.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 14.5,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 0.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -13.5,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -8.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 3,
       "path": "M 775.56 329.28 L 791.61 119.09 L 870.55 272.89 L 861.03 337.11 L 775.56 329.28 Z",
       "cx": 812.5,
       "cy": 298.25,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "St. Thomas Girls High School, Aldona",
       "village": "Aldona Proper",
       "voters": 680,
-      "margin_pct": -12,
+      "margin_pct": 7.4,
       "added": 16,
-      "deleted": 12
+      "deleted": 12,
+      "elections": {
+        "2012 AE": {
+          "margin": 23.7,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 26.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 13.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 0.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -12,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -7.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 4,
       "path": "M 695.05 382.54 L 600.51 434.49 L 588.27 419.92 L 613.11 313.46 L 699.02 330.51 L 695.05 382.54 Z",
       "cx": 662.5,
       "cy": 356,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Primary School, Quitla Aldona",
       "village": "Aldona Proper",
       "voters": 640,
-      "margin_pct": -15.8,
+      "margin_pct": 8,
       "added": 15,
-      "deleted": 12
+      "deleted": 12,
+      "elections": {
+        "2012 AE": {
+          "margin": 27.9,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 31,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 16.1,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": -0.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -15.8,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -10.7,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 5,
       "path": "M 695.05 382.54 L 699.02 330.51 L 709.38 321.97 L 770.89 333.24 L 767.18 386.37 L 739.07 404.38 L 695.05 382.54 Z",
       "cx": 731.25,
       "cy": 361.25,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Panchayat Hall, Aldona (East Wing)",
       "village": "Aldona Proper",
       "voters": 730,
-      "margin_pct": -11,
+      "margin_pct": 7.3,
       "added": 18,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": 22.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 25.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 12.7,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 1.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -11,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 6,
       "path": "M 770.89 333.24 L 775.56 329.28 L 861.03 337.11 L 919.22 461.79 L 767.18 386.37 L 770.89 333.24 Z",
       "cx": 806.25,
       "cy": 366.5,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Panchayat Hall, Aldona (West Wing)",
       "village": "Aldona Proper",
       "voters": 715,
-      "margin_pct": -10.5,
+      "margin_pct": 7.2,
       "added": 17,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": 22.1,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 24.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 12.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 1.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -10.5,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -6.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 7,
@@ -146,24 +452,126 @@
       "station_name": "Govt. Primary School, Coimavaddo",
       "village": "Aldona Proper",
       "voters": 635,
-      "margin_pct": -8.5,
+      "margin_pct": 6.9,
       "added": 15,
-      "deleted": 11
+      "deleted": 11,
+      "elections": {
+        "2012 AE": {
+          "margin": 19.9,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 22.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 11,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -8.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -5.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 8,
       "path": "M 739.07 404.38 L 767.18 386.37 L 919.22 461.79 L 919.78 462.49 L 766.23 494.28 L 733.77 480.22 L 739.07 404.38 Z",
       "cx": 775,
       "cy": 429.5,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Community Hall, Carona Aldona",
       "village": "Aldona Proper",
       "voters": 620,
-      "margin_pct": -13.7,
+      "margin_pct": 7.7,
       "added": 15,
-      "deleted": 11
+      "deleted": 11,
+      "elections": {
+        "2012 AE": {
+          "margin": 25.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": true
+        },
+        "2014 LS": {
+          "margin": 28.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": true
+        },
+        "2017 AE": {
+          "margin": 14.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": true
+        },
+        "2019 LS": {
+          "margin": 0.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": true
+        },
+        "2022 AE": {
+          "margin": -13.7,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": true
+        },
+        "2024 LS": {
+          "margin": -9.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": true
+        },
+        "Overall": {
+          "margin": 7.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": true
+        }
+      }
     },
     {
       "number": 9,
@@ -176,9 +584,60 @@
       "station_name": "Panchayat Hall, Moira (Room 1)",
       "village": "Moira",
       "voters": 620,
-      "margin_pct": -6.8,
+      "margin_pct": 6.6,
       "added": 15,
-      "deleted": 11
+      "deleted": 11,
+      "elections": {
+        "2012 AE": {
+          "margin": 18,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 20.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 9.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -6.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -3.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 10,
@@ -191,9 +650,60 @@
       "station_name": "Panchayat Hall, Moira (Room 2)",
       "village": "Moira",
       "voters": 610,
-      "margin_pct": -7.4,
+      "margin_pct": 6.7,
       "added": 15,
-      "deleted": 11
+      "deleted": 11,
+      "elections": {
+        "2012 AE": {
+          "margin": 18.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 20.9,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 10.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -7.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -4.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 11,
@@ -206,24 +716,126 @@
       "station_name": "St. Francis Xavier High School, Moira",
       "village": "Moira",
       "voters": 640,
-      "margin_pct": -9.5,
+      "margin_pct": 7.1,
       "added": 15,
-      "deleted": 12
+      "deleted": 12,
+      "elections": {
+        "2012 AE": {
+          "margin": 21,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 23.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 11.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 1.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -9.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -5.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 12,
       "path": "M 411.55 319.66 L 339.11 346.19 L 310.89 323.81 L 314.49 272.4 L 329.26 261.1 L 417.32 285.29 L 411.55 319.66 Z",
       "cx": 350,
       "cy": 303.5,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Primary School, Calizor Moira",
       "village": "Moira",
       "voters": 580,
-      "margin_pct": -10.2,
+      "margin_pct": 7.1,
       "added": 14,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 21.7,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 24.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 12.1,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 1.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -10.2,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -6.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 13,
@@ -236,9 +848,60 @@
       "station_name": "Govt. Primary School, Attafondem Moira",
       "village": "Moira",
       "voters": 590,
-      "margin_pct": -8,
+      "margin_pct": 6.8,
       "added": 14,
-      "deleted": 11
+      "deleted": 11,
+      "elections": {
+        "2012 AE": {
+          "margin": 19.3,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 21.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 10.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -4.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 14,
@@ -251,129 +914,588 @@
       "station_name": "Village Library Hall, Moira",
       "village": "Moira",
       "voters": 580,
-      "margin_pct": -9.1,
+      "margin_pct": 7,
       "added": 14,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 20.5,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 22.9,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 11.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 1.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -9.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -5.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 15,
       "path": "M 100 343.62 L 196.25 365.8 L 278.06 419.91 L 272.86 494.26 L 264.64 501.24 L 100 471.09 L 100 343.62 Z",
       "cx": 237.5,
       "cy": 461,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Primary School, Bastora",
       "village": "Bastora",
       "voters": 710,
-      "margin_pct": 16.5,
+      "margin_pct": 2.9,
       "added": 17,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": -7.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -7.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -6.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 9.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 16.5,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 13.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 2.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 16,
       "path": "M 372.66 499.35 L 363.55 510.87 L 272.86 494.26 L 278.06 419.91 L 334.44 412.84 L 377.53 441.34 L 372.66 499.35 Z",
       "cx": 312.5,
       "cy": 466.25,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Panchayat Hall, Bastora",
       "village": "Bastora",
       "voters": 690,
-      "margin_pct": 15.2,
+      "margin_pct": 3.2,
       "added": 17,
-      "deleted": 12
+      "deleted": 12,
+      "elections": {
+        "2012 AE": {
+          "margin": -6.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -6.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -5.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 9.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 15.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 12.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 3.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 17,
       "path": "M 100 471.09 L 264.64 501.24 L 260.8 556.11 L 100 600.29 L 100 471.09 Z",
       "cx": 225,
       "cy": 529.25,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Holy Cross High School, Bastora (Room 1)",
       "village": "Bastora",
       "voters": 700,
-      "margin_pct": 13.8,
+      "margin_pct": 3.3,
       "added": 17,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": -4.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -4.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -4.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 8.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 13.8,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 11.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 3.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 18,
       "path": "M 272.86 494.26 L 363.55 510.87 L 357.65 555.36 L 282.95 575.89 L 260.8 556.11 L 264.64 501.24 L 272.86 494.26 Z",
       "cx": 300,
       "cy": 534.5,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Holy Cross High School, Bastora (Room 2)",
       "village": "Bastora",
       "voters": 685,
-      "margin_pct": 14.9,
+      "margin_pct": 3.2,
       "added": 16,
-      "deleted": 12
+      "deleted": 12,
+      "elections": {
+        "2012 AE": {
+          "margin": -5.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -5.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -5.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 14.9,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 12.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 3.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 19,
       "path": "M 100 720 L 100 600.29 L 260.8 556.11 L 282.95 575.89 L 272.86 720 L 100 720 Z",
       "cx": 243.75,
       "cy": 597.5,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Primary School, Xell Bastora",
       "village": "Bastora",
       "voters": 660,
-      "margin_pct": 17.2,
+      "margin_pct": 2.8,
       "added": 16,
-      "deleted": 12
+      "deleted": 12,
+      "elections": {
+        "2012 AE": {
+          "margin": -8.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -8.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 9.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 17.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 14.1,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 2.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 20,
       "path": "M 387.62 612.45 L 371.2 720 L 272.86 720 L 282.95 575.89 L 357.65 555.36 L 387.62 612.45 Z",
       "cx": 318.75,
       "cy": 602.75,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Anganwadi Centre, Boa Vista Bastora",
       "village": "Bastora",
       "voters": 675,
-      "margin_pct": 11.4,
+      "margin_pct": 3.7,
       "added": 16,
-      "deleted": 12
+      "deleted": 12,
+      "elections": {
+        "2012 AE": {
+          "margin": -2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -1.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 7.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 11.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 9.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 3.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 21,
       "path": "M 472.79 511.01 L 458.46 521.24 L 372.66 499.35 L 377.53 441.34 L 448.96 398.83 L 480.1 406.5 L 472.79 511.01 Z",
       "cx": 437.5,
       "cy": 476.75,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Panchayat Hall, Ucassaim",
       "village": "Ucassaim",
       "voters": 600,
-      "margin_pct": 12,
+      "margin_pct": 3.6,
       "added": 14,
-      "deleted": 11
+      "deleted": 11,
+      "elections": {
+        "2012 AE": {
+          "margin": -2.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -2.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -3.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 8.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 12,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 10.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 3.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 22,
       "path": "M 605.93 452.1 L 570.7 535.99 L 472.79 511.01 L 480.1 406.5 L 507.4 400 L 588.27 419.92 L 600.51 434.49 L 605.93 452.1 Z",
       "cx": 512.5,
       "cy": 482,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Primary School, Paliem Ucassaim",
       "village": "Ucassaim",
       "voters": 580,
-      "margin_pct": 13.5,
+      "margin_pct": 3.4,
       "added": 14,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": -4.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -4.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -4.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 8.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 13.5,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 11.3,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 3.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 23,
@@ -386,39 +1508,192 @@
       "station_name": "St. Elizabeth High School, Ucassaim (Room 1)",
       "village": "Ucassaim",
       "voters": 590,
-      "margin_pct": 9.8,
+      "margin_pct": 4,
       "added": 14,
-      "deleted": 11
+      "deleted": 11,
+      "elections": {
+        "2012 AE": {
+          "margin": -0.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 0.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -1.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 7.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 9.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 8.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 24,
       "path": "M 578.58 614.13 L 568.75 641.14 L 454.47 578.34 L 458.46 521.24 L 472.79 511.01 L 570.7 535.99 L 578.58 614.13 Z",
       "cx": 493.75,
       "cy": 555.5,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "St. Elizabeth High School, Ucassaim (Room 2)",
       "village": "Ucassaim",
       "voters": 570,
-      "margin_pct": 10.4,
+      "margin_pct": 3.9,
       "added": 14,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": -0.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -0.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -2.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 7.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 10.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 3.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 25,
       "path": "M 371.2 720 L 387.62 612.45 L 454.47 578.34 L 568.75 641.14 L 568.75 720 L 371.2 720 Z",
       "cx": 456.25,
       "cy": 623.75,
-      "category": "Safe",
-      "color": "#15803D",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Community Centre, Punola Ucassaim",
       "village": "Ucassaim",
       "voters": 550,
-      "margin_pct": 10.5,
+      "margin_pct": 3.9,
       "added": 13,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": -1.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": -0.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": -2.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 7.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 10.5,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 9.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 3.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 26,
@@ -431,9 +1706,60 @@
       "station_name": "Panchayat Ghar, Nachinola",
       "village": "Nachinola",
       "voters": 560,
-      "margin_pct": 5.2,
+      "margin_pct": 4.7,
       "added": 13,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 4.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 5.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 1.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 6.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 5.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 5.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 4.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 27,
@@ -446,9 +1772,60 @@
       "station_name": "Govt. Primary School, Nachinola",
       "village": "Nachinola",
       "voters": 540,
-      "margin_pct": 3.8,
+      "margin_pct": 4.9,
       "added": 13,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 6.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 7.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 2.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 5.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 3.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 4.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 4.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 28,
@@ -461,9 +1838,60 @@
       "station_name": "Anganwadi Centre, Zuari Nachinola",
       "village": "Nachinola",
       "voters": 570,
-      "margin_pct": 4.5,
+      "margin_pct": 4.9,
       "added": 14,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 5.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 6.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 1.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 5.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 4.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 4.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 4.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 29,
@@ -476,114 +1904,522 @@
       "station_name": "Community Hall, Vaiginim Nachinola",
       "village": "Nachinola",
       "voters": 540,
-      "margin_pct": 3.3,
+      "margin_pct": 5,
       "added": 13,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 6.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 2.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 5.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": 3.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": 3.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 30,
       "path": "M 973.92 80 L 959.96 279.36 L 958.79 280.39 L 870.55 272.89 L 791.61 119.09 L 780.28 80 L 973.92 80 Z",
       "cx": 925,
       "cy": 240.5,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Primary School, Corjuem (North)",
       "village": "Corjuem",
       "voters": 490,
-      "margin_pct": -19.5,
+      "margin_pct": 8.7,
       "added": 12,
-      "deleted": 9
+      "deleted": 9,
+      "elections": {
+        "2012 AE": {
+          "margin": 32,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 35.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 18.7,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": -1.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -19.5,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -13.4,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 8.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 31,
       "path": "M 1160 80 L 1160 234.99 L 1100.92 287.74 L 1093.43 290.71 L 959.96 279.36 L 973.92 80 L 1160 80 Z",
       "cx": 1000,
       "cy": 245.75,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Primary School, Corjuem (South)",
       "village": "Corjuem",
       "voters": 510,
-      "margin_pct": -18.2,
+      "margin_pct": 8.4,
       "added": 12,
-      "deleted": 9
+      "deleted": 9,
+      "elections": {
+        "2012 AE": {
+          "margin": 30.5,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 33.8,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 17.7,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": -1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -18.2,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -12.4,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 8.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 32,
       "path": "M 919.22 461.79 L 861.03 337.11 L 870.55 272.89 L 958.79 280.39 L 948.79 423.16 L 926.08 465.65 L 919.78 462.49 L 919.22 461.79 Z",
       "cx": 918.75,
       "cy": 314,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Corjuem Fort Community Hall",
       "village": "Corjuem",
       "voters": 470,
-      "margin_pct": -20.4,
+      "margin_pct": 8.8,
       "added": 11,
-      "deleted": 8
+      "deleted": 8,
+      "elections": {
+        "2012 AE": {
+          "margin": 32.9,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 36.5,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 19.3,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": -1.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -20.4,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -14.1,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 8.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 33,
       "path": "M 948.79 423.16 L 958.79 280.39 L 959.96 279.36 L 1093.43 290.71 L 948.79 423.16 Z",
       "cx": 993.75,
       "cy": 319.25,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Panchayat Sub-Office, Corjuem",
       "village": "Corjuem",
       "voters": 470,
-      "margin_pct": -16.3,
+      "margin_pct": 8.1,
       "added": 11,
-      "deleted": 8
+      "deleted": 8,
+      "elections": {
+        "2012 AE": {
+          "margin": 28.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 31.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 16.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": -0.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -16.3,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -11,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 8.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 34,
       "path": "M 948.79 423.16 L 1093.43 290.71 L 1100.92 287.74 L 1091.97 415.59 L 942.66 491.77 L 926.08 465.65 L 948.79 423.16 Z",
       "cx": 1056.25,
       "cy": 387.5,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Primary School, Calvim Island",
       "village": "Calvim",
       "voters": 560,
-      "margin_pct": -16,
+      "margin_pct": 8.1,
       "added": 13,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 28.1,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 31.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 16.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": -0.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -16,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -10.8,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 8.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 35,
       "path": "M 1160 452.97 L 1091.97 415.59 L 1100.92 287.74 L 1160 234.99 L 1160 452.97 Z",
       "cx": 1131.25,
       "cy": 392.75,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Community Hall, Calvim Jetty",
       "village": "Calvim",
       "voters": 545,
-      "margin_pct": -14.8,
+      "margin_pct": 7.9,
       "added": 13,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 26.8,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 29.8,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 15.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 0.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -14.8,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -9.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 7.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 36,
       "path": "M 1160 720 L 1016.88 720 L 1004.73 696.04 L 942.66 491.77 L 1091.97 415.59 L 1160 452.97 L 1160 720 Z",
       "cx": 1093.75,
       "cy": 461,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Anganwadi Centre, Calvim Central",
       "village": "Calvim",
       "voters": 545,
-      "margin_pct": -15.4,
+      "margin_pct": 8,
       "added": 13,
-      "deleted": 10
+      "deleted": 10,
+      "elections": {
+        "2012 AE": {
+          "margin": 27.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 30.5,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 15.8,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": -0.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -15.4,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -10.4,
+          "category": "Weak",
+          "color": "#991B1B",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 37,
@@ -596,9 +2432,60 @@
       "station_name": "Govt. Primary School, Pomburpa Spring",
       "village": "Pomburpa",
       "voters": 740,
-      "margin_pct": -5.5,
+      "margin_pct": 6.4,
       "added": 18,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": 16.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 18.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 8.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -5.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -2.9,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.4,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 38,
@@ -611,9 +2498,60 @@
       "station_name": "Panchayat Ghar, Pomburpa",
       "village": "Pomburpa",
       "voters": 755,
-      "margin_pct": -6,
+      "margin_pct": 6.5,
       "added": 18,
-      "deleted": 14
+      "deleted": 14,
+      "elections": {
+        "2012 AE": {
+          "margin": 17.1,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 19.2,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 9.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -3.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 39,
@@ -626,9 +2564,60 @@
       "station_name": "St. Elizabeth High School, Pomburpa Wing",
       "village": "Pomburpa",
       "voters": 735,
-      "margin_pct": -7.2,
+      "margin_pct": 6.6,
       "added": 18,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": 18.4,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 20.6,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 10,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2.3,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -7.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -4.2,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 40,
@@ -641,9 +2630,60 @@
       "station_name": "Govt. Primary School, Olaulim Pomburpa",
       "village": "Pomburpa",
       "voters": 720,
-      "margin_pct": -5.8,
+      "margin_pct": 6.5,
       "added": 17,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": 16.9,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 19,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 9.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -5.8,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -3.1,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     },
     {
       "number": 41,
@@ -656,9 +2696,60 @@
       "station_name": "Community Centre, Golna Pomburpa",
       "village": "Pomburpa",
       "voters": 741,
-      "margin_pct": -6.5,
+      "margin_pct": 6.6,
       "added": 18,
-      "deleted": 13
+      "deleted": 13,
+      "elections": {
+        "2012 AE": {
+          "margin": 17.7,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2014 LS": {
+          "margin": 19.8,
+          "category": "Safe",
+          "color": "#15803D",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2017 AE": {
+          "margin": 9.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2019 LS": {
+          "margin": 2.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        },
+        "2022 AE": {
+          "margin": -6.5,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "2024 LS": {
+          "margin": -3.7,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "INC",
+          "isDashed": false
+        },
+        "Overall": {
+          "margin": 6.6,
+          "category": "Battle Ground",
+          "color": "#D97706",
+          "winner": "BJP",
+          "isDashed": false
+        }
+      }
     }
   ],
   "villages": [

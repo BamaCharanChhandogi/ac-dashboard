@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { Download, Printer } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 
@@ -6,6 +6,37 @@ export default function ReportsView({ data }) {
   const meta = data?.meta || {};
   const totalVoters = meta.total_voters || 27265;
   const totalBooths = meta.total_booths || 50;
+  const gender = data?.demographics?.gender || {};
+  const femaleCount = gender.female?.count || Math.round(totalVoters * 0.516);
+  const femalePct = gender.female?.pct || 51.6;
+  const sexRatio = gender.sex_ratio || 1066;
+
+  // Strongest village strongholds dynamically resolved
+  const strongholds = useMemo(() => {
+    if (data?.village_insights && data.village_insights.length > 0) {
+      return [...data.village_insights]
+        .sort((a, b) => parseFloat(b.margin) - parseFloat(a.margin))
+        .slice(0, 3);
+    }
+    return [
+      { village: 'Cotombi', margin: '+43.4%' },
+      { village: 'Surla', margin: '+39.6%' },
+      { village: 'Navelim', margin: '+35.6%' },
+    ];
+  }, [data]);
+
+  // Largest joint family compound clusters dynamically resolved
+  const topFamilies = useMemo(() => {
+    if (data?.families && data.families.length > 0) {
+      return data.families.slice(0, 2);
+    }
+    return [
+      { surname: 'Naik', village: 'Pale', membersCount: 25 },
+      { surname: 'Parab', village: 'Cotombi', membersCount: 19 },
+    ];
+  }, [data]);
+
+  const avgBoothVoters = Math.round(totalVoters / (totalBooths || 1));
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
@@ -56,21 +87,26 @@ export default function ReportsView({ data }) {
           <div className="p-4 bg-slate-50 dark:bg-slate-900/90 rounded-xl border border-slate-100 dark:border-slate-800">
             <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-1">2. Demographic Composition</h4>
             <p className="text-slate-600 dark:text-slate-300">
-              Female electors constitute <strong className="text-slate-900 dark:text-slate-100">51.0% (13,915 voters)</strong>, yielding an above-average sex ratio of <strong className="text-slate-900 dark:text-slate-100">1,042 females per 1,000 males</strong>. The largest voting cohort is aged 45–54 (21.8%), followed by youth voters aged 25–34 (18.6%).
+              Female electors constitute <strong className="text-slate-900 dark:text-slate-100">{femalePct}% ({formatIndianNumber(femaleCount)} voters)</strong>, yielding an above-average sex ratio of <strong className="text-slate-900 dark:text-slate-100">{sexRatio} females per 1,000 males</strong>. The largest voting cohort is aged 45–54, followed by young workforce voters aged 35–44.
             </p>
           </div>
 
           <div className="p-4 bg-slate-50 dark:bg-slate-900/90 rounded-xl border border-slate-100 dark:border-slate-800">
             <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-1">3. Polling Booth & Village Fortress</h4>
             <p className="text-slate-600 dark:text-slate-300">
-              Across all constituent villages, BJP maintains positive historical margins in Form-20 retrospective audits. The strongest strongholds are <strong className="text-slate-900 dark:text-slate-100">Cotombi (+43.4%)</strong>, <strong className="text-slate-900 dark:text-slate-100">Surla (+39.6%)</strong>, and <strong className="text-slate-900 dark:text-slate-100">Navelim (+35.6%)</strong>, with average booth density at 545 voters per EVM station.
+              Across all constituent villages, Form-20 retrospective audits demonstrate strong grassroots alignment. Strongest strongholds are {strongholds.map((s, idx) => (
+                <span key={s.village}>
+                  {idx > 0 && (idx === strongholds.length - 1 ? ', and ' : ', ')}
+                  <strong className="text-slate-900 dark:text-slate-100">{s.village} ({s.margin})</strong>
+                </span>
+              ))}, with average booth density at {avgBoothVoters} voters per EVM station.
             </p>
           </div>
 
           <div className="p-4 bg-slate-50 dark:bg-slate-900/90 rounded-xl border border-slate-100 dark:border-slate-800">
             <h4 className="font-bold text-slate-900 dark:text-slate-100 mb-1">4. Household Clustering & Community Footprint</h4>
             <p className="text-slate-600 dark:text-slate-300">
-              A total of <strong className="text-slate-900 dark:text-slate-100">{formatIndianNumber(meta.total_families || 6041)} family units</strong> were mapped. The largest joint family compound clusters include the Naik families in Pale (up to 25 electors in a single compound) and the Parab family in Cotombi.
+              A total of <strong className="text-slate-900 dark:text-slate-100">{formatIndianNumber(meta.total_families || 5420)} family units</strong> were mapped. The largest joint family compound clusters include the {topFamilies[0]?.surname || 'Vazarkar'} family in {topFamilies[0]?.village || 'Socorro'} (up to {topFamilies[0]?.membersCount || 24} electors in a single compound) and the {topFamilies[1]?.surname || 'Kambli'} family in {topFamilies[1]?.village || 'Socorro'}.
             </p>
           </div>
         </div>
