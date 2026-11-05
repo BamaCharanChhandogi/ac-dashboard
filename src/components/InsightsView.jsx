@@ -150,8 +150,16 @@ export default function InsightsView({ data }) {
               </div>
               <div className="text-right">
                 <p className="text-[18px] font-extrabold text-teal-700 dark:text-teal-400 tabular-nums leading-tight">{item.margin}</p>
-                <span className="inline-block text-[10px] font-bold text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/60 px-1.5 py-0.2 rounded mt-0.5">
-                  Safe
+                <span
+                  className={`inline-block text-[10px] font-bold px-1.5 py-0.5 rounded mt-0.5 ${
+                    item.status?.includes('Safe')
+                      ? 'text-emerald-800 dark:text-emerald-300 bg-emerald-100 dark:bg-emerald-950/60'
+                      : item.status?.includes('Battle')
+                      ? 'text-amber-800 dark:text-amber-300 bg-amber-100 dark:bg-amber-950/60'
+                      : 'text-rose-800 dark:text-rose-300 bg-rose-100 dark:bg-rose-950/60'
+                  }`}
+                >
+                  {item.status?.includes('Safe') ? 'Safe' : item.status?.includes('Battle') ? 'Battle Ground' : 'Weak'}
                 </span>
               </div>
             </div>
