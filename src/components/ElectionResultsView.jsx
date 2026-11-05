@@ -109,8 +109,8 @@ export default function ElectionResultsView({ data }) {
     if (meta.slug === 'ac09-porvorim' || meta.ac_no === 9) {
       return [
         { year: '2022', party: 'BJP', pct: 55.16, winner: 'Rohan Khaunte', runnerUp: 'Vikas Prabhu (IND)', margin: '+37.44%' },
-        { year: '2017', party: 'IND', pct: 47.90, winner: 'Rohan Khaunte', runnerUp: 'Guruprasad Pawaskar (BJP)', margin: '+18.4%' },
-        { year: '2012', party: 'IND', pct: 41.20, winner: 'Rohan Khaunte', runnerUp: 'Govind Parvatkar (BJP)', margin: '+18.9%' },
+        { year: '2017', party: 'IND', pct: 47.90, winner: 'Rohan Khaunte', runnerUp: 'Guruprasad Pawaskar (BJP)', margin: '+18.40%' },
+        { year: '2012', party: 'IND', pct: 41.20, winner: 'Rohan Khaunte', runnerUp: 'Govind Parvatkar (BJP)', margin: '+4.70%' },
       ];
     }
     return SANQUELIM_ASSEMBLY_HISTORY;
