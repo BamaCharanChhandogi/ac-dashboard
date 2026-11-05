@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Sun, Moon } from 'lucide-react';
 import Sidebar from './components/Sidebar';
 import ConstituencyOverview from './components/ConstituencyOverview';
 import ConstituenciesView from './components/ConstituenciesView';
@@ -8,8 +9,10 @@ import DemographicsView from './components/DemographicsView';
 import ElectionResultsView from './components/ElectionResultsView';
 import ReportsView from './components/ReportsView';
 import InsightsView from './components/InsightsView';
+import { useTheme } from './context/ThemeContext';
 
 export default function App() {
+  const { isDark, toggleTheme } = useTheme();
   const [currentSlug, setCurrentSlug] = useState(() => {
     const params = new URLSearchParams(window.location.search);
     return params.get('ac') || 'ac17-sanquelim';
@@ -65,7 +68,7 @@ export default function App() {
 
   if (loading) {
     return (
-      <div className="h-screen flex items-center justify-center bg-[#DFE6F0] dark:bg-[#0B1120]">
+      <div className="h-screen flex items-center justify-center bg-[#F1F5F9] dark:bg-[#0B1120]">
         <div className="text-center">
           <div className="w-8 h-8 border-2 border-[#2563EB] dark:border-blue-400 border-t-transparent rounded-full animate-spin mx-auto mb-3" />
           <p className="text-slate-600 dark:text-slate-300 text-[13px] font-semibold">Loading Electoral Intelligence…</p>
@@ -76,7 +79,7 @@ export default function App() {
 
   if (error) {
     return (
-      <div className="h-screen flex items-center justify-center bg-[#DFE6F0] dark:bg-[#0B1120] p-4">
+      <div className="h-screen flex items-center justify-center bg-[#F1F5F9] dark:bg-[#0B1120] p-4">
         <div className="text-center max-w-md bg-white dark:bg-slate-900 p-6 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
           <h2 className="text-[16px] font-bold text-slate-800 dark:text-slate-100 mb-1">Failed to Load Dataset</h2>
           <p className="text-slate-500 dark:text-slate-400 text-[12px] mb-4">{error}</p>
@@ -92,7 +95,7 @@ export default function App() {
   }
 
   return (
-    <div className="flex h-screen overflow-hidden bg-[#DFE6F0] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 transition-colors duration-200">
+    <div className="flex h-screen overflow-hidden bg-[#F1F5F9] dark:bg-[#0B1120] text-slate-900 dark:text-slate-100 transition-colors duration-200">
       {/* Left Sidebar Navigation with Persistent Global Switcher */}
       <Sidebar
         activeSection={activeSection}
@@ -103,7 +106,47 @@ export default function App() {
       />
 
       {/* Main Content Area */}
-      <main className="flex-1 lg:ml-[240px] flex flex-col h-full overflow-y-auto bg-[#DFE6F0] dark:bg-[#0B1120] transition-colors duration-200">
+      <main className="flex-1 lg:ml-[240px] flex flex-col h-full overflow-y-auto bg-[#F1F5F9] dark:bg-[#0B1120] transition-colors duration-200">
+        {/* Sticky Top Header Bar with Instant One-Click Theme Switcher */}
+        <header className="sticky top-0 z-30 bg-white/90 dark:bg-[#0B1120]/90 backdrop-blur-md border-b border-slate-200/80 dark:border-slate-800/80 px-6 sm:px-8 py-2.5 flex items-center justify-between transition-colors flex-shrink-0">
+          <div className="flex items-center gap-2 pl-10 lg:pl-0">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+            <span className="text-[11px] font-bold text-slate-600 dark:text-slate-300 tracking-wide uppercase">
+              Corporate Chanakya • Intelligence Suite
+            </span>
+          </div>
+
+          <div className="flex items-center gap-3">
+            {/* 1-Click Fast Light / Dark Toggle Pill */}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              className={`
+                inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-[11.5px] font-bold cursor-pointer
+                transition-all duration-150 border shadow-xs
+                ${
+                  isDark
+                    ? 'bg-slate-800 hover:bg-slate-700 text-amber-300 border-slate-700'
+                    : 'bg-white hover:bg-slate-50 text-slate-800 border-slate-200 hover:border-slate-300'
+                }
+              `}
+              title={isDark ? "Switch to Light Mode" : "Switch to Dark Mode"}
+              aria-label="Toggle Light and Dark Theme"
+            >
+              {isDark ? (
+                <>
+                  <Sun size={14} className="text-amber-400" />
+                  <span>Light Mode</span>
+                </>
+              ) : (
+                <>
+                  <Moon size={14} className="text-blue-600" />
+                  <span>Dark Mode</span>
+                </>
+              )}
+            </button>
+          </div>
+        </header>
         {activeSection === 'dashboard' && (
           <ConstituencyOverview
             data={data}

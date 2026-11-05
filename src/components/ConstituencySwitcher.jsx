@@ -117,30 +117,30 @@ export default function ConstituencySwitcher({
           w-full text-left p-2.5 rounded-xl border transition-all cursor-pointer group
           ${
             isOpen
-              ? 'bg-white/10 border-blue-500 shadow-md ring-2 ring-blue-500/20'
-              : 'bg-white/[0.06] hover:bg-white/[0.09] border-white/10'
+              ? 'bg-blue-50/80 dark:bg-white/10 border-blue-500 shadow-md ring-2 ring-blue-500/20'
+              : 'bg-slate-50 hover:bg-slate-100 border-slate-200/80 dark:bg-white/[0.06] dark:hover:bg-white/[0.09] dark:border-white/10'
           }
         `}
       >
         <div className="flex items-center justify-between gap-2">
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-1.5 mb-0.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse flex-shrink-0" />
-              <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 truncate">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 dark:bg-emerald-400 animate-pulse flex-shrink-0" />
+              <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 truncate">
                 Active Constituency
               </p>
             </div>
-            <p className="text-white font-bold text-[13.5px] leading-snug truncate group-hover:text-blue-300 transition-colors">
+            <p className="text-slate-900 dark:text-white font-bold text-[13.5px] leading-snug truncate group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
               AC {activeAC.ac_no} • {activeAC.ac_name}
             </p>
-            <p className="text-slate-400 text-[10.5px] truncate font-medium mt-0.5">
+            <p className="text-slate-500 dark:text-slate-400 text-[10.5px] truncate font-medium mt-0.5">
               {activeAC.district} • {activeAC.state}
             </p>
           </div>
 
           <div
-            className={`w-6 h-6 rounded-lg bg-white/10 flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${
-              isOpen ? 'rotate-180 bg-blue-600 text-white' : 'text-slate-300'
+            className={`w-6 h-6 rounded-lg bg-slate-200/80 dark:bg-white/10 flex items-center justify-center flex-shrink-0 transition-transform duration-200 ${
+              isOpen ? 'rotate-180 bg-blue-600 text-white' : 'text-slate-600 dark:text-slate-300'
             }`}
           >
             <ChevronDown size={14} />
