@@ -24,7 +24,11 @@
       "urban_pct": 65,
       "rural_pct": 35,
       "area_type": "Municipal Wards & Village Panchayats"
-    }
+    },
+    "male_voters": 11589,
+    "female_voters": 12357,
+    "third_gender_voters": 1,
+    "sex_ratio": 1066
   },
   "kpis": {
     "ac_no": "AC 09",
@@ -87,7 +91,7 @@
   "demographics": {
     "gender": {
       "female": {
-        "count": 12358,
+        "count": 12357,
         "pct": 51.6
       },
       "male": {
@@ -95,7 +99,7 @@
         "pct": 48.4
       },
       "third_gender": {
-        "count": 0,
+        "count": 1,
         "pct": 0
       },
       "sex_ratio": 1066
@@ -103,52 +107,52 @@
     "age_groups": [
       {
         "cohort": "45-54",
-        "count": 5210,
-        "pct": 21.8,
-        "male": 2510,
-        "female": 2700
-      },
-      {
-        "cohort": "25-34",
-        "count": 4530,
-        "pct": 18.9,
-        "male": 2240,
-        "female": 2290
+        "count": 4731,
+        "pct": 19.8,
+        "male": 2321,
+        "female": 2410
       },
       {
         "cohort": "35-44",
-        "count": 4310,
-        "pct": 18,
-        "male": 2110,
-        "female": 2200
+        "count": 4592,
+        "pct": 19.2,
+        "male": 2176,
+        "female": 2416
+      },
+      {
+        "cohort": "25-34",
+        "count": 4015,
+        "pct": 16.8,
+        "male": 2034,
+        "female": 1981
       },
       {
         "cohort": "55-64",
-        "count": 3980,
-        "pct": 16.6,
-        "male": 1920,
-        "female": 2060
-      },
-      {
-        "cohort": "18-24",
-        "count": 2690,
-        "pct": 11.2,
-        "male": 1410,
-        "female": 1280
+        "count": 3888,
+        "pct": 16.2,
+        "male": 1813,
+        "female": 2075
       },
       {
         "cohort": "65-74",
-        "count": 2250,
-        "pct": 9.4,
-        "male": 1080,
-        "female": 1170
+        "count": 2754,
+        "pct": 11.5,
+        "male": 1259,
+        "female": 1495
+      },
+      {
+        "cohort": "18-24",
+        "count": 2089,
+        "pct": 8.7,
+        "male": 1072,
+        "female": 1017
       },
       {
         "cohort": "75+",
-        "count": 977,
-        "pct": 4.1,
-        "male": 432,
-        "female": 545
+        "count": 1878,
+        "pct": 7.8,
+        "male": 915,
+        "female": 963
       }
     ]
   },

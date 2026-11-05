@@ -35,9 +35,11 @@ export function ThemeProvider({ children }) {
 
       setIsDark(activeDark);
       if (activeDark) {
-        root.classList.add('dark');
+        document.documentElement.classList.add('dark');
+        document.body.classList.add('dark');
       } else {
-        root.classList.remove('dark');
+        document.documentElement.classList.remove('dark');
+        document.body.classList.remove('dark');
       }
     };
 
