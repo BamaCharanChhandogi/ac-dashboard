@@ -229,7 +229,7 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
           {/* Background Connecting Blue Line: strictly starts at node 0 center and ends at last node center */}
           {steps.length > 1 && (
             <div
-              className="absolute top-[11px] h-[2.5px] bg-[#3B82F6] dark:bg-blue-500"
+              className="absolute top-[37px] h-[2.5px] bg-[#3B82F6] dark:bg-blue-500"
               style={{
                 left: `${100 / (steps.length * 2)}%`,
                 right: `${100 / (steps.length * 2)}%`,
@@ -246,8 +246,21 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
           >
             {steps.map((step, idx) => (
               <div key={idx} className="flex flex-col items-center">
+                {/* Date - positioned on top edge of tick button */}
+                <div className="h-5 flex items-center justify-center mb-1.5">
+                  <span
+                    className={`text-[10px] tracking-wider uppercase ${
+                      step.isLatest
+                        ? 'font-extrabold text-emerald-700 dark:text-emerald-400'
+                        : 'font-bold text-slate-500 dark:text-slate-400'
+                    }`}
+                  >
+                    {step.date}
+                  </span>
+                </div>
+
                 {/* Node Circle */}
-                <div className="mb-3.5 z-10 flex items-center justify-center h-6">
+                <div className="mb-3 z-10 flex items-center justify-center h-6">
                   {step.isLatest ? (
                     <div className="w-6 h-6 rounded-full bg-[#10B981] text-white flex items-center justify-center shadow-sm">
                       <Check size={13} strokeWidth={3} />
@@ -263,7 +276,7 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
 
                 {/* Stage Tag Pill */}
                 <span
-                  className={`px-3 py-0.5 rounded-md text-[11px] font-bold tracking-tight mb-1.5 ${
+                  className={`px-3 py-0.5 rounded-md text-[11px] font-bold tracking-tight mb-2 ${
                     step.isLatest
                       ? 'bg-[#D1FAE5] dark:bg-emerald-950/60 text-[#065F46] dark:text-emerald-300'
                       : 'bg-[#EFF6FF] dark:bg-blue-950/60 text-[#1E40AF] dark:text-blue-300'
@@ -271,11 +284,6 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
                 >
                   {step.label}
                 </span>
-
-                {/* Date */}
-                <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 tracking-wider uppercase mb-1.5">
-                  {step.date}
-                </p>
 
                 {/* Electors Count */}
                 <p className="text-[24px] font-extrabold text-slate-900 dark:text-slate-100 tabular-nums leading-tight mb-1">
