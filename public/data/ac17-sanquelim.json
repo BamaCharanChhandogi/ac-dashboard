@@ -12503,5 +12503,13 @@
       "added": 9,
       "modified": 5
     }
-  ]
+  ],
+  "asddo": {
+    "absent": 118,
+    "shifted": 316,
+    "dead": 98,
+    "duplicate": 74,
+    "others": 28,
+    "total": 634
+  }
 }

@@ -262,4 +262,21 @@ describe('Constituency Static Datasets Verification', () => {
     assert.strictEqual(data.survey.status, 'pending');
   });
 
+  test('All constituencies contain verified ASDDO statutory audit structures', () => {
+    ['ac09-porvorim.json', 'ac10-aldona.json', 'ac17-sanquelim.json'].forEach((filename) => {
+      const raw = fs.readFileSync(path.join(publicDir, filename), 'utf-8');
+      const data = JSON.parse(raw);
+      assert.ok(data.asddo, `${filename} should have asddo audit block`);
+      const { absent, shifted, dead, duplicate, others, total } = data.asddo;
+      assert.strictEqual(typeof absent, 'number');
+      assert.strictEqual(typeof shifted, 'number');
+      assert.strictEqual(typeof dead, 'number');
+      assert.strictEqual(typeof duplicate, 'number');
+      assert.strictEqual(typeof others, 'number');
+      assert.strictEqual(typeof total, 'number');
+      assert.strictEqual(absent + shifted + dead + duplicate + others, total, `${filename} ASDDO sum must equal total`);
+      assert.strictEqual(total, data.meta.sir_deleted, `${filename} ASDDO total must equal meta.sir_deleted`);
+    });
+  });
+
 });

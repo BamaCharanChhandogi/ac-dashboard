@@ -37722,5 +37722,13 @@
       "voters": 3009,
       "booths": 4
     }
-  ]
+  ],
+  "asddo": {
+    "absent": 0,
+    "shifted": 47,
+    "dead": 6,
+    "duplicate": 650,
+    "others": 2,
+    "total": 705
+  }
 }
