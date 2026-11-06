@@ -1,49 +1,12 @@
 import React from 'react';
-import { ChevronDown, Check } from 'lucide-react';
+import { Check } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 
-const AVAILABLE_ACS = [
-  { slug: 'ac17-sanquelim', name: 'AC 17 • Sanquelim', state: 'GOA', district: 'NORTH GOA', taluka: 'BICHOLIM' },
-  { slug: 'ac09-porvorim',  name: 'AC 09 • Porvorim',  state: 'GOA', district: 'NORTH GOA', taluka: 'BARDEZ' },
-  { slug: 'ac10-aldona',    name: 'AC 10 • Aldona',    state: 'GOA', district: 'NORTH GOA', taluka: 'BARDEZ' },
-];
-
-export default function ConstituencyOverview({ data, currentSlug, onSelectAC, directory }) {
-  const [isDropdownOpen, setIsDropdownOpen] = React.useState(false);
-  const dropdownRef = React.useRef(null);
-
-  React.useEffect(() => {
-    function handleClickOutside(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-        setIsDropdownOpen(false);
-      }
-    }
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
+export default function ConstituencyOverview({ data, currentSlug, directory }) {
   const meta = data?.meta || {};
-
-  // Flatten available ACs from dynamic directory
-  const availableACs = React.useMemo(() => {
-    if (!directory) return AVAILABLE_ACS;
-    const list = [];
-    const stateName = directory.state || 'Goa';
-    (directory.parliamentary_constituencies || []).forEach(pc => {
-      (pc.assembly_constituencies || []).forEach(ac => {
-        list.push({
-          slug: ac.slug,
-          name: `AC ${String(ac.ac_no).padStart(2, '0')} • ${ac.ac_name}`,
-          state: stateName.toUpperCase(),
-          district: (ac.district || 'NORTH GOA').toUpperCase(),
-          taluka: (ac.taluka || '').toUpperCase(),
-        });
-      });
-    });
-    return list.length > 0 ? list : AVAILABLE_ACS;
-  }, [directory]);
-
-  const currentAC = availableACs.find(ac => ac.slug === currentSlug) || availableACs[0];
+  const acNumber = meta.ac_no || (currentSlug === 'ac09-porvorim' ? 9 : currentSlug === 'ac10-aldona' ? 10 : 17);
+  const acName = meta.ac_name || (currentSlug === 'ac09-porvorim' ? 'Porvorim' : currentSlug === 'ac10-aldona' ? 'Aldona' : 'Sanquelim');
+  const formattedTitle = `AC ${String(acNumber).padStart(2, '0')} • ${acName}`;
   const totalVoters = meta.total_voters || 27265;
   const totalBooths = meta.total_booths || 50;
   const villagesCount = meta.constituent_areas?.length || 9;
@@ -126,63 +89,10 @@ export default function ConstituencyOverview({ data, currentSlug, onSelectAC, di
             {meta.state ? meta.state.toUpperCase() : 'GOA'} &nbsp;/&nbsp; {meta.district ? meta.district.toUpperCase() : 'NORTH GOA'} &nbsp;/&nbsp; {meta.taluka ? meta.taluka.toUpperCase() : 'BICHOLIM'}
           </p>
 
-          {/* AC Title with Sleek Custom React Dropdown */}
-          <div className="relative inline-flex items-center" ref={dropdownRef}>
-            <button
-              type="button"
-              onClick={() => setIsDropdownOpen(prev => !prev)}
-              className="group inline-flex items-center gap-2.5 text-left outline-none cursor-pointer"
-              aria-expanded={isDropdownOpen}
-              aria-haspopup="listbox"
-            >
-              <h1 className="font-serif text-[32px] md:text-[34px] font-bold text-slate-900 dark:text-slate-100 tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                {currentAC.name}
-              </h1>
-              <span className="w-6 h-6 rounded-md border border-slate-300 dark:border-slate-700 flex items-center justify-center bg-white dark:bg-slate-800 shadow-xs group-hover:border-blue-400 dark:group-hover:border-blue-500 group-hover:bg-blue-50/50 dark:group-hover:bg-slate-700 transition-all">
-                <ChevronDown size={14} className={`text-slate-600 dark:text-slate-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-transform duration-200 ${isDropdownOpen ? 'rotate-180 text-blue-600 dark:text-blue-400' : ''}`} />
-              </span>
-            </button>
-
-            {isDropdownOpen && (
-              <div className="absolute left-0 top-full mt-2 w-72 bg-white dark:bg-slate-900 rounded-xl border border-slate-200/90 dark:border-slate-800 shadow-2xl z-50 py-1.5 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150">
-                <div className="px-3.5 py-1.5 text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500 border-b border-slate-100 dark:border-slate-800">
-                  Select Constituency
-                </div>
-                <div className="py-1">
-                  {availableACs.map(ac => {
-                    const isSelected = ac.slug === currentSlug;
-                    return (
-                      <button
-                        key={ac.slug}
-                        type="button"
-                        onClick={() => {
-                          onSelectAC?.(ac.slug);
-                          setIsDropdownOpen(false);
-                        }}
-                        className={`w-full text-left px-3.5 py-2.5 flex items-center justify-between text-[13px] transition-colors cursor-pointer ${
-                          isSelected
-                            ? 'bg-blue-50/80 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-bold'
-                            : 'text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-800 font-medium'
-                        }`}
-                      >
-                        <div>
-                          <p className="font-serif font-bold text-[14px] leading-tight">
-                            {ac.name}
-                          </p>
-                          <p className="text-[11px] text-slate-400 dark:text-slate-500 font-sans mt-0.5">
-                            {ac.district} • {ac.taluka}
-                          </p>
-                        </div>
-                        {isSelected && (
-                          <Check size={16} className="text-blue-600 dark:text-blue-400 flex-shrink-0" />
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-            )}
-          </div>
+          {/* AC Title (Clean Institutional Editorial Heading) */}
+          <h1 className="font-serif text-[32px] md:text-[34px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
+            {formattedTitle}
+          </h1>
         </div>
 
         {/* Active Electors Card (Right Side) */}
