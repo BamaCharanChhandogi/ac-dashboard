@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react';
 import { formatIndianNumber } from '../utils/formatters';
+import CurrentLeadersSection from './CurrentLeadersSection';
 
 const SANQUELIM_ASSEMBLY_HISTORY = [
   { year: '2022', party: 'BJP', pct: 48.27, winner: 'Dr. Pramod Sawant', runnerUp: 'Dharmesh Saglani (INC)', margin: '+2.6%' },
@@ -92,10 +93,7 @@ const PARTY_COLORS = {
 
 export default function ElectionResultsView({ data }) {
   const meta = data?.meta || {};
-  const leaders = data?.leaders || {};
   const elections = data?.elections || {};
-  const mla = leaders.mla;
-  const mp = leaders.mp;
 
   // Assembly historical returns
   const assemblyHistory = useMemo(() => {
@@ -153,126 +151,10 @@ export default function ElectionResultsView({ data }) {
     return SANQUELIM_VOTE_SHARES;
   }, [elections, meta.ac_name]);
 
-  const isIncMla = mla?.party === 'INC';
-
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* Title */}
-      <div>
-        <h2 className="font-serif text-[26px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
-          Current MLA & MP • Election Retrospective
-        </h2>
-        <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
-          Elected leadership dossier, historical state assembly trends, and parliamentary performance across {meta.ac_name || 'Sanquelim'}
-        </p>
-      </div>
-
-      {/* Sitting MLA & MP Profile Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {/* Sitting MLA Card */}
-        {mla && (
-          <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs flex flex-col justify-between">
-            <div>
-              <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">
-                SITTING MLA · {meta.ac_name ? meta.ac_name.toUpperCase() : 'SANQUELIM'} AC
-              </p>
-              <div className="flex items-start gap-4 mb-4">
-                <img
-                  src={mla.photo_url || (isIncMla ? '/images/leaders/carlos-ferreira.jpg' : '/images/leaders/pramod-sawant.jpg')}
-                  alt={mla.name}
-                  className={`w-16 h-16 rounded-xl object-cover border-2 shadow-xs flex-shrink-0 ${
-                    isIncMla ? 'border-sky-500' : 'border-orange-500'
-                  }`}
-                />
-                <div>
-                  <h3 className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                    {mla.name}
-                  </h3>
-                  <p className={`text-[13px] font-semibold mt-0.5 ${isIncMla ? 'text-sky-700 dark:text-sky-400' : 'text-orange-600 dark:text-orange-400'}`}>
-                    {mla.party_name || (isIncMla ? 'Indian National Congress (INC)' : 'Bharatiya Janata Party (BJP)')}
-                  </p>
-                  <p className="text-[11.5px] text-slate-400 dark:text-slate-500 mt-0.5">
-                    {mla.portfolio || (isIncMla ? 'MLA (Former Advocate General of Goa)' : 'Chief Minister of Goa')}
-                  </p>
-                </div>
-              </div>
-
-              {/* Vote share and margin row */}
-              <div className="grid grid-cols-2 gap-4 bg-slate-50 dark:bg-slate-900/90 rounded-xl p-3.5 border border-slate-100 dark:border-slate-800">
-                <div>
-                  <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Vote Share, 2022</p>
-                  <p className="text-[22px] font-extrabold text-slate-900 dark:text-slate-100 tabular-nums leading-tight mt-0.5">
-                    {mla.vote_pct}%
-                  </p>
-                  <p className="text-[11px] text-slate-400 dark:text-slate-500 tabular-nums">
-                    {formatIndianNumber(mla.votes)} votes
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Margin over runner-up</p>
-                  <p className="text-[22px] font-extrabold text-teal-700 dark:text-teal-400 tabular-nums leading-tight mt-0.5">
-                    +{formatIndianNumber(mla.margin_votes)}
-                  </p>
-                  <p className="text-[11px] text-slate-400 dark:text-slate-500">
-                    {mla.margin_pct}% · over {mla.runner_up}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Sitting MP Card */}
-        {mp && (
-          <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs flex flex-col justify-between">
-            <div>
-              <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-widest mb-3">
-                SITTING MP · {meta.pc_name ? `${meta.pc_name.toUpperCase()} PC` : 'NORTH GOA PC'}
-              </p>
-              <div className="flex items-start gap-4 mb-4">
-                <img
-                  src={mp.photo_url || '/images/leaders/shripad-naik.jpg'}
-                  alt={mp.name}
-                  className="w-16 h-16 rounded-xl object-cover border-2 border-orange-500 shadow-xs flex-shrink-0"
-                />
-                <div>
-                  <h3 className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                    {mp.name}
-                  </h3>
-                  <p className="text-[13px] font-semibold text-orange-600 dark:text-orange-400 mt-0.5">
-                    {mp.party_name || 'Bharatiya Janata Party (BJP)'}
-                  </p>
-                  <p className="text-[11.5px] text-slate-400 dark:text-slate-500 mt-0.5">
-                    {mp.portfolio || 'Union Minister of State for Power & New and Renewable Energy'}
-                  </p>
-                </div>
-              </div>
-
-              {/* Vote share and margin row */}
-              <div className="grid grid-cols-2 gap-4 bg-slate-50 dark:bg-slate-900/90 rounded-xl p-3.5 border border-slate-100 dark:border-slate-800">
-                <div>
-                  <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Vote Share, 2024</p>
-                  <p className="text-[22px] font-extrabold text-slate-900 dark:text-slate-100 tabular-nums leading-tight mt-0.5">
-                    {mp.vote_pct}%
-                  </p>
-                  <p className="text-[11px] text-slate-400 dark:text-slate-500 tabular-nums">
-                    {formatIndianNumber(mp.votes)} votes
-                  </p>
-                </div>
-                <div>
-                  <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase">Margin over runner-up</p>
-                  <p className="text-[22px] font-extrabold text-teal-700 dark:text-teal-400 tabular-nums leading-tight mt-0.5">
-                    +{formatIndianNumber(mp.margin_votes)}
-                  </p>
-                  <p className="text-[11px] text-slate-400 dark:text-slate-500">
-                    {mp.margin_pct}% · over {mp.runner_up}
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
-      </div>
+      {/* Upgraded Current MLA & MP Dossier */}
+      <CurrentLeadersSection data={data} />
 
       {/* Candidate Vote Share by Election Horizontal Stacked Bars */}
       <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs">

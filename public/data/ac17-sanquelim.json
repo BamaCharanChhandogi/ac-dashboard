@@ -177,7 +177,11 @@
       "portfolio": "Chief Minister of Goa (Home, Finance, Personnel & Education)",
       "age": 51,
       "tenure": "3rd Consecutive Term (Since 2012)",
-      "photo_url": "/images/leaders/pramod-sawant.jpg"
+      "photo_url": "/images/leaders/pramod-sawant.jpg",
+      "terms_summary": "3-term MLA (2012, 2017, 2022)",
+      "education": "BAMS, MSW",
+      "first_elected": "2012",
+      "about": "Serving as the 13th Chief Minister of Goa since 2019. Represented Sanquelim constituency across three consecutive terms (2012, 2017, 2022). An ayurvedic medical practitioner by training, he has led statewide infrastructure, health modernization, and economic diversification programs."
     },
     "mp": {
       "role": "SITTING MP",
@@ -193,7 +197,11 @@
       "portfolio": "Union Minister of State for Power & New and Renewable Energy",
       "age": 71,
       "tenure": "6th Consecutive Term (Since 1999)",
-      "photo_url": "/images/leaders/shripad-naik.jpg"
+      "photo_url": "/images/leaders/shripad-naik.jpg",
+      "terms_summary": "6-term MP (1999, 2004, 2009, 2014, 2019, 2024)",
+      "education": "Bachelor of Arts (BA)",
+      "first_elected": "1999",
+      "about": "Elected to the Lok Sabha for six consecutive terms from North Goa since 1999. Serves as Union Minister of State for Power and New & Renewable Energy. Previously held independent charge of the Ministry of AYUSH and served as Union Minister of State for Defence."
     }
   },
   "elections": {

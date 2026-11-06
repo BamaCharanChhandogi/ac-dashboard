@@ -60,21 +60,25 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
           count: p.total_electors,
           delta,
           deltaType,
+          added: p.added_count,
+          deleted: p.deleted_count,
           isCompleted: true, // Marked completed
           isLatest,
         };
       });
     }
 
-    // Default 5-stage progression
+    // Default 5-stage progression with added/deleted statutory values
+    const isAC17 = meta.ac_no === 17 || currentSlug === 'ac17-sanquelim';
+    const isAC10 = meta.ac_no === 10 || currentSlug === 'ac10-aldona';
     return [
-      { label: 'Draft Roll', date: 'DEC 2025', count: meta.ac_no === 17 ? 27206 : Math.round(totalVoters * 0.994), delta: '—', deltaType: 'neutral', isCompleted: true, isLatest: false },
-      { label: 'Final Draft', date: 'FEB 2026', count: meta.ac_no === 17 ? 27089 : Math.round(totalVoters * 0.990), delta: meta.ac_no === 17 ? '−117' : '−90', deltaType: 'negative', isCompleted: true, isLatest: false },
-      { label: 'Supplement 2', date: 'APR 2026', count: meta.ac_no === 17 ? 27145 : Math.round(totalVoters * 0.994), delta: meta.ac_no === 17 ? '+56' : '+85', deltaType: 'positive', isCompleted: true, isLatest: false },
-      { label: 'Supplement 3', date: 'JUL 2026', count: totalVoters, delta: meta.ac_no === 17 ? '+120' : '+142', deltaType: 'positive', isCompleted: true, isLatest: false },
-      { label: 'Supplement 4', date: 'OCT 2026', count: totalVoters, delta: '0', deltaType: 'neutral', isCompleted: true, isLatest: true },
+      { label: 'Draft Roll', date: 'DEC 2025', count: isAC17 ? 27206 : isAC10 ? 25986 : 25082, delta: '—', deltaType: 'neutral', added: null, deleted: null, isCompleted: true, isLatest: false },
+      { label: 'Final Draft', date: 'FEB 2026', count: isAC17 ? 27089 : isAC10 ? 25281 : 23947, delta: isAC17 ? '−117' : isAC10 ? '−473' : '−1135', deltaType: 'negative', added: isAC17 ? 409 : isAC10 ? 232 : 270, deleted: isAC17 ? 526 : isAC10 ? 705 : 1405, isCompleted: true, isLatest: false },
+      { label: 'Supplement 2', date: 'APR 2026', count: isAC17 ? 27145 : isAC10 ? 25281 : 23920, delta: isAC17 ? '+56' : isAC10 ? '0' : '−27', deltaType: isAC17 ? 'positive' : isAC10 ? 'neutral' : 'negative', added: isAC17 ? 79 : isAC10 ? 34 : 45, deleted: isAC17 ? 23 : isAC10 ? 34 : 72, isCompleted: true, isLatest: false },
+      { label: 'Supplement 3', date: 'JUL 2026', count: isAC17 ? 27265 : isAC10 ? 25281 : 23947, delta: isAC17 ? '+120' : isAC10 ? '0' : '+27', deltaType: isAC17 || !isAC10 ? 'positive' : 'neutral', added: isAC17 ? 205 : isAC10 ? 28 : 65, deleted: isAC17 ? 85 : isAC10 ? 28 : 38, isCompleted: true, isLatest: false },
+      { label: 'Supplement 4', date: 'OCT 2026', count: totalVoters, delta: '0', deltaType: 'neutral', added: isAC17 ? 68 : isAC10 ? 19 : 42, deleted: isAC17 ? 68 : isAC10 ? 19 : 42, isCompleted: true, isLatest: true },
     ];
-  }, [rawProgression, meta.ac_no, totalVoters]);
+  }, [rawProgression, meta.ac_no, currentSlug, totalVoters]);
 
   // Robust ASDDO (Absent, Shifted, Dead, Duplicate, Others) statutory deletion audit computation
   const asddo = useMemo(() => {
@@ -278,18 +282,28 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
                   {formatIndianNumber(step.count)}
                 </p>
 
-                {/* Delta */}
-                <p
-                  className={`text-[13px] font-bold tabular-nums ${
-                    step.deltaType === 'positive'
-                      ? 'text-[#16A34A] dark:text-emerald-400'
-                      : step.deltaType === 'negative'
-                      ? 'text-[#DC2626] dark:text-rose-400'
-                      : 'text-slate-400 dark:text-slate-500'
-                  }`}
-                >
-                  {step.delta}
-                </p>
+                {/* Delta / Additions & Deletions (+ and -) */}
+                {step.added != null && step.deleted != null ? (
+                  <div
+                    className="flex items-center justify-center gap-1.5 text-[12.5px] font-bold tabular-nums"
+                    title={`Additions: +${formatIndianNumber(step.added)} | Deletions: −${formatIndianNumber(step.deleted)} | Net: ${step.delta}`}
+                  >
+                    <span className="text-[#0D9488] dark:text-teal-400">+{formatIndianNumber(step.added)}</span>
+                    <span className="text-[#DC2626] dark:text-rose-400">−{formatIndianNumber(step.deleted)}</span>
+                  </div>
+                ) : (
+                  <p
+                    className={`text-[13px] font-bold tabular-nums ${
+                      step.deltaType === 'positive'
+                        ? 'text-[#16A34A] dark:text-emerald-400'
+                        : step.deltaType === 'negative'
+                        ? 'text-[#DC2626] dark:text-rose-400'
+                        : 'text-slate-400 dark:text-slate-500'
+                    }`}
+                  >
+                    {step.delta}
+                  </p>
+                )}
               </div>
             ))}
           </div>
