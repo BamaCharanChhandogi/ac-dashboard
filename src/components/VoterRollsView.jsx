@@ -99,84 +99,107 @@ export default function VoterRollsView({ data }) {
   };
 
   const handleExportExcel = () => {
-    if (filteredChurn.length === 0) return;
     setIsExportingExcel(true);
     setTimeout(() => {
       try {
-        const titleRow = ['CORPORATE CHANAKYA - ELECTORAL INTELLIGENCE PLATFORM'];
-        const subTitleRow = ['ECI STATUTORY ELECTORAL ROLL AUDIT ROSTER — SIR 2026 REVISION'];
-        const metaRow1 = [
-          'Constituency:',
-          `${meta.ac_name || 'Constituency'} (AC ${meta.ac_no || '—'})`,
-          'District:',
-          meta.district || 'North Goa',
-          'State:',
-          meta.state || 'Goa',
-        ];
-        const metaRow2 = [
-          'Roster Category:',
-          activeTab.toUpperCase(),
-          'Scope Filter:',
-          selectedVillage === 'All' ? 'All Constituent Villages' : selectedVillage,
-          'Search Filter:',
-          searchTerm || 'None',
-          'Total Records:',
-          filteredChurn.length,
-          'Export Date:',
-          new Date().toLocaleString('en-IN'),
-        ];
-        const blankRow = [];
-        const headerRow = [
-          'Sl No',
-          'Elector Name',
-          'House No',
-          'Relative / Guardian Name',
-          'EPIC ID',
-          'Village / Locality',
-          'Polling Booth',
-          'Revision Stage',
-          'Statutory Audit Ground / Reason',
-          'Category',
-        ];
-
-        const dataRows = filteredChurn.map((c, idx) => [
-          idx + 1,
-          c.name || '—',
-          c.house_no || '—',
-          c.relation || '—',
-          c.epic || '—',
-          c.village || '—',
-          `Booth ${c.booth || '—'}`,
-          c.stage || 'Final Roll',
-          c.reason || (c.kind === 'deleted' ? 'Disqualified / Shifted' : 'Form 6 Elector'),
-          (c.kind || activeTab).toUpperCase(),
-        ]);
-
-        const wsData = [titleRow, subTitleRow, metaRow1, metaRow2, blankRow, headerRow, ...dataRows];
-        const ws = XLSX.utils.aoa_to_sheet(wsData);
-
-        // Auto-fit column widths
-        ws['!cols'] = [
-          { wch: 8 },  // Sl No
-          { wch: 28 }, // Elector Name
-          { wch: 12 }, // House No
-          { wch: 26 }, // Relative / Guardian
-          { wch: 16 }, // EPIC ID
-          { wch: 18 }, // Village
-          { wch: 14 }, // Booth
-          { wch: 16 }, // Stage
-          { wch: 32 }, // Reason
-          { wch: 14 }, // Category
-        ];
-
         const wb = XLSX.utils.book_new();
-        const sheetName = `${activeTab.charAt(0).toUpperCase() + activeTab.slice(1)} Voters`;
-        XLSX.utils.book_append_sheet(wb, ws, sheetName);
+        const categories = [
+          { key: 'deleted', label: 'Deleted Voters' },
+          { key: 'added', label: 'Added Voters' },
+          { key: 'modified', label: 'Modified Voters' },
+        ];
 
-        const fileName = `ECI_${(meta.ac_name || 'Constituency').replace(/\s+/g, '_')}_AC${meta.ac_no || ''}_${activeTab}_roster.xlsx`;
+        categories.forEach(({ key, label }) => {
+          // Filter records matching this category + any active search or village filter
+          const categoryRecords = churnRecords.filter((c) => {
+            const matchesKind = c.kind === key;
+            const matchesVillage = selectedVillage === 'All' || c.village === selectedVillage;
+            const s = searchTerm.toLowerCase();
+            const matchesSearch =
+              !s ||
+              (c.name || '').toLowerCase().includes(s) ||
+              (c.epic || '').toLowerCase().includes(s) ||
+              (c.village || '').toLowerCase().includes(s) ||
+              (c.reason || '').toLowerCase().includes(s) ||
+              (c.house_no || '').toLowerCase().includes(s) ||
+              String(c.booth || '').includes(s);
+            return matchesKind && matchesVillage && matchesSearch;
+          });
+
+          const titleRow = ['CORPORATE CHANAKYA - ELECTORAL INTELLIGENCE PLATFORM'];
+          const subTitleRow = ['ECI STATUTORY ELECTORAL ROLL AUDIT ROSTER — SIR 2026 REVISION'];
+          const metaRow1 = [
+            'Constituency:',
+            `${meta.ac_name || 'Constituency'} (AC ${meta.ac_no || '—'})`,
+            'District:',
+            meta.district || 'North Goa',
+            'State:',
+            meta.state || 'Goa',
+          ];
+          const metaRow2 = [
+            'Roster Category:',
+            label.toUpperCase(),
+            'Scope Filter:',
+            selectedVillage === 'All' ? 'All Constituent Villages' : selectedVillage,
+            'Search Filter:',
+            searchTerm || 'None',
+            'Total Records in Sheet:',
+            categoryRecords.length,
+            'Export Date:',
+            new Date().toLocaleString('en-IN'),
+          ];
+          const blankRow = [];
+          const headerRow = [
+            'Sl No',
+            'Elector Name',
+            'House No',
+            'Relative / Guardian Name',
+            'EPIC ID',
+            'Village / Locality',
+            'Polling Booth',
+            'Revision Stage',
+            'Statutory Audit Ground / Reason',
+            'Category',
+          ];
+
+          const dataRows = categoryRecords.map((c, idx) => [
+            idx + 1,
+            c.name || '—',
+            c.house_no || '—',
+            c.relation || '—',
+            c.epic || '—',
+            c.village || '—',
+            `Booth ${c.booth || '—'}`,
+            c.stage || 'Final Roll',
+            c.reason || (c.kind === 'deleted' ? 'Disqualified / Shifted' : 'Form 6 Elector'),
+            key.toUpperCase(),
+          ]);
+
+          const wsData = [titleRow, subTitleRow, metaRow1, metaRow2, blankRow, headerRow, ...dataRows];
+          const ws = XLSX.utils.aoa_to_sheet(wsData);
+
+          // Auto-fit column widths
+          ws['!cols'] = [
+            { wch: 8 },  // Sl No
+            { wch: 28 }, // Elector Name
+            { wch: 12 }, // House No
+            { wch: 26 }, // Relative / Guardian
+            { wch: 16 }, // EPIC ID
+            { wch: 18 }, // Village
+            { wch: 14 }, // Booth
+            { wch: 16 }, // Stage
+            { wch: 32 }, // Reason
+            { wch: 14 }, // Category
+          ];
+
+          const sheetName = `${label} (${categoryRecords.length})`;
+          XLSX.utils.book_append_sheet(wb, ws, sheetName);
+        });
+
+        const fileName = `ECI_${(meta.ac_name || 'Constituency').replace(/\s+/g, '_')}_AC${meta.ac_no || ''}_Master_Audit_Roster_2026.xlsx`;
         XLSX.writeFile(wb, fileName);
       } catch (err) {
-        console.error('Failed to export Excel:', err);
+        console.error('Failed to export Excel Master Workbook:', err);
       } finally {
         setIsExportingExcel(false);
       }
@@ -510,8 +533,8 @@ export default function VoterRollsView({ data }) {
               <button
                 type="button"
                 onClick={handleExportExcel}
-                disabled={isExportingExcel || filteredChurn.length === 0}
-                title={`Download ${activeTab} voters roster as Excel spreadsheet (.xlsx)`}
+                disabled={isExportingExcel || churnRecords.length === 0}
+                title="Download Master Electoral Roll Audit Workbook with 3 worksheet tabs: Deleted, Added, and Modified (.xlsx)"
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-bold rounded-lg border border-emerald-300/80 dark:border-emerald-800 bg-emerald-50 hover:bg-emerald-100 dark:bg-emerald-950/60 dark:hover:bg-emerald-900/60 text-emerald-800 dark:text-emerald-300 shadow-2xs transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {isExportingExcel ? (
@@ -519,14 +542,14 @@ export default function VoterRollsView({ data }) {
                 ) : (
                   <FileSpreadsheet size={13} className="text-emerald-600 dark:text-emerald-400" />
                 )}
-                <span>Excel</span>
+                <span>Excel (3 Tabs)</span>
               </button>
 
               <button
                 type="button"
                 onClick={handleExportPDF}
                 disabled={isExportingPDF || filteredChurn.length === 0}
-                title={`Download ${activeTab} voters roster as official PDF report (.pdf)`}
+                title={`Download official ${activeTab} voters audit gazette report (.pdf)`}
                 className="inline-flex items-center gap-1.5 px-3 py-1.5 text-[12px] font-bold rounded-lg border border-rose-300/80 dark:border-rose-800 bg-rose-50 hover:bg-rose-100 dark:bg-rose-950/60 dark:hover:bg-rose-900/60 text-rose-800 dark:text-rose-300 shadow-2xs transition-colors cursor-pointer disabled:opacity-40 disabled:cursor-not-allowed"
               >
                 {isExportingPDF ? (
@@ -534,7 +557,7 @@ export default function VoterRollsView({ data }) {
                 ) : (
                   <FileText size={13} className="text-rose-600 dark:text-rose-400" />
                 )}
-                <span>PDF</span>
+                <span>PDF ({activeTab.charAt(0).toUpperCase() + activeTab.slice(1)})</span>
               </button>
             </div>
           </div>
