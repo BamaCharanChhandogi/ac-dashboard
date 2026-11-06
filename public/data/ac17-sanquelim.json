@@ -4804,6 +4804,7342 @@
           "booth": 5
         }
       ]
+    },
+    {
+      "id": "fam_sq_9",
+      "head_name": "Gokuldas Naik family",
+      "surname": "Naik",
+      "village": "Sanquelim",
+      "house": "House No. 101",
+      "house_no": "101",
+      "members_count": 12,
+      "booth": 1,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400000",
+          "booth": 1
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400001",
+          "booth": 1
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400002",
+          "booth": 1
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400003",
+          "booth": 1
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400000",
+          "booth": 1
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400001",
+          "booth": 1
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400002",
+          "booth": 1
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400003",
+          "booth": 1
+        },
+        {
+          "name": "Vinayak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0400004",
+          "booth": 1
+        },
+        {
+          "name": "Sunita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0400005",
+          "booth": 1
+        },
+        {
+          "name": "Pooja Naik",
+          "relation": "Gokuldas Naik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0400006",
+          "booth": 1
+        },
+        {
+          "name": "Rohan Naik",
+          "relation": "Gokuldas Naik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0400007",
+          "booth": 1
+        },
+        {
+          "name": "Pratima Naik",
+          "relation": "Gokuldas Naik",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0400008",
+          "booth": 1
+        },
+        {
+          "name": "Deepak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0400009",
+          "booth": 1
+        },
+        {
+          "name": "Meena Naik",
+          "relation": "Gokuldas Naik",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0400010",
+          "booth": 1
+        },
+        {
+          "name": "Ajay Naik",
+          "relation": "Gokuldas Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0400011",
+          "booth": 1
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_10",
+      "head_name": "Chandrakant Parab family",
+      "surname": "Parab",
+      "village": "Sanquelim",
+      "house": "House No. 113",
+      "house_no": "113",
+      "members_count": 11,
+      "booth": 2,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400100",
+          "booth": 2
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400101",
+          "booth": 2
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400102",
+          "booth": 2
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400103",
+          "booth": 2
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400100",
+          "booth": 2
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400101",
+          "booth": 2
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400102",
+          "booth": 2
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400103",
+          "booth": 2
+        },
+        {
+          "name": "Vinayak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0400104",
+          "booth": 2
+        },
+        {
+          "name": "Sunita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0400105",
+          "booth": 2
+        },
+        {
+          "name": "Pooja Parab",
+          "relation": "Chandrakant Parab",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0400106",
+          "booth": 2
+        },
+        {
+          "name": "Rohan Parab",
+          "relation": "Chandrakant Parab",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0400107",
+          "booth": 2
+        },
+        {
+          "name": "Pratima Parab",
+          "relation": "Chandrakant Parab",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0400108",
+          "booth": 2
+        },
+        {
+          "name": "Deepak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0400109",
+          "booth": 2
+        },
+        {
+          "name": "Meena Parab",
+          "relation": "Chandrakant Parab",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0400110",
+          "booth": 2
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_11",
+      "head_name": "Tukaram Gawas family",
+      "surname": "Gawas",
+      "village": "Sanquelim",
+      "house": "House No. 125",
+      "house_no": "125",
+      "members_count": 10,
+      "booth": 3,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400200",
+          "booth": 3
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400201",
+          "booth": 3
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400202",
+          "booth": 3
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400203",
+          "booth": 3
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400200",
+          "booth": 3
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400201",
+          "booth": 3
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400202",
+          "booth": 3
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400203",
+          "booth": 3
+        },
+        {
+          "name": "Vinayak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0400204",
+          "booth": 3
+        },
+        {
+          "name": "Sunita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0400205",
+          "booth": 3
+        },
+        {
+          "name": "Pooja Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0400206",
+          "booth": 3
+        },
+        {
+          "name": "Rohan Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0400207",
+          "booth": 3
+        },
+        {
+          "name": "Pratima Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0400208",
+          "booth": 3
+        },
+        {
+          "name": "Deepak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0400209",
+          "booth": 3
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_12",
+      "head_name": "Dattaram Sinari family",
+      "surname": "Sinari",
+      "village": "Sanquelim",
+      "house": "House No. 137",
+      "house_no": "137",
+      "members_count": 9,
+      "booth": 4,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400300",
+          "booth": 4
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400301",
+          "booth": 4
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400302",
+          "booth": 4
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400303",
+          "booth": 4
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400300",
+          "booth": 4
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400301",
+          "booth": 4
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400302",
+          "booth": 4
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400303",
+          "booth": 4
+        },
+        {
+          "name": "Vinayak Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0400304",
+          "booth": 4
+        },
+        {
+          "name": "Sunita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0400305",
+          "booth": 4
+        },
+        {
+          "name": "Pooja Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0400306",
+          "booth": 4
+        },
+        {
+          "name": "Rohan Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0400307",
+          "booth": 4
+        },
+        {
+          "name": "Pratima Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0400308",
+          "booth": 4
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_13",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Sanquelim",
+      "house": "House No. 149",
+      "house_no": "149",
+      "members_count": 8,
+      "booth": 5,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400400",
+          "booth": 5
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400401",
+          "booth": 5
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400402",
+          "booth": 5
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400403",
+          "booth": 5
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400400",
+          "booth": 5
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400401",
+          "booth": 5
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400402",
+          "booth": 5
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400403",
+          "booth": 5
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0400404",
+          "booth": 5
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0400405",
+          "booth": 5
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0400406",
+          "booth": 5
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0400407",
+          "booth": 5
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_14",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Sanquelim",
+      "house": "House No. 161",
+      "house_no": "161",
+      "members_count": 7,
+      "booth": 1,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400500",
+          "booth": 1
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400501",
+          "booth": 1
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400502",
+          "booth": 1
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400503",
+          "booth": 1
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400500",
+          "booth": 1
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400501",
+          "booth": 1
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400502",
+          "booth": 1
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400503",
+          "booth": 1
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0400504",
+          "booth": 1
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0400505",
+          "booth": 1
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0400506",
+          "booth": 1
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_15",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Sanquelim",
+      "house": "House No. 173",
+      "house_no": "173",
+      "members_count": 12,
+      "booth": 2,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400600",
+          "booth": 2
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400601",
+          "booth": 2
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400602",
+          "booth": 2
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400603",
+          "booth": 2
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0400600",
+          "booth": 2
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0400601",
+          "booth": 2
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0400602",
+          "booth": 2
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0400603",
+          "booth": 2
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0400604",
+          "booth": 2
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0400605",
+          "booth": 2
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0400606",
+          "booth": 2
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0400607",
+          "booth": 2
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0400608",
+          "booth": 2
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0400609",
+          "booth": 2
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0400610",
+          "booth": 2
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0400611",
+          "booth": 2
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_16",
+      "head_name": "Gokuldas Naik family",
+      "surname": "Naik",
+      "village": "Arvalem",
+      "house": "House No. 201",
+      "house_no": "201",
+      "members_count": 12,
+      "booth": 6,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401000",
+          "booth": 6
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401001",
+          "booth": 6
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401002",
+          "booth": 6
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401003",
+          "booth": 6
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401000",
+          "booth": 6
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401001",
+          "booth": 6
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401002",
+          "booth": 6
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401003",
+          "booth": 6
+        },
+        {
+          "name": "Vinayak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0401004",
+          "booth": 6
+        },
+        {
+          "name": "Sunita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0401005",
+          "booth": 6
+        },
+        {
+          "name": "Pooja Naik",
+          "relation": "Gokuldas Naik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0401006",
+          "booth": 6
+        },
+        {
+          "name": "Rohan Naik",
+          "relation": "Gokuldas Naik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0401007",
+          "booth": 6
+        },
+        {
+          "name": "Pratima Naik",
+          "relation": "Gokuldas Naik",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0401008",
+          "booth": 6
+        },
+        {
+          "name": "Deepak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0401009",
+          "booth": 6
+        },
+        {
+          "name": "Meena Naik",
+          "relation": "Gokuldas Naik",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0401010",
+          "booth": 6
+        },
+        {
+          "name": "Ajay Naik",
+          "relation": "Gokuldas Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0401011",
+          "booth": 6
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_17",
+      "head_name": "Chandrakant Parab family",
+      "surname": "Parab",
+      "village": "Arvalem",
+      "house": "House No. 213",
+      "house_no": "213",
+      "members_count": 11,
+      "booth": 7,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401100",
+          "booth": 7
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401101",
+          "booth": 7
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401102",
+          "booth": 7
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401103",
+          "booth": 7
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401100",
+          "booth": 7
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401101",
+          "booth": 7
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401102",
+          "booth": 7
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401103",
+          "booth": 7
+        },
+        {
+          "name": "Vinayak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0401104",
+          "booth": 7
+        },
+        {
+          "name": "Sunita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0401105",
+          "booth": 7
+        },
+        {
+          "name": "Pooja Parab",
+          "relation": "Chandrakant Parab",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0401106",
+          "booth": 7
+        },
+        {
+          "name": "Rohan Parab",
+          "relation": "Chandrakant Parab",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0401107",
+          "booth": 7
+        },
+        {
+          "name": "Pratima Parab",
+          "relation": "Chandrakant Parab",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0401108",
+          "booth": 7
+        },
+        {
+          "name": "Deepak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0401109",
+          "booth": 7
+        },
+        {
+          "name": "Meena Parab",
+          "relation": "Chandrakant Parab",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0401110",
+          "booth": 7
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_18",
+      "head_name": "Dattaram Sinari family",
+      "surname": "Sinari",
+      "village": "Arvalem",
+      "house": "House No. 237",
+      "house_no": "237",
+      "members_count": 9,
+      "booth": 9,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401300",
+          "booth": 9
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401301",
+          "booth": 9
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401302",
+          "booth": 9
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401303",
+          "booth": 9
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401300",
+          "booth": 9
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401301",
+          "booth": 9
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401302",
+          "booth": 9
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401303",
+          "booth": 9
+        },
+        {
+          "name": "Vinayak Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0401304",
+          "booth": 9
+        },
+        {
+          "name": "Sunita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0401305",
+          "booth": 9
+        },
+        {
+          "name": "Pooja Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0401306",
+          "booth": 9
+        },
+        {
+          "name": "Rohan Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0401307",
+          "booth": 9
+        },
+        {
+          "name": "Pratima Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0401308",
+          "booth": 9
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_19",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Arvalem",
+      "house": "House No. 249",
+      "house_no": "249",
+      "members_count": 8,
+      "booth": 10,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401400",
+          "booth": 10
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401401",
+          "booth": 10
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401402",
+          "booth": 10
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401403",
+          "booth": 10
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401400",
+          "booth": 10
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401401",
+          "booth": 10
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401402",
+          "booth": 10
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401403",
+          "booth": 10
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0401404",
+          "booth": 10
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0401405",
+          "booth": 10
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0401406",
+          "booth": 10
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0401407",
+          "booth": 10
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_20",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Arvalem",
+      "house": "House No. 261",
+      "house_no": "261",
+      "members_count": 7,
+      "booth": 6,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401500",
+          "booth": 6
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401501",
+          "booth": 6
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401502",
+          "booth": 6
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401503",
+          "booth": 6
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401500",
+          "booth": 6
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401501",
+          "booth": 6
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401502",
+          "booth": 6
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401503",
+          "booth": 6
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0401504",
+          "booth": 6
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0401505",
+          "booth": 6
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0401506",
+          "booth": 6
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_21",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Arvalem",
+      "house": "House No. 273",
+      "house_no": "273",
+      "members_count": 12,
+      "booth": 7,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401600",
+          "booth": 7
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401601",
+          "booth": 7
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401602",
+          "booth": 7
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401603",
+          "booth": 7
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0401600",
+          "booth": 7
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0401601",
+          "booth": 7
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0401602",
+          "booth": 7
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0401603",
+          "booth": 7
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0401604",
+          "booth": 7
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0401605",
+          "booth": 7
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0401606",
+          "booth": 7
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0401607",
+          "booth": 7
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0401608",
+          "booth": 7
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0401609",
+          "booth": 7
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0401610",
+          "booth": 7
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0401611",
+          "booth": 7
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_22",
+      "head_name": "Gokuldas Naik family",
+      "surname": "Naik",
+      "village": "Cudnem",
+      "house": "House No. 301",
+      "house_no": "301",
+      "members_count": 12,
+      "booth": 11,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402000",
+          "booth": 11
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402001",
+          "booth": 11
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402002",
+          "booth": 11
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402003",
+          "booth": 11
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402000",
+          "booth": 11
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402001",
+          "booth": 11
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402002",
+          "booth": 11
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402003",
+          "booth": 11
+        },
+        {
+          "name": "Vinayak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0402004",
+          "booth": 11
+        },
+        {
+          "name": "Sunita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0402005",
+          "booth": 11
+        },
+        {
+          "name": "Pooja Naik",
+          "relation": "Gokuldas Naik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0402006",
+          "booth": 11
+        },
+        {
+          "name": "Rohan Naik",
+          "relation": "Gokuldas Naik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0402007",
+          "booth": 11
+        },
+        {
+          "name": "Pratima Naik",
+          "relation": "Gokuldas Naik",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0402008",
+          "booth": 11
+        },
+        {
+          "name": "Deepak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0402009",
+          "booth": 11
+        },
+        {
+          "name": "Meena Naik",
+          "relation": "Gokuldas Naik",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0402010",
+          "booth": 11
+        },
+        {
+          "name": "Ajay Naik",
+          "relation": "Gokuldas Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0402011",
+          "booth": 11
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_23",
+      "head_name": "Chandrakant Parab family",
+      "surname": "Parab",
+      "village": "Cudnem",
+      "house": "House No. 313",
+      "house_no": "313",
+      "members_count": 11,
+      "booth": 12,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402100",
+          "booth": 12
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402101",
+          "booth": 12
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402102",
+          "booth": 12
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402103",
+          "booth": 12
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402100",
+          "booth": 12
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402101",
+          "booth": 12
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402102",
+          "booth": 12
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402103",
+          "booth": 12
+        },
+        {
+          "name": "Vinayak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0402104",
+          "booth": 12
+        },
+        {
+          "name": "Sunita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0402105",
+          "booth": 12
+        },
+        {
+          "name": "Pooja Parab",
+          "relation": "Chandrakant Parab",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0402106",
+          "booth": 12
+        },
+        {
+          "name": "Rohan Parab",
+          "relation": "Chandrakant Parab",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0402107",
+          "booth": 12
+        },
+        {
+          "name": "Pratima Parab",
+          "relation": "Chandrakant Parab",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0402108",
+          "booth": 12
+        },
+        {
+          "name": "Deepak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0402109",
+          "booth": 12
+        },
+        {
+          "name": "Meena Parab",
+          "relation": "Chandrakant Parab",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0402110",
+          "booth": 12
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_24",
+      "head_name": "Tukaram Gawas family",
+      "surname": "Gawas",
+      "village": "Cudnem",
+      "house": "House No. 325",
+      "house_no": "325",
+      "members_count": 10,
+      "booth": 13,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402200",
+          "booth": 13
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402201",
+          "booth": 13
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402202",
+          "booth": 13
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402203",
+          "booth": 13
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402200",
+          "booth": 13
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402201",
+          "booth": 13
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402202",
+          "booth": 13
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402203",
+          "booth": 13
+        },
+        {
+          "name": "Vinayak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0402204",
+          "booth": 13
+        },
+        {
+          "name": "Sunita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0402205",
+          "booth": 13
+        },
+        {
+          "name": "Pooja Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0402206",
+          "booth": 13
+        },
+        {
+          "name": "Rohan Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0402207",
+          "booth": 13
+        },
+        {
+          "name": "Pratima Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0402208",
+          "booth": 13
+        },
+        {
+          "name": "Deepak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0402209",
+          "booth": 13
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_25",
+      "head_name": "Dattaram Sinari family",
+      "surname": "Sinari",
+      "village": "Cudnem",
+      "house": "House No. 337",
+      "house_no": "337",
+      "members_count": 9,
+      "booth": 14,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402300",
+          "booth": 14
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402301",
+          "booth": 14
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402302",
+          "booth": 14
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402303",
+          "booth": 14
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402300",
+          "booth": 14
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402301",
+          "booth": 14
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402302",
+          "booth": 14
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402303",
+          "booth": 14
+        },
+        {
+          "name": "Vinayak Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0402304",
+          "booth": 14
+        },
+        {
+          "name": "Sunita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0402305",
+          "booth": 14
+        },
+        {
+          "name": "Pooja Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0402306",
+          "booth": 14
+        },
+        {
+          "name": "Rohan Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0402307",
+          "booth": 14
+        },
+        {
+          "name": "Pratima Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0402308",
+          "booth": 14
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_26",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Cudnem",
+      "house": "House No. 349",
+      "house_no": "349",
+      "members_count": 8,
+      "booth": 15,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402400",
+          "booth": 15
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402401",
+          "booth": 15
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402402",
+          "booth": 15
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402403",
+          "booth": 15
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402400",
+          "booth": 15
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402401",
+          "booth": 15
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402402",
+          "booth": 15
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402403",
+          "booth": 15
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0402404",
+          "booth": 15
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0402405",
+          "booth": 15
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0402406",
+          "booth": 15
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0402407",
+          "booth": 15
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_27",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Cudnem",
+      "house": "House No. 361",
+      "house_no": "361",
+      "members_count": 7,
+      "booth": 11,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402500",
+          "booth": 11
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402501",
+          "booth": 11
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402502",
+          "booth": 11
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402503",
+          "booth": 11
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402500",
+          "booth": 11
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402501",
+          "booth": 11
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402502",
+          "booth": 11
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402503",
+          "booth": 11
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0402504",
+          "booth": 11
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0402505",
+          "booth": 11
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0402506",
+          "booth": 11
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_28",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Cudnem",
+      "house": "House No. 373",
+      "house_no": "373",
+      "members_count": 12,
+      "booth": 12,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402600",
+          "booth": 12
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402601",
+          "booth": 12
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402602",
+          "booth": 12
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402603",
+          "booth": 12
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0402600",
+          "booth": 12
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0402601",
+          "booth": 12
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0402602",
+          "booth": 12
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0402603",
+          "booth": 12
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0402604",
+          "booth": 12
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0402605",
+          "booth": 12
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0402606",
+          "booth": 12
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0402607",
+          "booth": 12
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0402608",
+          "booth": 12
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0402609",
+          "booth": 12
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0402610",
+          "booth": 12
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0402611",
+          "booth": 12
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_29",
+      "head_name": "Gokuldas Naik family",
+      "surname": "Naik",
+      "village": "Navelim",
+      "house": "House No. 401",
+      "house_no": "401",
+      "members_count": 12,
+      "booth": 16,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403000",
+          "booth": 16
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403001",
+          "booth": 16
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403002",
+          "booth": 16
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403003",
+          "booth": 16
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403000",
+          "booth": 16
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403001",
+          "booth": 16
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403002",
+          "booth": 16
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403003",
+          "booth": 16
+        },
+        {
+          "name": "Vinayak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0403004",
+          "booth": 16
+        },
+        {
+          "name": "Sunita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0403005",
+          "booth": 16
+        },
+        {
+          "name": "Pooja Naik",
+          "relation": "Gokuldas Naik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0403006",
+          "booth": 16
+        },
+        {
+          "name": "Rohan Naik",
+          "relation": "Gokuldas Naik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0403007",
+          "booth": 16
+        },
+        {
+          "name": "Pratima Naik",
+          "relation": "Gokuldas Naik",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0403008",
+          "booth": 16
+        },
+        {
+          "name": "Deepak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0403009",
+          "booth": 16
+        },
+        {
+          "name": "Meena Naik",
+          "relation": "Gokuldas Naik",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0403010",
+          "booth": 16
+        },
+        {
+          "name": "Ajay Naik",
+          "relation": "Gokuldas Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0403011",
+          "booth": 16
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_30",
+      "head_name": "Chandrakant Parab family",
+      "surname": "Parab",
+      "village": "Navelim",
+      "house": "House No. 413",
+      "house_no": "413",
+      "members_count": 11,
+      "booth": 17,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403100",
+          "booth": 17
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403101",
+          "booth": 17
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403102",
+          "booth": 17
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403103",
+          "booth": 17
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403100",
+          "booth": 17
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403101",
+          "booth": 17
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403102",
+          "booth": 17
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403103",
+          "booth": 17
+        },
+        {
+          "name": "Vinayak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0403104",
+          "booth": 17
+        },
+        {
+          "name": "Sunita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0403105",
+          "booth": 17
+        },
+        {
+          "name": "Pooja Parab",
+          "relation": "Chandrakant Parab",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0403106",
+          "booth": 17
+        },
+        {
+          "name": "Rohan Parab",
+          "relation": "Chandrakant Parab",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0403107",
+          "booth": 17
+        },
+        {
+          "name": "Pratima Parab",
+          "relation": "Chandrakant Parab",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0403108",
+          "booth": 17
+        },
+        {
+          "name": "Deepak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0403109",
+          "booth": 17
+        },
+        {
+          "name": "Meena Parab",
+          "relation": "Chandrakant Parab",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0403110",
+          "booth": 17
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_31",
+      "head_name": "Tukaram Gawas family",
+      "surname": "Gawas",
+      "village": "Navelim",
+      "house": "House No. 425",
+      "house_no": "425",
+      "members_count": 10,
+      "booth": 18,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403200",
+          "booth": 18
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403201",
+          "booth": 18
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403202",
+          "booth": 18
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403203",
+          "booth": 18
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403200",
+          "booth": 18
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403201",
+          "booth": 18
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403202",
+          "booth": 18
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403203",
+          "booth": 18
+        },
+        {
+          "name": "Vinayak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0403204",
+          "booth": 18
+        },
+        {
+          "name": "Sunita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0403205",
+          "booth": 18
+        },
+        {
+          "name": "Pooja Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0403206",
+          "booth": 18
+        },
+        {
+          "name": "Rohan Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0403207",
+          "booth": 18
+        },
+        {
+          "name": "Pratima Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0403208",
+          "booth": 18
+        },
+        {
+          "name": "Deepak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0403209",
+          "booth": 18
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_32",
+      "head_name": "Dattaram Sinari family",
+      "surname": "Sinari",
+      "village": "Navelim",
+      "house": "House No. 437",
+      "house_no": "437",
+      "members_count": 9,
+      "booth": 19,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403300",
+          "booth": 19
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403301",
+          "booth": 19
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403302",
+          "booth": 19
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403303",
+          "booth": 19
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403300",
+          "booth": 19
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403301",
+          "booth": 19
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403302",
+          "booth": 19
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403303",
+          "booth": 19
+        },
+        {
+          "name": "Vinayak Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0403304",
+          "booth": 19
+        },
+        {
+          "name": "Sunita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0403305",
+          "booth": 19
+        },
+        {
+          "name": "Pooja Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0403306",
+          "booth": 19
+        },
+        {
+          "name": "Rohan Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0403307",
+          "booth": 19
+        },
+        {
+          "name": "Pratima Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0403308",
+          "booth": 19
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_33",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Navelim",
+      "house": "House No. 449",
+      "house_no": "449",
+      "members_count": 8,
+      "booth": 20,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403400",
+          "booth": 20
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403401",
+          "booth": 20
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403402",
+          "booth": 20
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403403",
+          "booth": 20
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403400",
+          "booth": 20
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403401",
+          "booth": 20
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403402",
+          "booth": 20
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403403",
+          "booth": 20
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0403404",
+          "booth": 20
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0403405",
+          "booth": 20
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0403406",
+          "booth": 20
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0403407",
+          "booth": 20
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_34",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Navelim",
+      "house": "House No. 461",
+      "house_no": "461",
+      "members_count": 7,
+      "booth": 16,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403500",
+          "booth": 16
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403501",
+          "booth": 16
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403502",
+          "booth": 16
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403503",
+          "booth": 16
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403500",
+          "booth": 16
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403501",
+          "booth": 16
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403502",
+          "booth": 16
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403503",
+          "booth": 16
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0403504",
+          "booth": 16
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0403505",
+          "booth": 16
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0403506",
+          "booth": 16
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_35",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Navelim",
+      "house": "House No. 473",
+      "house_no": "473",
+      "members_count": 12,
+      "booth": 17,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403600",
+          "booth": 17
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403601",
+          "booth": 17
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403602",
+          "booth": 17
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403603",
+          "booth": 17
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0403600",
+          "booth": 17
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0403601",
+          "booth": 17
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0403602",
+          "booth": 17
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0403603",
+          "booth": 17
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0403604",
+          "booth": 17
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0403605",
+          "booth": 17
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0403606",
+          "booth": 17
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0403607",
+          "booth": 17
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0403608",
+          "booth": 17
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0403609",
+          "booth": 17
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0403610",
+          "booth": 17
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0403611",
+          "booth": 17
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_36",
+      "head_name": "Gokuldas Naik family",
+      "surname": "Naik",
+      "village": "Amona",
+      "house": "House No. 501",
+      "house_no": "501",
+      "members_count": 12,
+      "booth": 21,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404000",
+          "booth": 21
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404001",
+          "booth": 21
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404002",
+          "booth": 21
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404003",
+          "booth": 21
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404000",
+          "booth": 21
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404001",
+          "booth": 21
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404002",
+          "booth": 21
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404003",
+          "booth": 21
+        },
+        {
+          "name": "Vinayak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0404004",
+          "booth": 21
+        },
+        {
+          "name": "Sunita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0404005",
+          "booth": 21
+        },
+        {
+          "name": "Pooja Naik",
+          "relation": "Gokuldas Naik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0404006",
+          "booth": 21
+        },
+        {
+          "name": "Rohan Naik",
+          "relation": "Gokuldas Naik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0404007",
+          "booth": 21
+        },
+        {
+          "name": "Pratima Naik",
+          "relation": "Gokuldas Naik",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0404008",
+          "booth": 21
+        },
+        {
+          "name": "Deepak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0404009",
+          "booth": 21
+        },
+        {
+          "name": "Meena Naik",
+          "relation": "Gokuldas Naik",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0404010",
+          "booth": 21
+        },
+        {
+          "name": "Ajay Naik",
+          "relation": "Gokuldas Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0404011",
+          "booth": 21
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_37",
+      "head_name": "Chandrakant Parab family",
+      "surname": "Parab",
+      "village": "Amona",
+      "house": "House No. 513",
+      "house_no": "513",
+      "members_count": 11,
+      "booth": 22,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404100",
+          "booth": 22
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404101",
+          "booth": 22
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404102",
+          "booth": 22
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404103",
+          "booth": 22
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404100",
+          "booth": 22
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404101",
+          "booth": 22
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404102",
+          "booth": 22
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404103",
+          "booth": 22
+        },
+        {
+          "name": "Vinayak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0404104",
+          "booth": 22
+        },
+        {
+          "name": "Sunita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0404105",
+          "booth": 22
+        },
+        {
+          "name": "Pooja Parab",
+          "relation": "Chandrakant Parab",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0404106",
+          "booth": 22
+        },
+        {
+          "name": "Rohan Parab",
+          "relation": "Chandrakant Parab",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0404107",
+          "booth": 22
+        },
+        {
+          "name": "Pratima Parab",
+          "relation": "Chandrakant Parab",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0404108",
+          "booth": 22
+        },
+        {
+          "name": "Deepak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0404109",
+          "booth": 22
+        },
+        {
+          "name": "Meena Parab",
+          "relation": "Chandrakant Parab",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0404110",
+          "booth": 22
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_38",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Amona",
+      "house": "House No. 549",
+      "house_no": "549",
+      "members_count": 8,
+      "booth": 25,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404400",
+          "booth": 25
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404401",
+          "booth": 25
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404402",
+          "booth": 25
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404403",
+          "booth": 25
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404400",
+          "booth": 25
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404401",
+          "booth": 25
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404402",
+          "booth": 25
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404403",
+          "booth": 25
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0404404",
+          "booth": 25
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0404405",
+          "booth": 25
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0404406",
+          "booth": 25
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0404407",
+          "booth": 25
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_39",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Amona",
+      "house": "House No. 561",
+      "house_no": "561",
+      "members_count": 7,
+      "booth": 21,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404500",
+          "booth": 21
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404501",
+          "booth": 21
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404502",
+          "booth": 21
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404503",
+          "booth": 21
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404500",
+          "booth": 21
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404501",
+          "booth": 21
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404502",
+          "booth": 21
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404503",
+          "booth": 21
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0404504",
+          "booth": 21
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0404505",
+          "booth": 21
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0404506",
+          "booth": 21
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_40",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Amona",
+      "house": "House No. 573",
+      "house_no": "573",
+      "members_count": 12,
+      "booth": 22,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404600",
+          "booth": 22
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404601",
+          "booth": 22
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404602",
+          "booth": 22
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404603",
+          "booth": 22
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0404600",
+          "booth": 22
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0404601",
+          "booth": 22
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0404602",
+          "booth": 22
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0404603",
+          "booth": 22
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0404604",
+          "booth": 22
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0404605",
+          "booth": 22
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0404606",
+          "booth": 22
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0404607",
+          "booth": 22
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0404608",
+          "booth": 22
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0404609",
+          "booth": 22
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0404610",
+          "booth": 22
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0404611",
+          "booth": 22
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_41",
+      "head_name": "Gokuldas Naik family",
+      "surname": "Naik",
+      "village": "Surla",
+      "house": "House No. 601",
+      "house_no": "601",
+      "members_count": 12,
+      "booth": 26,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405000",
+          "booth": 26
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405001",
+          "booth": 26
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405002",
+          "booth": 26
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405003",
+          "booth": 26
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405000",
+          "booth": 26
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405001",
+          "booth": 26
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405002",
+          "booth": 26
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405003",
+          "booth": 26
+        },
+        {
+          "name": "Vinayak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0405004",
+          "booth": 26
+        },
+        {
+          "name": "Sunita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0405005",
+          "booth": 26
+        },
+        {
+          "name": "Pooja Naik",
+          "relation": "Gokuldas Naik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0405006",
+          "booth": 26
+        },
+        {
+          "name": "Rohan Naik",
+          "relation": "Gokuldas Naik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0405007",
+          "booth": 26
+        },
+        {
+          "name": "Pratima Naik",
+          "relation": "Gokuldas Naik",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0405008",
+          "booth": 26
+        },
+        {
+          "name": "Deepak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0405009",
+          "booth": 26
+        },
+        {
+          "name": "Meena Naik",
+          "relation": "Gokuldas Naik",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0405010",
+          "booth": 26
+        },
+        {
+          "name": "Ajay Naik",
+          "relation": "Gokuldas Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0405011",
+          "booth": 26
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_42",
+      "head_name": "Chandrakant Parab family",
+      "surname": "Parab",
+      "village": "Surla",
+      "house": "House No. 613",
+      "house_no": "613",
+      "members_count": 11,
+      "booth": 27,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405100",
+          "booth": 27
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405101",
+          "booth": 27
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405102",
+          "booth": 27
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405103",
+          "booth": 27
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405100",
+          "booth": 27
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405101",
+          "booth": 27
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405102",
+          "booth": 27
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405103",
+          "booth": 27
+        },
+        {
+          "name": "Vinayak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0405104",
+          "booth": 27
+        },
+        {
+          "name": "Sunita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0405105",
+          "booth": 27
+        },
+        {
+          "name": "Pooja Parab",
+          "relation": "Chandrakant Parab",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0405106",
+          "booth": 27
+        },
+        {
+          "name": "Rohan Parab",
+          "relation": "Chandrakant Parab",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0405107",
+          "booth": 27
+        },
+        {
+          "name": "Pratima Parab",
+          "relation": "Chandrakant Parab",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0405108",
+          "booth": 27
+        },
+        {
+          "name": "Deepak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0405109",
+          "booth": 27
+        },
+        {
+          "name": "Meena Parab",
+          "relation": "Chandrakant Parab",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0405110",
+          "booth": 27
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_43",
+      "head_name": "Tukaram Gawas family",
+      "surname": "Gawas",
+      "village": "Surla",
+      "house": "House No. 625",
+      "house_no": "625",
+      "members_count": 10,
+      "booth": 28,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405200",
+          "booth": 28
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405201",
+          "booth": 28
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405202",
+          "booth": 28
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405203",
+          "booth": 28
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405200",
+          "booth": 28
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405201",
+          "booth": 28
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405202",
+          "booth": 28
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405203",
+          "booth": 28
+        },
+        {
+          "name": "Vinayak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0405204",
+          "booth": 28
+        },
+        {
+          "name": "Sunita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0405205",
+          "booth": 28
+        },
+        {
+          "name": "Pooja Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0405206",
+          "booth": 28
+        },
+        {
+          "name": "Rohan Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0405207",
+          "booth": 28
+        },
+        {
+          "name": "Pratima Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0405208",
+          "booth": 28
+        },
+        {
+          "name": "Deepak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0405209",
+          "booth": 28
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_44",
+      "head_name": "Dattaram Sinari family",
+      "surname": "Sinari",
+      "village": "Surla",
+      "house": "House No. 637",
+      "house_no": "637",
+      "members_count": 9,
+      "booth": 29,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405300",
+          "booth": 29
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405301",
+          "booth": 29
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405302",
+          "booth": 29
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405303",
+          "booth": 29
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405300",
+          "booth": 29
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405301",
+          "booth": 29
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405302",
+          "booth": 29
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405303",
+          "booth": 29
+        },
+        {
+          "name": "Vinayak Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0405304",
+          "booth": 29
+        },
+        {
+          "name": "Sunita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0405305",
+          "booth": 29
+        },
+        {
+          "name": "Pooja Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0405306",
+          "booth": 29
+        },
+        {
+          "name": "Rohan Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0405307",
+          "booth": 29
+        },
+        {
+          "name": "Pratima Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0405308",
+          "booth": 29
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_45",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Surla",
+      "house": "House No. 649",
+      "house_no": "649",
+      "members_count": 8,
+      "booth": 30,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405400",
+          "booth": 30
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405401",
+          "booth": 30
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405402",
+          "booth": 30
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405403",
+          "booth": 30
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405400",
+          "booth": 30
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405401",
+          "booth": 30
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405402",
+          "booth": 30
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405403",
+          "booth": 30
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0405404",
+          "booth": 30
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0405405",
+          "booth": 30
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0405406",
+          "booth": 30
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0405407",
+          "booth": 30
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_46",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Surla",
+      "house": "House No. 661",
+      "house_no": "661",
+      "members_count": 7,
+      "booth": 26,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405500",
+          "booth": 26
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405501",
+          "booth": 26
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405502",
+          "booth": 26
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405503",
+          "booth": 26
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405500",
+          "booth": 26
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405501",
+          "booth": 26
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405502",
+          "booth": 26
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405503",
+          "booth": 26
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0405504",
+          "booth": 26
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0405505",
+          "booth": 26
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0405506",
+          "booth": 26
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_47",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Surla",
+      "house": "House No. 673",
+      "house_no": "673",
+      "members_count": 12,
+      "booth": 27,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405600",
+          "booth": 27
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405601",
+          "booth": 27
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405602",
+          "booth": 27
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405603",
+          "booth": 27
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0405600",
+          "booth": 27
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0405601",
+          "booth": 27
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0405602",
+          "booth": 27
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0405603",
+          "booth": 27
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0405604",
+          "booth": 27
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0405605",
+          "booth": 27
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0405606",
+          "booth": 27
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0405607",
+          "booth": 27
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0405608",
+          "booth": 27
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0405609",
+          "booth": 27
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0405610",
+          "booth": 27
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0405611",
+          "booth": 27
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_48",
+      "head_name": "Gokuldas Naik family",
+      "surname": "Naik",
+      "village": "Velguem",
+      "house": "House No. 701",
+      "house_no": "701",
+      "members_count": 12,
+      "booth": 31,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406000",
+          "booth": 31
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406001",
+          "booth": 31
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406002",
+          "booth": 31
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406003",
+          "booth": 31
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406000",
+          "booth": 31
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406001",
+          "booth": 31
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406002",
+          "booth": 31
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406003",
+          "booth": 31
+        },
+        {
+          "name": "Vinayak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0406004",
+          "booth": 31
+        },
+        {
+          "name": "Sunita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0406005",
+          "booth": 31
+        },
+        {
+          "name": "Pooja Naik",
+          "relation": "Gokuldas Naik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0406006",
+          "booth": 31
+        },
+        {
+          "name": "Rohan Naik",
+          "relation": "Gokuldas Naik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0406007",
+          "booth": 31
+        },
+        {
+          "name": "Pratima Naik",
+          "relation": "Gokuldas Naik",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0406008",
+          "booth": 31
+        },
+        {
+          "name": "Deepak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0406009",
+          "booth": 31
+        },
+        {
+          "name": "Meena Naik",
+          "relation": "Gokuldas Naik",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0406010",
+          "booth": 31
+        },
+        {
+          "name": "Ajay Naik",
+          "relation": "Gokuldas Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0406011",
+          "booth": 31
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_49",
+      "head_name": "Chandrakant Parab family",
+      "surname": "Parab",
+      "village": "Velguem",
+      "house": "House No. 713",
+      "house_no": "713",
+      "members_count": 11,
+      "booth": 32,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406100",
+          "booth": 32
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406101",
+          "booth": 32
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406102",
+          "booth": 32
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406103",
+          "booth": 32
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406100",
+          "booth": 32
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406101",
+          "booth": 32
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406102",
+          "booth": 32
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406103",
+          "booth": 32
+        },
+        {
+          "name": "Vinayak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0406104",
+          "booth": 32
+        },
+        {
+          "name": "Sunita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0406105",
+          "booth": 32
+        },
+        {
+          "name": "Pooja Parab",
+          "relation": "Chandrakant Parab",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0406106",
+          "booth": 32
+        },
+        {
+          "name": "Rohan Parab",
+          "relation": "Chandrakant Parab",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0406107",
+          "booth": 32
+        },
+        {
+          "name": "Pratima Parab",
+          "relation": "Chandrakant Parab",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0406108",
+          "booth": 32
+        },
+        {
+          "name": "Deepak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0406109",
+          "booth": 32
+        },
+        {
+          "name": "Meena Parab",
+          "relation": "Chandrakant Parab",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0406110",
+          "booth": 32
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_50",
+      "head_name": "Tukaram Gawas family",
+      "surname": "Gawas",
+      "village": "Velguem",
+      "house": "House No. 725",
+      "house_no": "725",
+      "members_count": 10,
+      "booth": 33,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406200",
+          "booth": 33
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406201",
+          "booth": 33
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406202",
+          "booth": 33
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406203",
+          "booth": 33
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406200",
+          "booth": 33
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406201",
+          "booth": 33
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406202",
+          "booth": 33
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406203",
+          "booth": 33
+        },
+        {
+          "name": "Vinayak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0406204",
+          "booth": 33
+        },
+        {
+          "name": "Sunita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0406205",
+          "booth": 33
+        },
+        {
+          "name": "Pooja Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0406206",
+          "booth": 33
+        },
+        {
+          "name": "Rohan Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0406207",
+          "booth": 33
+        },
+        {
+          "name": "Pratima Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0406208",
+          "booth": 33
+        },
+        {
+          "name": "Deepak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0406209",
+          "booth": 33
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_51",
+      "head_name": "Dattaram Sinari family",
+      "surname": "Sinari",
+      "village": "Velguem",
+      "house": "House No. 737",
+      "house_no": "737",
+      "members_count": 9,
+      "booth": 34,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406300",
+          "booth": 34
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406301",
+          "booth": 34
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406302",
+          "booth": 34
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406303",
+          "booth": 34
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406300",
+          "booth": 34
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406301",
+          "booth": 34
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406302",
+          "booth": 34
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406303",
+          "booth": 34
+        },
+        {
+          "name": "Vinayak Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0406304",
+          "booth": 34
+        },
+        {
+          "name": "Sunita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0406305",
+          "booth": 34
+        },
+        {
+          "name": "Pooja Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0406306",
+          "booth": 34
+        },
+        {
+          "name": "Rohan Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0406307",
+          "booth": 34
+        },
+        {
+          "name": "Pratima Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0406308",
+          "booth": 34
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_52",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Velguem",
+      "house": "House No. 749",
+      "house_no": "749",
+      "members_count": 8,
+      "booth": 35,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406400",
+          "booth": 35
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406401",
+          "booth": 35
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406402",
+          "booth": 35
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406403",
+          "booth": 35
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406400",
+          "booth": 35
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406401",
+          "booth": 35
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406402",
+          "booth": 35
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406403",
+          "booth": 35
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0406404",
+          "booth": 35
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0406405",
+          "booth": 35
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0406406",
+          "booth": 35
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0406407",
+          "booth": 35
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_53",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Velguem",
+      "house": "House No. 761",
+      "house_no": "761",
+      "members_count": 7,
+      "booth": 31,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406500",
+          "booth": 31
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406501",
+          "booth": 31
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406502",
+          "booth": 31
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406503",
+          "booth": 31
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406500",
+          "booth": 31
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406501",
+          "booth": 31
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406502",
+          "booth": 31
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406503",
+          "booth": 31
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0406504",
+          "booth": 31
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0406505",
+          "booth": 31
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0406506",
+          "booth": 31
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_54",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Velguem",
+      "house": "House No. 773",
+      "house_no": "773",
+      "members_count": 12,
+      "booth": 32,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406600",
+          "booth": 32
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406601",
+          "booth": 32
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406602",
+          "booth": 32
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406603",
+          "booth": 32
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0406600",
+          "booth": 32
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0406601",
+          "booth": 32
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0406602",
+          "booth": 32
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0406603",
+          "booth": 32
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0406604",
+          "booth": 32
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0406605",
+          "booth": 32
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0406606",
+          "booth": 32
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0406607",
+          "booth": 32
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0406608",
+          "booth": 32
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0406609",
+          "booth": 32
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0406610",
+          "booth": 32
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0406611",
+          "booth": 32
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_55",
+      "head_name": "Chandrakant Parab family",
+      "surname": "Parab",
+      "village": "Pale",
+      "house": "House No. 813",
+      "house_no": "813",
+      "members_count": 11,
+      "booth": 37,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407100",
+          "booth": 37
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407101",
+          "booth": 37
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407102",
+          "booth": 37
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407103",
+          "booth": 37
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Parab",
+          "relation": "Chandrakant Parab",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407100",
+          "booth": 37
+        },
+        {
+          "name": "Sita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407101",
+          "booth": 37
+        },
+        {
+          "name": "Suresh Parab",
+          "relation": "Chandrakant Parab",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407102",
+          "booth": 37
+        },
+        {
+          "name": "Anita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407103",
+          "booth": 37
+        },
+        {
+          "name": "Vinayak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0407104",
+          "booth": 37
+        },
+        {
+          "name": "Sunita Parab",
+          "relation": "Chandrakant Parab",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0407105",
+          "booth": 37
+        },
+        {
+          "name": "Pooja Parab",
+          "relation": "Chandrakant Parab",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0407106",
+          "booth": 37
+        },
+        {
+          "name": "Rohan Parab",
+          "relation": "Chandrakant Parab",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0407107",
+          "booth": 37
+        },
+        {
+          "name": "Pratima Parab",
+          "relation": "Chandrakant Parab",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0407108",
+          "booth": 37
+        },
+        {
+          "name": "Deepak Parab",
+          "relation": "Chandrakant Parab",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0407109",
+          "booth": 37
+        },
+        {
+          "name": "Meena Parab",
+          "relation": "Chandrakant Parab",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0407110",
+          "booth": 37
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_56",
+      "head_name": "Tukaram Gawas family",
+      "surname": "Gawas",
+      "village": "Pale",
+      "house": "House No. 825",
+      "house_no": "825",
+      "members_count": 10,
+      "booth": 38,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407200",
+          "booth": 38
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407201",
+          "booth": 38
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407202",
+          "booth": 38
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407203",
+          "booth": 38
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407200",
+          "booth": 38
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407201",
+          "booth": 38
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407202",
+          "booth": 38
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407203",
+          "booth": 38
+        },
+        {
+          "name": "Vinayak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0407204",
+          "booth": 38
+        },
+        {
+          "name": "Sunita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0407205",
+          "booth": 38
+        },
+        {
+          "name": "Pooja Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0407206",
+          "booth": 38
+        },
+        {
+          "name": "Rohan Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0407207",
+          "booth": 38
+        },
+        {
+          "name": "Pratima Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0407208",
+          "booth": 38
+        },
+        {
+          "name": "Deepak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0407209",
+          "booth": 38
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_57",
+      "head_name": "Dattaram Sinari family",
+      "surname": "Sinari",
+      "village": "Pale",
+      "house": "House No. 837",
+      "house_no": "837",
+      "members_count": 9,
+      "booth": 39,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407300",
+          "booth": 39
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407301",
+          "booth": 39
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407302",
+          "booth": 39
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407303",
+          "booth": 39
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407300",
+          "booth": 39
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407301",
+          "booth": 39
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407302",
+          "booth": 39
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407303",
+          "booth": 39
+        },
+        {
+          "name": "Vinayak Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0407304",
+          "booth": 39
+        },
+        {
+          "name": "Sunita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0407305",
+          "booth": 39
+        },
+        {
+          "name": "Pooja Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0407306",
+          "booth": 39
+        },
+        {
+          "name": "Rohan Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0407307",
+          "booth": 39
+        },
+        {
+          "name": "Pratima Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0407308",
+          "booth": 39
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_58",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Pale",
+      "house": "House No. 849",
+      "house_no": "849",
+      "members_count": 8,
+      "booth": 40,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407400",
+          "booth": 40
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407401",
+          "booth": 40
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407402",
+          "booth": 40
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407403",
+          "booth": 40
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407400",
+          "booth": 40
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407401",
+          "booth": 40
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407402",
+          "booth": 40
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407403",
+          "booth": 40
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0407404",
+          "booth": 40
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0407405",
+          "booth": 40
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0407406",
+          "booth": 40
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0407407",
+          "booth": 40
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_59",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Pale",
+      "house": "House No. 861",
+      "house_no": "861",
+      "members_count": 7,
+      "booth": 36,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407500",
+          "booth": 36
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407501",
+          "booth": 36
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407502",
+          "booth": 36
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407503",
+          "booth": 36
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407500",
+          "booth": 36
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407501",
+          "booth": 36
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407502",
+          "booth": 36
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407503",
+          "booth": 36
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0407504",
+          "booth": 36
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0407505",
+          "booth": 36
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0407506",
+          "booth": 36
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_60",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Pale",
+      "house": "House No. 873",
+      "house_no": "873",
+      "members_count": 12,
+      "booth": 37,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407600",
+          "booth": 37
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407601",
+          "booth": 37
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407602",
+          "booth": 37
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407603",
+          "booth": 37
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0407600",
+          "booth": 37
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0407601",
+          "booth": 37
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0407602",
+          "booth": 37
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0407603",
+          "booth": 37
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0407604",
+          "booth": 37
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0407605",
+          "booth": 37
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0407606",
+          "booth": 37
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0407607",
+          "booth": 37
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0407608",
+          "booth": 37
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0407609",
+          "booth": 37
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0407610",
+          "booth": 37
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0407611",
+          "booth": 37
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_61",
+      "head_name": "Gokuldas Naik family",
+      "surname": "Naik",
+      "village": "Cotombi",
+      "house": "House No. 901",
+      "house_no": "901",
+      "members_count": 12,
+      "booth": 41,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408000",
+          "booth": 41
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408001",
+          "booth": 41
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408002",
+          "booth": 41
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408003",
+          "booth": 41
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Naik",
+          "relation": "Gokuldas Naik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408000",
+          "booth": 41
+        },
+        {
+          "name": "Sita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408001",
+          "booth": 41
+        },
+        {
+          "name": "Suresh Naik",
+          "relation": "Gokuldas Naik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408002",
+          "booth": 41
+        },
+        {
+          "name": "Anita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408003",
+          "booth": 41
+        },
+        {
+          "name": "Vinayak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0408004",
+          "booth": 41
+        },
+        {
+          "name": "Sunita Naik",
+          "relation": "Gokuldas Naik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0408005",
+          "booth": 41
+        },
+        {
+          "name": "Pooja Naik",
+          "relation": "Gokuldas Naik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0408006",
+          "booth": 41
+        },
+        {
+          "name": "Rohan Naik",
+          "relation": "Gokuldas Naik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0408007",
+          "booth": 41
+        },
+        {
+          "name": "Pratima Naik",
+          "relation": "Gokuldas Naik",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0408008",
+          "booth": 41
+        },
+        {
+          "name": "Deepak Naik",
+          "relation": "Gokuldas Naik",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0408009",
+          "booth": 41
+        },
+        {
+          "name": "Meena Naik",
+          "relation": "Gokuldas Naik",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0408010",
+          "booth": 41
+        },
+        {
+          "name": "Ajay Naik",
+          "relation": "Gokuldas Naik",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0408011",
+          "booth": 41
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_62",
+      "head_name": "Tukaram Gawas family",
+      "surname": "Gawas",
+      "village": "Cotombi",
+      "house": "House No. 925",
+      "house_no": "925",
+      "members_count": 10,
+      "booth": 43,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408200",
+          "booth": 43
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408201",
+          "booth": 43
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408202",
+          "booth": 43
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408203",
+          "booth": 43
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408200",
+          "booth": 43
+        },
+        {
+          "name": "Sita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408201",
+          "booth": 43
+        },
+        {
+          "name": "Suresh Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408202",
+          "booth": 43
+        },
+        {
+          "name": "Anita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408203",
+          "booth": 43
+        },
+        {
+          "name": "Vinayak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0408204",
+          "booth": 43
+        },
+        {
+          "name": "Sunita Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0408205",
+          "booth": 43
+        },
+        {
+          "name": "Pooja Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0408206",
+          "booth": 43
+        },
+        {
+          "name": "Rohan Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0408207",
+          "booth": 43
+        },
+        {
+          "name": "Pratima Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0408208",
+          "booth": 43
+        },
+        {
+          "name": "Deepak Gawas",
+          "relation": "Tukaram Gawas",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0408209",
+          "booth": 43
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_63",
+      "head_name": "Dattaram Sinari family",
+      "surname": "Sinari",
+      "village": "Cotombi",
+      "house": "House No. 937",
+      "house_no": "937",
+      "members_count": 9,
+      "booth": 44,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408300",
+          "booth": 44
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408301",
+          "booth": 44
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408302",
+          "booth": 44
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408303",
+          "booth": 44
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408300",
+          "booth": 44
+        },
+        {
+          "name": "Sita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408301",
+          "booth": 44
+        },
+        {
+          "name": "Suresh Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408302",
+          "booth": 44
+        },
+        {
+          "name": "Anita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408303",
+          "booth": 44
+        },
+        {
+          "name": "Vinayak Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0408304",
+          "booth": 44
+        },
+        {
+          "name": "Sunita Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0408305",
+          "booth": 44
+        },
+        {
+          "name": "Pooja Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0408306",
+          "booth": 44
+        },
+        {
+          "name": "Rohan Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0408307",
+          "booth": 44
+        },
+        {
+          "name": "Pratima Sinari",
+          "relation": "Dattaram Sinari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0408308",
+          "booth": 44
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_64",
+      "head_name": "Shantaram Malik family",
+      "surname": "Malik",
+      "village": "Cotombi",
+      "house": "House No. 949",
+      "house_no": "949",
+      "members_count": 8,
+      "booth": 45,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408400",
+          "booth": 45
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408401",
+          "booth": 45
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408402",
+          "booth": 45
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408403",
+          "booth": 45
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Malik",
+          "relation": "Shantaram Malik",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408400",
+          "booth": 45
+        },
+        {
+          "name": "Sita Malik",
+          "relation": "Shantaram Malik",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408401",
+          "booth": 45
+        },
+        {
+          "name": "Suresh Malik",
+          "relation": "Shantaram Malik",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408402",
+          "booth": 45
+        },
+        {
+          "name": "Anita Malik",
+          "relation": "Shantaram Malik",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408403",
+          "booth": 45
+        },
+        {
+          "name": "Vinayak Malik",
+          "relation": "Shantaram Malik",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0408404",
+          "booth": 45
+        },
+        {
+          "name": "Sunita Malik",
+          "relation": "Shantaram Malik",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0408405",
+          "booth": 45
+        },
+        {
+          "name": "Pooja Malik",
+          "relation": "Shantaram Malik",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0408406",
+          "booth": 45
+        },
+        {
+          "name": "Rohan Malik",
+          "relation": "Shantaram Malik",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0408407",
+          "booth": 45
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_65",
+      "head_name": "Satyawan Gaonkar family",
+      "surname": "Gaonkar",
+      "village": "Cotombi",
+      "house": "House No. 961",
+      "house_no": "961",
+      "members_count": 7,
+      "booth": 41,
+      "is_cluster": true,
+      "cluster_tag": "Nuclear Household",
+      "sample": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408500",
+          "booth": 41
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408501",
+          "booth": 41
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408502",
+          "booth": 41
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408503",
+          "booth": 41
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408500",
+          "booth": 41
+        },
+        {
+          "name": "Sita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408501",
+          "booth": 41
+        },
+        {
+          "name": "Suresh Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408502",
+          "booth": 41
+        },
+        {
+          "name": "Anita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408503",
+          "booth": 41
+        },
+        {
+          "name": "Vinayak Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0408504",
+          "booth": 41
+        },
+        {
+          "name": "Sunita Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0408505",
+          "booth": 41
+        },
+        {
+          "name": "Pooja Gaonkar",
+          "relation": "Satyawan Gaonkar",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0408506",
+          "booth": 41
+        }
+      ]
+    },
+    {
+      "id": "fam_sq_66",
+      "head_name": "Mahadev Chari family",
+      "surname": "Chari",
+      "village": "Cotombi",
+      "house": "House No. 973",
+      "house_no": "973",
+      "members_count": 12,
+      "booth": 42,
+      "is_cluster": true,
+      "cluster_tag": "Joint Family Unit",
+      "sample": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408600",
+          "booth": 42
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408601",
+          "booth": 42
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408602",
+          "booth": 42
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408603",
+          "booth": 42
+        }
+      ],
+      "members": [
+        {
+          "name": "Rama Chari",
+          "relation": "Mahadev Chari",
+          "age": 70,
+          "gender": "Male",
+          "epic": "IIT0408600",
+          "booth": 42
+        },
+        {
+          "name": "Sita Chari",
+          "relation": "Mahadev Chari",
+          "age": 66,
+          "gender": "Female",
+          "epic": "IIT0408601",
+          "booth": 42
+        },
+        {
+          "name": "Suresh Chari",
+          "relation": "Mahadev Chari",
+          "age": 62,
+          "gender": "Male",
+          "epic": "IIT0408602",
+          "booth": 42
+        },
+        {
+          "name": "Anita Chari",
+          "relation": "Mahadev Chari",
+          "age": 58,
+          "gender": "Female",
+          "epic": "IIT0408603",
+          "booth": 42
+        },
+        {
+          "name": "Vinayak Chari",
+          "relation": "Mahadev Chari",
+          "age": 54,
+          "gender": "Male",
+          "epic": "IIT0408604",
+          "booth": 42
+        },
+        {
+          "name": "Sunita Chari",
+          "relation": "Mahadev Chari",
+          "age": 50,
+          "gender": "Female",
+          "epic": "IIT0408605",
+          "booth": 42
+        },
+        {
+          "name": "Pooja Chari",
+          "relation": "Mahadev Chari",
+          "age": 46,
+          "gender": "Male",
+          "epic": "IIT0408606",
+          "booth": 42
+        },
+        {
+          "name": "Rohan Chari",
+          "relation": "Mahadev Chari",
+          "age": 42,
+          "gender": "Female",
+          "epic": "IIT0408607",
+          "booth": 42
+        },
+        {
+          "name": "Pratima Chari",
+          "relation": "Mahadev Chari",
+          "age": 38,
+          "gender": "Male",
+          "epic": "IIT0408608",
+          "booth": 42
+        },
+        {
+          "name": "Deepak Chari",
+          "relation": "Mahadev Chari",
+          "age": 34,
+          "gender": "Female",
+          "epic": "IIT0408609",
+          "booth": 42
+        },
+        {
+          "name": "Meena Chari",
+          "relation": "Mahadev Chari",
+          "age": 30,
+          "gender": "Male",
+          "epic": "IIT0408610",
+          "booth": 42
+        },
+        {
+          "name": "Ajay Chari",
+          "relation": "Mahadev Chari",
+          "age": 26,
+          "gender": "Female",
+          "epic": "IIT0408611",
+          "booth": 42
+        }
+      ]
     }
   ],
   "churn_records": [

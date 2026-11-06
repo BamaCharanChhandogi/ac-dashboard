@@ -36,144 +36,12 @@ const SANQUELIM_VILLAGE_LEANS = [
   { village: 'Sanquelim', margin: '+20.7%', status: 'Safe (≥10%)', voters: 8480 },
 ];
 
-const SHIVRAM_MEMBERS = [
-  { name: 'Radha Krishna Naik', relation: 'Krishna Naik', age: 77, gender: 'Female', epic: 'IIT0250183', booth: 45 },
-  { name: 'Shivram Nara Naik', relation: 'Nara Naik', age: 74, gender: 'Male', epic: 'IIT0406330', booth: 45 },
-  { name: 'Sitabai Shivram Naik', relation: 'Shivram Naik', age: 69, gender: 'Female', epic: 'IIT0406322', booth: 45 },
-  { name: 'Anant Nara Naik', relation: 'Nara Naik', age: 63, gender: 'Male', epic: 'IIT0406314', booth: 45 },
-  { name: 'Ambika Anant Naik', relation: 'Anant Naik', age: 61, gender: 'Female', epic: 'IIT0406306', booth: 45 },
-  { name: 'Ravindra Nara Naik', relation: 'Nara Naik', age: 56, gender: 'Male', epic: 'BGP1207372', booth: 45 },
-  { name: 'Navin Krishna Naik', relation: 'Krishna Naik', age: 54, gender: 'Male', epic: 'BGP5160494', booth: 45 },
-  { name: 'Navnita Navin Naik', relation: 'Navin Naik', age: 52, gender: 'Female', epic: 'BGP0465120', booth: 45 },
-  { name: 'Somnath Krishna Naik', relation: 'Krishna Naik', age: 52, gender: 'Male', epic: 'IIT0271890', booth: 45 },
-  { name: 'Swapna Somnath Naik', relation: 'Somnath Naik', age: 51, gender: 'Female', epic: 'BGP0465112', booth: 45 },
-  { name: 'Rakhee Ravindra Naik', relation: 'Ravindra Naik', age: 51, gender: 'Female', epic: 'BGP1207380', booth: 45 },
-  { name: 'Satish Shivram Naik', relation: 'Shivram Naik', age: 44, gender: 'Male', epic: 'BGP1619444', booth: 45 },
-  { name: 'Nitesh Krishna Naik', relation: 'Krishna Naik', age: 44, gender: 'Male', epic: 'BGP5149091', booth: 45 },
-  { name: 'Nishakant Shivram Naik', relation: 'Shivram Naik', age: 42, gender: 'Male', epic: 'BGP1208990', booth: 45 },
-  { name: 'Nilesh Anant Naik', relation: 'Anant Naik', age: 38, gender: 'Male', epic: 'IIT0406298', booth: 45 },
-  { name: 'Pratima Shivram Naik', relation: 'Shivram Naik', age: 38, gender: 'Female', epic: 'IIT0406280', booth: 45 },
-  { name: 'Neha Nitesh Naik', relation: 'Nitesh Naik', age: 37, gender: 'Female', epic: 'IIT0406272', booth: 45 },
-  { name: 'Pritesh Anant Naik', relation: 'Anant Naik', age: 35, gender: 'Male', epic: 'IIT0406264', booth: 45 },
-  { name: 'Shrutika Somnath Naik', relation: 'Somnath Naik', age: 30, gender: 'Female', epic: 'IIT0406256', booth: 45 },
-  { name: 'Shubham Ravindra Naik', relation: 'Ravindra Naik', age: 28, gender: 'Male', epic: 'IIT0406249', booth: 45 },
-  { name: 'Pooja Ravindra Naik', relation: 'Ravindra Naik', age: 26, gender: 'Female', epic: 'IIT0406231', booth: 45 },
-  { name: 'Sahil Somnath Naik', relation: 'Somnath Naik', age: 25, gender: 'Male', epic: 'IIT0406223', booth: 45 },
-  { name: 'Tanvi Navin Naik', relation: 'Navin Naik', age: 24, gender: 'Female', epic: 'IIT0406215', booth: 45 },
-  { name: 'Pratiksha Anant Naik', relation: 'Anant Naik', age: 23, gender: 'Female', epic: 'IIT0406207', booth: 45 },
-  { name: 'Aryan Satish Naik', relation: 'Satish Naik', age: 21, gender: 'Male', epic: 'IIT0406199', booth: 45 }
-];
-
-const SANQUELIM_FAMILIES = [
-  {
-    head: 'Shivram Nara Naik family',
-    village: 'Pale',
-    house: 'House No. 01',
-    membersCount: 25,
-    also_in_household: 'Anant Nara Naik (63)',
-    sample: SHIVRAM_MEMBERS.slice(0, 4),
-    members: SHIVRAM_MEMBERS,
-  },
-  {
-    head: 'Kamlakant Naik family',
-    village: 'Pale',
-    house: 'House No. 15',
-    membersCount: 24,
-    sample: [
-      { name: 'Pritesh Naik', age: 35, gender: 'M' },
-      { name: 'Pratima Naik', age: 59, gender: 'F' },
-      { name: 'Kamlakant Naik', age: 63, gender: 'M' },
-      { name: 'Navita Naik', age: 30, gender: 'F' },
-    ],
-    members: [
-      { name: 'Kamlakant Naik', relation: 'Nara Naik', age: 63, gender: 'Male', epic: 'BGP014521', booth: 45 },
-      { name: 'Pratima Naik', relation: 'Kamlakant Naik', age: 59, gender: 'Female', epic: 'BGP014522', booth: 45 },
-      { name: 'Pritesh Naik', relation: 'Kamlakant Naik', age: 35, gender: 'Male', epic: 'BGP014523', booth: 45 },
-      { name: 'Navita Naik', relation: 'Pritesh Naik', age: 30, gender: 'Female', epic: 'BGP014524', booth: 45 },
-      { name: 'Rohan Naik', relation: 'Kamlakant Naik', age: 32, gender: 'Male', epic: 'BGP014525', booth: 45 },
-      { name: 'Shubhangi Naik', relation: 'Rohan Naik', age: 29, gender: 'Female', epic: 'BGP014526', booth: 45 },
-      { name: 'Gautam Naik', relation: 'Kamlakant Naik', age: 27, gender: 'Male', epic: 'BGP014527', booth: 45 },
-      { name: 'Pooja Naik', relation: 'Gautam Naik', age: 25, gender: 'Female', epic: 'BGP014528', booth: 45 },
-    ],
-  },
-  {
-    head: 'Nagesh Naik family',
-    village: 'Pale',
-    house: 'House No. 28',
-    membersCount: 20,
-    sample: [
-      { name: 'Avinash Sakharam Naik', age: 49, gender: 'M' },
-      { name: 'Priyanka Naik', age: 49, gender: 'F' },
-      { name: 'Sujata Naik', age: 49, gender: 'F' },
-      { name: 'Devidas Sakharam Naik', age: 53, gender: 'M' },
-    ],
-    members: [
-      { name: 'Devidas Sakharam Naik', relation: 'Sakharam Naik', age: 53, gender: 'Male', epic: 'IIT0321445', booth: 45 },
-      { name: 'Avinash Sakharam Naik', relation: 'Sakharam Naik', age: 49, gender: 'Male', epic: 'IIT0321446', booth: 45 },
-      { name: 'Priyanka Naik', relation: 'Avinash Naik', age: 49, gender: 'Female', epic: 'IIT0321447', booth: 45 },
-      { name: 'Sujata Naik', relation: 'Devidas Naik', age: 49, gender: 'Female', epic: 'IIT0321448', booth: 45 },
-      { name: 'Akash Naik', relation: 'Avinash Naik', age: 24, gender: 'Male', epic: 'IIT0321449', booth: 45 },
-      { name: 'Deepa Naik', relation: 'Devidas Naik', age: 22, gender: 'Female', epic: 'IIT0321450', booth: 45 },
-    ],
-  },
-  {
-    head: 'Suresh Parab family',
-    village: 'Cotombi',
-    house: 'House No. 24',
-    membersCount: 19,
-    sample: [
-      { name: 'Siddhi Parab', age: 51, gender: 'F' },
-      { name: 'Gurudas Parab', age: 51, gender: 'M' },
-      { name: 'Radhika Parab', age: 51, gender: 'F' },
-      { name: 'Hema Parab', age: 51, gender: 'F' },
-    ],
-    members: [
-      { name: 'Suresh Parab', relation: 'Rama Parab', age: 58, gender: 'Male', epic: 'BGP0481231', booth: 47 },
-      { name: 'Siddhi Parab', relation: 'Suresh Parab', age: 51, gender: 'Female', epic: 'BGP0481232', booth: 47 },
-      { name: 'Gurudas Parab', relation: 'Rama Parab', age: 51, gender: 'Male', epic: 'BGP0481233', booth: 47 },
-      { name: 'Radhika Parab', relation: 'Gurudas Parab', age: 51, gender: 'Female', epic: 'BGP0481234', booth: 47 },
-      { name: 'Hema Parab', relation: 'Rama Parab', age: 51, gender: 'Female', epic: 'BGP0481235', booth: 47 },
-    ],
-  },
-  {
-    head: 'Ashok Sinari family',
-    village: 'Amona',
-    house: 'House No. 25',
-    membersCount: 18,
-    sample: [
-      { name: 'Jagdish Sinari', age: 39, gender: 'M' },
-      { name: 'Sanjana Sinari', age: 48, gender: 'F' },
-      { name: 'Sanjay Sinari', age: 40, gender: 'M' },
-      { name: 'Sulakshana Sinari', age: 59, gender: 'F' },
-    ],
-    members: [
-      { name: 'Sulakshana Sinari', relation: 'Ashok Sinari', age: 59, gender: 'Female', epic: 'IIT0198421', booth: 27 },
-      { name: 'Sanjana Sinari', relation: 'Jagdish Sinari', age: 48, gender: 'Female', epic: 'IIT0198422', booth: 27 },
-      { name: 'Sanjay Sinari', relation: 'Ashok Sinari', age: 40, gender: 'Male', epic: 'IIT0198423', booth: 27 },
-      { name: 'Jagdish Sinari', relation: 'Ashok Sinari', age: 39, gender: 'Male', epic: 'IIT0198424', booth: 27 },
-    ],
-  },
-  {
-    head: 'Tukaram Gawas family',
-    village: 'Arvalem',
-    house: 'House No. 728',
-    membersCount: 18,
-    sample: [
-      { name: 'Ashok Gawas', age: 55, gender: 'M' },
-      { name: 'Rajshri Gawas', age: 53, gender: 'F' },
-      { name: 'Sugandhi Gawas', age: 58, gender: 'F' },
-      { name: 'Sahadev Gawas', age: 52, gender: 'M' },
-    ],
-    members: [
-      { name: 'Sugandhi Gawas', relation: 'Tukaram Gawas', age: 58, gender: 'Female', epic: 'IIT0241901', booth: 15 },
-      { name: 'Ashok Gawas', relation: 'Tukaram Gawas', age: 55, gender: 'Male', epic: 'IIT0241902', booth: 15 },
-      { name: 'Rajshri Gawas', relation: 'Ashok Gawas', age: 53, gender: 'Female', epic: 'IIT0241903', booth: 15 },
-      { name: 'Sahadev Gawas', relation: 'Tukaram Gawas', age: 52, gender: 'Male', epic: 'IIT0241904', booth: 15 },
-    ],
-  },
-];
-
 const FAMILIES_PER_PAGE = 6;
+
+function roundTo(n, digits) {
+  const f = Math.pow(10, digits);
+  return Math.round(n * f) / f;
+}
 
 export default function InsightsView({ data }) {
   const meta = data?.meta || {};
@@ -193,18 +61,33 @@ export default function InsightsView({ data }) {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Resolve the active map data across Sanquelim, Porvorim, Aldona
+  // Resolve active map across Sanquelim, Porvorim, Aldona
   const activeMap = useMemo(() => {
     const slugKey = meta.slug || `ac${String(meta.ac_no || '').padStart(2, '0')}`;
     if (STATIC_MAPS[slugKey]) return STATIC_MAPS[slugKey];
     if (STATIC_MAPS[String(meta.ac_no)]) return STATIC_MAPS[String(meta.ac_no)];
-    if (data?.spatial?.villages && data.spatial.villages.length > 0) {
+    if (data?.spatial?.booths && data.spatial.booths.length > 0) {
       return data.spatial;
     }
     return sanquelimMapData;
   }, [meta.slug, meta.ac_no, data?.spatial]);
 
-  // Village leans: dynamically calculate from booths if election selected, or use default
+  // Dynamic scale factor based on viewBox width so badges and text are always sharp and legible
+  const mapScale = useMemo(() => {
+    const vb = (activeMap.viewBox || '80 100 455 440').split(' ').map(Number);
+    const w = vb[2] || 455;
+    const ratio = Math.max(0.85, Math.min(2.8, w / 455));
+    return {
+      ratio,
+      villageFont: roundTo(11 * ratio, 1),
+      marginFont: roundTo(9.5 * ratio, 1),
+      borderStroke: roundTo(1.6 * ratio, 1),
+      dyTop: roundTo(-6 * ratio, 1),
+      dyBottom: roundTo(13 * ratio, 1),
+    };
+  }, [activeMap.viewBox]);
+
+  // Village leans: dynamically calculate from booths for active election, or fallback
   const villageLeans = useMemo(() => {
     if (activeMap?.booths && activeMap.booths.length > 0) {
       const byVillage = {};
@@ -246,25 +129,38 @@ export default function InsightsView({ data }) {
     return SANQUELIM_VILLAGE_LEANS;
   }, [activeMap, selectedElection, data]);
 
-  // Village border SVG paths matching village names
-  const villagePolygons = useMemo(() => {
-    const borders = activeMap?.villageBorders || [];
-    const vList = activeMap?.villages || [];
-    return vList.map((v, i) => {
-      const path = borders[i] || '';
-      const matchedLean = villageLeans.find((l) => l.village.toLowerCase() === v.name.toLowerCase());
-      const marginStr = matchedLean ? matchedLean.margin : v.margin || '+0.0%';
-      const marginNum = matchedLean?.numericMargin ?? parseFloat(marginStr);
+  // Map each booth to its village lean color for seamless rendering across ALL constituencies (Sanquelim, Porvorim, Aldona)
+  const boothPolygons = useMemo(() => {
+    const booths = activeMap?.booths || [];
+    return booths.map((b, i) => {
+      const matchedLean = villageLeans.find(
+        (l) => l.village.toLowerCase() === (b.village || '').toLowerCase()
+      );
+      const marginNum = matchedLean?.numericMargin ?? (b.elections?.[selectedElection]?.margin ?? 0);
       const isSafe = marginNum >= 10;
       const isWeak = marginNum <= -10;
       const fillColor = isSafe ? '#15803D' : isWeak ? '#DC2626' : '#D97706';
       return {
+        id: b.number || b.part_no || i,
+        village: b.village,
+        path: b.path || '',
+        fillColor,
+        marginNum,
+      };
+    });
+  }, [activeMap, villageLeans, selectedElection]);
+
+  // Village labels overlay
+  const villageLabels = useMemo(() => {
+    const vList = activeMap?.villages || [];
+    return vList.map((v) => {
+      const matchedLean = villageLeans.find((l) => l.village.toLowerCase() === v.name.toLowerCase());
+      const marginStr = matchedLean ? matchedLean.margin : v.margin || '+0.0%';
+      return {
         name: v.name,
-        path,
         x: v.x,
         y: v.y,
         margin: marginStr,
-        fillColor,
       };
     });
   }, [activeMap, villageLeans]);
@@ -278,11 +174,12 @@ export default function InsightsView({ data }) {
         house: f.house || `House No. ${f.house_no}`,
         membersCount: f.members_count || f.membersCount || f.members?.length || 10,
         also_in_household: f.also_in_household,
+        booth: f.booth,
         sample: f.sample || (f.members || []).slice(0, 4),
         members: f.members && f.members.length > 0 ? f.members : (f.sample || []),
       }));
     }
-    return SANQUELIM_FAMILIES;
+    return [];
   }, [data]);
 
   // URL deep-link to automatically open a family modal if ?family=... is present
@@ -347,7 +244,7 @@ export default function InsightsView({ data }) {
               Village-level Electoral Lean
             </h3>
             <p className="text-[11.5px] text-slate-400 dark:text-slate-500 font-medium">
-              Each village's own average BJP margin across its booths, by election. Organic tessellation by real village adjacency.
+              Each village's own average BJP margin across its constituent booths, by election cycle.
             </p>
           </div>
 
@@ -372,42 +269,51 @@ export default function InsightsView({ data }) {
 
         {/* Map & Grid Container */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-start">
-          {/* Interactive SVG Village Map */}
-          <div className="lg:col-span-6 bg-slate-50 dark:bg-[#0A1120] rounded-xl p-4 border border-slate-200/70 dark:border-slate-800 flex flex-col items-center justify-center min-h-[380px]">
-            {activeMap?.viewBox && villagePolygons.length > 0 ? (
-              <div className="w-full max-w-[460px]">
+          {/* Interactive SVG Village Map (Fully Responsive across Sanquelim, Porvorim, Aldona) */}
+          <div className="lg:col-span-6 bg-slate-50 dark:bg-[#0A1120] rounded-xl p-4 border border-slate-200/70 dark:border-slate-800 flex flex-col items-center justify-center min-h-[420px]">
+            {activeMap?.viewBox && boothPolygons.length > 0 ? (
+              <div className="w-full flex items-center justify-center">
                 <svg
                   viewBox={activeMap.viewBox}
                   className="w-full h-auto drop-shadow-sm select-none"
-                  style={{ maxHeight: '360px' }}
+                  style={{ maxHeight: '400px' }}
                 >
-                  {/* Village Tessellation Polygons */}
-                  {villagePolygons.map((vp) => (
-                    <g key={vp.name} className="transition-all duration-200 hover:opacity-90 cursor-pointer">
-                      <path
-                        d={vp.path}
-                        fill={vp.fillColor}
-                        stroke="#FFFFFF"
-                        strokeWidth="1.8"
-                        strokeLinejoin="round"
-                        className="transition-colors duration-300"
-                      />
-                      {vp.x != null && vp.y != null && (
+                  {/* Booth Voronoi Polygons colored by Village Lean */}
+                  {boothPolygons.map((bp) => (
+                    <path
+                      key={bp.id}
+                      d={bp.path}
+                      fill={bp.fillColor}
+                      stroke="#FFFFFF"
+                      strokeWidth={mapScale.borderStroke}
+                      strokeLinejoin="round"
+                      className="transition-colors duration-300 opacity-95 hover:opacity-100 cursor-pointer"
+                    >
+                      <title>{`${bp.village}: ${bp.marginNum >= 0 ? '+' : ''}${bp.marginNum.toFixed(1)}%`}</title>
+                    </path>
+                  ))}
+
+                  {/* Centered Village Labels */}
+                  {villageLabels.map((vl) => (
+                    vl.x != null && vl.y != null && (
+                      <g key={vl.name} className="pointer-events-none select-none">
                         <text
-                          x={vp.x}
-                          y={vp.y}
+                          x={vl.x}
+                          y={vl.y}
                           textAnchor="middle"
                           dominantBaseline="middle"
                           fill="#FFFFFF"
-                          className="font-bold pointer-events-none drop-shadow-md"
-                          fontSize="9.5"
+                          className="font-bold drop-shadow-md"
+                          fontSize={mapScale.villageFont}
                           letterSpacing="0.02em"
                         >
-                          <tspan x={vp.x} dy="-5" fontWeight="bold">{vp.name}</tspan>
-                          <tspan x={vp.x} dy="11" fontSize="8.5" fill="#E2E8F0" fontWeight="bold">{vp.margin}</tspan>
+                          <tspan x={vl.x} dy={mapScale.dyTop} fontWeight="bold">{vl.name}</tspan>
+                          <tspan x={vl.x} dy={mapScale.dyBottom} fontSize={mapScale.marginFont} fill="#F8FAFC" fontWeight="bold">
+                            {vl.margin}
+                          </tspan>
                         </text>
-                      )}
-                    </g>
+                      </g>
+                    )
                   ))}
                 </svg>
               </div>
@@ -419,7 +325,7 @@ export default function InsightsView({ data }) {
             )}
 
             {/* Map Legend */}
-            <div className="flex flex-wrap items-center justify-center gap-4 mt-4 pt-3 border-t border-slate-200 dark:border-slate-800/80 text-[11px] font-semibold">
+            <div className="flex flex-wrap items-center justify-center gap-4 mt-4 pt-3 border-t border-slate-200 dark:border-slate-800/80 text-[11px] font-semibold w-full">
               <div className="flex items-center gap-1.5">
                 <span className="w-3 h-3 rounded bg-[#15803D]" />
                 <span className="text-slate-700 dark:text-slate-300">Safe (≥10% margin)</span>
@@ -436,7 +342,7 @@ export default function InsightsView({ data }) {
           </div>
 
           {/* Village Metric Cards Grid */}
-          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[460px] overflow-y-auto pr-1">
+          <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-3 max-h-[480px] overflow-y-auto pr-1">
             {villageLeans.map((item) => (
               <div
                 key={item.village}
@@ -474,7 +380,7 @@ export default function InsightsView({ data }) {
               Family / Household Groups
             </h3>
             <p className="text-[11.5px] text-slate-400 dark:text-slate-500 font-medium">
-              Search by surname, village, or house number… <strong className="text-slate-700 dark:text-slate-300">{formatIndianNumber(meta.total_families || 6041)} household groups</strong>
+              Showing top <strong className="text-slate-700 dark:text-slate-300">{filteredFamilies.length}</strong> joint family clusters (<strong className="text-slate-700 dark:text-slate-300">{formatIndianNumber(meta.total_families || 6041)}</strong> total households on record)
             </p>
           </div>
 
@@ -529,7 +435,7 @@ export default function InsightsView({ data }) {
           ))}
         </div>
 
-        {/* Pagination Controls (Matching PDF Page 13: Page 1 of 252  Previous  Next) */}
+        {/* Pagination Controls */}
         <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800 text-[12px]">
           <span className="text-slate-500 dark:text-slate-400 font-medium">
             Page <strong className="text-slate-800 dark:text-slate-200">{validPage}</strong> of{' '}
@@ -565,27 +471,27 @@ export default function InsightsView({ data }) {
         </div>
       </div>
 
-      {/* Interactive Family Members Modal Popup (Matching User's Attached Screenshot) */}
+      {/* Interactive Family Members Modal (Native Corporate Chanakya Design Palette) */}
       {selectedFamily && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/75 backdrop-blur-xs animate-in fade-in duration-150"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs animate-in fade-in duration-150"
           onClick={() => setSelectedFamily(null)}
         >
           <div
-            className="w-full max-w-4xl max-h-[85vh] bg-[#1a1814] text-amber-50/90 rounded-2xl shadow-2xl border border-amber-900/40 flex flex-col overflow-hidden animate-in zoom-in-95 duration-150"
+            className="w-full max-w-4xl max-h-[85vh] bg-white dark:bg-[#111C35] rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-800 flex flex-col overflow-hidden animate-in zoom-in-95 duration-150"
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="flex items-start justify-between px-6 pt-5 pb-3 border-b border-amber-900/30">
+            <div className="flex items-start justify-between px-6 pt-5 pb-3 border-b border-slate-100 dark:border-slate-800">
               <div>
-                <h3 className="font-serif text-[22px] font-bold text-amber-100 tracking-tight leading-snug">
+                <h3 className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-snug">
                   {selectedFamily.head} — {selectedFamily.house}
                 </h3>
-                <p className="text-[12px] text-amber-200/70 font-medium mt-0.5">
+                <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
                   {selectedFamily.village} • {selectedFamily.membersCount} members
                 </p>
                 {selectedFamily.also_in_household && (
-                  <p className="text-[11.5px] text-amber-400/80 font-medium mt-0.5">
+                  <p className="text-[11.5px] text-blue-600 dark:text-blue-400 font-semibold mt-1">
                     Also in household: {selectedFamily.also_in_household}
                   </p>
                 )}
@@ -594,7 +500,7 @@ export default function InsightsView({ data }) {
               <button
                 type="button"
                 onClick={() => setSelectedFamily(null)}
-                className="w-8 h-8 rounded-lg flex items-center justify-center text-amber-300/70 hover:text-amber-100 hover:bg-amber-900/40 transition-colors cursor-pointer"
+                className="w-8 h-8 rounded-lg flex items-center justify-center text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
                 aria-label="Close dialog"
               >
                 <X size={18} />
@@ -605,7 +511,7 @@ export default function InsightsView({ data }) {
             <div className="overflow-y-auto px-6 py-4 flex-1">
               <table className="w-full text-left text-[12px]">
                 <thead>
-                  <tr className="border-b border-amber-900/40 text-amber-400/60 font-bold uppercase text-[10px] tracking-wider">
+                  <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-500 font-bold uppercase text-[10px] tracking-wider">
                     <th className="pb-3 pr-4">NAME</th>
                     <th className="pb-3 px-4">RELATION</th>
                     <th className="pb-3 px-3 text-center">AGE</th>
@@ -614,25 +520,33 @@ export default function InsightsView({ data }) {
                     <th className="pb-3 pl-3 text-right">BOOTH</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-amber-950/40">
+                <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
                   {(selectedFamily.members && selectedFamily.members.length > 0 ? selectedFamily.members : selectedFamily.sample).map((m, idx) => (
-                    <tr key={idx} className="hover:bg-amber-950/30 transition-colors">
-                      <td className="py-2.5 pr-4 font-semibold text-amber-100">
+                    <tr key={idx} className="hover:bg-slate-50/70 dark:hover:bg-slate-800/40 transition-colors">
+                      <td className="py-2.5 pr-4 font-semibold text-slate-900 dark:text-slate-100">
                         {m.name}
                       </td>
-                      <td className="py-2.5 px-4 text-amber-200/70 font-medium">
+                      <td className="py-2.5 px-4 text-slate-600 dark:text-slate-400 font-medium">
                         {m.relation || `${selectedFamily.head.split(' ')[0]} Household`}
                       </td>
-                      <td className="py-2.5 px-3 text-center text-amber-200/80 tabular-nums">
+                      <td className="py-2.5 px-3 text-center text-slate-800 dark:text-slate-200 tabular-nums font-medium">
                         {m.age}
                       </td>
-                      <td className="py-2.5 px-4 text-amber-200/70 font-medium">
-                        {m.gender === 'M' ? 'Male' : m.gender === 'F' ? 'Female' : m.gender || 'Male'}
+                      <td className="py-2.5 px-4 text-slate-600 dark:text-slate-400 font-medium">
+                        <span className={`inline-block px-1.5 py-0.5 rounded text-[10.5px] font-semibold ${
+                          m.gender === 'Female' || m.gender === 'F'
+                            ? 'text-pink-700 dark:text-pink-300 bg-pink-50 dark:bg-pink-950/60'
+                            : 'text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-blue-950/60'
+                        }`}>
+                          {m.gender === 'M' ? 'Male' : m.gender === 'F' ? 'Female' : m.gender || 'Male'}
+                        </span>
                       </td>
-                      <td className="py-2.5 px-4 font-mono text-[11px] text-amber-300/80">
-                        {m.epic || 'IIT0406' + (100 + idx)}
+                      <td className="py-2.5 px-4 font-mono text-[11px] text-slate-700 dark:text-slate-300">
+                        <span className="bg-slate-100 dark:bg-slate-800 px-1.5 py-0.5 rounded border border-slate-200/60 dark:border-slate-700">
+                          {m.epic || 'IIT0406' + (100 + idx)}
+                        </span>
                       </td>
-                      <td className="py-2.5 pl-3 text-right tabular-nums text-amber-200/80 font-semibold">
+                      <td className="py-2.5 pl-3 text-right tabular-nums text-slate-900 dark:text-slate-100 font-bold">
                         {m.booth || selectedFamily.booth || 45}
                       </td>
                     </tr>
@@ -642,12 +556,12 @@ export default function InsightsView({ data }) {
             </div>
 
             {/* Modal Footer */}
-            <div className="px-6 py-3 border-t border-amber-900/30 flex items-center justify-between text-[11px] text-amber-300/60 bg-amber-950/20">
+            <div className="px-6 py-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11.5px] text-slate-400 bg-slate-50/70 dark:bg-slate-900/50">
               <span>Verified ECI SIR 2026 Household Roster</span>
               <button
                 type="button"
                 onClick={() => setSelectedFamily(null)}
-                className="px-3 py-1 bg-amber-900/40 hover:bg-amber-900/60 text-amber-100 rounded-md font-medium transition-colors cursor-pointer"
+                className="px-4 py-1.5 bg-slate-900 dark:bg-blue-600 hover:bg-slate-800 dark:hover:bg-blue-500 text-white rounded-lg font-medium transition-colors cursor-pointer text-[12px]"
               >
                 Close
               </button>
