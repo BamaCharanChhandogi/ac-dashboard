@@ -81,9 +81,13 @@ export default function Sidebar({
         {/* Brand Header */}
         <div className="flex items-center px-5 h-[72px] border-b border-slate-100 dark:border-white/5 flex-shrink-0">
           <div className="flex items-center gap-3 min-w-0">
-            {/* Red CC Badge */}
-            <div className="w-8 h-8 rounded-xl bg-[#D32F2F] flex items-center justify-center shadow-md shadow-red-900/30 flex-shrink-0">
-              <span className="text-white font-extrabold text-[12px] tracking-tight">CC</span>
+            {/* Official Corporate Chanakya Insignia Logo */}
+            <div className="w-9 h-9 rounded-xl bg-white dark:bg-white p-1 flex items-center justify-center shadow-xs border border-slate-200/90 dark:border-white/20 flex-shrink-0">
+              <img
+                src="/images/corporate-chanakya-logo.png"
+                alt="Corporate Chanakya Logo"
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="min-w-0">
               <h1 className="text-slate-900 dark:text-white font-bold text-[12.5px] leading-tight tracking-wider uppercase">
