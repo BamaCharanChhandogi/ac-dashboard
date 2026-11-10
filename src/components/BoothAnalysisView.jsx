@@ -1,9 +1,10 @@
 import React, { useState, useMemo } from 'react';
-import { Search, ChevronDown, Check, X } from 'lucide-react';
+import { Search, ChevronDown, Check, X, Eye } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import sanquelimMapData from '../data/sanquelim-map.json';
 import porvorimMapData from '../data/porvorim-map.json';
 import aldonaMapData from '../data/aldona-map.json';
+import BoothDetailModal from './BoothDetailModal';
 
 const ELECTION_OPTIONS = [
   'Overall',
@@ -78,6 +79,7 @@ export default function BoothAnalysisView({ data }) {
   const [selectedBoothNumber, setSelectedBoothNumber] = useState(null);
   const [hoveredBooth, setHoveredBooth] = useState(null);
   const [isVillageDropdownOpen, setIsVillageDropdownOpen] = useState(false);
+  const [modalBooth, setModalBooth] = useState(null);
 
   // Unique villages for filter dropdown
   const uniqueVillages = useMemo(() => {
@@ -154,15 +156,23 @@ export default function BoothAnalysisView({ data }) {
     setHoveredBooth(null);
   };
 
-  const handleBoothClick = (boothNum) => {
-    if (selectedBoothNumber === boothNum) {
-      setSelectedBoothNumber(null);
+  const handleBoothClick = (boothOrNum) => {
+    let bObj = null;
+    let bNum = null;
+    if (boothOrNum && typeof boothOrNum === 'object') {
+      bObj = boothOrNum;
+      bNum = Number(boothOrNum.part_no || boothOrNum.number);
     } else {
-      setSelectedBoothNumber(boothNum);
-      const bObj = rawBooths.find((b) => Number(b.part_no || b.number) === boothNum);
-      if (bObj && selectedVillage !== 'All' && bObj.village !== selectedVillage) {
+      bNum = Number(boothOrNum);
+      bObj = rawBooths.find((b) => Number(b.part_no || b.number) === bNum);
+    }
+
+    setSelectedBoothNumber(bNum);
+    if (bObj) {
+      if (selectedVillage !== 'All' && bObj.village !== selectedVillage) {
         setSelectedVillage('All');
       }
+      setModalBooth(bObj);
     }
   };
 
@@ -331,7 +341,7 @@ export default function BoothAnalysisView({ data }) {
                 return (
                   <g
                     key={`badge-${bNum}`}
-                    onClick={() => handleBoothClick(bNum)}
+                    onClick={() => handleBoothClick(b)}
                     onMouseEnter={() => handleMouseEnter(b)}
                     onMouseLeave={handleMouseLeave}
                   >
@@ -454,6 +464,10 @@ export default function BoothAnalysisView({ data }) {
                     <span className="block text-slate-500">Lead Party</span>
                     <span className="text-white font-semibold">{hStats.winner || 'BJP'}</span>
                   </div>
+                </div>
+                <div className="mt-2 pt-1.5 border-t border-slate-800 text-[10px] text-blue-400 font-bold flex items-center justify-between">
+                  <span>Click to view full Form-20 retrospective dossier</span>
+                  <span>→</span>
                 </div>
               </div>
             );
@@ -599,8 +613,8 @@ export default function BoothAnalysisView({ data }) {
                 return (
                   <tr
                     key={b.part_no || b.number}
-                    onClick={() => handleBoothClick(bNum)}
-                    className={`transition-colors cursor-pointer ${
+                    onClick={() => handleBoothClick(b)}
+                    className={`transition-colors cursor-pointer group ${
                       isSelected ? 'bg-blue-50/70 dark:bg-blue-950/50 font-semibold' : 'hover:bg-slate-50/70 dark:hover:bg-slate-800/50'
                     }`}
                   >
@@ -638,17 +652,22 @@ export default function BoothAnalysisView({ data }) {
                       </span>
                     </td>
                     <td className="py-3 pl-4 text-right">
-                      <span
-                        className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide ${
-                          status === 'Weak'
-                            ? 'bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300'
-                            : status === 'Battle Ground' || status === 'Battleground'
-                            ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300'
-                            : 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300'
-                        }`}
-                      >
-                        {status}
-                      </span>
+                      <div className="flex items-center justify-end gap-2">
+                        <span
+                          className={`inline-block px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wide ${
+                            status === 'Weak'
+                              ? 'bg-rose-100 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300'
+                              : status === 'Battle Ground' || status === 'Battleground'
+                              ? 'bg-amber-100 dark:bg-amber-950/60 text-amber-800 dark:text-amber-300'
+                              : 'bg-emerald-100 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300'
+                          }`}
+                        >
+                          {status}
+                        </span>
+                        <span className="opacity-0 group-hover:opacity-100 text-[10.5px] font-bold text-blue-600 dark:text-blue-400 transition-opacity">
+                          Dossier →
+                        </span>
+                      </div>
                     </td>
                   </tr>
                 );
@@ -657,6 +676,15 @@ export default function BoothAnalysisView({ data }) {
           </table>
         </div>
       </div>
+
+      {/* Booth Retrospective Dossier Modal */}
+      {modalBooth && (
+        <BoothDetailModal
+          booth={modalBooth}
+          onClose={() => setModalBooth(null)}
+          data={data}
+        />
+      )}
     </div>
   );
 }

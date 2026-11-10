@@ -1,9 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, X, ChevronLeft, ChevronRight, Users, Home, MapPin } from 'lucide-react';
+import { Search, X, ChevronLeft, ChevronRight, Users, Home, MapPin, Eye } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import sanquelimMapData from '../data/sanquelim-map.json';
 import porvorimMapData from '../data/porvorim-map.json';
 import aldonaMapData from '../data/aldona-map.json';
+import VillageDetailModal from './VillageDetailModal';
+import BoothDetailModal from './BoothDetailModal';
 
 const ELECTION_OPTIONS = [
   'Overall',
@@ -49,12 +51,16 @@ export default function InsightsView({ data }) {
   const [selectedElection, setSelectedElection] = useState('Overall');
   const [selectedFamily, setSelectedFamily] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
+  const [modalVillage, setModalVillage] = useState(null);
+  const [modalBooth, setModalBooth] = useState(null);
 
-  // Close modal on Escape key
+  // Close modals on Escape key
   useEffect(() => {
     function handleKeyDown(e) {
       if (e.key === 'Escape') {
         setSelectedFamily(null);
+        setModalVillage(null);
+        setModalBooth(null);
       }
     }
     window.addEventListener('keydown', handleKeyDown);
@@ -213,6 +219,15 @@ export default function InsightsView({ data }) {
     });
   }, [rawFamilies, searchTerm]);
 
+  // Constituent booths for selected village modal
+  const constituentBoothsForModal = useMemo(() => {
+    if (!modalVillage) return [];
+    const allBooths = activeMap?.booths || data?.spatial?.booths || [];
+    return allBooths.filter(
+      (b) => (b.village || '').trim().toLowerCase() === modalVillage.trim().toLowerCase()
+    );
+  }, [modalVillage, activeMap, data?.spatial]);
+
   // Pagination calculations
   const totalPages = Math.max(1, Math.ceil(filteredFamilies.length / FAMILIES_PER_PAGE));
   const validPage = Math.min(currentPage, totalPages);
@@ -287,16 +302,21 @@ export default function InsightsView({ data }) {
                       stroke="#FFFFFF"
                       strokeWidth={mapScale.borderStroke}
                       strokeLinejoin="round"
+                      onClick={() => setModalVillage(bp.village)}
                       className="transition-colors duration-300 opacity-95 hover:opacity-100 cursor-pointer"
                     >
-                      <title>{`${bp.village}: ${bp.marginNum >= 0 ? '+' : ''}${bp.marginNum.toFixed(1)}%`}</title>
+                      <title>{`${bp.village}: ${bp.marginNum >= 0 ? '+' : ''}${bp.marginNum.toFixed(1)}% (Click for Retrospective Dossier)`}</title>
                     </path>
                   ))}
 
                   {/* Centered Village Labels */}
                   {villageLabels.map((vl) => (
                     vl.x != null && vl.y != null && (
-                      <g key={vl.name} className="pointer-events-none select-none">
+                      <g
+                        key={vl.name}
+                        onClick={() => setModalVillage(vl.name)}
+                        className="cursor-pointer select-none"
+                      >
                         <text
                           x={vl.x}
                           y={vl.y}
@@ -346,14 +366,26 @@ export default function InsightsView({ data }) {
             {villageLeans.map((item) => (
               <div
                 key={item.village}
-                className="bg-slate-50 dark:bg-slate-900/90 rounded-xl p-3.5 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between hover:border-blue-400 dark:hover:border-blue-500 transition-colors"
+                onClick={() => setModalVillage(item.village)}
+                className="bg-slate-50 dark:bg-slate-900/90 rounded-xl p-3.5 border border-slate-200/80 dark:border-slate-800 flex items-center justify-between hover:border-blue-500 dark:hover:border-blue-400 transition-colors cursor-pointer group shadow-2xs"
               >
                 <div>
-                  <p className="font-bold text-slate-900 dark:text-slate-100 text-[13px]">{item.village}</p>
-                  <p className="text-[11px] text-slate-400 dark:text-slate-500 tabular-nums">{formatIndianNumber(item.voters)} electors</p>
+                  <div className="flex items-center gap-1.5">
+                    <p className="font-bold text-slate-900 dark:text-slate-100 text-[13px] group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      {item.village}
+                    </p>
+                    <span className="opacity-0 group-hover:opacity-100 text-[10px] font-bold text-blue-600 dark:text-blue-400 transition-opacity">
+                      →
+                    </span>
+                  </div>
+                  <p className="text-[11px] text-slate-400 dark:text-slate-500 tabular-nums">
+                    {formatIndianNumber(item.voters)} electors
+                  </p>
                 </div>
                 <div className="text-right">
-                  <p className="text-[16px] font-extrabold text-teal-700 dark:text-teal-400 tabular-nums leading-tight">{item.margin}</p>
+                  <p className="text-[16px] font-extrabold text-teal-700 dark:text-teal-400 tabular-nums leading-tight">
+                    {item.margin}
+                  </p>
                   <span
                     className={`inline-block text-[9.5px] font-bold px-1.5 py-0.5 rounded mt-0.5 ${
                       item.status?.includes('Safe')
@@ -568,6 +600,26 @@ export default function InsightsView({ data }) {
             </div>
           </div>
         </div>
+      )}
+
+      {/* Village Retrospective Dossier Modal */}
+      {modalVillage && (
+        <VillageDetailModal
+          villageName={modalVillage}
+          constituentBooths={constituentBoothsForModal}
+          onClose={() => setModalVillage(null)}
+          onSelectBooth={(b) => setModalBooth(b)}
+          data={data}
+        />
+      )}
+
+      {/* Booth Retrospective Dossier Modal (linked from village modal or direct) */}
+      {modalBooth && (
+        <BoothDetailModal
+          booth={modalBooth}
+          onClose={() => setModalBooth(null)}
+          data={data}
+        />
       )}
     </div>
   );

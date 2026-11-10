@@ -35,6 +35,18 @@ export default function App() {
     window.history.replaceState({}, '', url);
   };
 
+  // Listen to hash changes for browser back/forward and deep linking
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      if (hash) {
+        setActiveSection(hash);
+      }
+    };
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
   // Fetch nationwide directory registry on mount
   useEffect(() => {
     fetch('/data/directory.json')
