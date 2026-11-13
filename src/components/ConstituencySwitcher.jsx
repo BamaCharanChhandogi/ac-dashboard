@@ -115,7 +115,7 @@ export default function ConstituencySwitcher({
           onClick={() => setIsOpen(!isOpen)}
           aria-expanded={isOpen}
           aria-label={`AC ${activeAC.ac_no} ${activeAC.ac_name}`}
-          className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-900/60 flex flex-col items-center justify-center cursor-pointer hover:bg-blue-100/70 active:scale-95 transition-all shadow-xs"
+          className="w-10 h-10 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/80 dark:border-blue-900/60 flex flex-col items-center justify-center cursor-pointer hover:bg-blue-100/70 transition-colors shadow-xs"
         >
           <span className="text-[8px] font-black uppercase text-blue-600 dark:text-blue-400 leading-none">AC</span>
           <span className="text-[12px] font-extrabold text-slate-900 dark:text-slate-100 leading-none mt-0.5">{activeAC.ac_no}</span>
@@ -127,7 +127,7 @@ export default function ConstituencySwitcher({
           aria-expanded={isOpen}
           aria-haspopup="listbox"
           className={`
-            w-full text-left p-3 rounded-2xl border transition-all duration-200 cursor-pointer group relative overflow-hidden active:scale-[0.98]
+            w-full text-left p-3 rounded-2xl border transition-colors duration-150 cursor-pointer group relative overflow-hidden
             ${
               isOpen
                 ? 'bg-gradient-to-b from-blue-50 to-blue-100/50 dark:from-slate-900 dark:to-slate-900/80 border-blue-500 shadow-md ring-2 ring-blue-500/20'

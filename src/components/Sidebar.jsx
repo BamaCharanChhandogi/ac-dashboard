@@ -43,15 +43,10 @@ export default function Sidebar({
   onToggleCollapse,
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [clickedItemId, setClickedItemId] = useState(null);
   const { theme, setTheme, isDark } = useTheme();
 
   const handleNav = (id) => {
-    setClickedItemId(id);
     onNavigate?.(id);
-    setTimeout(() => {
-      setClickedItemId(null);
-    }, 280);
     setMobileOpen(false);
   };
 
@@ -154,7 +149,7 @@ export default function Sidebar({
                 onClick={onToggleCollapse}
                 aria-label="Expand sidebar"
                 title="Expand sidebar («)"
-                className="w-6 h-5 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 flex items-center justify-center text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all cursor-pointer active:scale-90"
+                className="w-6 h-5 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 flex items-center justify-center text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors cursor-pointer"
               >
                 <ChevronsRight size={13} />
               </button>
@@ -188,7 +183,7 @@ export default function Sidebar({
                 onClick={onToggleCollapse}
                 aria-label="Collapse sidebar"
                 title="Collapse sidebar («)"
-                className="hidden lg:flex items-center justify-center w-7 h-7 rounded-lg bg-slate-50 hover:bg-slate-100 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-all duration-150 cursor-pointer active:scale-90 ml-auto"
+                className="hidden lg:flex items-center justify-center w-7 h-7 rounded-lg bg-slate-50 hover:bg-slate-100 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors cursor-pointer ml-auto"
               >
                 <ChevronsLeft size={14} />
               </button>
@@ -230,7 +225,6 @@ export default function Sidebar({
             <div className="space-y-1">
               {ANALYTICAL_NAV_ITEMS.map(({ id, label, icon: Icon }) => {
                 const isActive = activeSection === id;
-                const isJustClicked = clickedItemId === id;
                 return (
                   <button
                     key={id}
@@ -238,15 +232,13 @@ export default function Sidebar({
                     onClick={() => handleNav(id)}
                     title={isCollapsed ? label : undefined}
                     className={`
-                      w-full relative flex items-center rounded-xl text-[12.5px] font-medium
-                      transition-all duration-200 ease-out cursor-pointer outline-none focus:outline-none select-none
-                      active:scale-[0.96] active:translate-y-px
-                      ${isJustClicked ? 'animate-nav-pop' : ''}
+                      w-full relative flex items-center rounded-xl text-[12.5px] font-semibold
+                      transition-colors duration-150 cursor-pointer outline-none focus:outline-none select-none
                       ${isCollapsed ? 'justify-center p-2.5 w-11 h-11 mx-auto' : 'px-3 py-2 gap-3'}
                       ${
                         isActive
-                          ? 'bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#3B82F6] text-white shadow-md shadow-blue-500/25 font-semibold'
-                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/80 dark:text-slate-300/80 dark:hover:text-white dark:hover:bg-white/[0.06] hover:translate-x-0.5'
+                          ? 'bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#3B82F6] text-white shadow-md shadow-blue-500/25'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/90 dark:text-slate-300/80 dark:hover:text-white dark:hover:bg-white/[0.06]'
                       }
                     `}
                   >
@@ -258,7 +250,7 @@ export default function Sidebar({
                     {/* Subtle Corner Wave SVG decoration inside active button */}
                     {isActive && !isCollapsed && (
                       <svg
-                        className="absolute right-0 bottom-0 pointer-events-none opacity-20 text-white animate-in fade-in duration-300"
+                        className="absolute right-0 bottom-0 pointer-events-none opacity-20 text-white"
                         width="54"
                         height="32"
                         viewBox="0 0 54 32"
@@ -270,11 +262,11 @@ export default function Sidebar({
 
                     <Icon
                       size={17}
-                      strokeWidth={isActive ? 2.2 : 1.7}
-                      className={`flex-shrink-0 transition-transform duration-200 ${
+                      strokeWidth={isActive ? 2.2 : 1.8}
+                      className={`flex-shrink-0 transition-colors duration-150 ${
                         isActive
-                          ? 'text-white scale-105'
-                          : 'text-slate-400 dark:text-slate-400 group-hover:scale-105'
+                          ? 'text-white'
+                          : 'text-slate-400 dark:text-slate-400'
                       }`}
                     />
                     {!isCollapsed && <span className="truncate">{label}</span>}
@@ -296,7 +288,6 @@ export default function Sidebar({
             <div className="space-y-1">
               {DIRECTORY_NAV_ITEMS.map(({ id, label, icon: Icon }) => {
                 const isActive = activeSection === id;
-                const isJustClicked = clickedItemId === id;
                 return (
                   <button
                     key={id}
@@ -304,15 +295,13 @@ export default function Sidebar({
                     onClick={() => handleNav(id)}
                     title={isCollapsed ? label : undefined}
                     className={`
-                      w-full relative flex items-center rounded-xl text-[12.5px] font-medium
-                      transition-all duration-200 ease-out cursor-pointer outline-none focus:outline-none select-none
-                      active:scale-[0.96] active:translate-y-px
-                      ${isJustClicked ? 'animate-nav-pop' : ''}
+                      w-full relative flex items-center rounded-xl text-[12.5px] font-semibold
+                      transition-colors duration-150 cursor-pointer outline-none focus:outline-none select-none
                       ${isCollapsed ? 'justify-center p-2.5 w-11 h-11 mx-auto' : 'px-3 py-2 gap-3'}
                       ${
                         isActive
-                          ? 'bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#3B82F6] text-white shadow-md shadow-blue-500/25 font-semibold'
-                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/80 dark:text-slate-300/80 dark:hover:text-white dark:hover:bg-white/[0.06] hover:translate-x-0.5'
+                          ? 'bg-gradient-to-r from-[#1D4ED8] via-[#2563EB] to-[#3B82F6] text-white shadow-md shadow-blue-500/25'
+                          : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100/90 dark:text-slate-300/80 dark:hover:text-white dark:hover:bg-white/[0.06]'
                       }
                     `}
                   >
@@ -324,7 +313,7 @@ export default function Sidebar({
                     {/* Subtle Corner Wave SVG decoration inside active button */}
                     {isActive && !isCollapsed && (
                       <svg
-                        className="absolute right-0 bottom-0 pointer-events-none opacity-20 text-white animate-in fade-in duration-300"
+                        className="absolute right-0 bottom-0 pointer-events-none opacity-20 text-white"
                         width="54"
                         height="32"
                         viewBox="0 0 54 32"
@@ -336,11 +325,11 @@ export default function Sidebar({
 
                     <Icon
                       size={17}
-                      strokeWidth={isActive ? 2.2 : 1.7}
-                      className={`flex-shrink-0 transition-transform duration-200 ${
+                      strokeWidth={isActive ? 2.2 : 1.8}
+                      className={`flex-shrink-0 transition-colors duration-150 ${
                         isActive
-                          ? 'text-white scale-105'
-                          : 'text-slate-400 dark:text-slate-400 group-hover:scale-105'
+                          ? 'text-white'
+                          : 'text-slate-400 dark:text-slate-400'
                       }`}
                     />
                     {!isCollapsed && <span className="truncate">{label}</span>}
@@ -364,7 +353,7 @@ export default function Sidebar({
               type="button"
               onClick={() => setTheme(isDark ? 'light' : 'dark')}
               title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-              className="w-10 h-10 mx-auto rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 cursor-pointer active:scale-95 transition-all"
+              className="w-10 h-10 mx-auto rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 cursor-pointer transition-colors"
             >
               {isDark ? <Moon size={16} className="text-blue-400" /> : <Sun size={16} className="text-amber-500" />}
             </button>
@@ -375,7 +364,7 @@ export default function Sidebar({
                 onClick={() => setTheme('light')}
                 className={`
                   flex items-center justify-center gap-2 py-1.5 rounded-lg text-[12px] font-semibold
-                  transition-all duration-200 ease-out cursor-pointer active:scale-95 select-none
+                  transition-colors duration-150 cursor-pointer select-none
                   ${
                     !isDark
                       ? 'bg-white text-slate-900 shadow-sm border border-slate-200/80 font-bold'
@@ -392,7 +381,7 @@ export default function Sidebar({
                 onClick={() => setTheme('dark')}
                 className={`
                   flex items-center justify-center gap-2 py-1.5 rounded-lg text-[12px] font-semibold
-                  transition-all duration-200 ease-out cursor-pointer active:scale-95 select-none
+                  transition-colors duration-150 cursor-pointer select-none
                   ${
                     isDark
                       ? 'bg-[#0D1527] text-white shadow-sm border border-blue-500/40 font-bold'

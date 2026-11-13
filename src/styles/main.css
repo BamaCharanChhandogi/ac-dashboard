@@ -104,52 +104,32 @@ html.dark ::-webkit-scrollbar-thumb:hover {
   animation: ping-slow 2.5s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
-/* Sidebar Nav Item Micro-Animations */
+/* Sidebar Nav Indicator (Smooth Opacity & Height, Zero Text Movement) */
 @keyframes nav-pill-in {
-  0% {
+  from {
     opacity: 0;
-    transform: translateY(-50%) scaleY(0.2);
+    transform: translateY(-50%) scaleY(0.4);
   }
-  60% {
-    transform: translateY(-50%) scaleY(1.15);
-  }
-  100% {
+  to {
     opacity: 1;
     transform: translateY(-50%) scaleY(1);
   }
 }
 .animate-nav-pill {
-  animation: nav-pill-in 220ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: nav-pill-in 150ms ease-out forwards;
 }
 
-@keyframes nav-item-pop {
-  0% {
-    transform: scale(0.97);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-.animate-nav-pop {
-  animation: nav-item-pop 240ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
-}
-
-/* View transition fade */
+/* Stable View Transition Fade (Pure Opacity, Zero Vertical Shift) */
 @keyframes view-fade-in {
   from {
-    opacity: 0.85;
-    transform: translateY(3px);
+    opacity: 0.92;
   }
   to {
     opacity: 1;
-    transform: translateY(0);
   }
 }
 .animate-view-fade {
-  animation: view-fade-in 200ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation: view-fade-in 150ms ease-out forwards;
 }
 
 /* Stepper connector line */
