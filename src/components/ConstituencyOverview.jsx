@@ -181,29 +181,11 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
 
   return (
     <div className="px-6 md:px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* 1. Standardized Distinctive Page Header */}
+      {/* 1. Clean Editorial Page Header */}
       <PageHeader
-        badgeLabel="Executive Constituency Overview"
-        badgeIcon={LayoutDashboard}
-        badgeColor="blue"
         title={`Constituency Master Overview • ${formattedTitle}`}
         subtitle={`Consolidated statutory intelligence, Form-7 roll purge audit, and core demographic indicators for ${formattedTitle}`}
         meta={meta}
-        actions={
-          <div className="inline-flex items-center gap-2.5 bg-white dark:bg-[#0D1527] border border-slate-200/90 dark:border-slate-800/80 rounded-xl px-3.5 py-1.5 shadow-2xs">
-            <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/80 dark:border-emerald-800/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0">
-              <CheckCircle2 size={13} strokeWidth={2.5} />
-            </div>
-            <div>
-              <p className="text-[9px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 leading-none">
-                Official ECI Roll
-              </p>
-              <p className="text-[11.5px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                Oct 2026 Supp-4
-              </p>
-            </div>
-          </div>
-        }
       />
 
       {/* 2. Metadata Card (5 Distinct Columns) */}
