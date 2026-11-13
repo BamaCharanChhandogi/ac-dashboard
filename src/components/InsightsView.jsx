@@ -172,6 +172,7 @@ export default function InsightsView({ data }) {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedElection, setSelectedElection] = useState('Overall');
   const [sortBy, setSortBy] = useState('margin_desc');
+  const [mapViewMode, setMapViewMode] = useState('villages'); // 'villages' | 'booths'
   const [selectedFamily, setSelectedFamily] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [modalVillage, setModalVillage] = useState(null);
@@ -308,6 +309,43 @@ export default function InsightsView({ data }) {
       };
     });
   }, [activeMap, villageLeans, selectedElection]);
+
+  // High-level Revenue Village Polygons for the Village Insights GIS Map
+  const villagePolygons = useMemo(() => {
+    if (activeMap?.villageBorders && activeMap.villages && activeMap.villageBorders.length === activeMap.villages.length) {
+      return activeMap.villages.map((v, i) => {
+        const path = activeMap.villageBorders[i];
+        const matchedLean = villageLeans.find((l) => l.village.toLowerCase() === v.name.toLowerCase());
+        const marginNum = matchedLean?.numericMargin ?? (v.margin ? parseFloat(v.margin) : 0);
+        const marginStr = matchedLean ? matchedLean.margin : v.margin || '+0.0%';
+        const isSafe = marginNum >= 10;
+        const isWeak = marginNum <= -10;
+
+        let fillColor = '#15803D';
+        if (isSafe) {
+          if (marginNum >= 38) fillColor = '#14532D'; // Deep fortress green (Cotombi, Surla)
+          else if (marginNum >= 30) fillColor = '#15803D'; // Solid safe green (Navelim, Cudnem, Amona, Arvalem)
+          else fillColor = '#16A34A'; // Medium green (Pale, Velguem, Sanquelim)
+        } else if (isWeak) {
+          fillColor = '#DC2626';
+        } else {
+          fillColor = '#D97706';
+        }
+
+        return {
+          id: `village_${v.name}`,
+          name: v.name,
+          path,
+          marginNum,
+          marginStr,
+          fillColor,
+          x: v.x,
+          y: v.y,
+        };
+      });
+    }
+    return [];
+  }, [activeMap, villageLeans]);
 
   // Village labels overlay
   const villageLabels = useMemo(() => {
@@ -553,6 +591,34 @@ export default function InsightsView({ data }) {
             {/* Ambient Vignette & Shadow Overlay */}
             <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30 pointer-events-none" />
 
+            {/* Top-Left Mode Switcher: Village Boundaries vs Booth Partitions */}
+            {villagePolygons.length > 0 && (
+              <div className="absolute top-4 left-4 z-20 flex items-center bg-slate-950/85 backdrop-blur-md border border-white/20 rounded-xl p-1 text-[11px] font-bold shadow-lg">
+                <button
+                  type="button"
+                  onClick={() => setMapViewMode('villages')}
+                  className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+                    mapViewMode === 'villages'
+                      ? 'bg-blue-600 text-white shadow-xs'
+                      : 'text-slate-300 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  Village Zones
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setMapViewMode('booths')}
+                  className={`px-2.5 py-1 rounded-lg transition-all cursor-pointer ${
+                    mapViewMode === 'booths'
+                      ? 'bg-blue-600 text-white shadow-xs'
+                      : 'text-slate-300 hover:text-white hover:bg-white/10'
+                  }`}
+                >
+                  Booth Partitions
+                </button>
+              </div>
+            )}
+
             {/* Top-Right North Arrow Compass Badge */}
             <div className="absolute top-4 right-4 z-20 pointer-events-none">
               <div className="w-8 h-8 rounded-full bg-slate-950/80 backdrop-blur-md border border-white/20 flex flex-col items-center justify-center shadow-lg">
@@ -563,32 +629,56 @@ export default function InsightsView({ data }) {
 
             {/* Interactive SVG Polygons */}
             <div className="w-full relative z-10 p-4 flex items-center justify-center">
-              {activeMap?.viewBox && boothPolygons.length > 0 ? (
+              {activeMap?.viewBox && (villagePolygons.length > 0 || boothPolygons.length > 0) ? (
                 <svg
                   viewBox={activeMap.viewBox}
                   className="w-full h-auto drop-shadow-md select-none max-h-[420px]"
                 >
-                  {/* Booth Polygons colored by Village Lean with interactive hover link */}
-                  {boothPolygons.map((bp) => {
-                    const isHovered = hoveredVillage && hoveredVillage.toLowerCase() === (bp.village || '').toLowerCase();
-                    return (
-                      <path
-                        key={bp.id}
-                        d={bp.path}
-                        fill={bp.fillColor}
-                        fillOpacity={isHovered ? 1.0 : 0.85}
-                        stroke={isHovered ? '#60A5FA' : '#FFFFFF'}
-                        strokeWidth={isHovered ? mapScale.borderStroke * 1.5 : mapScale.borderStroke}
-                        strokeLinejoin="round"
-                        onClick={() => setModalVillage(bp.village)}
-                        onMouseEnter={() => setHoveredVillage(bp.village)}
-                        onMouseLeave={() => setHoveredVillage(null)}
-                        className="transition-all duration-150 cursor-pointer"
-                      >
-                        <title>{`${bp.village}: ${bp.marginNum >= 0 ? '+' : ''}${bp.marginNum.toFixed(1)}% (Click to view Retrospective Dossier)`}</title>
-                      </path>
-                    );
-                  })}
+                  {/* Clean Revenue Village Boundaries Mode (Default) */}
+                  {mapViewMode === 'villages' && villagePolygons.length > 0 ? (
+                    villagePolygons.map((vp) => {
+                      const isHovered = hoveredVillage && hoveredVillage.toLowerCase() === vp.name.toLowerCase();
+                      return (
+                        <path
+                          key={vp.id}
+                          d={vp.path}
+                          fill={vp.fillColor}
+                          fillOpacity={isHovered ? 0.95 : 0.78}
+                          stroke={isHovered ? '#60A5FA' : '#FFFFFF'}
+                          strokeWidth={isHovered ? mapScale.borderStroke * 1.5 : mapScale.borderStroke}
+                          strokeLinejoin="round"
+                          onClick={() => setModalVillage(vp.name)}
+                          onMouseEnter={() => setHoveredVillage(vp.name)}
+                          onMouseLeave={() => setHoveredVillage(null)}
+                          className="transition-all duration-150 cursor-pointer"
+                        >
+                          <title>{`${vp.name}: ${vp.marginStr} (Click to view Retrospective Dossier)`}</title>
+                        </path>
+                      );
+                    })
+                  ) : (
+                    /* Detailed Polling Booth Partitions Mode */
+                    boothPolygons.map((bp) => {
+                      const isHovered = hoveredVillage && hoveredVillage.toLowerCase() === (bp.village || '').toLowerCase();
+                      return (
+                        <path
+                          key={bp.id}
+                          d={bp.path}
+                          fill={bp.fillColor}
+                          fillOpacity={isHovered ? 1.0 : 0.85}
+                          stroke={isHovered ? '#60A5FA' : '#FFFFFF'}
+                          strokeWidth={isHovered ? mapScale.borderStroke * 1.5 : mapScale.borderStroke}
+                          strokeLinejoin="round"
+                          onClick={() => setModalVillage(bp.village)}
+                          onMouseEnter={() => setHoveredVillage(bp.village)}
+                          onMouseLeave={() => setHoveredVillage(null)}
+                          className="transition-all duration-150 cursor-pointer"
+                        >
+                          <title>{`${bp.village}: ${bp.marginNum >= 0 ? '+' : ''}${bp.marginNum.toFixed(1)}% (Click to view Retrospective Dossier)`}</title>
+                        </path>
+                      );
+                    })
+                  )}
 
                   {/* Centered Village Labels with Margins */}
                   {villageLabels.map((vl) => (
@@ -598,7 +688,7 @@ export default function InsightsView({ data }) {
                         onClick={() => setModalVillage(vl.name)}
                         onMouseEnter={() => setHoveredVillage(vl.name)}
                         onMouseLeave={() => setHoveredVillage(null)}
-                        className="cursor-pointer select-none"
+                        className="cursor-pointer select-none pointer-events-none"
                       >
                         <text
                           x={vl.x}
