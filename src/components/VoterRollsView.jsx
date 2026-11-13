@@ -474,6 +474,9 @@ export default function VoterRollsView({ data }) {
             <div className="font-serif text-[28px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none mt-1">
               {formatIndianNumber(totalElectorsCount)}
             </div>
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 font-medium mt-0.5">
+              Total enrolled constituency voters
+            </div>
           </div>
         </div>
 

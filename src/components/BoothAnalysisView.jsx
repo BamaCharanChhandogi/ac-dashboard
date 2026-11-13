@@ -233,111 +233,82 @@ export default function BoothAnalysisView({ data }) {
         meta={meta}
       />
 
-      {/* 2. Master Metric Cards Row (Elevated Clean Institutional Style Matching Overview & Voter Rolls) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {/* Card 1: TOTAL BOOTHS */}
-        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+      {/* 2. Top Master KPI Bar - Interconnected Clean 3-Row Strip (Matching Reference Image 2) */}
+      <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-slate-800">
+        {/* Total Booths */}
+        <div className="flex items-center gap-4 px-3 py-2 sm:py-0">
+          <div className="w-11 h-11 rounded-full bg-blue-50 dark:bg-blue-950/60 flex items-center justify-center text-blue-600 dark:text-blue-400 flex-shrink-0">
+            <Building2 size={20} />
+          </div>
+          <div>
+            <div className="text-[12.5px] font-bold text-slate-800 dark:text-slate-200">
               Total Booths
-            </span>
-            <div className="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/70 dark:border-blue-900/60 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-2xs">
-              <Building2 className="w-4 h-4" />
             </div>
-          </div>
-
-          <div className="my-2.5">
-            <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
+            <div className="font-serif text-[28px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none mt-1">
               {rawBooths.length || meta.total_booths || 50}
-            </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            </div>
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 font-medium mt-0.5">
               Form-20 polling stations
-            </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span>100% Form-20 Mapped</span>
+            </div>
           </div>
         </div>
 
-        {/* Card 2: ACTIVE ELECTORS */}
-        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-teal-400/50 dark:hover:border-teal-500/50 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-              Active Electors
-            </span>
-            <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/60 border border-teal-200/70 dark:border-teal-900/60 flex items-center justify-center text-teal-600 dark:text-teal-400 shadow-2xs">
-              <Users className="w-4 h-4" />
-            </div>
+        {/* Active Electors */}
+        <div className="flex items-center gap-4 px-4 py-2 sm:py-0">
+          <div className="w-11 h-11 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 flex-shrink-0">
+            <Users size={20} />
           </div>
-
-          <div className="my-2.5">
-            <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-[12.5px] font-bold text-slate-800 dark:text-slate-200">
+                Active Electors
+              </span>
+              <span className="inline-flex items-center text-[10px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/70 px-1.5 py-0.2 rounded border border-emerald-200 dark:border-emerald-800/60">
+                ↑ Roll Stable
+              </span>
+            </div>
+            <div className="font-serif text-[28px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none mt-1">
               {formatIndianNumber(meta.total_voters || 27265)}
-            </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            </div>
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 font-medium mt-0.5">
               Constituency voter roll
-            </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
-            <span className="px-1.5 py-0.2 rounded text-[10px] font-bold text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-950/70 border border-emerald-200 dark:border-emerald-800/60">
-              ↑ Roll Stable
-            </span>
-            <span className="text-slate-500 dark:text-slate-400 text-[11px]">Across 50 booths</span>
+            </div>
           </div>
         </div>
 
-        {/* Card 3: ADDED (SSR) */}
-        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-emerald-400/50 dark:hover:border-emerald-500/50 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+        {/* Added (SSR) */}
+        <div className="flex items-center gap-4 px-4 py-2 sm:py-0">
+          <div className="w-11 h-11 rounded-full bg-emerald-50 dark:bg-emerald-950/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0">
+            <Plus size={20} strokeWidth={2.8} />
+          </div>
+          <div>
+            <div className="text-[12.5px] font-bold text-slate-800 dark:text-slate-200">
               Added (SSR)
-            </span>
-            <div className="w-8 h-8 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/70 dark:border-emerald-900/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-2xs">
-              <Plus className="w-4 h-4" strokeWidth={2.8} />
             </div>
-          </div>
-
-          <div className="my-2.5">
-            <p className="font-serif text-[30px] md:text-[32px] font-bold text-[#16A34A] dark:text-emerald-400 tabular-nums leading-none tracking-tight">
+            <div className="font-serif text-[28px] font-bold text-[#16A34A] dark:text-emerald-400 tabular-nums leading-none mt-1">
               +{formatIndianNumber(totalRollAdded)}
-            </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            </div>
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 font-medium mt-0.5">
               Form 6 fresh enrollments
-            </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-slate-600 dark:text-slate-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span>+2.54% roll growth</span>
+            </div>
           </div>
         </div>
 
-        {/* Card 4: DELETED (SSR) */}
-        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-rose-400/50 dark:hover:border-rose-500/50 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+        {/* Deleted (SSR) */}
+        <div className="flex items-center gap-4 px-4 py-2 sm:py-0">
+          <div className="w-11 h-11 rounded-full bg-rose-50 dark:bg-rose-950/60 flex items-center justify-center text-rose-600 dark:text-rose-400 flex-shrink-0">
+            <Minus size={20} strokeWidth={2.8} />
+          </div>
+          <div>
+            <div className="text-[12.5px] font-bold text-slate-800 dark:text-slate-200">
               Deleted (SSR)
-            </span>
-            <div className="w-8 h-8 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200/70 dark:border-rose-900/60 flex items-center justify-center text-rose-600 dark:text-rose-400 shadow-2xs">
-              <Minus className="w-4 h-4" strokeWidth={2.8} />
             </div>
-          </div>
-
-          <div className="my-2.5">
-            <p className="font-serif text-[30px] md:text-[32px] font-bold text-[#DC2626] dark:text-rose-400 tabular-nums leading-none tracking-tight">
+            <div className="font-serif text-[28px] font-bold text-[#DC2626] dark:text-rose-400 tabular-nums leading-none mt-1">
               −{formatIndianNumber(totalRollDeleted)}
-            </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            </div>
+            <div className="text-[11px] text-slate-400 dark:text-slate-500 font-medium mt-0.5">
               ASDDO statutory audit
-            </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-slate-600 dark:text-slate-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
-            <span>−2.33% roll purged</span>
+            </div>
           </div>
         </div>
       </div>

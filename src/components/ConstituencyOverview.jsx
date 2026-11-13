@@ -467,7 +467,7 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
         </div>
       </div>
 
-      {/* 4. Master Metric Cards Row (Elevated Clean Institutional Style) */}
+      {/* 4. Master Metric Cards Row (Clean 3-Row Architecture: Label -> Hero Number -> Subtitle) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Card 1: ACTIVE ELECTORS */}
         <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all">
@@ -480,18 +480,13 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
             </div>
           </div>
 
-          <div className="my-2.5">
+          <div className="mt-3">
             <p className="font-serif text-[30px] md:text-[32px] font-bold text-blue-600 dark:text-blue-400 tabular-nums leading-none tracking-tight">
               {formatIndianNumber(totalVoters)}
             </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1.5">
               Statutory enrolled voters
             </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span>100% ECI Roll Synced</span>
           </div>
         </div>
 
@@ -506,18 +501,13 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
             </div>
           </div>
 
-          <div className="my-2.5">
+          <div className="mt-3">
             <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
               {formatIndianNumber(totalFamilies)}
             </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1.5">
               Distinct family clusters
             </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-slate-600 dark:text-slate-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-500" />
-            <span>~{avgVotersPerFamily} electors / household</span>
           </div>
         </div>
 
@@ -532,18 +522,13 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
             </div>
           </div>
 
-          <div className="my-2.5">
+          <div className="mt-3">
             <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
               {villagesCount}
             </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1.5">
               Constituent revenue units
             </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-slate-600 dark:text-slate-300 truncate" title={villages.join(', ')}>
-            <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 flex-shrink-0" />
-            <span className="truncate">Across constituent areas</span>
           </div>
         </div>
 
@@ -558,18 +543,13 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
             </div>
           </div>
 
-          <div className="my-2.5">
+          <div className="mt-3">
             <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
               {totalBooths}
             </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1.5">
               Designated voting centers
             </p>
-          </div>
-
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-slate-600 dark:text-slate-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-amber-500" />
-            <span>Avg ~{avgVotersPerBooth} electors / booth</span>
           </div>
         </div>
       </div>
@@ -593,89 +573,68 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
           </div>
         </div>
 
-        {/* 3 Cohesive Elevated Signal Cards */}
+        {/* 3 Clean 3-Row Signal Cards (Label -> Headline Value -> Contextual Text) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {/* Signal 1: Roll Stability */}
           <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-emerald-400/50 dark:hover:border-emerald-500/50 transition-all">
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-                  Roll Stability
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-400 border border-emerald-200/80 dark:border-emerald-800/60">
-                  <CheckCircle2 className="w-3 h-3 text-emerald-500" /> STABLE
-                </span>
-              </div>
-
-              <div className="my-2.5">
-                <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                  Zero Net Drift
-                </p>
-                <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
-                  No net change since July ({formatIndianNumber(totalVoters)}). Roll movement is minimal and strictly within normal range.
-                </p>
-              </div>
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                Roll Stability
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-400 border border-emerald-200/80 dark:border-emerald-800/60">
+                <CheckCircle2 className="w-3 h-3 text-emerald-500" /> STABLE
+              </span>
             </div>
 
-            <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-              <span>ECI Churn Rate</span>
-              <span className="text-emerald-600 dark:text-emerald-400 font-bold">0.0% Net Volatility</span>
+            <div className="mt-3">
+              <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
+                Zero Net Drift
+              </p>
+              <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1.5">
+                No net change since July ({formatIndianNumber(totalVoters)}). Roll movement is minimal and strictly within normal range.
+              </p>
             </div>
           </div>
 
           {/* Signal 2: Booth Coverage */}
           <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all">
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-                  Booth Coverage
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-blue-50 dark:bg-blue-950/70 text-blue-700 dark:text-blue-400 border border-blue-200/80 dark:border-blue-800/60">
-                  <ShieldCheck className="w-3 h-3 text-blue-500" /> OPTIMAL
-                </span>
-              </div>
-
-              <div className="my-2.5">
-                <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                  {totalBooths} Polling Stations
-                </p>
-                <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
-                  Coverage across {villagesCount} villages. Average ~{avgVotersPerBooth} electors per booth, comfortably under ECI 1,200 limit.
-                </p>
-              </div>
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                Booth Coverage
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-blue-50 dark:bg-blue-950/70 text-blue-700 dark:text-blue-400 border border-blue-200/80 dark:border-blue-800/60">
+                <ShieldCheck className="w-3 h-3 text-blue-500" /> OPTIMAL
+              </span>
             </div>
 
-            <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-              <span>Avg Saturation</span>
-              <span className="text-blue-600 dark:text-blue-400 font-bold">{Math.round((avgVotersPerBooth / 1200) * 100)}% of Max Cap</span>
+            <div className="mt-3">
+              <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
+                {totalBooths} Polling Stations
+              </p>
+              <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1.5">
+                Coverage across {villagesCount} villages. Average ~{avgVotersPerBooth} electors per booth, comfortably under ECI 1,200 limit.
+              </p>
             </div>
           </div>
 
           {/* Signal 3: Household Concentration */}
           <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-teal-400/50 dark:hover:border-teal-500/50 transition-all">
-            <div>
-              <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-                  Household Concentration
-                </span>
-                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-teal-50 dark:bg-teal-950/70 text-teal-700 dark:text-teal-400 border border-teal-200/80 dark:border-teal-800/60">
-                  <Layers className="w-3 h-3 text-teal-500" /> CLUSTERED
-                </span>
-              </div>
-
-              <div className="my-2.5">
-                <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                  {formatIndianNumber(totalFamilies)} Households
-                </p>
-                <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1">
-                  Average ~{avgVotersPerFamily} electors per household cluster. High family voter concentration across 66 wadas.
-                </p>
-              </div>
+            <div className="flex items-center justify-between">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+                Household Concentration
+              </span>
+              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-teal-50 dark:bg-teal-950/70 text-teal-700 dark:text-teal-400 border border-teal-200/80 dark:border-teal-800/60">
+                <Layers className="w-3 h-3 text-teal-500" /> CLUSTERED
+              </span>
             </div>
 
-            <div className="mt-3 pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center justify-between text-[11px] font-semibold text-slate-500 dark:text-slate-400">
-              <span>Family Density</span>
-              <span className="text-teal-600 dark:text-teal-400 font-bold">~{avgVotersPerFamily} voters / household</span>
+            <div className="mt-3">
+              <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
+                {formatIndianNumber(totalFamilies)} Households
+              </p>
+              <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1.5">
+                Average ~{avgVotersPerFamily} electors per household cluster. High family voter concentration across 66 wadas.
+              </p>
             </div>
           </div>
         </div>
