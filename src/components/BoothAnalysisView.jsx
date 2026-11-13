@@ -1,10 +1,11 @@
 import React, { useState, useMemo, useRef } from 'react';
-import { Search, ChevronDown, Check, AlertTriangle, Plus, Minus, Crosshair, Building2, Users } from 'lucide-react';
+import { Search, ChevronDown, Check, AlertTriangle, Plus, Minus, Crosshair, Building2, Users, BarChart3 } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import sanquelimMapData from '../data/sanquelim-map.json';
 import porvorimMapData from '../data/porvorim-map.json';
 import aldonaMapData from '../data/aldona-map.json';
 import BoothDetailModal from './BoothDetailModal';
+import PageHeader from './PageHeader';
 
 const ELECTION_OPTIONS = [
   'Overall',
@@ -222,15 +223,15 @@ export default function BoothAnalysisView({ data }) {
 
   return (
     <div className="px-6 md:px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* 1. Header Title */}
-      <div>
-        <h2 className="font-serif text-[28px] md:text-[30px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
-          Booth Analysis &amp; Spatial Margins
-        </h2>
-        <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-1">
-          Electoral geography, historical Form-20 returns, and booth roster across {meta.ac_name || 'Sanquelim'}
-        </p>
-      </div>
+      {/* 1. Standardized Distinctive Page Header */}
+      <PageHeader
+        badgeLabel="Booth Spatial Intelligence"
+        badgeIcon={BarChart3}
+        badgeColor="indigo"
+        title="Booth Analysis & Spatial Margins"
+        subtitle={`Electoral geography, historical Form-20 returns, and interactive GIS booth roster across ${meta.ac_name || 'Sanquelim'}`}
+        meta={meta}
+      />
 
       {/* 2. Master Metric Cards Row (Elevated Clean Institutional Style Matching Overview & Voter Rolls) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -361,10 +362,10 @@ export default function BoothAnalysisView({ data }) {
                 key={elec}
                 type="button"
                 onClick={() => setSelectedElection(elec)}
-                className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer font-bold ${
+                className={`px-3 py-1.5 rounded-lg border transition-colors duration-150 cursor-pointer font-bold ${
                   selectedElection === elec
-                    ? 'bg-blue-600 text-white shadow-xs'
-                    : 'text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-800/70'
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-xs'
+                    : 'border-transparent text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:bg-white dark:hover:bg-slate-800/70'
                 }`}
               >
                 {elec}
@@ -786,15 +787,15 @@ export default function BoothAnalysisView({ data }) {
           </div>
         </div>
 
-        {/* Quick Status Filter Tabs */}
+        {/* Quick Status Filter Tabs with Persistent Borders & Colors Transition */}
         <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800/80">
           <button
             type="button"
             onClick={() => setStatusFilter('ALL')}
-            className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+            className={`px-3 py-1 rounded-lg text-[11px] font-bold border transition-colors duration-150 cursor-pointer ${
               statusFilter === 'ALL'
-                ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-900 shadow-2xs'
-                : 'bg-slate-100 dark:bg-[#131F38] text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
+                ? 'bg-slate-900 text-white border-slate-900 dark:bg-white dark:text-slate-900 dark:border-white shadow-2xs'
+                : 'bg-slate-100 dark:bg-[#131F38] border-transparent text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-800'
             }`}
           >
             All ({rawBooths.length})
@@ -803,10 +804,10 @@ export default function BoothAnalysisView({ data }) {
           <button
             type="button"
             onClick={() => setStatusFilter('NEEDS_ATTENTION')}
-            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+            className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-bold border transition-colors duration-150 cursor-pointer ${
               statusFilter === 'NEEDS_ATTENTION'
-                ? 'bg-amber-600 text-white shadow-2xs'
-                : 'bg-amber-50 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60 hover:bg-amber-100 dark:hover:bg-amber-900/60'
+                ? 'bg-amber-600 text-white border-amber-600 shadow-2xs'
+                : 'bg-amber-50 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 border-amber-200 dark:border-amber-800/60 hover:bg-amber-100 dark:hover:bg-amber-900/60'
             }`}
           >
             <AlertTriangle className="w-3 h-3 text-amber-500" />
@@ -816,10 +817,10 @@ export default function BoothAnalysisView({ data }) {
           <button
             type="button"
             onClick={() => setStatusFilter('BATTLE_GROUND')}
-            className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+            className={`px-3 py-1 rounded-lg text-[11px] font-bold border transition-colors duration-150 cursor-pointer ${
               statusFilter === 'BATTLE_GROUND'
-                ? 'bg-amber-600 text-white shadow-2xs'
-                : 'bg-slate-100 dark:bg-[#131F38] text-amber-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-800'
+                ? 'bg-amber-600 text-white border-amber-600 shadow-2xs'
+                : 'bg-slate-100 dark:bg-[#131F38] border-transparent text-amber-700 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-800'
             }`}
           >
             Battle Ground ({electionSummary.battle})
@@ -828,10 +829,10 @@ export default function BoothAnalysisView({ data }) {
           <button
             type="button"
             onClick={() => setStatusFilter('WEAK')}
-            className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+            className={`px-3 py-1 rounded-lg text-[11px] font-bold border transition-colors duration-150 cursor-pointer ${
               statusFilter === 'WEAK'
-                ? 'bg-rose-600 text-white shadow-2xs'
-                : 'bg-slate-100 dark:bg-[#131F38] text-rose-700 dark:text-rose-400 hover:bg-slate-200 dark:hover:bg-slate-800'
+                ? 'bg-rose-600 text-white border-rose-600 shadow-2xs'
+                : 'bg-slate-100 dark:bg-[#131F38] border-transparent text-rose-700 dark:text-rose-400 hover:bg-slate-200 dark:hover:bg-slate-800'
             }`}
           >
             Weak ({electionSummary.weak})
@@ -840,10 +841,10 @@ export default function BoothAnalysisView({ data }) {
           <button
             type="button"
             onClick={() => setStatusFilter('SAFE')}
-            className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+            className={`px-3 py-1 rounded-lg text-[11px] font-bold border transition-colors duration-150 cursor-pointer ${
               statusFilter === 'SAFE'
-                ? 'bg-emerald-600 text-white shadow-2xs'
-                : 'bg-slate-100 dark:bg-[#131F38] text-emerald-700 dark:text-emerald-400 hover:bg-slate-200 dark:hover:bg-slate-800'
+                ? 'bg-emerald-600 text-white border-emerald-600 shadow-2xs'
+                : 'bg-slate-100 dark:bg-[#131F38] border-transparent text-emerald-700 dark:text-emerald-400 hover:bg-slate-200 dark:hover:bg-slate-800'
             }`}
           >
             Safe ({electionSummary.safe})

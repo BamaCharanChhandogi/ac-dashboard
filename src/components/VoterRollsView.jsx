@@ -20,12 +20,14 @@ import {
   RotateCcw,
   Minus,
   Plus,
-  Edit2
+  Edit2,
+  ScrollText
 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import { jsPDF } from 'jspdf';
 import autoTable from 'jspdf-autotable';
 import { formatIndianNumber } from '../utils/formatters';
+import PageHeader from './PageHeader';
 
 // Reconciled 9 constituent village stats summing to exactly 27,265 electors
 const SANQUELIM_DEFAULT_STATS = [
@@ -94,7 +96,12 @@ export default function VoterRollsView({ data }) {
   const deletedCount = meta.sir_deleted || 634;
   const addedCount = meta.sir_added || 693;
   const modifiedCount = meta.sir_modified || 330;
-  const previousRollCount = 26842; // Matches exact reference design
+
+  // Mathematically airtight roll progression:
+  // Previous Roll (Draft Roll: 27,206) + 693 Added - 634 Deleted = 27,265 Current Roll
+  const previousRollCount = totalElectorsCount - (addedCount - deletedCount); // 27,206
+  const addedPct = ((addedCount / (previousRollCount || 1)) * 100).toFixed(2); // 2.55%
+  const deletedPct = ((deletedCount / (previousRollCount || 1)) * 100).toFixed(2); // 2.33%
 
   // Sorted village stats for expanded table view
   const sortedVillageStats = useMemo(() => {
@@ -438,28 +445,15 @@ export default function VoterRollsView({ data }) {
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* 1. Official Breadcrumb Navigation */}
-      <nav aria-label="Breadcrumb" className="flex items-center gap-2 text-[12px] text-slate-400 dark:text-slate-500 font-medium">
-        <Home size={13} className="text-slate-400 dark:text-slate-500" />
-        <span className="text-slate-300 dark:text-slate-600">/</span>
-        <span>Goa</span>
-        <span className="text-slate-300 dark:text-slate-600">/</span>
-        <span>{meta.district || 'North Goa'}</span>
-        <span className="text-slate-300 dark:text-slate-600">/</span>
-        <span>{meta.taluka || 'Bicholim'}</span>
-        <span className="text-slate-300 dark:text-slate-600">/</span>
-        <span className="text-slate-700 dark:text-slate-300 font-semibold">AC {meta.ac_no || '17'}</span>
-      </nav>
-
-      {/* 2. Hero Header */}
-      <div>
-        <h2 className="font-serif text-[28px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
-          Voter Rolls & SIR Audit Analysis
-        </h2>
-        <p className="text-[13px] text-slate-500 dark:text-slate-400 font-medium mt-1">
-          Special Summary Revision (SIR 2026) roll movements, village breakdowns, and granular elector audit records across {meta.ac_name || 'Sanquelim'}
-        </p>
-      </div>
+      {/* 1. Standardized Distinctive Page Header */}
+      <PageHeader
+        badgeLabel="Statutory Electoral Roll Audit"
+        badgeIcon={ScrollText}
+        badgeColor="teal"
+        title="Voter Rolls & SIR Audit Analysis"
+        subtitle={`Special Summary Revision (SIR 2026) roll movements, constituent village breakdowns, and granular elector audit records across ${meta.ac_name || 'Sanquelim'}`}
+        meta={meta}
+      />
 
       {/* 3. Top Master KPI Bar - Interconnected Glowing Strip with Dividers (Matching Reference Image) */}
       <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-slate-800">
@@ -581,23 +575,23 @@ export default function VoterRollsView({ data }) {
                 />
               </svg>
 
-              {/* Top Floating Badge: +693 Added (2.58%) */}
+              {/* Top Floating Badge: +693 Added */}
               <div className="absolute top-2 left-1/2 -translate-x-1/2 bg-emerald-50 dark:bg-emerald-950/90 border border-emerald-300 dark:border-emerald-800 px-3 py-1 rounded-xl shadow-xs text-center z-20">
                 <span className="text-[12px] font-bold text-emerald-800 dark:text-emerald-300 tabular-nums">
                   +{formatIndianNumber(addedCount)} Added
                 </span>
                 <span className="block text-[10px] text-emerald-600 dark:text-emerald-400 font-medium">
-                  (2.58%)
+                  ({addedPct}%)
                 </span>
               </div>
 
-              {/* Bottom Floating Badge: -634 Deleted (2.36%) */}
+              {/* Bottom Floating Badge: -634 Deleted */}
               <div className="absolute bottom-2 left-1/2 -translate-x-1/2 bg-rose-50 dark:bg-rose-950/90 border border-rose-300 dark:border-rose-800 px-3 py-1 rounded-xl shadow-xs text-center z-20">
                 <span className="text-[12px] font-bold text-[#DC2626] dark:text-rose-300 tabular-nums">
                   -{formatIndianNumber(deletedCount)} Deleted
                 </span>
                 <span className="block text-[10px] text-rose-500 dark:text-rose-400 font-medium">
-                  (2.36%)
+                  ({deletedPct}%)
                 </span>
               </div>
 
@@ -941,31 +935,34 @@ export default function VoterRollsView({ data }) {
         {/* Status Tabs Matching Reference Mockup */}
         <div className="flex gap-2 border-b border-slate-200 dark:border-slate-800 pb-3 mb-4 select-none">
           <button
+            type="button"
             onClick={() => handleTabChange('deleted')}
-            className={`px-4 py-1.5 rounded-lg text-[12px] font-bold transition-all cursor-pointer ${
+            className={`px-4 py-1.5 rounded-lg text-[12px] font-bold border transition-colors duration-150 cursor-pointer ${
               activeTab === 'deleted'
-                ? 'bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200 dark:border-rose-900/50 shadow-xs'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+                ? 'bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border-rose-200 dark:border-rose-900/50 shadow-xs'
+                : 'border-transparent text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60'
             }`}
           >
             Deleted ({formatIndianNumber(deletedCount)})
           </button>
           <button
+            type="button"
             onClick={() => handleTabChange('added')}
-            className={`px-4 py-1.5 rounded-lg text-[12px] font-bold transition-all cursor-pointer ${
+            className={`px-4 py-1.5 rounded-lg text-[12px] font-bold border transition-colors duration-150 cursor-pointer ${
               activeTab === 'added'
                 ? 'bg-emerald-50 dark:bg-emerald-950/60 text-emerald-800 dark:text-emerald-300 border border-emerald-200 dark:border-emerald-900/50 shadow-xs'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+                : 'border-transparent text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60'
             }`}
           >
             Added ({formatIndianNumber(addedCount)})
           </button>
           <button
+            type="button"
             onClick={() => handleTabChange('modified')}
-            className={`px-4 py-1.5 rounded-lg text-[12px] font-bold transition-all cursor-pointer ${
+            className={`px-4 py-1.5 rounded-lg text-[12px] font-bold border transition-colors duration-150 cursor-pointer ${
               activeTab === 'modified'
                 ? 'bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200 dark:border-blue-900/50 shadow-xs'
-                : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200'
+                : 'border-transparent text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800/60'
             }`}
           >
             Modified ({formatIndianNumber(modifiedCount)})

@@ -9,9 +9,11 @@ import {
   ShieldCheck,
   Layers,
   Sparkles,
-  BarChart2
+  BarChart2,
+  LayoutDashboard
 } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
+import PageHeader from './PageHeader';
 
 export default function ConstituencyOverview({ data, currentSlug, directory }) {
   const meta = data?.meta || {};
@@ -179,42 +181,30 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
 
   return (
     <div className="px-6 md:px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* 1. Top Header Row: Breadcrumb & Title on Left, Official ECI Status Badge on Right */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          {/* Breadcrumb */}
-          <div className="flex items-center gap-1.5 text-[11px] font-bold tracking-widest text-[#2563EB] dark:text-blue-400 uppercase mb-1">
-            <span>{meta.state ? meta.state.toUpperCase() : 'GOA'}</span>
-            <span className="opacity-40">/</span>
-            <span>{meta.district ? meta.district.toUpperCase() : 'NORTH GOA'}</span>
-            <span className="opacity-40">/</span>
-            <span>{meta.taluka ? meta.taluka.toUpperCase() : 'BICHOLIM'}</span>
-          </div>
-
-          {/* AC Title (Clean Institutional Editorial Heading) */}
-          <h1 className="font-serif text-[32px] md:text-[34px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
-            {formattedTitle}
-          </h1>
-        </div>
-
-        {/* Official ECI Status Pill */}
-        <div className="inline-flex items-center gap-3 bg-white dark:bg-[#0D1527] border border-slate-200/90 dark:border-slate-800/80 rounded-2xl px-4 py-2.5 shadow-xs">
-          <div className="w-9 h-9 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/80 dark:border-emerald-800/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0">
-            <CheckCircle2 className="w-4 h-4" />
-          </div>
-          <div>
-            <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-              <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
+      {/* 1. Standardized Distinctive Page Header */}
+      <PageHeader
+        badgeLabel="Executive Constituency Overview"
+        badgeIcon={LayoutDashboard}
+        badgeColor="blue"
+        title={`Constituency Master Overview • ${formattedTitle}`}
+        subtitle={`Consolidated statutory intelligence, Form-7 roll purge audit, and core demographic indicators for ${formattedTitle}`}
+        meta={meta}
+        actions={
+          <div className="inline-flex items-center gap-2.5 bg-white dark:bg-[#0D1527] border border-slate-200/90 dark:border-slate-800/80 rounded-xl px-3.5 py-1.5 shadow-2xs">
+            <div className="w-7 h-7 rounded-lg bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/80 dark:border-emerald-800/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 flex-shrink-0">
+              <CheckCircle2 size={13} strokeWidth={2.5} />
+            </div>
+            <div>
+              <p className="text-[9px] font-extrabold uppercase tracking-wider text-slate-400 dark:text-slate-500 leading-none">
                 Official ECI Roll
               </p>
+              <p className="text-[11.5px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
+                Oct 2026 Supp-4
+              </p>
             </div>
-            <p className="text-[13px] font-bold text-slate-900 dark:text-slate-100">
-              October 2026 Supplement 4
-            </p>
           </div>
-        </div>
-      </div>
+        }
+      />
 
       {/* 2. Metadata Card (5 Distinct Columns) */}
       <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs">

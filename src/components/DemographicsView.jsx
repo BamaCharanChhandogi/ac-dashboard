@@ -1,5 +1,7 @@
 import React, { useMemo } from 'react';
+import { Users } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
+import PageHeader from './PageHeader';
 
 export default function DemographicsView({ data }) {
   const meta = data?.meta || {};
@@ -37,15 +39,15 @@ export default function DemographicsView({ data }) {
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* Title */}
-      <div>
-        <h2 className="font-serif text-[26px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
-          Gender & Age Composition
-        </h2>
-        <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
-          Currently active electors only (Supplement-4, latest stage) — matches the {formatIndianNumber(totalVoters)} figure used throughout this dashboard across {meta.ac_name || 'Sanquelim'}.
-        </p>
-      </div>
+      {/* 1. Standardized Distinctive Page Header */}
+      <PageHeader
+        badgeLabel="Electoral Demographics & Pyramid"
+        badgeIcon={Users}
+        badgeColor="purple"
+        title="Gender & Age Composition"
+        subtitle={`Constituency demographic pyramid, sex ratio benchmarks, and cohort breakdowns based on Supplement-4 rolls across ${meta.ac_name || 'Sanquelim'}`}
+        meta={meta}
+      />
 
       {/* Top 3 KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">

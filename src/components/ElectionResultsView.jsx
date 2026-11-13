@@ -1,6 +1,8 @@
 import React, { useMemo } from 'react';
+import { Vote } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import CurrentLeadersSection from './CurrentLeadersSection';
+import PageHeader from './PageHeader';
 
 const SANQUELIM_ASSEMBLY_HISTORY = [
   { year: '2022', party: 'BJP', pct: 48.27, winner: 'Dr. Pramod Sawant', runnerUp: 'Dharmesh Saglani (INC)', margin: '+2.6%' },
@@ -153,6 +155,16 @@ export default function ElectionResultsView({ data }) {
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
+      {/* 1. Standardized Distinctive Page Header */}
+      <PageHeader
+        badgeLabel="Historical Elections & Leaders"
+        badgeIcon={Vote}
+        badgeColor="orange"
+        title="Election Results & Historical Returns"
+        subtitle={`Assembly Form-20 victory returns, Parliamentary margins, candidate vote-shares, and sitting MLA/MP leadership profiles across ${meta.ac_name || 'Sanquelim'}`}
+        meta={meta}
+      />
+
       {/* Upgraded Current MLA & MP Dossier */}
       <CurrentLeadersSection data={data} />
 

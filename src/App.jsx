@@ -114,8 +114,11 @@ export default function App() {
         onSelectAC={handleSelectAC}
       />
 
-      {/* Main Content Area */}
-      <main className="flex-1 lg:ml-[240px] flex flex-col h-full overflow-y-auto bg-[#F1F5F9] dark:bg-[#0B1120] transition-colors duration-200">
+      {/* Main Content Area with Locked Stable Scrollbar Gutter to Prevent Layout Shift */}
+      <main
+        className="flex-1 lg:ml-[240px] flex flex-col h-full overflow-y-auto bg-[#F1F5F9] dark:bg-[#0B1120] transition-colors duration-200"
+        style={{ scrollbarGutter: 'stable' }}
+      >
         {activeSection === 'dashboard' && (
           <ConstituencyOverview
             data={data}

@@ -1,11 +1,12 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Search, X, ChevronLeft, ChevronRight, Users, Home, MapPin, Eye } from 'lucide-react';
+import { Search, X, ChevronLeft, ChevronRight, Users, Home, MapPin, Eye, Lightbulb } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import sanquelimMapData from '../data/sanquelim-map.json';
 import porvorimMapData from '../data/porvorim-map.json';
 import aldonaMapData from '../data/aldona-map.json';
 import VillageDetailModal from './VillageDetailModal';
 import BoothDetailModal from './BoothDetailModal';
+import PageHeader from './PageHeader';
 
 const ELECTION_OPTIONS = [
   'Overall',
@@ -241,15 +242,15 @@ export default function InsightsView({ data }) {
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* Title */}
-      <div>
-        <h2 className="font-serif text-[26px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
-          Village Electoral Lean & Household Clusters
-        </h2>
-        <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
-          Organic village political margins and largest joint family compound units across {meta.ac_name || 'Sanquelim'}
-        </p>
-      </div>
+      {/* 1. Standardized Distinctive Page Header */}
+      <PageHeader
+        badgeLabel="Village Lean & Household Clusters"
+        badgeIcon={Lightbulb}
+        badgeColor="emerald"
+        title="Village Electoral Lean & Household Clusters"
+        subtitle={`Organic village political margins, Form-20 lean dynamics, and largest joint family compound clusters across ${meta.ac_name || 'Sanquelim'}`}
+        meta={meta}
+      />
 
       {/* Section 1: Village Electoral Lean Map & Statistics (Matching PDF Pages 6-8) */}
       <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs space-y-6">
@@ -263,17 +264,17 @@ export default function InsightsView({ data }) {
             </p>
           </div>
 
-          {/* Election Cycle Filter Tabs */}
+          {/* Election Cycle Filter Tabs with Persistent Borders & Colors Transition */}
           <div className="flex flex-wrap items-center gap-1.5 bg-slate-100 dark:bg-slate-900/90 p-1 rounded-xl">
             {ELECTION_OPTIONS.map((opt) => (
               <button
                 key={opt}
                 type="button"
                 onClick={() => setSelectedElection(opt)}
-                className={`px-3 py-1 text-[11px] font-bold rounded-lg transition-all cursor-pointer ${
+                className={`px-3 py-1 text-[11px] font-bold rounded-lg border transition-colors duration-150 cursor-pointer ${
                   selectedElection === opt
-                    ? 'bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 shadow-xs'
-                    : 'text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
+                    ? 'bg-white dark:bg-slate-800 text-blue-600 dark:text-blue-400 border-slate-200/80 dark:border-slate-700 shadow-xs'
+                    : 'border-transparent text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200'
                 }`}
               >
                 {opt}

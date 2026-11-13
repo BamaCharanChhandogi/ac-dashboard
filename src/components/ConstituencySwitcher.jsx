@@ -114,7 +114,7 @@ export default function ConstituencySwitcher({
         aria-expanded={isOpen}
         aria-haspopup="listbox"
         className={`
-          w-full text-left p-2.5 rounded-xl border transition-all cursor-pointer group
+          w-full text-left p-2.5 rounded-xl border transition-colors duration-150 cursor-pointer group
           ${
             isOpen
               ? 'bg-blue-50/80 dark:bg-white/10 border-blue-500 shadow-md ring-2 ring-blue-500/20'
@@ -150,7 +150,7 @@ export default function ConstituencySwitcher({
 
       {/* Floating Popover Menu (Scalable for 100+ Constituencies) */}
       {isOpen && (
-        <div className="absolute left-3 right-3 top-full mt-2 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 z-50 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150 w-[300px] lg:w-[320px]">
+        <div className="absolute left-2 top-full mt-1.5 bg-white dark:bg-slate-900 rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 z-50 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150 w-[260px] sm:w-[280px]">
           {/* Header & Search */}
           <div className="p-3 bg-slate-50 dark:bg-slate-900/90 border-b border-slate-100 dark:border-slate-800">
             <div className="flex items-center justify-between mb-2">
