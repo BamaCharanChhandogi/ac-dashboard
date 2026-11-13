@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useRef } from 'react';
-import { Search, ChevronDown, Check, AlertTriangle, Plus, Minus, Crosshair, Building2, Users, BarChart3 } from 'lucide-react';
+import { Search, ChevronDown, Check, AlertTriangle, Plus, Minus, Crosshair, Building2, Users, BarChart3, MapPin } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import sanquelimMapData from '../data/sanquelim-map.json';
 import porvorimMapData from '../data/porvorim-map.json';
@@ -84,6 +84,7 @@ export default function BoothAnalysisView({ data }) {
 
   // Interactive Zoom State
   const [zoomLevel, setZoomLevel] = useState(1);
+  const [showVillageLabels, setShowVillageLabels] = useState(false);
   const handleZoomIn = () => setZoomLevel((z) => Math.min(2.2, roundTo(z + 0.25, 2)));
   const handleZoomOut = () => setZoomLevel((z) => Math.max(0.8, roundTo(z - 0.25, 2)));
   const handleResetZoom = () => setZoomLevel(1);
@@ -386,6 +387,19 @@ export default function BoothAnalysisView({ data }) {
             >
               <Crosshair size={14} />
             </button>
+            <div className="h-[1px] bg-white/10" />
+            <button
+              type="button"
+              onClick={() => setShowVillageLabels((s) => !s)}
+              className={`w-8 h-8 flex items-center justify-center transition-colors cursor-pointer ${
+                showVillageLabels
+                  ? 'bg-blue-600 text-white'
+                  : 'text-white/80 hover:text-white hover:bg-white/10'
+              }`}
+              title={showVillageLabels ? 'Hide Village Labels' : 'Show Village Labels'}
+            >
+              <MapPin size={14} />
+            </button>
           </div>
 
           {/* Bottom-Left 2 km Scale Bar (Matching Reference Image) */}
@@ -494,8 +508,8 @@ export default function BoothAnalysisView({ data }) {
                       d={b.path}
                       fill={cellFill}
                       fillOpacity={isHovered ? 0.98 : 0.88}
-                      stroke={isHovered ? '#FFFFFF' : '#0B1E12'}
-                      strokeWidth={isHovered ? '2.2' : '1.1'}
+                      stroke={isHovered ? '#60A5FA' : 'rgba(0, 0, 0, 0.45)'}
+                      strokeWidth={isHovered ? '2.0' : '0.8'}
                       className="transition-all duration-150 cursor-pointer"
                       onClick={() => handleBoothClick(b)}
                       onMouseEnter={() => setHoveredBooth(b)}
@@ -505,44 +519,46 @@ export default function BoothAnalysisView({ data }) {
                 })}
               </g>
 
-              {/* 3. Internal Booth Boundaries (Thin separators) */}
+              {/* 3. Prominent Village Boundaries (Crisp white separators clearly distinguishing village from booths) */}
               <g id="village-borders" className="pointer-events-none">
                 {activeMap.villageBorders?.map((vPath, i) => (
                   <path
                     key={`vborder-${i}`}
                     d={vPath}
                     fill="none"
-                    stroke="#07190F"
-                    strokeWidth={mapScale.borderStroke || '2.0'}
+                    stroke="#FFFFFF"
+                    strokeWidth={mapScale.borderStroke || '2.2'}
                     strokeLinejoin="round"
                     strokeLinecap="round"
-                    className="opacity-90"
+                    className="opacity-95"
                   />
                 ))}
               </g>
 
-              {/* 4. Village Labels (Rendered under booth badges so numbers are never covered) */}
-              <g id="village-labels" className="pointer-events-none select-none opacity-80">
-                {activeMap.villages?.map((v) => (
-                  <text
-                    key={`vlabel-${v.name}`}
-                    x={v.x}
-                    y={v.y}
-                    textAnchor="middle"
-                    fill="#FFFFFF"
-                    stroke="#000000"
-                    strokeWidth={mapScale.haloStroke}
-                    paintOrder="stroke fill"
-                    fontSize={mapScale.villageFont}
-                    fontWeight="900"
-                    letterSpacing="0.04em"
-                    fontFamily="system-ui, -apple-system, sans-serif"
-                    filter="url(#villageTextGlow)"
-                  >
-                    {v.name}
-                  </text>
-                ))}
-              </g>
+              {/* 4. Optional Village Labels (Off by default so numbers and badges remain 100% clean and unblocked) */}
+              {showVillageLabels && (
+                <g id="village-labels" className="pointer-events-none select-none opacity-85">
+                  {activeMap.villages?.map((v) => (
+                    <text
+                      key={`vlabel-${v.name}`}
+                      x={v.x}
+                      y={v.y}
+                      textAnchor="middle"
+                      fill="#FFFFFF"
+                      stroke="#000000"
+                      strokeWidth={mapScale.haloStroke}
+                      paintOrder="stroke fill"
+                      fontSize={mapScale.villageFont}
+                      fontWeight="900"
+                      letterSpacing="0.04em"
+                      fontFamily="system-ui, -apple-system, sans-serif"
+                      filter="url(#villageTextGlow)"
+                    >
+                      {v.name}
+                    </text>
+                  ))}
+                </g>
+              )}
 
               {/* 5. Booth Badges (Matching Reference Image: crisp white ring + bold number on top) */}
               <g id="booth-badges" className="cursor-pointer">

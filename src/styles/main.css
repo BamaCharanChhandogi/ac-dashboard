@@ -25,9 +25,30 @@
     color: #F1F5F9;
     background-color: #0B1120;
   }
+  html.dark {
+    color-scheme: dark;
+  }
+  html {
+    color-scheme: light;
+  }
   button, input, select, textarea {
     box-sizing: border-box;
   }
+}
+
+/* Telegram-Style Expanding Circular Theme Transitions (View Transition API) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 9999;
 }
 
 .font-serif {

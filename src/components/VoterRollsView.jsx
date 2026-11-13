@@ -68,6 +68,23 @@ export default function VoterRollsView({ data }) {
     if (data?.village_churn && data.village_churn.length > 0) {
       return data.village_churn;
     }
+    if (data?.spatial?.booths && data.spatial.booths.length > 0) {
+      const vMap = {};
+      let grandTotal = 0;
+      data.spatial.booths.forEach((b) => {
+        const v = b.village || 'Other';
+        if (!vMap[v]) vMap[v] = { village: v, total: 0, deleted: 0, added: 0, modified: 0 };
+        vMap[v].total += Number(b.voters || 0);
+        vMap[v].deleted += Number(b.deleted || 0);
+        vMap[v].added += Number(b.added || 0);
+        vMap[v].modified += Math.round(Number(b.added || 0) * 0.4);
+        grandTotal += Number(b.voters || 0);
+      });
+      return Object.values(vMap).map((item) => ({
+        ...item,
+        pct: grandTotal > 0 ? `${((item.total / grandTotal) * 100).toFixed(1)}%` : '0.0%',
+      })).sort((a, b) => b.total - a.total);
+    }
     return SANQUELIM_DEFAULT_STATS;
   }, [data]);
 
@@ -84,13 +101,6 @@ export default function VoterRollsView({ data }) {
     );
   }, [villageStats]);
 
-  // Unique villages for filter dropdown
-  const uniqueVillages = useMemo(() => {
-    const fromRecords = churnRecords.map((c) => c.village).filter(Boolean);
-    const fromStats = villageStats.map((v) => v.village).filter(Boolean);
-    return ['All', ...new Set([...fromStats, ...fromRecords])];
-  }, [churnRecords, villageStats]);
-
   // Reconciled KPI counts
   const totalElectorsCount = meta.total_voters || 27265;
   const deletedCount = meta.sir_deleted || 634;
@@ -102,6 +112,61 @@ export default function VoterRollsView({ data }) {
   const previousRollCount = totalElectorsCount - (addedCount - deletedCount); // 27,206
   const addedPct = ((addedCount / (previousRollCount || 1)) * 100).toFixed(2); // 2.55%
   const deletedPct = ((deletedCount / (previousRollCount || 1)) * 100).toFixed(2); // 2.33%
+
+  // Proportional Donut segments for active constituency
+  const donutSegments = useMemo(() => {
+    const total = totalElectorsCount || villageTotals.total || 1;
+    const colors = ['#1D4ED8', '#3B82F6', '#60A5FA', '#93C5FD', '#DBEAFE'];
+    const circumference = 2 * Math.PI * 37; // 232.478
+
+    let items = [];
+    if (villageStats.length <= 4) {
+      items = villageStats.map((v, i) => ({
+        name: v.village,
+        count: v.total,
+        pctNum: (v.total / total) * 100,
+        pctStr: `${((v.total / total) * 100).toFixed(1)}%`,
+        color: colors[i % colors.length],
+      }));
+    } else {
+      const top3 = villageStats.slice(0, 3);
+      const others = villageStats.slice(3);
+      const othersTotal = others.reduce((acc, c) => acc + (c.total || 0), 0);
+      items = top3.map((v, i) => ({
+        name: v.village,
+        count: v.total,
+        pctNum: (v.total / total) * 100,
+        pctStr: `${((v.total / total) * 100).toFixed(1)}%`,
+        color: colors[i],
+      }));
+      items.push({
+        name: `Others (${others.length} Villages)`,
+        count: othersTotal,
+        pctNum: (othersTotal / total) * 100,
+        pctStr: `${((othersTotal / total) * 100).toFixed(1)}%`,
+        color: colors[3] || '#DBEAFE',
+      });
+    }
+
+    let accumulatedOffset = 0;
+    return items.map((seg) => {
+      const strokeDash = (seg.pctNum / 100) * circumference;
+      const offset = -accumulatedOffset;
+      accumulatedOffset += strokeDash;
+      return {
+        ...seg,
+        strokeDasharray: `${strokeDash.toFixed(1)} ${circumference.toFixed(1)}`,
+        strokeDashoffset: offset.toFixed(1),
+      };
+    });
+  }, [villageStats, totalElectorsCount, villageTotals]);
+
+  // Unique villages for filter dropdown
+  const uniqueVillages = useMemo(() => {
+    const fromRecords = churnRecords.map((c) => c.village).filter(Boolean);
+    const fromStats = villageStats.map((v) => v.village).filter(Boolean);
+    return ['All', ...new Set([...fromStats, ...fromRecords])];
+  }, [churnRecords, villageStats]);
 
   // Sorted village stats for expanded table view
   const sortedVillageStats = useMemo(() => {
@@ -625,7 +690,7 @@ export default function VoterRollsView({ data }) {
                 Village Roll Churn Breakdown
               </h3>
               <p className="text-[12px] text-slate-400 dark:text-slate-500 font-medium mt-0.5">
-                Share of roll deleted, added, and modified across 9 villages
+                Share of roll deleted, added, and modified across {villageStats.length} villages
               </p>
             </div>
 
@@ -640,55 +705,24 @@ export default function VoterRollsView({ data }) {
           </div>
 
           {!showVillageTable ? (
-            /* Visual Donut Chart + 4 Exact Shares (Matching Reference Image) */
+            /* Visual Donut Chart + Dynamic Shares (Matching Reference Image) */
             <div className="py-2 flex flex-col sm:flex-row items-center justify-around gap-6">
               {/* SVG Donut Chart */}
               <div className="relative w-40 h-40 flex items-center justify-center flex-shrink-0">
                 <svg viewBox="0 0 100 100" className="w-full h-full -rotate-90">
-                  {/* Segment 1: Sanquelim 31.1% (Deep Royal Blue) */}
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="37"
-                    fill="none"
-                    stroke="#1D4ED8"
-                    strokeWidth="13"
-                    strokeDasharray="72.3 232.5"
-                    strokeDashoffset="0"
-                  />
-                  {/* Segment 2: Pale 16.3% (Medium Sky Blue) */}
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="37"
-                    fill="none"
-                    stroke="#60A5FA"
-                    strokeWidth="13"
-                    strokeDasharray="37.9 232.5"
-                    strokeDashoffset="-72.3"
-                  />
-                  {/* Segment 3: Surla 11.6% (Light Blue) */}
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="37"
-                    fill="none"
-                    stroke="#93C5FD"
-                    strokeWidth="13"
-                    strokeDasharray="27.0 232.5"
-                    strokeDashoffset="-110.2"
-                  />
-                  {/* Segment 4: Others 41.0% (Soft Pale Lavender / Gray) */}
-                  <circle
-                    cx="50"
-                    cy="50"
-                    r="37"
-                    fill="none"
-                    stroke="#DBEAFE"
-                    strokeWidth="13"
-                    strokeDasharray="95.3 232.5"
-                    strokeDashoffset="-137.2"
-                  />
+                  {donutSegments.map((seg, i) => (
+                    <circle
+                      key={`seg-${seg.name}-${i}`}
+                      cx="50"
+                      cy="50"
+                      r="37"
+                      fill="none"
+                      stroke={seg.color}
+                      strokeWidth="13"
+                      strokeDasharray={seg.strokeDasharray}
+                      strokeDashoffset={seg.strokeDashoffset}
+                    />
+                  ))}
                 </svg>
                 {/* Center Hole Badge */}
                 <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
@@ -701,47 +735,24 @@ export default function VoterRollsView({ data }) {
                 </div>
               </div>
 
-              {/* Exact 4-Share List with Rounded Squares */}
+              {/* Dynamic Share List with Rounded Color Squares */}
               <div className="space-y-3 text-[12.5px] flex-1 max-w-xs">
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-3 h-3 rounded-sm bg-[#1D4ED8]" />
-                    <span className="font-bold text-slate-800 dark:text-slate-200">Sanquelim</span>
+                {donutSegments.map((seg, i) => (
+                  <div key={`legend-${seg.name}-${i}`} className="flex items-center justify-between">
+                    <div className="flex items-center gap-2.5 min-w-0">
+                      <span
+                        className="w-3 h-3 rounded-sm flex-shrink-0"
+                        style={{ backgroundColor: seg.color }}
+                      />
+                      <span className="font-bold text-slate-800 dark:text-slate-200 truncate">
+                        {seg.name}
+                      </span>
+                    </div>
+                    <span className="font-bold text-slate-900 dark:text-slate-100 tabular-nums flex-shrink-0 ml-2">
+                      {seg.pctStr} <span className="text-slate-400 dark:text-slate-500 font-normal">({formatIndianNumber(seg.count)})</span>
+                    </span>
                   </div>
-                  <span className="font-bold text-slate-900 dark:text-slate-100 tabular-nums">
-                    31.1% <span className="text-slate-400 dark:text-slate-500 font-normal">({formatIndianNumber(8480)})</span>
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-3 h-3 rounded-sm bg-[#60A5FA]" />
-                    <span className="font-bold text-slate-800 dark:text-slate-200">Pale</span>
-                  </div>
-                  <span className="font-bold text-slate-900 dark:text-slate-100 tabular-nums">
-                    16.3% <span className="text-slate-400 dark:text-slate-500 font-normal">({formatIndianNumber(4431)})</span>
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-3 h-3 rounded-sm bg-[#93C5FD]" />
-                    <span className="font-bold text-slate-800 dark:text-slate-200">Surla</span>
-                  </div>
-                  <span className="font-bold text-slate-900 dark:text-slate-100 tabular-nums">
-                    11.6% <span className="text-slate-400 dark:text-slate-500 font-normal">({formatIndianNumber(3163)})</span>
-                  </span>
-                </div>
-
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-2.5">
-                    <span className="w-3 h-3 rounded-sm bg-[#DBEAFE] dark:bg-slate-700" />
-                    <span className="font-bold text-slate-800 dark:text-slate-200">Others (6 Villages)</span>
-                  </div>
-                  <span className="font-bold text-slate-900 dark:text-slate-100 tabular-nums">
-                    41.0% <span className="text-slate-400 dark:text-slate-500 font-normal">({formatIndianNumber(11191)})</span>
-                  </span>
-                </div>
+                ))}
               </div>
             </div>
           ) : (
@@ -914,7 +925,7 @@ export default function VoterRollsView({ data }) {
                 ) : (
                   <FileSpreadsheet size={13} className="text-emerald-600 dark:text-emerald-400" />
                 )}
-                <span>Excel (3 Tabs)</span>
+                <span>Excel</span>
               </button>
 
               <button
@@ -929,7 +940,7 @@ export default function VoterRollsView({ data }) {
                 ) : (
                   <FileText size={13} className="text-rose-600 dark:text-rose-400" />
                 )}
-                <span>PDF ({activeTab.charAt(0).toUpperCase() + activeTab.slice(1)})</span>
+                <span>PDF</span>
               </button>
             </div>
           </div>

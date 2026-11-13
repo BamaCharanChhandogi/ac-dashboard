@@ -3,14 +3,7 @@ import {
   Users,
   Home,
   MapPin,
-  Landmark,
-  Activity,
-  CheckCircle2,
-  ShieldCheck,
-  Layers,
-  Sparkles,
-  BarChart2,
-  LayoutDashboard
+  Landmark
 } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import PageHeader from './PageHeader';
@@ -178,6 +171,11 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
 
   const avgVotersPerBooth = Math.round(totalVoters / (totalBooths || 1));
   const avgVotersPerFamily = (totalVoters / (totalFamilies || 1)).toFixed(1);
+
+  // Dynamic Net SSR 2026 Change calculation
+  const draftElectorCount = steps[0]?.count || totalVoters;
+  const netSSRDiff = totalVoters - draftElectorCount;
+  const netSSRDiffStr = netSSRDiff > 0 ? `+${formatIndianNumber(netSSRDiff)}` : netSSRDiff < 0 ? `−${formatIndianNumber(Math.abs(netSSRDiff))}` : '0';
 
   return (
     <div className="px-6 md:px-8 py-7 space-y-6 max-w-[1360px]">
@@ -456,7 +454,7 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
         </div>
       </div>
 
-      {/* 4. Master Metric Cards Row (Clean 3-Row Architecture: Label -> Hero Number -> Subtitle) */}
+      {/* 4. Master Metric Cards Row (Clean 3-Row Architecture: Label -> Hero Number -> Subtitle & Context) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {/* Card 1: ACTIVE ELECTORS */}
         <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all">
@@ -473,8 +471,11 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
             <p className="font-serif text-[30px] md:text-[32px] font-bold text-blue-600 dark:text-blue-400 tabular-nums leading-none tracking-tight">
               {formatIndianNumber(totalVoters)}
             </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1.5">
+            <p className="text-[12px] text-slate-700 dark:text-slate-300 font-semibold mt-1.5">
               Statutory enrolled voters
+            </p>
+            <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">
+              {netSSRDiffStr} Net SSR 2026 • {formatIndianNumber(totalDel)} Form-7 Purged
             </p>
           </div>
         </div>
@@ -494,8 +495,11 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
             <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
               {formatIndianNumber(totalFamilies)}
             </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1.5">
+            <p className="text-[12px] text-slate-700 dark:text-slate-300 font-semibold mt-1.5">
               Distinct family clusters
+            </p>
+            <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">
+              ~{avgVotersPerFamily} electors / family • across {villagesCount} localities
             </p>
           </div>
         </div>
@@ -515,8 +519,11 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
             <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
               {villagesCount}
             </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1.5">
+            <p className="text-[12px] text-slate-700 dark:text-slate-300 font-semibold mt-1.5">
               Constituent revenue units
+            </p>
+            <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">
+              100% Form-20 Mapped • {meta.taluka || 'Bicholim'}
             </p>
           </div>
         </div>
@@ -536,95 +543,12 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
             <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
               {totalBooths}
             </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1.5">
+            <p className="text-[12px] text-slate-700 dark:text-slate-300 font-semibold mt-1.5">
               Designated voting centers
             </p>
-          </div>
-        </div>
-      </div>
-
-      {/* 5. Constituency Signals Section (Matching Elevated Design) */}
-      <div className="space-y-4">
-        {/* Section Header */}
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
-            <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/60 border border-blue-200/70 dark:border-blue-900/60 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-2xs">
-              <Activity className="w-4 h-4" />
-            </div>
-            <div>
-              <h3 className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-none">
-                Constituency Signals
-              </h3>
-              <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
-                Automated statutory roll health, polling booth saturation, and voter clustering
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* 3 Clean 3-Row Signal Cards (Label -> Headline Value -> Contextual Text) */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-          {/* Signal 1: Roll Stability */}
-          <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-emerald-400/50 dark:hover:border-emerald-500/50 transition-all">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-                Roll Stability
-              </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-emerald-50 dark:bg-emerald-950/70 text-emerald-700 dark:text-emerald-400 border border-emerald-200/80 dark:border-emerald-800/60">
-                <CheckCircle2 className="w-3 h-3 text-emerald-500" /> STABLE
-              </span>
-            </div>
-
-            <div className="mt-3">
-              <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                Zero Net Drift
-              </p>
-              <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1.5">
-                No net change since July ({formatIndianNumber(totalVoters)}). Roll movement is minimal and strictly within normal range.
-              </p>
-            </div>
-          </div>
-
-          {/* Signal 2: Booth Coverage */}
-          <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-                Booth Coverage
-              </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-blue-50 dark:bg-blue-950/70 text-blue-700 dark:text-blue-400 border border-blue-200/80 dark:border-blue-800/60">
-                <ShieldCheck className="w-3 h-3 text-blue-500" /> OPTIMAL
-              </span>
-            </div>
-
-            <div className="mt-3">
-              <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                {totalBooths} Polling Stations
-              </p>
-              <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1.5">
-                Coverage across {villagesCount} villages. Average ~{avgVotersPerBooth} electors per booth, comfortably under ECI 1,200 limit.
-              </p>
-            </div>
-          </div>
-
-          {/* Signal 3: Household Concentration */}
-          <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-teal-400/50 dark:hover:border-teal-500/50 transition-all">
-            <div className="flex items-center justify-between">
-              <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-                Household Concentration
-              </span>
-              <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[11px] font-extrabold bg-teal-50 dark:bg-teal-950/70 text-teal-700 dark:text-teal-400 border border-teal-200/80 dark:border-teal-800/60">
-                <Layers className="w-3 h-3 text-teal-500" /> CLUSTERED
-              </span>
-            </div>
-
-            <div className="mt-3">
-              <p className="font-serif text-[22px] font-bold text-slate-900 dark:text-slate-100 leading-tight">
-                {formatIndianNumber(totalFamilies)} Households
-              </p>
-              <p className="text-[12px] text-slate-600 dark:text-slate-300 leading-relaxed font-normal mt-1.5">
-                Average ~{avgVotersPerFamily} electors per household cluster. High family voter concentration across 66 wadas.
-              </p>
-            </div>
+            <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-0.5">
+              ~{avgVotersPerBooth} electors / booth • Under ECI 1,200 limit
+            </p>
           </div>
         </div>
       </div>

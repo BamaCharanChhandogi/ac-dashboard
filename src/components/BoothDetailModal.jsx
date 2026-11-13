@@ -60,19 +60,20 @@ function getElectionReturns(booth, electionKey, acSlug) {
 
 /**
  * Reusable SVG Dual-Line Trend Chart matching original intelligence dashboard
+ * Includes intelligent collision-free label positioning and protective text halos
  */
 function TrendChart({ points, oppPartyName = 'Opponent' }) {
   const width = 360;
   const height = 150;
-  const padL = 42;
-  const padR = 24;
-  const padT = 22;
+  const padL = 48; // Roomy left padding so labels never touch Y-axis ticks
+  const padR = 26;
+  const padT = 24; // Headroom so peak percentages (80%+) never clip
   const padB = 28;
 
   const yMin = 10;
   const yMax = 90;
 
-  const getX = (idx) => padL + (idx * (width - padL - padR)) / (points.length - 1);
+  const getX = (idx) => padL + (idx * (width - padL - padR)) / Math.max(1, points.length - 1);
   const getY = (val) => padT + (1 - (val - yMin) / (yMax - yMin)) * (height - padT - padB);
 
   const bjpCoords = points.map((p, idx) => ({ x: getX(idx), y: getY(p.bjpShare), val: p.bjpShare, label: p.electionKey }));
@@ -82,6 +83,44 @@ function TrendChart({ points, oppPartyName = 'Opponent' }) {
   const oppPath = oppCoords.reduce((acc, pt, idx) => `${acc} ${idx === 0 ? 'M' : 'L'} ${pt.x} ${pt.y}`, '');
 
   const yTicks = [20, 40, 60, 80];
+
+  // Intelligent collision-free label positioning:
+  // Whichever line has higher share goes ABOVE dot; lower share goes BELOW dot.
+  // First point aligns start, last point aligns end, middle centers.
+  const resolvedLabels = points.map((p, idx) => {
+    const bjpPt = bjpCoords[idx];
+    const oppPt = oppCoords[idx];
+    const bjpIsHigher = bjpPt.val >= oppPt.val;
+
+    const isFirst = idx === 0;
+    const isLast = idx === points.length - 1;
+    const textAnchor = isFirst ? 'start' : isLast ? 'end' : 'middle';
+    const textX = isFirst ? bjpPt.x - 3 : isLast ? bjpPt.x + 3 : bjpPt.x;
+
+    let bjpLabelY, oppLabelY;
+
+    if (bjpIsHigher) {
+      // BJP is higher on screen -> BJP label goes ABOVE dot, Opponent goes BELOW dot
+      bjpLabelY = Math.max(15, bjpPt.y - 8);
+      oppLabelY = Math.min(height - padB - 4, oppPt.y + 13);
+    } else {
+      // Opponent is higher on screen -> Opponent label goes ABOVE dot, BJP goes BELOW dot
+      oppLabelY = Math.max(15, oppPt.y - 8);
+      bjpLabelY = Math.min(height - padB - 4, bjpPt.y + 13);
+    }
+
+    return {
+      textAnchor,
+      textX,
+      bjpLabelY,
+      oppLabelY,
+      bjpVal: bjpPt.val,
+      oppVal: oppPt.val,
+      bjpPt,
+      oppPt,
+      label: p.electionKey,
+    };
+  });
 
   return (
     <div className="w-full">
@@ -138,7 +177,7 @@ function TrendChart({ points, oppPartyName = 'Opponent' }) {
           Vote Share (%)
         </text>
 
-        {/* Opponent Line (Blue/Grey) */}
+        {/* Opponent Line (Blue) */}
         <path
           d={oppPath}
           fill="none"
@@ -158,46 +197,55 @@ function TrendChart({ points, oppPartyName = 'Opponent' }) {
           strokeLinejoin="round"
         />
 
-        {/* Opponent Dots & Values */}
-        {oppCoords.map((pt, idx) => (
-          <g key={`opp-${idx}`}>
-            <circle cx={pt.x} cy={pt.y} r={3.8} fill="#3B82F6" stroke="#FFFFFF" strokeWidth={1.5} />
-            <text
-              x={pt.x}
-              y={pt.y + 11}
-              textAnchor="middle"
-              className="text-[9px] font-bold fill-blue-600 dark:fill-blue-400"
-            >
-              {pt.val.toFixed(1)}%
-            </text>
+        {/* Dots */}
+        {resolvedLabels.map((item, idx) => (
+          <g key={`dots-${idx}`}>
+            <circle cx={item.oppPt.x} cy={item.oppPt.y} r={3.8} fill="#3B82F6" stroke="#FFFFFF" strokeWidth={1.5} />
+            <circle cx={item.bjpPt.x} cy={item.bjpPt.y} r={4.2} fill="#EA580C" stroke="#FFFFFF" strokeWidth={1.8} />
           </g>
         ))}
 
-        {/* BJP Dots & Values */}
-        {bjpCoords.map((pt, idx) => (
-          <g key={`bjp-${idx}`}>
-            <circle cx={pt.x} cy={pt.y} r={4.2} fill="#EA580C" stroke="#FFFFFF" strokeWidth={1.8} />
+        {/* Percentage Labels with Protective Halos */}
+        {resolvedLabels.map((item, idx) => (
+          <g key={`labels-${idx}`}>
+            {/* Opponent Value */}
             <text
-              x={pt.x}
-              y={pt.y - 6}
-              textAnchor="middle"
-              className="text-[9px] font-extrabold fill-orange-600 dark:fill-orange-400"
+              x={item.textX}
+              y={item.oppLabelY}
+              textAnchor={item.textAnchor}
+              stroke="white"
+              strokeWidth="2.5"
+              paintOrder="stroke fill"
+              className="dark:stroke-[#0D1527] text-[9.5px] font-bold fill-blue-600 dark:fill-blue-400 select-none"
             >
-              {pt.val.toFixed(1)}%
+              {item.oppVal.toFixed(1)}%
+            </text>
+
+            {/* BJP Value */}
+            <text
+              x={item.textX}
+              y={item.bjpLabelY}
+              textAnchor={item.textAnchor}
+              stroke="white"
+              strokeWidth="2.5"
+              paintOrder="stroke fill"
+              className="dark:stroke-[#0D1527] text-[9.5px] font-extrabold fill-orange-600 dark:fill-orange-400 select-none"
+            >
+              {item.bjpVal.toFixed(1)}%
             </text>
           </g>
         ))}
 
         {/* X Axis Labels */}
-        {bjpCoords.map((pt, idx) => (
+        {resolvedLabels.map((item, idx) => (
           <text
             key={`lbl-${idx}`}
-            x={pt.x}
+            x={item.bjpPt.x}
             y={height - 6}
             textAnchor="middle"
             className="text-[9.5px] font-bold fill-slate-500 dark:fill-slate-400"
           >
-            {pt.label}
+            {item.label}
           </text>
         ))}
       </svg>
@@ -434,13 +482,6 @@ export default function BoothDetailModal({ booth, onClose, data }) {
           <p className="text-[11px] text-slate-400 dark:text-slate-500 italic">
             Form-20 audited returns across 6 consecutive election cycles • Corporate Chanakya Intelligence
           </p>
-          <button
-            type="button"
-            onClick={onClose}
-            className="px-4 py-1.5 text-xs font-bold rounded-lg bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-300 dark:hover:bg-slate-700 transition-colors cursor-pointer"
-          >
-            Close
-          </button>
         </div>
       </div>
     </div>,

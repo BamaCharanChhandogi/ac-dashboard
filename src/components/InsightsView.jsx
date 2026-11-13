@@ -218,14 +218,17 @@ export default function InsightsView({ data }) {
   const mapScale = useMemo(() => {
     const vb = (activeMap.viewBox || '80 100 455 440').split(' ').map(Number);
     const w = vb[2] || 455;
-    const ratio = Math.max(0.85, Math.min(2.8, w / 455));
+    // Normalized ratio: 1.0 for standard Sanquelim (455px), gentle proportional scaling for wide maps (1186px)
+    const ratio = Math.max(0.85, Math.min(1.8, 1 + (w - 455) * 0.00095));
     return {
       ratio,
       villageFont: roundTo(11 * ratio, 1),
       marginFont: roundTo(9.5 * ratio, 1),
-      borderStroke: roundTo(2.0 * ratio, 1),
-      dyTop: roundTo(-6 * ratio, 1),
-      dyBottom: roundTo(13 * ratio, 1),
+      borderStroke: roundTo(2.0 * Math.min(1.4, ratio), 1),
+      boothStroke: roundTo(0.75 * Math.min(1.2, ratio), 1), // Light weight for internal booth lines
+      villageBorderStroke: roundTo(2.4 * Math.min(1.4, ratio), 1), // Prominent bold weight for village boundaries
+      dyTop: roundTo(-5 * ratio, 1),
+      dyBottom: roundTo(11 * ratio, 1),
     };
   }, [activeMap.viewBox]);
 
@@ -537,7 +540,7 @@ export default function InsightsView({ data }) {
                 {topKpis.totalHouseholds}
               </p>
               <p className="text-[11px] text-slate-500 dark:text-slate-400 font-medium">
-                Across 66 organic wadas
+                Across {meta.constituent_areas?.length || 9} constituent areas
               </p>
             </div>
           </div>
@@ -645,7 +648,7 @@ export default function InsightsView({ data }) {
                           fill={vp.fillColor}
                           fillOpacity={isHovered ? 0.95 : 0.78}
                           stroke={isHovered ? '#60A5FA' : '#FFFFFF'}
-                          strokeWidth={isHovered ? mapScale.borderStroke * 1.5 : mapScale.borderStroke}
+                          strokeWidth={isHovered ? mapScale.villageBorderStroke * 1.4 : mapScale.villageBorderStroke}
                           strokeLinejoin="round"
                           onClick={() => setModalVillage(vp.name)}
                           onMouseEnter={() => setHoveredVillage(vp.name)}
@@ -657,27 +660,58 @@ export default function InsightsView({ data }) {
                       );
                     })
                   ) : (
-                    /* Detailed Polling Booth Partitions Mode */
-                    boothPolygons.map((bp) => {
-                      const isHovered = hoveredVillage && hoveredVillage.toLowerCase() === (bp.village || '').toLowerCase();
-                      return (
+                    /* Detailed Polling Booth Partitions Mode: Less weight on booth lines, prominent bold weight on village borders! */
+                    <>
+                      {boothPolygons.map((bp) => {
+                        const isHovered = hoveredVillage && hoveredVillage.toLowerCase() === (bp.village || '').toLowerCase();
+                        return (
+                          <path
+                            key={bp.id}
+                            d={bp.path}
+                            fill={bp.fillColor}
+                            fillOpacity={isHovered ? 1.0 : 0.85}
+                            stroke={isHovered ? '#60A5FA' : 'rgba(255, 255, 255, 0.45)'}
+                            strokeWidth={isHovered ? mapScale.villageBorderStroke : mapScale.boothStroke}
+                            strokeLinejoin="round"
+                            onClick={() => setModalVillage(bp.village)}
+                            onMouseEnter={() => setHoveredVillage(bp.village)}
+                            onMouseLeave={() => setHoveredVillage(null)}
+                            className="transition-all duration-150 cursor-pointer"
+                          >
+                            <title>{`${bp.village}: ${bp.marginNum >= 0 ? '+' : ''}${bp.marginNum.toFixed(1)}% (Click to view Retrospective Dossier)`}</title>
+                          </path>
+                        );
+                      })}
+
+                      {/* Prominent Village Borders Overlay on top of Booth Partitions to clearly distinguish Village vs Booth borders */}
+                      <g id="village-borders-prominent-overlay" className="pointer-events-none">
+                        {activeMap.villageBorders?.map((vPath, i) => (
+                          <path
+                            key={`vp-prominent-border-${i}`}
+                            d={vPath}
+                            fill="none"
+                            stroke="#FFFFFF"
+                            strokeWidth={mapScale.villageBorderStroke}
+                            strokeLinejoin="round"
+                            strokeLinecap="round"
+                            className="opacity-95"
+                          />
+                        ))}
+                      </g>
+
+                      {/* Prominent Outer Boundary Contour */}
+                      {activeMap.outerBorder && (
                         <path
-                          key={bp.id}
-                          d={bp.path}
-                          fill={bp.fillColor}
-                          fillOpacity={isHovered ? 1.0 : 0.85}
-                          stroke={isHovered ? '#60A5FA' : '#FFFFFF'}
-                          strokeWidth={isHovered ? mapScale.borderStroke * 1.5 : mapScale.borderStroke}
+                          d={activeMap.outerBorder}
+                          fill="none"
+                          stroke="#FFFFFF"
+                          strokeWidth={mapScale.villageBorderStroke * 1.25}
                           strokeLinejoin="round"
-                          onClick={() => setModalVillage(bp.village)}
-                          onMouseEnter={() => setHoveredVillage(bp.village)}
-                          onMouseLeave={() => setHoveredVillage(null)}
-                          className="transition-all duration-150 cursor-pointer"
-                        >
-                          <title>{`${bp.village}: ${bp.marginNum >= 0 ? '+' : ''}${bp.marginNum.toFixed(1)}% (Click to view Retrospective Dossier)`}</title>
-                        </path>
-                      );
-                    })
+                          strokeLinecap="round"
+                          className="opacity-95"
+                        />
+                      )}
+                    </>
                   )}
 
                   {/* Centered Village Labels with Margins */}
@@ -851,7 +885,7 @@ export default function InsightsView({ data }) {
               Joint Family & Household Compound Clusters
             </h3>
             <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium">
-              Showing top <strong className="text-slate-700 dark:text-slate-300 font-bold">{filteredFamilies.length}</strong> joint family clusters across 66 wadas (<strong className="text-slate-700 dark:text-slate-300 font-bold">{formatIndianNumber(meta.total_families || 6041)}</strong> total households on record)
+              Showing top <strong className="text-slate-700 dark:text-slate-300 font-bold">{filteredFamilies.length}</strong> joint family clusters across {meta.constituent_areas?.length || 9} constituent areas (<strong className="text-slate-700 dark:text-slate-300 font-bold">{formatIndianNumber(meta.total_families || 6041)}</strong> total households on record)
             </p>
           </div>
 
@@ -1038,13 +1072,6 @@ export default function InsightsView({ data }) {
               {/* Modal Footer */}
               <div className="px-6 py-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-[11.5px] text-slate-400 bg-slate-50/70 dark:bg-slate-900/50">
                 <span>Verified ECI SIR 2026 Household Roster</span>
-                <button
-                  type="button"
-                  onClick={() => setSelectedFamily(null)}
-                  className="px-4 py-1.5 bg-slate-900 dark:bg-blue-600 hover:bg-slate-800 dark:hover:bg-blue-500 text-white rounded-lg font-medium transition-colors cursor-pointer text-[12px]"
-                >
-                  Close
-                </button>
               </div>
             </div>
           </div>,

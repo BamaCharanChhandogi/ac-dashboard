@@ -83,7 +83,7 @@ export default function ElectionResultsView({ data }) {
 
   const c1Width = 540;
   const c1Height = 230;
-  const c1Pad = { left: 45, right: 35, top: 25, bottom: 30 };
+  const c1Pad = { left: 58, right: 35, top: 25, bottom: 30 }; // Roomy left padding so labels never overlap Y-axis ticks
   const c1PlotW = c1Width - c1Pad.left - c1Pad.right;
   const c1PlotH = c1Height - c1Pad.top - c1Pad.bottom;
   const c1BaseY = c1Height - c1Pad.bottom;
@@ -127,7 +127,75 @@ export default function ElectionResultsView({ data }) {
         gradId: `grad_c1_${sIdx}`,
       };
     });
-  }, [c1Series, c1Years]);
+  }, [c1Series, c1Years, c1BaseY, c1PlotW, c1PlotH]);
+
+  // Intelligent Collision-Free Multi-Series Label Placement
+  // Groups points by year index, resolves vertical offsets and edge bounds
+  const c1ResolvedLabels = useMemo(() => {
+    const byYear = {};
+    computedC1Series.forEach((s) => {
+      s.validPoints.forEach((pt) => {
+        if (!byYear[pt.index]) byYear[pt.index] = [];
+        byYear[pt.index].push({
+          ...pt,
+          party: s.party,
+          color: s.color,
+        });
+      });
+    });
+
+    const result = [];
+    Object.keys(byYear).forEach((idxStr) => {
+      const idx = Number(idxStr);
+      const yearPts = byYear[idx];
+      // Sort points from highest vote share (smallest y) to lowest (largest y)
+      yearPts.sort((a, b) => a.y - b.y);
+
+      const isFirst = idx === 0;
+      const isLast = idx === c1Years.length - 1;
+      const textAnchor = isFirst ? 'start' : isLast ? 'end' : 'middle';
+      const textX = isFirst ? yearPts[0].x - 4 : isLast ? yearPts[0].x + 4 : yearPts[0].x;
+
+      if (yearPts.length === 1) {
+        yearPts[0].labelY = Math.max(16, yearPts[0].y - 12);
+      } else if (yearPts.length === 2) {
+        // Two points: top point goes ABOVE its dot, bottom point goes BELOW its dot
+        const topLabelY = Math.max(16, yearPts[0].y - 12);
+        const bottomLabelY = Math.min(c1BaseY - 6, Math.max(topLabelY + 16, yearPts[1].y + 16));
+        yearPts[0].labelY = topLabelY;
+        yearPts[1].labelY = bottomLabelY;
+      } else {
+        // Three or more points:
+        // Top point goes ABOVE its dot
+        yearPts[0].labelY = Math.max(16, yearPts[0].y - 12);
+        // Bottom point goes BELOW its dot
+        yearPts[yearPts.length - 1].labelY = Math.min(c1BaseY - 6, yearPts[yearPts.length - 1].y + 17);
+
+        // Middle points: determine whether to place above or below based on surrounding gaps
+        for (let i = 1; i < yearPts.length - 1; i++) {
+          const prevLabelY = yearPts[i - 1].labelY;
+          const naturalAbove = yearPts[i].y - 12;
+          const naturalBelow = yearPts[i].y + 16;
+
+          if (naturalAbove > prevLabelY + 14) {
+            yearPts[i].labelY = naturalAbove;
+          } else {
+            yearPts[i].labelY = Math.max(prevLabelY + 15, naturalBelow);
+          }
+        }
+      }
+
+      yearPts.forEach((pt) => {
+        result.push({
+          ...pt,
+          textAnchor,
+          textX,
+        });
+      });
+    });
+
+    return result;
+  }, [computedC1Series, c1Years.length, c1BaseY]);
 
   // =========================================================================
   // 3. DYNAMIC PARLIAMENTARY TREND GRAPH (ROW 2 - RIGHT)
@@ -148,7 +216,7 @@ export default function ElectionResultsView({ data }) {
 
   const c4Width = 540;
   const c4Height = 230;
-  const c4Pad = { left: 45, right: 35, top: 35, bottom: 30 };
+  const c4Pad = { left: 58, right: 35, top: 35, bottom: 30 }; // Roomy left padding so labels never overlap Y-axis ticks
   const c4PlotW = c4Width - c4Pad.left - c4Pad.right;
   const c4PlotH = c4Height - c4Pad.top - c4Pad.bottom;
   const c4BaseY = c4Height - c4Pad.bottom;
@@ -246,16 +314,34 @@ export default function ElectionResultsView({ data }) {
                 <img
                   src={mlaWinner.photo}
                   alt={mlaWinner.name}
-                  className="w-16 h-16 sm:w-17 sm:h-17 rounded-full object-cover border-2 border-orange-400/90 shadow-xs flex-shrink-0"
+                  className={`w-16 h-16 sm:w-17 sm:h-17 rounded-full object-cover border-2 shadow-xs flex-shrink-0 ${
+                    mlaWinner.party === 'BJP'
+                      ? 'border-orange-400/90'
+                      : mlaWinner.party === 'INC'
+                      ? 'border-blue-500/90'
+                      : 'border-slate-400/90'
+                  }`}
                 />
                 <div className="space-y-0.5 min-w-0">
-                  <span className="text-[10px] font-bold tracking-wider text-orange-600 dark:text-orange-400 uppercase">
+                  <span className={`text-[10px] font-bold tracking-wider uppercase ${
+                    mlaWinner.party === 'BJP'
+                      ? 'text-orange-600 dark:text-orange-400'
+                      : mlaWinner.party === 'INC'
+                      ? 'text-blue-600 dark:text-blue-400'
+                      : 'text-slate-600 dark:text-slate-400'
+                  }`}>
                     WINNER
                   </span>
-                  <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-slate-900 dark:text-slate-100 leading-tight whitespace-nowrap">
+                  <h4 className="font-serif text-[16px] sm:text-[17px] font-bold text-slate-900 dark:text-slate-100 leading-snug break-words">
                     {mlaWinner.name}
                   </h4>
-                  <span className="inline-block px-2 py-0.5 rounded text-[10px] font-extrabold bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300">
+                  <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-extrabold ${
+                    mlaWinner.party === 'BJP'
+                      ? 'bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300'
+                      : mlaWinner.party === 'INC'
+                      ? 'bg-blue-100 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200'
+                  }`}>
                     {mlaWinner.party}
                   </span>
                 </div>
@@ -331,16 +417,34 @@ export default function ElectionResultsView({ data }) {
                 <img
                   src={mpWinner.photo}
                   alt={mpWinner.name}
-                  className="w-16 h-16 sm:w-17 sm:h-17 rounded-full object-cover border-2 border-orange-400/90 shadow-xs flex-shrink-0"
+                  className={`w-16 h-16 sm:w-17 sm:h-17 rounded-full object-cover border-2 shadow-xs flex-shrink-0 ${
+                    mpWinner.party === 'BJP'
+                      ? 'border-orange-400/90'
+                      : mpWinner.party === 'INC'
+                      ? 'border-blue-500/90'
+                      : 'border-slate-400/90'
+                  }`}
                 />
                 <div className="space-y-0.5 min-w-0">
-                  <span className="text-[10px] font-bold tracking-wider text-orange-600 dark:text-orange-400 uppercase">
+                  <span className={`text-[10px] font-bold tracking-wider uppercase ${
+                    mpWinner.party === 'BJP'
+                      ? 'text-orange-600 dark:text-orange-400'
+                      : mpWinner.party === 'INC'
+                      ? 'text-blue-600 dark:text-blue-400'
+                      : 'text-slate-600 dark:text-slate-400'
+                  }`}>
                     WINNER
                   </span>
-                  <h4 className="font-serif text-[17px] sm:text-[18px] font-bold text-slate-900 dark:text-slate-100 leading-tight whitespace-nowrap">
+                  <h4 className="font-serif text-[16px] sm:text-[17px] font-bold text-slate-900 dark:text-slate-100 leading-snug break-words">
                     {mpWinner.name}
                   </h4>
-                  <span className="inline-block px-2 py-0.5 rounded text-[10px] font-extrabold bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300">
+                  <span className={`inline-block px-2 py-0.5 rounded text-[10px] font-extrabold ${
+                    mpWinner.party === 'BJP'
+                      ? 'bg-orange-100 dark:bg-orange-950/60 text-orange-800 dark:text-orange-300'
+                      : mpWinner.party === 'INC'
+                      ? 'bg-blue-100 dark:bg-blue-950/60 text-blue-800 dark:text-blue-300'
+                      : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200'
+                  }`}>
                     {mpWinner.party}
                   </span>
                 </div>
@@ -487,37 +591,34 @@ export default function ElectionResultsView({ data }) {
                   </g>
                 ))}
 
-                {/* Render Dots & Percentage Labels */}
-                {computedC1Series.map((s) => (
-                  <g key={`dots_${s.party}`}>
-                    {s.validPoints.map((pt, pIdx) => {
-                      const isBjp = s.party.includes('BJP');
-                      const isInc = s.party.includes('INC');
-                      const labelY = isBjp ? pt.y - 12 : (isInc && pt.index === 0 ? pt.y - 12 : pt.y + 17);
+                {/* Render Dots */}
+                {c1ResolvedLabels.map((pt, pIdx) => (
+                  <circle
+                    key={`dot_${pt.party}_${pIdx}`}
+                    cx={pt.x}
+                    cy={pt.y}
+                    r="4.5"
+                    fill={pt.color}
+                    stroke="#fff"
+                    strokeWidth="2"
+                  />
+                ))}
 
-                      return (
-                        <g key={pIdx}>
-                          <circle
-                            cx={pt.x}
-                            cy={pt.y}
-                            r="4.5"
-                            fill={s.color}
-                            stroke="#fff"
-                            strokeWidth="2"
-                          />
-                          <text
-                            x={pt.x}
-                            y={labelY}
-                            textAnchor="middle"
-                            fill={s.color}
-                            className="text-[12px] font-bold"
-                          >
-                            {pt.val.toFixed(2).replace(/\.00$/, '')}%
-                          </text>
-                        </g>
-                      );
-                    })}
-                  </g>
+                {/* Render Collision-Free Labels with Protective Halos */}
+                {c1ResolvedLabels.map((pt, pIdx) => (
+                  <text
+                    key={`lbl_${pt.party}_${pIdx}`}
+                    x={pt.textX}
+                    y={pt.labelY}
+                    textAnchor={pt.textAnchor}
+                    fill={pt.color}
+                    stroke="white"
+                    strokeWidth="3.5"
+                    paintOrder="stroke fill"
+                    className="dark:stroke-[#0D1527] text-[12px] font-extrabold select-none"
+                  >
+                    {pt.val.toFixed(2).replace(/\.00$/, '')}%
+                  </text>
                 ))}
 
                 {/* Dash for first year if BJP did not contest */}
@@ -625,28 +726,39 @@ export default function ElectionResultsView({ data }) {
                   />
                 )}
 
-                {/* Points & Tags */}
-                {computedC4Points.map((pt, idx) => (
-                  <g key={idx}>
-                    <circle cx={pt.x} cy={pt.y} r="4.5" fill="#EA580C" stroke="#fff" strokeWidth="2" />
-                    <text
-                      x={pt.x}
-                      y={pt.y - 11}
-                      textAnchor="middle"
-                      className="fill-[#EA580C] text-[12px] font-bold"
-                    >
-                      {pt.pct.toFixed(2)}%
-                    </text>
-                    <text
-                      x={pt.x}
-                      y={c4Height - 12}
-                      textAnchor="middle"
-                      className="fill-slate-600 dark:fill-slate-400 text-[12px] font-semibold"
-                    >
-                      {pt.year}
-                    </text>
-                  </g>
-                ))}
+                {/* Points & Tags with Protective Halos */}
+                {computedC4Points.map((pt, idx) => {
+                  const isFirst = idx === 0;
+                  const isLast = idx === computedC4Points.length - 1;
+                  const textAnchor = isFirst ? 'start' : isLast ? 'end' : 'middle';
+                  const textX = isFirst ? pt.x - 4 : isLast ? pt.x + 4 : pt.x;
+
+                  return (
+                    <g key={idx}>
+                      <circle cx={pt.x} cy={pt.y} r="4.5" fill="#EA580C" stroke="#fff" strokeWidth="2" />
+                      <text
+                        x={textX}
+                        y={Math.max(18, pt.y - 11)}
+                        textAnchor={textAnchor}
+                        fill="#EA580C"
+                        stroke="white"
+                        strokeWidth="3.5"
+                        paintOrder="stroke fill"
+                        className="dark:stroke-[#0D1527] text-[12px] font-extrabold select-none"
+                      >
+                        {pt.pct.toFixed(2)}%
+                      </text>
+                      <text
+                        x={pt.x}
+                        y={c4Height - 12}
+                        textAnchor="middle"
+                        className="fill-slate-600 dark:fill-slate-400 text-[12px] font-semibold"
+                      >
+                        {pt.year}
+                      </text>
+                    </g>
+                  );
+                })}
               </svg>
             </div>
           </div>

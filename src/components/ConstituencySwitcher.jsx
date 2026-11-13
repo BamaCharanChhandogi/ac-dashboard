@@ -171,9 +171,9 @@ export default function ConstituencySwitcher({
 
       {/* Floating Popover Menu (Scalable for 100+ Constituencies) */}
       {isOpen && (
-        <div className={`absolute ${isCollapsed ? 'left-full ml-2 top-0' : 'left-2 top-full mt-1.5'} bg-white dark:bg-[#0D1527] rounded-2xl shadow-2xl border border-slate-200/90 dark:border-slate-800 z-50 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-150 w-[270px] sm:w-[290px]`}>
+        <div className={`absolute ${isCollapsed ? 'left-full ml-2 top-0' : 'left-2 top-full mt-1.5'} bg-white dark:bg-[#08132B] rounded-2xl shadow-2xl border border-slate-200 dark:border-slate-700/80 z-[100] overflow-hidden w-[270px] sm:w-[290px]`}>
           {/* Header & Search */}
-          <div className="p-3 bg-slate-50 dark:bg-slate-900/90 border-b border-slate-100 dark:border-slate-800">
+          <div className="p-3 bg-slate-50 dark:bg-[#0B152E] border-b border-slate-100 dark:border-slate-800">
             <div className="flex items-center justify-between mb-2">
               <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-500">
                 Switch Constituency ({allConstituencies.length} Available)
@@ -215,7 +215,7 @@ export default function ConstituencySwitcher({
           </div>
 
           {/* Constituencies List */}
-          <div className="max-h-[300px] overflow-y-auto divide-y divide-slate-100 dark:divide-slate-800 py-1">
+          <div className="max-h-[300px] overflow-y-auto divide-y divide-slate-100 dark:divide-slate-800 py-1 bg-white dark:bg-[#08132B]">
             {filteredList.length === 0 ? (
               <div className="p-4 text-center text-slate-400 dark:text-slate-500 text-[12px]">
                 No constituency found for "{searchTerm}"
@@ -280,7 +280,7 @@ export default function ConstituencySwitcher({
           </div>
 
           {/* Popover Footer */}
-          <div className="p-2 bg-slate-50 dark:bg-slate-900/90 border-t border-slate-100 dark:border-slate-800 text-center">
+          <div className="p-2 bg-slate-50 dark:bg-[#0B152E] border-t border-slate-100 dark:border-slate-800 text-center">
             <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
               Corporate Chanakya • Multi-Constituency Engine
             </span>

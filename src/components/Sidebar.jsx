@@ -12,7 +12,6 @@ import {
   ChevronsRight,
   Sun,
   Moon,
-  Check,
   Menu,
   X,
 } from 'lucide-react';
@@ -132,27 +131,16 @@ export default function Sidebar({
         )}
 
         {/* Brand Header */}
-        <div className={`relative z-10 flex items-center border-b border-slate-100 dark:border-white/5 flex-shrink-0 ${
-          isCollapsed ? 'h-[74px] px-2 justify-center' : 'h-[68px] px-3.5 justify-between'
-        }`}>
+        <div className="relative z-10 flex items-center h-[68px] px-3.5 border-b border-slate-100 dark:border-white/5 flex-shrink-0 justify-between">
           {isCollapsed ? (
-            <div className="flex flex-col items-center justify-center gap-1.5 w-full">
-              <div className="w-8 h-8 rounded-xl bg-white dark:bg-white p-1 flex items-center justify-center shadow-xs border border-slate-200/90 dark:border-white/20 flex-shrink-0">
+            <div className="flex items-center justify-center w-full">
+              <div className="w-9 h-9 rounded-xl bg-white dark:bg-white p-1 flex items-center justify-center shadow-xs border border-slate-200/90 dark:border-white/20 flex-shrink-0">
                 <img
                   src="/images/corporate-chanakya-logo.png"
                   alt="Corporate Chanakya Logo"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <button
-                type="button"
-                onClick={onToggleCollapse}
-                aria-label="Expand sidebar"
-                title="Expand sidebar («)"
-                className="w-6 h-5 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 flex items-center justify-center text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors cursor-pointer"
-              >
-                <ChevronsRight size={13} />
-              </button>
             </div>
           ) : (
             <>
@@ -177,17 +165,6 @@ export default function Sidebar({
                 </div>
               </div>
 
-              {/* Desktop Collapse Toggle Button « */}
-              <button
-                type="button"
-                onClick={onToggleCollapse}
-                aria-label="Collapse sidebar"
-                title="Collapse sidebar («)"
-                className="hidden lg:flex items-center justify-center w-7 h-7 rounded-lg bg-slate-50 hover:bg-slate-100 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors cursor-pointer ml-auto"
-              >
-                <ChevronsLeft size={14} />
-              </button>
-
               {/* Mobile close */}
               <button
                 type="button"
@@ -202,7 +179,7 @@ export default function Sidebar({
         </div>
 
         {/* Global Persistent Constituency Switcher Card */}
-        <div className="relative z-10 border-b border-slate-100 dark:border-white/5 flex-shrink-0">
+        <div className="relative z-30 border-b border-slate-100 dark:border-white/5 flex-shrink-0">
           <ConstituencySwitcher
             currentSlug={currentSlug}
             directory={directory}
@@ -340,84 +317,85 @@ export default function Sidebar({
           </div>
         </nav>
 
-        {/* Appearance Switcher (Clean 2-Button Segmented Pill Container) */}
-        <div className="relative z-10 px-3 py-2 border-t border-slate-100 dark:border-white/5 flex-shrink-0">
-          {!isCollapsed && (
-            <p className="px-1 mb-1.5 text-[9.5px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400/80">
-              Appearance
-            </p>
-          )}
-
+        {/* Appearance Switcher & Collapse Toggle */}
+        <div className="relative z-10 px-3 py-2.5 border-t border-slate-100 dark:border-white/5 flex-shrink-0">
           {isCollapsed ? (
-            <button
-              type="button"
-              onClick={() => setTheme(isDark ? 'light' : 'dark')}
-              title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
-              className="w-10 h-10 mx-auto rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 cursor-pointer transition-colors"
-            >
-              {isDark ? <Moon size={16} className="text-blue-400" /> : <Sun size={16} className="text-amber-500" />}
-            </button>
-          ) : (
-            <div className="grid grid-cols-2 gap-1 bg-slate-100/90 dark:bg-white/[0.04] p-1 rounded-xl border border-slate-200/70 dark:border-white/5">
+            <div className="flex flex-col items-center gap-2">
+              {/* Expand Sidebar Toggle (ChevronsRight >>) placed right before color switch */}
               <button
                 type="button"
-                onClick={() => setTheme('light')}
-                className={`
-                  flex items-center justify-center gap-2 py-1.5 rounded-lg text-[12px] font-semibold
-                  transition-colors duration-150 cursor-pointer select-none
-                  ${
-                    !isDark
-                      ? 'bg-white text-slate-900 shadow-sm border border-slate-200/80 font-bold'
-                      : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
-                  }
-                `}
-                title="Light Mode"
+                onClick={onToggleCollapse}
+                aria-label="Expand sidebar"
+                title="Expand sidebar"
+                className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 flex items-center justify-center text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white cursor-pointer transition-colors"
               >
-                <Sun size={14} className={!isDark ? 'text-blue-600' : 'text-slate-400'} />
-                <span>Light</span>
+                <ChevronsRight size={16} />
               </button>
+
+              {/* Theme Toggle Button */}
               <button
                 type="button"
-                onClick={() => setTheme('dark')}
-                className={`
-                  flex items-center justify-center gap-2 py-1.5 rounded-lg text-[12px] font-semibold
-                  transition-colors duration-150 cursor-pointer select-none
-                  ${
-                    isDark
-                      ? 'bg-[#0D1527] text-white shadow-sm border border-blue-500/40 font-bold'
-                      : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
-                  }
-                `}
-                title="Dark Mode"
+                onClick={(e) => setTheme(isDark ? 'light' : 'dark', e)}
+                title={isDark ? 'Switch to Light Mode' : 'Switch to Dark Mode'}
+                className="w-10 h-10 rounded-xl bg-slate-100 hover:bg-slate-200/80 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 flex items-center justify-center text-slate-700 dark:text-slate-300 cursor-pointer transition-colors"
               >
-                <Moon size={14} className={isDark ? 'text-blue-400' : 'text-slate-400'} />
-                <span>Dark</span>
+                {isDark ? <Moon size={16} className="text-blue-400" /> : <Sun size={16} className="text-amber-500" />}
               </button>
             </div>
-          )}
-        </div>
-
-        {/* Ambient Footer Status Badge (Goa Assembly Revision 2026) */}
-        <div className="relative z-10 p-2.5 border-t border-slate-100 dark:border-white/5 flex-shrink-0">
-          {isCollapsed ? (
-            <div
-              title="Goa Assembly Revision 2026 • 50 Polling Stations • SIR Synchronized"
-              className="w-10 h-10 mx-auto rounded-xl bg-emerald-50 dark:bg-emerald-950/40 border border-emerald-200/70 dark:border-emerald-800/40 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-xs cursor-default"
-            >
-              <Check size={16} strokeWidth={2.5} />
-            </div>
           ) : (
-            <div className="bg-[#EBFDF2] dark:bg-emerald-950/30 rounded-xl p-2.5 border border-[#B7F4CA] dark:border-emerald-800/40 flex items-center gap-2.5 shadow-xs">
-              <div className="w-6 h-6 rounded-full bg-[#10B981] text-white flex items-center justify-center shrink-0 shadow-xs">
-                <Check size={13} strokeWidth={3} />
+            <div className="space-y-1.5">
+              {/* Header row: Appearance label on left, Collapse button at bottom right placed right before color switch */}
+              <div className="flex items-center justify-between px-1">
+                <span className="text-[9.5px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400/80">
+                  Appearance
+                </span>
+                <button
+                  type="button"
+                  onClick={onToggleCollapse}
+                  aria-label="Collapse sidebar"
+                  title="Collapse sidebar"
+                  className="hidden lg:flex items-center justify-center w-6 h-6 rounded-md bg-slate-100 hover:bg-slate-200 dark:bg-white/5 dark:hover:bg-white/10 border border-slate-200/80 dark:border-white/10 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white transition-colors cursor-pointer"
+                >
+                  <ChevronsLeft size={13} />
+                </button>
               </div>
-              <div className="min-w-0">
-                <p className="text-[11px] font-bold text-slate-800 dark:text-emerald-100 leading-tight truncate">
-                  Goa Assembly Revision 2026
-                </p>
-                <p className="text-[9.5px] font-medium text-slate-500 dark:text-emerald-400/80 leading-tight mt-0.5 truncate">
-                  50 Polling Stations • SIR Synchronized
-                </p>
+
+              {/* Color switch buttons */}
+              <div className="grid grid-cols-2 gap-1 bg-slate-100/90 dark:bg-white/[0.04] p-1 rounded-xl border border-slate-200/70 dark:border-white/5">
+                <button
+                  type="button"
+                  onClick={(e) => setTheme('light', e)}
+                  className={`
+                    flex items-center justify-center gap-2 py-1.5 rounded-lg text-[12px] font-semibold
+                    transition-colors duration-150 cursor-pointer select-none
+                    ${
+                      !isDark
+                        ? 'bg-white text-slate-900 shadow-sm border border-slate-200/80 font-bold'
+                        : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
+                    }
+                  `}
+                  title="Light Mode"
+                >
+                  <Sun size={14} className={!isDark ? 'text-blue-600' : 'text-slate-400'} />
+                  <span>Light</span>
+                </button>
+                <button
+                  type="button"
+                  onClick={(e) => setTheme('dark', e)}
+                  className={`
+                    flex items-center justify-center gap-2 py-1.5 rounded-lg text-[12px] font-semibold
+                    transition-colors duration-150 cursor-pointer select-none
+                    ${
+                      isDark
+                        ? 'bg-[#0D1527] text-white shadow-sm border border-blue-500/40 font-bold'
+                        : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
+                    }
+                  `}
+                  title="Dark Mode"
+                >
+                  <Moon size={14} className={isDark ? 'text-blue-400' : 'text-slate-400'} />
+                  <span>Dark</span>
+                </button>
               </div>
             </div>
           )}
