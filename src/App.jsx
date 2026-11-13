@@ -22,6 +22,23 @@ export default function App() {
     const params = new URLSearchParams(window.location.search);
     return params.get('tab') || window.location.hash.replace('#', '') || 'dashboard';
   });
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(() => {
+    try {
+      return localStorage.getItem('chanakya_sidebar_collapsed') === 'true';
+    } catch {
+      return false;
+    }
+  });
+
+  const handleToggleCollapse = () => {
+    setSidebarCollapsed((prev) => {
+      const next = !prev;
+      try {
+        localStorage.setItem('chanakya_sidebar_collapsed', String(next));
+      } catch {}
+      return next;
+    });
+  };
 
   const handleNavigate = (section) => {
     setActiveSection(section);
@@ -112,56 +129,62 @@ export default function App() {
         currentSlug={currentSlug}
         directory={directory}
         onSelectAC={handleSelectAC}
+        isCollapsed={sidebarCollapsed}
+        onToggleCollapse={handleToggleCollapse}
       />
 
-      {/* Main Content Area with Locked Stable Scrollbar Gutter to Prevent Layout Shift */}
+      {/* Main Content Area with Dynamic Margin & Animated Section Transitions */}
       <main
-        className="flex-1 lg:ml-[240px] flex flex-col h-full overflow-y-auto bg-[#F1F5F9] dark:bg-[#0B1120] transition-colors duration-200"
+        className={`flex-1 ${
+          sidebarCollapsed ? 'lg:ml-[72px]' : 'lg:ml-[240px]'
+        } flex flex-col h-full overflow-y-auto bg-[#F1F5F9] dark:bg-[#0B1120] transition-[margin] duration-300 ease-in-out`}
         style={{ scrollbarGutter: 'stable' }}
       >
-        {activeSection === 'dashboard' && (
-          <ConstituencyOverview
-            data={data}
-            currentSlug={currentSlug}
-            onSelectAC={handleSelectAC}
-            directory={directory}
-          />
-        )}
+        <div key={activeSection} className="animate-view-fade min-h-full flex flex-col">
+          {activeSection === 'dashboard' && (
+            <ConstituencyOverview
+              data={data}
+              currentSlug={currentSlug}
+              onSelectAC={handleSelectAC}
+              directory={directory}
+            />
+          )}
 
-        {activeSection === 'constituencies' && (
-          <ConstituenciesView
-            currentSlug={currentSlug}
-            directory={directory}
-            onSelectAC={(slug) => {
-              handleSelectAC(slug);
-              setActiveSection('dashboard');
-            }}
-          />
-        )}
+          {activeSection === 'constituencies' && (
+            <ConstituenciesView
+              currentSlug={currentSlug}
+              directory={directory}
+              onSelectAC={(slug) => {
+                handleSelectAC(slug);
+                setActiveSection('dashboard');
+              }}
+            />
+          )}
 
-        {activeSection === 'booth' && (
-          <BoothAnalysisView data={data} />
-        )}
+          {activeSection === 'booth' && (
+            <BoothAnalysisView data={data} />
+          )}
 
-        {activeSection === 'voter-rolls' && (
-          <VoterRollsView data={data} />
-        )}
+          {activeSection === 'voter-rolls' && (
+            <VoterRollsView data={data} />
+          )}
 
-        {activeSection === 'demographics' && (
-          <DemographicsView data={data} />
-        )}
+          {activeSection === 'demographics' && (
+            <DemographicsView data={data} />
+          )}
 
-        {activeSection === 'results' && (
-          <ElectionResultsView data={data} />
-        )}
+          {activeSection === 'results' && (
+            <ElectionResultsView data={data} />
+          )}
 
-        {activeSection === 'reports' && (
-          <ReportsView data={data} />
-        )}
+          {activeSection === 'reports' && (
+            <ReportsView data={data} />
+          )}
 
-        {activeSection === 'insights' && (
-          <InsightsView data={data} />
-        )}
+          {activeSection === 'insights' && (
+            <InsightsView data={data} />
+          )}
+        </div>
       </main>
     </div>
   );
