@@ -1,5 +1,5 @@
-import React, { useState, useMemo } from 'react';
-import { Search, ChevronDown, Check, AlertTriangle } from 'lucide-react';
+import React, { useState, useMemo, useRef } from 'react';
+import { Search, ChevronDown, Check, AlertTriangle, Plus, Minus, Crosshair } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import sanquelimMapData from '../data/sanquelim-map.json';
 import porvorimMapData from '../data/porvorim-map.json';
@@ -87,6 +87,12 @@ export default function BoothAnalysisView({ data }) {
     return meta.sir_deleted || 702;
   }, [data?.roll_progression, meta.sir_deleted]);
 
+  // Interactive Zoom State
+  const [zoomLevel, setZoomLevel] = useState(1);
+  const handleZoomIn = () => setZoomLevel((z) => Math.min(2.2, roundTo(z + 0.25, 2)));
+  const handleZoomOut = () => setZoomLevel((z) => Math.max(0.8, roundTo(z - 0.25, 2)));
+  const handleResetZoom = () => setZoomLevel(1);
+
   // Filter & UI States
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedVillage, setSelectedVillage] = useState('All');
@@ -103,23 +109,23 @@ export default function BoothAnalysisView({ data }) {
   }, [rawBooths]);
 
   // Helper to resolve margin, category, color
-  // Strict non-overlapping rule: Safe (>10%), Battle Ground (-10% to +10%), Weak (<-10%)
+  // Strict rule: Safe (>10%), Battle Ground (-10% to +10%), Weak (<-10%)
   const getBoothElectionData = (b) => {
     if (!b) {
-      return { margin: 0, category: 'Safe', color: '#15803D', winner: 'BJP', isDashed: false };
+      return { margin: 0, category: 'Safe', color: '#16A34A', winner: 'BJP', isDashed: false };
     }
 
     if (b.elections && b.elections[selectedElection]) {
       const eData = b.elections[selectedElection];
       const m = eData.margin != null ? eData.margin : 0;
       let cat = 'Safe';
-      let col = '#15803D';
+      let col = '#16A34A';
       if (m < -10.0) {
         cat = 'Weak';
-        col = '#991B1B';
+        col = '#DC2626';
       } else if (m <= 10.0) {
-        cat = 'Battle Ground';
-        col = '#D97706';
+        cat = 'Battleground';
+        col = '#EA580C';
       }
 
       return {
@@ -132,13 +138,13 @@ export default function BoothAnalysisView({ data }) {
 
     const baseMargin = b.margin_pct != null ? b.margin_pct : 15.0;
     let cat = 'Safe';
-    let col = '#15803D';
+    let col = '#16A34A';
     if (baseMargin < -10.0) {
       cat = 'Weak';
-      col = '#991B1B';
+      col = '#DC2626';
     } else if (baseMargin <= 10.0) {
-      cat = 'Battle Ground';
-      col = '#D97706';
+      cat = 'Battleground';
+      col = '#EA580C';
     }
 
     return {
@@ -163,7 +169,7 @@ export default function BoothAnalysisView({ data }) {
     rawBooths.forEach((b) => {
       const stats = getBoothElectionData(b);
       if (stats.category === 'Weak') weak++;
-      else if (stats.category === 'Battle Ground') battle++;
+      else if (stats.category === 'Battle Ground' || stats.category === 'Battleground') battle++;
       else safe++;
       totalMargin += (stats.margin || 0);
     });
@@ -171,13 +177,13 @@ export default function BoothAnalysisView({ data }) {
     return { safe, battle, weak, needsAttention: battle + weak, avgMargin };
   }, [rawBooths, selectedElection]);
 
-  // Filtered and Sorted booth roster — NEVER filters out booths when clicking a booth!
+  // Filtered and Sorted booth roster
   const filteredBooths = useMemo(() => {
     return rawBooths
       .filter((b) => {
         const stats = getBoothElectionData(b);
         if (statusFilter === 'NEEDS_ATTENTION' && stats.category === 'Safe') return false;
-        if (statusFilter === 'BATTLE_GROUND' && stats.category !== 'Battle Ground') return false;
+        if (statusFilter === 'BATTLE_GROUND' && stats.category !== 'Battle Ground' && stats.category !== 'Battleground') return false;
         if (statusFilter === 'WEAK' && stats.category !== 'Weak') return false;
         if (statusFilter === 'SAFE' && stats.category !== 'Safe') return false;
 
@@ -232,7 +238,7 @@ export default function BoothAnalysisView({ data }) {
         </p>
       </div>
 
-      {/* 2. Top 4 Clean Metric Cards (No Dev Bloat Text) */}
+      {/* 2. Top 4 Clean Metric Cards */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {/* Card 1: TOTAL BOOTHS */}
         <div className="bg-white dark:bg-[#0D1527] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs">
@@ -275,9 +281,9 @@ export default function BoothAnalysisView({ data }) {
         </div>
       </div>
 
-      {/* 3. Spatial Vector Map Card */}
+      {/* 3. Spatial Satellite Map Card (Matching User Reference Image Exactly!) */}
       <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 md:p-6 shadow-xs space-y-4">
-        {/* Top Controls: Title & Election Pills */}
+        {/* Top Controls: Title & Election Selector Pills */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
           <div>
             <h3 className="font-serif text-[18px] md:text-[20px] font-bold text-slate-900 dark:text-slate-100">
@@ -307,177 +313,261 @@ export default function BoothAnalysisView({ data }) {
           </div>
         </div>
 
-        {/* Live Legend Strip (Directly above the map) */}
-        <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-50 dark:bg-[#131F38] border border-slate-200/80 dark:border-slate-800/80 rounded-xl px-4 py-2 text-[12px]">
-          <div className="flex flex-wrap items-center gap-4 sm:gap-6">
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#15803D]" />
-              <span className="font-medium text-slate-700 dark:text-slate-300">
-                Safe (&gt;+10%): <strong className="text-emerald-700 dark:text-emerald-400 font-bold">{electionSummary.safe} {electionSummary.safe === 1 ? 'booth' : 'booths'}</strong>
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#D97706]" />
-              <span className="font-medium text-slate-700 dark:text-slate-300">
-                Battle Ground (±10%): <strong className="text-amber-700 dark:text-amber-400 font-bold">{electionSummary.battle} {electionSummary.battle === 1 ? 'booth' : 'booths'}</strong>
-              </span>
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="w-3 h-3 rounded-full bg-[#991B1B]" />
-              <span className="font-medium text-slate-700 dark:text-slate-300">
-                Weak (&lt;−10%): <strong className="text-rose-700 dark:text-rose-400 font-bold">{electionSummary.weak} {electionSummary.weak === 1 ? 'booth' : 'booths'}</strong>
-              </span>
+        {/* Satellite Map Container with Interactive Controls & Floating Glassmorphic Legend */}
+        <div className="w-full relative rounded-2xl overflow-hidden border border-slate-800/90 shadow-2xl min-h-[460px] md:min-h-[520px] flex items-center justify-center select-none bg-[#071318]">
+          {/* Authentic High-Resolution Satellite Aerial Terrain Layer */}
+          <div
+            className="absolute inset-0 bg-cover bg-center brightness-[0.82] contrast-[1.25] saturate-[1.2]"
+            style={{
+              backgroundImage: `url('/images/goa-satellite.jpg')`,
+            }}
+          />
+
+          {/* Subtle Ambient Vignette & Shadow Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40 pointer-events-none" />
+
+          {/* Top-Left GIS Zoom Controls (Matching Reference Image) */}
+          <div className="absolute top-4 left-4 flex flex-col rounded-xl overflow-hidden bg-slate-900/85 backdrop-blur-md border border-white/15 shadow-xl z-20">
+            <button
+              type="button"
+              onClick={handleZoomIn}
+              className="w-8 h-8 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+              title="Zoom In"
+            >
+              <Plus size={15} />
+            </button>
+            <div className="h-[1px] bg-white/10" />
+            <button
+              type="button"
+              onClick={handleZoomOut}
+              className="w-8 h-8 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+              title="Zoom Out"
+            >
+              <Minus size={15} />
+            </button>
+            <div className="h-[1px] bg-white/10" />
+            <button
+              type="button"
+              onClick={handleResetZoom}
+              className="w-8 h-8 flex items-center justify-center text-white/90 hover:text-white hover:bg-white/10 transition-colors cursor-pointer"
+              title="Recenter / Reset Extent"
+            >
+              <Crosshair size={14} />
+            </button>
+          </div>
+
+          {/* Bottom-Left 2 km Scale Bar (Matching Reference Image) */}
+          <div className="absolute bottom-4 left-4 flex items-center gap-2 select-none z-20 pointer-events-none">
+            <span className="text-[11px] font-bold text-white tracking-wider drop-shadow-md">
+              2 km
+            </span>
+            <div className="flex items-center">
+              <div className="w-[2px] h-2.5 bg-white shadow-xs" />
+              <div className="w-14 h-[2px] bg-white shadow-xs" />
+              <div className="w-[2px] h-2.5 bg-white shadow-xs" />
             </div>
           </div>
 
-          <div className="text-[11.5px] font-semibold text-slate-500 dark:text-slate-400">
-            AC Avg Margin: <strong className="text-slate-900 dark:text-slate-100 tabular-nums">{electionSummary.avgMargin > 0 ? '+' : ''}{electionSummary.avgMargin}%</strong>
-          </div>
-        </div>
+          {/* Top-Right Floating Glassmorphic Legend Card (Matching Reference Image Exactly!) */}
+          <div className="absolute top-4 right-4 bg-[#0A1124]/85 backdrop-blur-md rounded-2xl border border-white/15 p-4 shadow-2xl z-20 min-w-[210px] text-left select-none">
+            <h4 className="font-serif text-[15px] font-bold text-white tracking-tight leading-none">
+              Booth Status
+            </h4>
+            <p className="text-[11px] text-slate-300 font-medium italic mt-1 mb-3">
+              (vs AC Avg Margin)
+            </p>
 
-        {/* Spatial Map Canvas */}
-        <div className="w-full bg-[#0B1120] dark:bg-[#060B16] rounded-xl border border-slate-800/80 relative overflow-hidden flex items-center justify-center p-3 select-none min-h-[440px] shadow-inner">
-          <svg
-            viewBox={activeMap.viewBox || '80 100 455 440'}
-            className="w-full h-auto max-h-[580px]"
-            preserveAspectRatio="xMidYMid meet"
+            <div className="space-y-2 text-[12px] font-semibold">
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-3.5 h-3.5 rounded-full bg-[#16A34A] shadow-xs" />
+                  <span className="text-slate-200">Safe (&gt;+10%)</span>
+                </div>
+                <span className="font-bold text-white tabular-nums">{electionSummary.safe}</span>
+              </div>
+
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-3.5 h-3.5 rounded-full bg-[#EA580C] shadow-xs" />
+                  <span className="text-slate-200">Battleground (±10%)</span>
+                </div>
+                <span className="font-bold text-white tabular-nums">{electionSummary.battle}</span>
+              </div>
+
+              <div className="flex items-center justify-between gap-4">
+                <div className="flex items-center gap-2">
+                  <span className="w-3.5 h-3.5 rounded-full bg-[#DC2626] shadow-xs" />
+                  <span className="text-slate-200">Weak (&lt;−10%)</span>
+                </div>
+                <span className="font-bold text-white tabular-nums">{electionSummary.weak}</span>
+              </div>
+            </div>
+
+            {/* Boundary Legend Key matching reference image */}
+            <div className="mt-3.5 pt-3 border-t border-white/15 space-y-1.5 text-[11px] text-slate-300 font-medium">
+              <div className="flex items-center gap-2.5">
+                <div className="w-5 h-3 rounded-[3px] border-2 border-white bg-transparent" />
+                <span>Constituency Boundary</span>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <div className="w-5 h-3 rounded-[3px] border border-dashed border-white/80 bg-transparent" />
+                <span>Booth Boundary</span>
+              </div>
+            </div>
+          </div>
+
+          {/* SVG Vector Layer overlay with Smooth Interactive Zoom & Pan */}
+          <div
+            className="w-full h-full relative z-10 flex items-center justify-center p-4 transition-transform duration-200 ease-out"
+            style={{ transform: `scale(${zoomLevel})` }}
           >
-            <defs>
-              <filter id="villageTextGlow" x="-20%" y="-20%" width="140%" height="140%">
-                <feDropShadow dx="0" dy="1" stdDeviation="1.5" floodColor="#000000" floodOpacity="0.9" />
-              </filter>
-            </defs>
+            <svg
+              viewBox={activeMap.viewBox || '80 100 455 440'}
+              className="w-full h-auto max-h-[580px] overflow-visible"
+              preserveAspectRatio="xMidYMid meet"
+            >
+              <defs>
+                <filter id="villageTextGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="1" stdDeviation="1.5" floodColor="#000000" floodOpacity="0.9" />
+                </filter>
+                <filter id="whiteGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="0" stdDeviation="2.5" floodColor="#FFFFFF" floodOpacity="0.8" />
+                </filter>
+              </defs>
 
-            {/* 1. Outer Border Glow */}
-            {activeMap.outerBorder && (
-              <path
-                d={activeMap.outerBorder}
-                fill="none"
-                stroke="#6B7280"
-                strokeWidth="4"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-                className="opacity-70"
-              />
-            )}
-
-            {/* 2. Booth Polygonal Choropleth Cells */}
-            <g id="booth-cells">
-              {activeMap.booths?.map((b) => {
-                const bNum = Number(b.number || b.part_no);
-                const isHovered = (hoveredBooth?.number || hoveredBooth?.part_no) === bNum;
-                const cellFill = getBoothColor(b);
-
-                return (
-                  <path
-                    key={`poly-${bNum}`}
-                    d={b.path}
-                    fill={cellFill}
-                    stroke={isHovered ? '#FFFFFF' : '#0B1120'}
-                    strokeWidth={isHovered ? '2.2' : '1.1'}
-                    className="transition-colors duration-150 cursor-pointer opacity-90 hover:opacity-100"
-                    onClick={() => handleBoothClick(b)}
-                    onMouseEnter={() => setHoveredBooth(b)}
-                    onMouseLeave={() => setHoveredBooth(null)}
-                  />
-                );
-              })}
-            </g>
-
-            {/* 3. Village Boundaries */}
-            <g id="village-borders" className="pointer-events-none">
-              {activeMap.villageBorders?.map((vPath, i) => (
+              {/* 1. Outer Glowing White Boundary (Constituency Boundary Key) */}
+              {activeMap.outerBorder && (
                 <path
-                  key={`vborder-${i}`}
-                  d={vPath}
+                  d={activeMap.outerBorder}
                   fill="none"
-                  stroke="#060B16"
-                  strokeWidth={mapScale.borderStroke || '2.2'}
+                  stroke="#FFFFFF"
+                  strokeWidth="3.2"
                   strokeLinejoin="round"
                   strokeLinecap="round"
+                  filter="url(#whiteGlow)"
                   className="opacity-95"
                 />
-              ))}
-            </g>
+              )}
 
-            {/* 4. Village Labels (RENDERED UNDER BOOTH BADGES) */}
-            <g id="village-labels" className="pointer-events-none select-none opacity-80">
-              {activeMap.villages?.map((v) => (
-                <text
-                  key={`vlabel-${v.name}`}
-                  x={v.x}
-                  y={v.y}
-                  textAnchor="middle"
-                  fill="#FFFFFF"
-                  stroke="#000000"
-                  strokeWidth={mapScale.haloStroke}
-                  paintOrder="stroke fill"
-                  fontSize={mapScale.villageFont}
-                  fontWeight="900"
-                  letterSpacing="0.04em"
-                  fontFamily="system-ui, -apple-system, sans-serif"
-                  filter="url(#villageTextGlow)"
-                >
-                  {v.name}
-                </text>
-              ))}
-            </g>
+              {/* 2. Booth Polygonal Cells (Choropleth overlay with translucency) */}
+              <g id="booth-cells">
+                {activeMap.booths?.map((b) => {
+                  const bNum = Number(b.number || b.part_no);
+                  const isHovered = (hoveredBooth?.number || hoveredBooth?.part_no) === bNum;
+                  const cellFill = getBoothColor(b);
 
-            {/* 5. Booth Badges (RENDERED ON TOP) */}
-            <g id="booth-badges" className="cursor-pointer">
-              {activeMap.booths?.map((b) => {
-                const bNum = Number(b.number || b.part_no);
-                const badgeStats = getBoothElectionData(b);
-                const badgeFill = badgeStats.color;
-                const cx = b.cx || b.x;
-                const cy = b.cy || b.y;
+                  return (
+                    <path
+                      key={`poly-${bNum}`}
+                      d={b.path}
+                      fill={cellFill}
+                      fillOpacity={isHovered ? 0.98 : 0.88}
+                      stroke={isHovered ? '#FFFFFF' : '#0B1E12'}
+                      strokeWidth={isHovered ? '2.2' : '1.1'}
+                      className="transition-all duration-150 cursor-pointer"
+                      onClick={() => handleBoothClick(b)}
+                      onMouseEnter={() => setHoveredBooth(b)}
+                      onMouseLeave={() => setHoveredBooth(null)}
+                    />
+                  );
+                })}
+              </g>
 
-                return (
-                  <g
-                    key={`badge-${bNum}`}
-                    onClick={() => handleBoothClick(b)}
-                    onMouseEnter={() => setHoveredBooth(b)}
-                    onMouseLeave={() => setHoveredBooth(null)}
+              {/* 3. Internal Booth Boundaries (Thin separators) */}
+              <g id="village-borders" className="pointer-events-none">
+                {activeMap.villageBorders?.map((vPath, i) => (
+                  <path
+                    key={`vborder-${i}`}
+                    d={vPath}
+                    fill="none"
+                    stroke="#07190F"
+                    strokeWidth={mapScale.borderStroke || '2.0'}
+                    strokeLinejoin="round"
+                    strokeLinecap="round"
+                    className="opacity-90"
+                  />
+                ))}
+              </g>
+
+              {/* 4. Village Labels (Rendered under booth badges so numbers are never covered) */}
+              <g id="village-labels" className="pointer-events-none select-none opacity-80">
+                {activeMap.villages?.map((v) => (
+                  <text
+                    key={`vlabel-${v.name}`}
+                    x={v.x}
+                    y={v.y}
+                    textAnchor="middle"
+                    fill="#FFFFFF"
+                    stroke="#000000"
+                    strokeWidth={mapScale.haloStroke}
+                    paintOrder="stroke fill"
+                    fontSize={mapScale.villageFont}
+                    fontWeight="900"
+                    letterSpacing="0.04em"
+                    fontFamily="system-ui, -apple-system, sans-serif"
+                    filter="url(#villageTextGlow)"
                   >
-                    {(badgeStats.isDashed || b.isDashed) && (
+                    {v.name}
+                  </text>
+                ))}
+              </g>
+
+              {/* 5. Booth Badges (Matching Reference Image: crisp white ring + bold number on top) */}
+              <g id="booth-badges" className="cursor-pointer">
+                {activeMap.booths?.map((b) => {
+                  const bNum = Number(b.number || b.part_no);
+                  const badgeStats = getBoothElectionData(b);
+                  const badgeFill = badgeStats.color;
+                  const cx = b.cx || b.x;
+                  const cy = b.cy || b.y;
+
+                  return (
+                    <g
+                      key={`badge-${bNum}`}
+                      onClick={() => handleBoothClick(b)}
+                      onMouseEnter={() => setHoveredBooth(b)}
+                      onMouseLeave={() => setHoveredBooth(null)}
+                    >
+                      {(badgeStats.isDashed || b.isDashed) && (
+                        <circle
+                          cx={cx}
+                          cy={cy}
+                          r={mapScale.badgeDashedR}
+                          fill="none"
+                          stroke="#FFFFFF"
+                          strokeWidth="1.2"
+                          strokeDasharray="2,2"
+                        />
+                      )}
+
                       <circle
                         cx={cx}
                         cy={cy}
-                        r={mapScale.badgeDashedR}
-                        fill="none"
+                        r={mapScale.badgeR}
+                        fill={badgeFill}
                         stroke="#FFFFFF"
-                        strokeWidth="1.2"
-                        strokeDasharray="2,2"
+                        strokeWidth="1.3"
+                        className="transition-transform duration-150"
                       />
-                    )}
 
-                    <circle
-                      cx={cx}
-                      cy={cy}
-                      r={mapScale.badgeR}
-                      fill={badgeFill}
-                      stroke="#FFFFFF"
-                      strokeWidth="1.2"
-                      className="transition-transform duration-150"
-                    />
-
-                    <text
-                      x={cx}
-                      y={cy + mapScale.badgeFont * 0.38}
-                      textAnchor="middle"
-                      fill="#FFFFFF"
-                      fontSize={mapScale.badgeFont}
-                      fontWeight="bold"
-                      fontFamily="system-ui, sans-serif"
-                      className="pointer-events-none select-none"
-                    >
-                      {bNum}
-                    </text>
-                  </g>
-                );
-              })}
-            </g>
-          </svg>
+                      <text
+                        x={cx}
+                        y={cy + mapScale.badgeFont * 0.38}
+                        textAnchor="middle"
+                        fill="#FFFFFF"
+                        fontSize={mapScale.badgeFont}
+                        fontWeight="bold"
+                        fontFamily="system-ui, sans-serif"
+                        className="pointer-events-none select-none"
+                      >
+                        {bNum}
+                      </text>
+                    </g>
+                  );
+                })}
+              </g>
+            </svg>
+          </div>
 
           {/* Hover Tooltip */}
           {hoveredBooth && (() => {
@@ -719,7 +809,7 @@ export default function BoothAnalysisView({ data }) {
                 const stats = getBoothElectionData(b);
                 const status = stats.category;
                 const margin = stats.margin;
-                const isBattleOrWeak = status === 'Battle Ground' || status === 'Weak';
+                const isBattleOrWeak = status === 'Battle Ground' || status === 'Battleground' || status === 'Weak';
 
                 return (
                   <tr
