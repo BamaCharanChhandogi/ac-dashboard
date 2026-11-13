@@ -1,20 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import {
-  Search,
-  ChevronDown,
-  Check,
-  X,
-  Landmark,
-  Users,
-  UserPlus,
-  UserMinus,
-  MapPin,
-  ArrowUpDown,
-  AlertTriangle,
-  ShieldCheck,
-  Layers,
-  Info
-} from 'lucide-react';
+import { Search, ChevronDown, Check, AlertTriangle } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 import sanquelimMapData from '../data/sanquelim-map.json';
 import porvorimMapData from '../data/porvorim-map.json';
@@ -32,13 +17,13 @@ const ELECTION_OPTIONS = [
 ];
 
 const ELECTION_DESCRIPTIONS = {
-  'Overall': "Overall = each booth's average BJP margin across all verified elections.",
+  'Overall': "Overall = each booth's average BJP margin across all elections.",
   '2024 LS': '2024 Lok Sabha (Parliament) — Shripad Naik (BJP) booth returns & victory gaps.',
-  '2022 AE': '2022 Goa Legislative Assembly Election — Form-20 booth-level victory margins.',
-  '2019 LS': '2019 Lok Sabha (Parliament) — Shripad Naik (BJP) PC in AC booth vote margins.',
-  '2017 AE': '2017 Goa Legislative Assembly Election — Form-20 booth-level victory margins.',
-  '2014 LS': '2014 Lok Sabha (Parliament) — PC in AC booth-level wave margins.',
-  '2012 AE': '2012 Goa Legislative Assembly Election — Form-20 booth-level victory margins.',
+  '2022 AE': '2022 Goa Legislative Assembly Election — Form-20 booth victory margins.',
+  '2019 LS': '2019 Lok Sabha (Parliament) — Shripad Naik (BJP) booth vote margins.',
+  '2017 AE': '2017 Goa Legislative Assembly Election — Form-20 booth victory margins.',
+  '2014 LS': '2014 Lok Sabha (Parliament) — Wave victory margins.',
+  '2012 AE': '2012 Goa Legislative Assembly Election — Form-20 booth victory margins.',
 };
 
 const STATIC_MAPS = {
@@ -65,7 +50,7 @@ export default function BoothAnalysisView({ data }) {
     return sanquelimMapData;
   }, [meta.slug, meta.ac_no, spatial]);
 
-  // Dynamic scale factor based on viewBox width so badges and text are always sharp and legible
+  // Dynamic scale factor for map
   const mapScale = useMemo(() => {
     const vb = (activeMap.viewBox || '80 100 455 440').split(' ').map(Number);
     const w = vb[2] || 455;
@@ -87,7 +72,7 @@ export default function BoothAnalysisView({ data }) {
     return sanquelimMapData.booths || [];
   }, [activeMap, spatial]);
 
-  // Calculate cumulative additions and deletions matching the 5-stage timeline
+  // Total additions and deletions matching the 5-stage timeline
   const totalRollAdded = useMemo(() => {
     if (data?.roll_progression?.length) {
       return data.roll_progression.reduce((sum, p) => sum + (p.added_count || 0), 0);
@@ -108,21 +93,17 @@ export default function BoothAnalysisView({ data }) {
   const [selectedElection, setSelectedElection] = useState('Overall');
   const [statusFilter, setStatusFilter] = useState('ALL'); // 'ALL' | 'NEEDS_ATTENTION' | 'BATTLE_GROUND' | 'WEAK' | 'SAFE'
   const [sortBy, setSortBy] = useState('part_asc'); // 'part_asc' | 'margin_asc' | 'margin_desc' | 'voters_desc'
-  const [selectedBoothNumber, setSelectedBoothNumber] = useState(null);
   const [hoveredBooth, setHoveredBooth] = useState(null);
   const [isVillageDropdownOpen, setIsVillageDropdownOpen] = useState(false);
   const [modalBooth, setModalBooth] = useState(null);
 
-  // Unique villages for filter dropdown (includes Virdi & Maulinguem)
+  // Unique villages for filter dropdown
   const uniqueVillages = useMemo(() => {
     return ['All', ...new Set(rawBooths.map((b) => b.village).filter(Boolean))];
   }, [rawBooths]);
 
-  // Helper to resolve margin, category, color, winner, and dashed status
-  // STRICT, NON-OVERLAPPING RULE:
-  // - Safe: margin > 10.0%
-  // - Battle Ground: margin between -10.0% and +10.0% (inclusive)
-  // - Weak: margin < -10.0%
+  // Helper to resolve margin, category, color
+  // Strict non-overlapping rule: Safe (>10%), Battle Ground (-10% to +10%), Weak (<-10%)
   const getBoothElectionData = (b) => {
     if (!b) {
       return { margin: 0, category: 'Safe', color: '#15803D', winner: 'BJP', isDashed: false };
@@ -130,7 +111,6 @@ export default function BoothAnalysisView({ data }) {
 
     if (b.elections && b.elections[selectedElection]) {
       const eData = b.elections[selectedElection];
-      // Normalize category strictly based on exact margin value
       const m = eData.margin != null ? eData.margin : 0;
       let cat = 'Safe';
       let col = '#15803D';
@@ -191,15 +171,10 @@ export default function BoothAnalysisView({ data }) {
     return { safe, battle, weak, needsAttention: battle + weak, avgMargin };
   }, [rawBooths, selectedElection]);
 
-  // Filtered and Sorted booth roster
+  // Filtered and Sorted booth roster — NEVER filters out booths when clicking a booth!
   const filteredBooths = useMemo(() => {
     return rawBooths
       .filter((b) => {
-        const bNum = Number(b.part_no || b.number);
-        if (selectedBoothNumber && bNum !== selectedBoothNumber) {
-          return false;
-        }
-
         const stats = getBoothElectionData(b);
         if (statusFilter === 'NEEDS_ATTENTION' && stats.category === 'Safe') return false;
         if (statusFilter === 'BATTLE_GROUND' && stats.category !== 'Battle Ground') return false;
@@ -220,194 +195,101 @@ export default function BoothAnalysisView({ data }) {
         const bStats = getBoothElectionData(b);
 
         if (sortBy === 'margin_asc') {
-          return (aStats.margin || 0) - (bStats.margin || 0); // Weakest / lowest margin first
+          return (aStats.margin || 0) - (bStats.margin || 0);
         }
         if (sortBy === 'margin_desc') {
-          return (bStats.margin || 0) - (aStats.margin || 0); // Strongest first
+          return (bStats.margin || 0) - (aStats.margin || 0);
         }
         if (sortBy === 'voters_desc') {
           return (b.voters || 0) - (a.voters || 0);
         }
-        return aNum - bNum; // Default: part_asc
+        return aNum - bNum;
       });
-  }, [rawBooths, searchTerm, selectedVillage, selectedBoothNumber, statusFilter, sortBy, selectedElection]);
-
-  const handleMouseEnter = (booth) => {
-    setHoveredBooth(booth);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredBooth(null);
-  };
+  }, [rawBooths, searchTerm, selectedVillage, statusFilter, sortBy, selectedElection]);
 
   const handleBoothClick = (boothOrNum) => {
     let bObj = null;
-    let bNum = null;
     if (boothOrNum && typeof boothOrNum === 'object') {
       bObj = boothOrNum;
-      bNum = Number(boothOrNum.part_no || boothOrNum.number);
     } else {
-      bNum = Number(boothOrNum);
+      const bNum = Number(boothOrNum);
       bObj = rawBooths.find((b) => Number(b.part_no || b.number) === bNum);
     }
-
-    setSelectedBoothNumber(bNum);
     if (bObj) {
-      if (selectedVillage !== 'All' && bObj.village !== selectedVillage) {
-        setSelectedVillage('All');
-      }
       setModalBooth(bObj);
     }
   };
 
   return (
     <div className="px-6 md:px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* 1. Header Title & Election Abbreviation Legend */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h2 className="font-serif text-[28px] md:text-[30px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
-            Booth Analysis & Spatial Margins
-          </h2>
-          <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-1">
-            Electoral geography, historical Form-20 returns, and statutory polling booth roster across {meta.ac_name || 'Sanquelim'}
+      {/* 1. Header Title */}
+      <div>
+        <h2 className="font-serif text-[28px] md:text-[30px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-tight">
+          Booth Analysis &amp; Spatial Margins
+        </h2>
+        <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+          Electoral geography, historical Form-20 returns, and booth roster across {meta.ac_name || 'Sanquelim'}
+        </p>
+      </div>
+
+      {/* 2. Top 4 Clean Metric Cards (No Dev Bloat Text) */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        {/* Card 1: TOTAL BOOTHS */}
+        <div className="bg-white dark:bg-[#0D1527] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+            TOTAL BOOTHS
+          </p>
+          <p className="font-serif text-[28px] font-bold text-[#1E3A8A] dark:text-blue-400 tabular-nums leading-none">
+            {rawBooths.length || meta.total_booths || 50}
           </p>
         </div>
 
-        {/* ECI Election Acronym Key Pill */}
-        <div className="inline-flex items-center gap-2 bg-white dark:bg-[#0D1527] border border-slate-200/90 dark:border-slate-800/80 rounded-xl px-3.5 py-2 text-[11px] font-medium text-slate-600 dark:text-slate-300 shadow-2xs">
-          <Info className="w-3.5 h-3.5 text-blue-600 dark:text-blue-400 flex-shrink-0" />
-          <span><strong className="text-slate-900 dark:text-slate-100 font-bold">AE</strong>: Assembly Election</span>
-          <span className="opacity-40">•</span>
-          <span><strong className="text-slate-900 dark:text-slate-100 font-bold">LS</strong>: Lok Sabha (Parliament)</span>
-        </div>
-      </div>
-
-      {/* 2. Top 4 Elevated KPI Strip (Matching Modern Design) */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-        {/* Card 1: TOTAL BOOTHS */}
-        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-blue-400/50 dark:hover:border-blue-500/50 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-              Total Booths
-            </span>
-            <div className="w-8 h-8 rounded-xl bg-blue-50 dark:bg-blue-950/60 border border-blue-200/70 dark:border-blue-900/60 flex items-center justify-center text-blue-600 dark:text-blue-400 shadow-2xs">
-              <Landmark className="w-4 h-4" />
-            </div>
-          </div>
-          <div className="my-2.5">
-            <p className="font-serif text-[30px] md:text-[32px] font-bold text-slate-900 dark:text-slate-100 tabular-nums leading-none tracking-tight">
-              {rawBooths.length || meta.total_booths || 50}
-            </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
-              Designated voting stations
-            </p>
-          </div>
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-slate-600 dark:text-slate-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-500" />
-            <span>Across 9 revenue areas</span>
-          </div>
-        </div>
-
         {/* Card 2: ACTIVE ELECTORS */}
-        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-teal-400/50 dark:hover:border-teal-500/50 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-              Active Electors
-            </span>
-            <div className="w-8 h-8 rounded-xl bg-teal-50 dark:bg-teal-950/60 border border-teal-200/70 dark:border-teal-900/60 flex items-center justify-center text-teal-600 dark:text-teal-400 shadow-2xs">
-              <Users className="w-4 h-4" />
-            </div>
-          </div>
-          <div className="my-2.5">
-            <p className="font-serif text-[30px] md:text-[32px] font-bold text-teal-700 dark:text-teal-400 tabular-nums leading-none tracking-tight">
-              {formatIndianNumber(meta.total_voters || 27265)}
-            </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
-              Enrolled constituency voters
-            </p>
-          </div>
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-slate-600 dark:text-slate-300">
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-500" />
-            <span>Avg ~545 voters / booth</span>
-          </div>
+        <div className="bg-white dark:bg-[#0D1527] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+            ACTIVE ELECTORS
+          </p>
+          <p className="font-serif text-[28px] font-bold text-[#0F766E] dark:text-teal-400 tabular-nums leading-none">
+            {formatIndianNumber(meta.total_voters || 27265)}
+          </p>
         </div>
 
-        {/* Card 3: ADDED (CUMULATIVE STAGES) */}
-        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-emerald-400/50 dark:hover:border-emerald-500/50 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-              Added (All Stages)
-            </span>
-            <div className="w-8 h-8 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 border border-emerald-200/70 dark:border-emerald-900/60 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-2xs">
-              <UserPlus className="w-4 h-4" />
-            </div>
-          </div>
-          <div className="my-2.5">
-            <p className="font-serif text-[30px] md:text-[32px] font-bold text-emerald-600 dark:text-emerald-400 tabular-nums leading-none tracking-tight">
-              +{formatIndianNumber(totalRollAdded)}
-            </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
-              New additions across stages
-            </p>
-          </div>
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-emerald-600 dark:text-emerald-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            <span>Matches Overview progression</span>
-          </div>
+        {/* Card 3: ADDED */}
+        <div className="bg-white dark:bg-[#0D1527] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+            ADDED (ALL STAGES)
+          </p>
+          <p className="font-serif text-[28px] font-bold text-[#16A34A] dark:text-emerald-400 tabular-nums leading-none">
+            +{formatIndianNumber(totalRollAdded)}
+          </p>
         </div>
 
-        {/* Card 4: DELETED (CUMULATIVE STAGES) */}
-        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs flex flex-col justify-between hover:border-rose-400/50 dark:hover:border-rose-500/50 transition-all">
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400">
-              Deleted (All Stages)
-            </span>
-            <div className="w-8 h-8 rounded-xl bg-rose-50 dark:bg-rose-950/60 border border-rose-200/70 dark:border-rose-900/60 flex items-center justify-center text-rose-600 dark:text-rose-400 shadow-2xs">
-              <UserMinus className="w-4 h-4" />
-            </div>
-          </div>
-          <div className="my-2.5">
-            <p className="font-serif text-[30px] md:text-[32px] font-bold text-rose-600 dark:text-rose-400 tabular-nums leading-none tracking-tight">
-              −{formatIndianNumber(totalRollDeleted)}
-            </p>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
-              ASDDO purge deletions
-            </p>
-          </div>
-          <div className="pt-3 border-t border-slate-100 dark:border-slate-800/80 flex items-center gap-1.5 text-[11px] font-semibold text-rose-600 dark:text-rose-400">
-            <span className="w-1.5 h-1.5 rounded-full bg-rose-500" />
-            <span>Includes Oct 2026 Supp-4</span>
-          </div>
+        {/* Card 4: DELETED */}
+        <div className="bg-white dark:bg-[#0D1527] rounded-xl border border-slate-200/90 dark:border-slate-800/80 p-4 shadow-xs">
+          <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">
+            DELETED (ALL STAGES)
+          </p>
+          <p className="font-serif text-[28px] font-bold text-[#DC2626] dark:text-rose-400 tabular-nums leading-none">
+            −{formatIndianNumber(totalRollDeleted)}
+          </p>
         </div>
       </div>
 
-      {/* 3. High-Contrast Spatial Vector Map Card */}
-      <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 md:p-7 shadow-xs space-y-4">
-        {/* Top Controls: Title, Election Selector Pills, and Filter Status */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      {/* 3. Spatial Vector Map Card */}
+      <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 md:p-6 shadow-xs space-y-4">
+        {/* Top Controls: Title & Election Pills */}
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
           <div>
-            <div className="flex items-center gap-2">
-              <h3 className="font-serif text-[20px] md:text-[22px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-none">
-                Form-20 Spatial Margin Retrospective
-              </h3>
-              {selectedBoothNumber && (
-                <button
-                  type="button"
-                  onClick={() => setSelectedBoothNumber(null)}
-                  className="inline-flex items-center gap-1 text-[11px] font-bold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 px-2.5 py-0.5 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/60 transition-colors cursor-pointer"
-                >
-                  <span>Booth #{selectedBoothNumber}</span>
-                  <X size={12} />
-                </button>
-              )}
-            </div>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            <h3 className="font-serif text-[18px] md:text-[20px] font-bold text-slate-900 dark:text-slate-100">
+              Booth-level Form-20 Election Retrospective
+            </h3>
+            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
               {ELECTION_DESCRIPTIONS[selectedElection] || ELECTION_DESCRIPTIONS['Overall']}
             </p>
           </div>
 
           {/* Election Filter Pills */}
-          <div className="flex flex-wrap gap-1 bg-slate-100 dark:bg-[#131F38] p-1 rounded-xl text-[11.5px] font-semibold border border-slate-200/80 dark:border-slate-800">
+          <div className="flex flex-wrap gap-1 bg-slate-100 dark:bg-[#131F38] p-1 rounded-xl text-[11px] font-semibold border border-slate-200/80 dark:border-slate-800">
             {ELECTION_OPTIONS.map((elec) => (
               <button
                 key={elec}
@@ -425,43 +307,36 @@ export default function BoothAnalysisView({ data }) {
           </div>
         </div>
 
-        {/* Integrated Live Legend Strip (Directly above the map so users never scroll for it!) */}
-        <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-50 dark:bg-[#131F38] border border-slate-200/80 dark:border-slate-800/80 rounded-xl px-4 py-2.5 text-[12px]">
+        {/* Live Legend Strip (Directly above the map) */}
+        <div className="flex flex-wrap items-center justify-between gap-3 bg-slate-50 dark:bg-[#131F38] border border-slate-200/80 dark:border-slate-800/80 rounded-xl px-4 py-2 text-[12px]">
           <div className="flex flex-wrap items-center gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
-              <span className="w-3.5 h-3.5 rounded-full bg-[#15803D] border border-white dark:border-slate-800 shadow-2xs" />
+              <span className="w-3 h-3 rounded-full bg-[#15803D]" />
               <span className="font-medium text-slate-700 dark:text-slate-300">
                 Safe (&gt;+10%): <strong className="text-emerald-700 dark:text-emerald-400 font-bold">{electionSummary.safe} {electionSummary.safe === 1 ? 'booth' : 'booths'}</strong>
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-3.5 h-3.5 rounded-full bg-[#D97706] border border-white dark:border-slate-800 shadow-2xs" />
+              <span className="w-3 h-3 rounded-full bg-[#D97706]" />
               <span className="font-medium text-slate-700 dark:text-slate-300">
                 Battle Ground (±10%): <strong className="text-amber-700 dark:text-amber-400 font-bold">{electionSummary.battle} {electionSummary.battle === 1 ? 'booth' : 'booths'}</strong>
               </span>
             </div>
             <div className="flex items-center gap-2">
-              <span className="w-3.5 h-3.5 rounded-full bg-[#991B1B] border border-white dark:border-slate-800 shadow-2xs" />
+              <span className="w-3 h-3 rounded-full bg-[#991B1B]" />
               <span className="font-medium text-slate-700 dark:text-slate-300">
                 Weak (&lt;−10%): <strong className="text-rose-700 dark:text-rose-400 font-bold">{electionSummary.weak} {electionSummary.weak === 1 ? 'booth' : 'booths'}</strong>
               </span>
             </div>
           </div>
 
-          <div className="flex items-center gap-3 text-[11.5px] font-semibold text-slate-500 dark:text-slate-400">
-            <span>
-              AC Avg Margin: <strong className="text-slate-900 dark:text-slate-100 tabular-nums">{electionSummary.avgMargin > 0 ? '+' : ''}{electionSummary.avgMargin}%</strong>
-            </span>
-            {selectedBoothNumber && (
-              <span className="text-[11px] text-blue-600 dark:text-blue-400 font-bold bg-blue-50 dark:bg-blue-950/60 px-2 py-0.5 rounded">
-                Booth #{selectedBoothNumber} Active
-              </span>
-            )}
+          <div className="text-[11.5px] font-semibold text-slate-500 dark:text-slate-400">
+            AC Avg Margin: <strong className="text-slate-900 dark:text-slate-100 tabular-nums">{electionSummary.avgMargin > 0 ? '+' : ''}{electionSummary.avgMargin}%</strong>
           </div>
         </div>
 
-        {/* High-Contrast Spatial Canvas with Slate Border */}
-        <div className="w-full bg-[#0B1120] dark:bg-[#060B16] rounded-2xl border border-slate-800/80 relative overflow-hidden flex items-center justify-center p-3 select-none min-h-[440px] shadow-inner">
+        {/* Spatial Map Canvas */}
+        <div className="w-full bg-[#0B1120] dark:bg-[#060B16] rounded-xl border border-slate-800/80 relative overflow-hidden flex items-center justify-center p-3 select-none min-h-[440px] shadow-inner">
           <svg
             viewBox={activeMap.viewBox || '80 100 455 440'}
             className="w-full h-auto max-h-[580px]"
@@ -473,7 +348,7 @@ export default function BoothAnalysisView({ data }) {
               </filter>
             </defs>
 
-            {/* 1. Outer Border Glow / Halo */}
+            {/* 1. Outer Border Glow */}
             {activeMap.outerBorder && (
               <path
                 d={activeMap.outerBorder}
@@ -490,7 +365,6 @@ export default function BoothAnalysisView({ data }) {
             <g id="booth-cells">
               {activeMap.booths?.map((b) => {
                 const bNum = Number(b.number || b.part_no);
-                const isSelected = selectedBoothNumber === bNum;
                 const isHovered = (hoveredBooth?.number || hoveredBooth?.part_no) === bNum;
                 const cellFill = getBoothColor(b);
 
@@ -499,18 +373,18 @@ export default function BoothAnalysisView({ data }) {
                     key={`poly-${bNum}`}
                     d={b.path}
                     fill={cellFill}
-                    stroke={isSelected ? '#FACC15' : isHovered ? '#FFFFFF' : '#0B1120'}
-                    strokeWidth={isSelected ? '2.8' : isHovered ? '2.2' : '1.1'}
+                    stroke={isHovered ? '#FFFFFF' : '#0B1120'}
+                    strokeWidth={isHovered ? '2.2' : '1.1'}
                     className="transition-colors duration-150 cursor-pointer opacity-90 hover:opacity-100"
-                    onClick={() => handleBoothClick(bNum)}
-                    onMouseEnter={() => handleMouseEnter(b)}
-                    onMouseLeave={handleMouseLeave}
+                    onClick={() => handleBoothClick(b)}
+                    onMouseEnter={() => setHoveredBooth(b)}
+                    onMouseLeave={() => setHoveredBooth(null)}
                   />
                 );
               })}
             </g>
 
-            {/* 3. Village Boundaries (Thick Dark Separators) */}
+            {/* 3. Village Boundaries */}
             <g id="village-borders" className="pointer-events-none">
               {activeMap.villageBorders?.map((vPath, i) => (
                 <path
@@ -526,7 +400,7 @@ export default function BoothAnalysisView({ data }) {
               ))}
             </g>
 
-            {/* 4. Village Labels (RENDERED UNDER BOOTH BADGES SO NUMBERS ARE NEVER COVERED!) */}
+            {/* 4. Village Labels (RENDERED UNDER BOOTH BADGES) */}
             <g id="village-labels" className="pointer-events-none select-none opacity-80">
               {activeMap.villages?.map((v) => (
                 <text
@@ -549,11 +423,10 @@ export default function BoothAnalysisView({ data }) {
               ))}
             </g>
 
-            {/* 5. Booth Badges (RENDERED ON TOP OF VILLAGE LABELS FOR UNHINDERED VISIBILITY!) */}
+            {/* 5. Booth Badges (RENDERED ON TOP) */}
             <g id="booth-badges" className="cursor-pointer">
               {activeMap.booths?.map((b) => {
                 const bNum = Number(b.number || b.part_no);
-                const isSelected = selectedBoothNumber === bNum;
                 const badgeStats = getBoothElectionData(b);
                 const badgeFill = badgeStats.color;
                 const cx = b.cx || b.x;
@@ -563,10 +436,9 @@ export default function BoothAnalysisView({ data }) {
                   <g
                     key={`badge-${bNum}`}
                     onClick={() => handleBoothClick(b)}
-                    onMouseEnter={() => handleMouseEnter(b)}
-                    onMouseLeave={handleMouseLeave}
+                    onMouseEnter={() => setHoveredBooth(b)}
+                    onMouseLeave={() => setHoveredBooth(null)}
                   >
-                    {/* Dashed outer ring for special booths */}
                     {(badgeStats.isDashed || b.isDashed) && (
                       <circle
                         cx={cx}
@@ -579,18 +451,16 @@ export default function BoothAnalysisView({ data }) {
                       />
                     )}
 
-                    {/* Badge Circle */}
                     <circle
                       cx={cx}
                       cy={cy}
                       r={mapScale.badgeR}
                       fill={badgeFill}
-                      stroke={isSelected ? '#FACC15' : '#FFFFFF'}
-                      strokeWidth={isSelected ? '2.4' : '1.2'}
+                      stroke="#FFFFFF"
+                      strokeWidth="1.2"
                       className="transition-transform duration-150"
                     />
 
-                    {/* Booth Number Text */}
                     <text
                       x={cx}
                       y={cy + mapScale.badgeFont * 0.38}
@@ -609,7 +479,7 @@ export default function BoothAnalysisView({ data }) {
             </g>
           </svg>
 
-          {/* Floating Hover Card Tooltip */}
+          {/* Hover Tooltip */}
           {hoveredBooth && (() => {
             const hStats = getBoothElectionData(hoveredBooth);
             return (
@@ -663,31 +533,26 @@ export default function BoothAnalysisView({ data }) {
                     <span className="text-white font-semibold">{hStats.winner || 'BJP'}</span>
                   </div>
                 </div>
-                <div className="mt-2 pt-1.5 border-t border-slate-800 text-[10px] text-blue-400 font-bold flex items-center justify-between">
-                  <span>Click to view full Form-20 retrospective dossier</span>
-                  <span>→</span>
-                </div>
               </div>
             );
           })()}
         </div>
       </div>
 
-      {/* 4. Full Booths Table Roster with Status Filters & Sorting */}
-      <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 md:p-7 shadow-xs space-y-4">
+      {/* 4. Full Booths Table Roster */}
+      <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 md:p-6 shadow-xs space-y-4">
         {/* Table Title and Quick Actions */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-3">
           <div>
-            <h3 className="font-serif text-[20px] md:text-[22px] font-bold text-slate-900 dark:text-slate-100 tracking-tight leading-none">
+            <h3 className="font-serif text-[18px] md:text-[20px] font-bold text-slate-900 dark:text-slate-100">
               Polling Stations Roster
             </h3>
-            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium mt-1">
+            <p className="text-[12px] text-slate-500 dark:text-slate-400 font-medium">
               Showing <strong className="text-slate-800 dark:text-slate-200">{filteredBooths.length}</strong> of {rawBooths.length} stations in <strong className="text-blue-600 dark:text-blue-400">{selectedElection}</strong>
-              {selectedBoothNumber && ` (Booth #${selectedBoothNumber} Filter Active)`}
             </p>
           </div>
 
-          <div className="flex flex-wrap items-center gap-3">
+          <div className="flex flex-wrap items-center gap-2.5">
             {/* Search Input */}
             <div className="relative">
               <Search size={14} className="absolute left-2.5 top-1/2 -translate-y-1/2 text-slate-400 dark:text-slate-500" />
@@ -696,7 +561,7 @@ export default function BoothAnalysisView({ data }) {
                 placeholder="Search station, village, or part #..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-8 pr-3 py-1.5 text-[12px] border border-slate-200 dark:border-slate-700/80 rounded-xl outline-none focus:border-blue-500 w-56 bg-slate-50/70 dark:bg-slate-900/60 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500"
+                className="pl-8 pr-3 py-1.5 text-[12px] border border-slate-200 dark:border-slate-700/80 rounded-xl outline-none focus:border-blue-500 w-52 bg-slate-50/70 dark:bg-slate-900/60 text-slate-900 dark:text-slate-100 placeholder-slate-400 dark:placeholder-slate-500"
               />
             </div>
 
@@ -705,7 +570,7 @@ export default function BoothAnalysisView({ data }) {
               <button
                 type="button"
                 onClick={() => setIsVillageDropdownOpen(!isVillageDropdownOpen)}
-                className="inline-flex items-center justify-between gap-2 text-[12px] border border-slate-200 dark:border-slate-700/80 rounded-xl px-3 py-1.5 bg-slate-50/70 dark:bg-slate-900/60 text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 transition-colors cursor-pointer min-w-[130px]"
+                className="inline-flex items-center justify-between gap-2 text-[12px] border border-slate-200 dark:border-slate-700/80 rounded-xl px-3 py-1.5 bg-slate-50/70 dark:bg-slate-900/60 text-slate-700 dark:text-slate-200 hover:border-slate-300 dark:hover:border-slate-600 transition-colors cursor-pointer min-w-[120px]"
               >
                 <span>{selectedVillage === 'All' ? 'All Villages' : selectedVillage}</span>
                 <ChevronDown
@@ -747,18 +612,17 @@ export default function BoothAnalysisView({ data }) {
                 className="text-[12px] border border-slate-200 dark:border-slate-700/80 rounded-xl px-2.5 py-1.5 bg-slate-50/70 dark:bg-slate-900/60 text-slate-700 dark:text-slate-200 outline-none cursor-pointer"
               >
                 <option value="part_asc">Sort: Part # (1 → 50)</option>
-                <option value="margin_asc">Sort: Lowest Margin (Weak First)</option>
-                <option value="margin_desc">Sort: Highest Margin (Safe First)</option>
+                <option value="margin_asc">Sort: Lowest Margin First</option>
+                <option value="margin_desc">Sort: Highest Margin First</option>
                 <option value="voters_desc">Sort: Most Electors</option>
               </select>
             </div>
 
             {/* Reset Filters */}
-            {(selectedBoothNumber || selectedVillage !== 'All' || searchTerm || statusFilter !== 'ALL' || sortBy !== 'part_asc') && (
+            {(selectedVillage !== 'All' || searchTerm || statusFilter !== 'ALL' || sortBy !== 'part_asc') && (
               <button
                 type="button"
                 onClick={() => {
-                  setSelectedBoothNumber(null);
                   setSelectedVillage('All');
                   setSearchTerm('');
                   setStatusFilter('ALL');
@@ -772,12 +636,8 @@ export default function BoothAnalysisView({ data }) {
           </div>
         </div>
 
-        {/* Quick Status Filter Tabs (Addresses Problem #10: "47 rows say SAFE - weak & battleground should be easy to find") */}
+        {/* Quick Status Filter Tabs */}
         <div className="flex flex-wrap items-center gap-2 pt-2 border-t border-slate-100 dark:border-slate-800/80">
-          <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400 dark:text-slate-400 mr-1">
-            Status Filter:
-          </span>
-
           <button
             type="button"
             onClick={() => setStatusFilter('ALL')}
@@ -795,7 +655,7 @@ export default function BoothAnalysisView({ data }) {
             onClick={() => setStatusFilter('NEEDS_ATTENTION')}
             className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
               statusFilter === 'NEEDS_ATTENTION'
-                ? 'bg-amber-600 text-white shadow-2xs ring-1 ring-amber-500'
+                ? 'bg-amber-600 text-white shadow-2xs'
                 : 'bg-amber-50 dark:bg-amber-950/50 text-amber-800 dark:text-amber-300 border border-amber-200 dark:border-amber-800/60 hover:bg-amber-100 dark:hover:bg-amber-900/60'
             }`}
           >
@@ -844,27 +704,21 @@ export default function BoothAnalysisView({ data }) {
         <div className="overflow-x-auto">
           <table className="w-full text-[12px] text-left">
             <thead>
-              <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-400 font-bold uppercase text-[10.5px] tracking-wider">
+              <tr className="border-b border-slate-200 dark:border-slate-800 text-slate-400 dark:text-slate-400 font-bold uppercase text-[10px] tracking-wider">
                 <th className="pb-3 pr-3">BOOTH</th>
                 <th className="pb-3 px-3">POLLING STATION</th>
-                <th className="pb-3 px-3">VILLAGE / LOCALITY</th>
+                <th className="pb-3 px-3">VILLAGE</th>
                 <th className="pb-3 px-3 text-right">ELECTORS</th>
                 <th className="pb-3 px-3 text-right">ADDED</th>
                 <th className="pb-3 px-3 text-right">DELETED</th>
-                <th className="pb-3 px-3 text-right">
-                  MARGIN ({selectedElection === 'Overall' ? 'AVG' : selectedElection}) &amp; STATUS
-                </th>
-                <th className="pb-3 pl-3 text-right">DOSSIER</th>
+                <th className="pb-3 pl-3 text-right">MARGIN &amp; STATUS</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 dark:divide-slate-800/80">
               {filteredBooths.map((b) => {
-                const bNum = Number(b.part_no || b.number);
-                const isSelected = selectedBoothNumber === bNum;
                 const stats = getBoothElectionData(b);
                 const status = stats.category;
                 const margin = stats.margin;
-
                 const isBattleOrWeak = status === 'Battle Ground' || status === 'Weak';
 
                 return (
@@ -872,22 +726,14 @@ export default function BoothAnalysisView({ data }) {
                     key={b.part_no || b.number}
                     onClick={() => handleBoothClick(b)}
                     className={`transition-colors cursor-pointer group ${
-                      isSelected
-                        ? 'bg-blue-50/70 dark:bg-blue-950/50 font-semibold'
-                        : isBattleOrWeak
+                      isBattleOrWeak
                         ? 'bg-amber-50/30 dark:bg-amber-950/20 hover:bg-amber-50/60 dark:hover:bg-amber-950/40'
                         : 'hover:bg-slate-50/70 dark:hover:bg-slate-800/50'
                     }`}
                   >
                     {/* Part No Circle */}
                     <td className="py-3 pr-3 font-bold text-slate-900 dark:text-slate-100 tabular-nums">
-                      <span
-                        className={`inline-block w-6 h-6 rounded-full text-center leading-6 text-[11px] ${
-                          isSelected
-                            ? 'bg-blue-600 text-white font-bold shadow-2xs'
-                            : 'bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold'
-                        }`}
-                      >
+                      <span className="inline-block w-6 h-6 rounded-full text-center leading-6 text-[11px] bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-semibold group-hover:bg-blue-600 group-hover:text-white transition-colors">
                         {b.part_no || b.number}
                       </span>
                     </td>
@@ -898,10 +744,8 @@ export default function BoothAnalysisView({ data }) {
                     </td>
 
                     {/* Village Name */}
-                    <td className="py-3 px-3 font-medium">
-                      <span className="inline-block px-2 py-0.5 rounded text-[11px] font-semibold bg-slate-100 dark:bg-slate-800/80 text-slate-700 dark:text-slate-300">
-                        {b.village}
-                      </span>
+                    <td className="py-3 px-3 font-medium text-slate-600 dark:text-slate-300">
+                      {b.village}
                     </td>
 
                     {/* Electors Count */}
@@ -919,8 +763,8 @@ export default function BoothAnalysisView({ data }) {
                       {b.deleted != null ? `−${b.deleted}` : '—'}
                     </td>
 
-                    {/* Margin & Status Combined (Addresses Problem #12: eliminates empty space!) */}
-                    <td className="py-3 px-3 text-right">
+                    {/* Margin & Status */}
+                    <td className="py-3 pl-3 text-right">
                       <div className="inline-flex items-center justify-end gap-2">
                         <span
                           className={`font-serif text-[13px] font-bold tabular-nums ${
@@ -946,13 +790,6 @@ export default function BoothAnalysisView({ data }) {
                           {status}
                         </span>
                       </div>
-                    </td>
-
-                    {/* Dossier Link */}
-                    <td className="py-3 pl-3 text-right">
-                      <span className="opacity-0 group-hover:opacity-100 text-[11px] font-bold text-blue-600 dark:text-blue-400 transition-opacity">
-                        View Dossier →
-                      </span>
                     </td>
                   </tr>
                 );
