@@ -135,10 +135,10 @@ export default function Sidebar({
                     onClick={() => handleNav(id)}
                     className={`
                       w-full flex items-center gap-3 rounded-xl text-[12.5px] font-medium
-                      transition-all duration-150 px-3 py-2 cursor-pointer
+                      transition-all duration-150 px-3 py-2 cursor-pointer outline-none focus:outline-none focus:ring-0 select-none
                       ${
                         isActive
-                          ? 'bg-[#2563EB] text-white shadow-md shadow-blue-600/30 font-semibold'
+                          ? 'bg-[#2563EB] text-white shadow-md shadow-blue-600/30 font-semibold ring-0'
                           : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300/80 dark:hover:text-white dark:hover:bg-white/5'
                       }
                     `}
@@ -169,10 +169,10 @@ export default function Sidebar({
                     onClick={() => handleNav(id)}
                     className={`
                       w-full flex items-center gap-3 rounded-xl text-[12.5px] font-medium
-                      transition-all duration-150 px-3 py-2 cursor-pointer
+                      transition-all duration-150 px-3 py-2 cursor-pointer outline-none focus:outline-none focus:ring-0 select-none
                       ${
                         isActive
-                          ? 'bg-[#2563EB] text-white shadow-md shadow-blue-600/30 font-semibold'
+                          ? 'bg-[#2563EB] text-white shadow-md shadow-blue-600/30 font-semibold ring-0'
                           : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100 dark:text-slate-300/80 dark:hover:text-white dark:hover:bg-white/5'
                       }
                     `}
