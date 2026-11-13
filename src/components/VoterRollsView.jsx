@@ -462,7 +462,7 @@ export default function VoterRollsView({ data }) {
       </div>
 
       {/* 3. Top Master KPI Bar - Interconnected Glowing Strip with Dividers (Matching Reference Image) */}
-      <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-slate-800">
+      <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-slate-100 dark:divide-slate-800">
         {/* Active Electors */}
         <div className="flex items-center gap-4 px-3 py-2 sm:py-0">
           <div className="w-11 h-11 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-700 dark:text-slate-300 flex-shrink-0">
@@ -541,7 +541,7 @@ export default function VoterRollsView({ data }) {
       {/* 4. Middle Section (Dual Intelligence Cards: Roll Movement Flow & Village Breakdown - EXACT Mockup Design) */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Left Card: Roll Movement Flow (Fluid Curving Ribbons Architecture) */}
-        <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs flex flex-col justify-between">
+        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs flex flex-col justify-between">
           <div>
             <h3 className="font-serif text-[18px] font-bold text-slate-900 dark:text-slate-100">
               Roll Movement Flow
@@ -621,7 +621,7 @@ export default function VoterRollsView({ data }) {
         </div>
 
         {/* Right Card: Village Roll Churn Breakdown (Matching Exact Donut & 4-Share List) */}
-        <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs flex flex-col justify-between">
+        <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs flex flex-col justify-between">
           <div className="flex items-center justify-between gap-4 mb-2">
             <div>
               <h3 className="font-serif text-[18px] font-bold text-slate-900 dark:text-slate-100">
@@ -827,7 +827,7 @@ export default function VoterRollsView({ data }) {
       </div>
 
       {/* 5. Granular Elector Audit Roster Card (Matching Exact Reference Layout) */}
-      <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs">
+      <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 shadow-xs">
         {/* Header & Controls Toolbar */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-4">
           <div>
@@ -888,21 +888,6 @@ export default function VoterRollsView({ data }) {
               )}
             </div>
 
-            {/* Privacy Masking Toggle */}
-            <button
-              type="button"
-              onClick={() => setIsMasked(!isMasked)}
-              title="Toggle EPIC voter ID masking for privacy compliance"
-              className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 text-[12px] font-semibold rounded-lg border transition-colors cursor-pointer shadow-2xs select-none ${
-                isMasked
-                  ? 'border-blue-300 dark:border-blue-700 bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 font-bold'
-                  : 'border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800/80 text-slate-600 dark:text-slate-300'
-              }`}
-            >
-              {isMasked ? <EyeOff size={13} className="text-blue-600 dark:text-blue-400" /> : <Eye size={13} className="text-slate-400" />}
-              <span>{isMasked ? 'Masked' : 'Unmasked'}</span>
-            </button>
-
             {/* Reset Filters */}
             {(selectedVillage !== 'All' || searchTerm) && (
               <button
@@ -918,8 +903,8 @@ export default function VoterRollsView({ data }) {
               </button>
             )}
 
-            {/* Excel & PDF Download Buttons Matching Reference Design */}
-            <div className="flex items-center gap-2 pl-2 border-l border-slate-200 dark:border-slate-700/80">
+            {/* Excel & PDF Download Buttons on the Right Side */}
+            <div className="flex items-center gap-2 pl-1 sm:pl-2 sm:border-l border-slate-200 dark:border-slate-700/80">
               <button
                 type="button"
                 onClick={handleExportExcel}

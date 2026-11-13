@@ -86,7 +86,7 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
       { label: 'Final Draft', date: 'FEB 2026', count: isAC17 ? 27089 : isAC10 ? 25281 : 23947, delta: isAC17 ? '−117' : isAC10 ? '−473' : '−1135', deltaType: 'negative', added: isAC17 ? 409 : isAC10 ? 232 : 270, deleted: isAC17 ? 526 : isAC10 ? 705 : 1405, isCompleted: true, isLatest: false },
       { label: 'Supplement 2', date: 'APR 2026', count: isAC17 ? 27145 : isAC10 ? 25281 : 23920, delta: isAC17 ? '+56' : isAC10 ? '0' : '−27', deltaType: isAC17 ? 'positive' : isAC10 ? 'neutral' : 'negative', added: isAC17 ? 79 : isAC10 ? 34 : 45, deleted: isAC17 ? 23 : isAC10 ? 34 : 72, isCompleted: true, isLatest: false },
       { label: 'Supplement 3', date: 'JUL 2026', count: isAC17 ? 27265 : isAC10 ? 25281 : 23947, delta: isAC17 ? '+120' : isAC10 ? '0' : '+27', deltaType: isAC17 || !isAC10 ? 'positive' : 'neutral', added: isAC17 ? 205 : isAC10 ? 28 : 65, deleted: isAC17 ? 85 : isAC10 ? 28 : 38, isCompleted: true, isLatest: false },
-      { label: 'Supplement 4', date: 'OCT 2026', count: totalVoters, delta: '0', deltaType: 'neutral', added: isAC17 ? 68 : isAC10 ? 19 : 42, deleted: isAC17 ? 68 : isAC10 ? 19 : 42, isCompleted: true, isLatest: true },
+      { label: 'Supplement 4', date: 'OCT 2026', count: totalVoters, delta: '0', deltaType: 'neutral', added: isAC17 ? null : isAC10 ? 19 : 42, deleted: isAC17 ? null : isAC10 ? 19 : 42, isCompleted: true, isLatest: true },
     ];
   }, [rawProgression, meta.ac_no, currentSlug, totalVoters]);
 
