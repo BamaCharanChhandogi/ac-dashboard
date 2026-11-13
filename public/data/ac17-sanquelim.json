@@ -582,7 +582,119 @@
           "margin": "-18035"
         }
       ]
-    }
+    },
+    "assembly_journey": {
+      "years": [
+        "2007",
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "series": [
+        {
+          "party": "BJP",
+          "color": "#EA580C",
+          "data": [
+            null,
+            65.93,
+            42.44,
+            47.73
+          ]
+        },
+        {
+          "party": "INC",
+          "color": "#2563EB",
+          "data": [
+            42,
+            33.93,
+            33.9,
+            45.13
+          ]
+        },
+        {
+          "party": "Others",
+          "color": "#16A34A",
+          "data": [
+            null,
+            null,
+            16.4,
+            6.1
+          ]
+        }
+      ]
+    },
+    "assembly_history": [
+      {
+        "year": "2022",
+        "winner": "Dr. Pramod Sawant",
+        "winnerParty": "BJP",
+        "winnerVotes": "12,250",
+        "winnerPct": "47.73%",
+        "runnerUp": "Dharmesh Saglani (INC)",
+        "runnerUpVotes": "11,584",
+        "marginVotes": "+666",
+        "marginPct": "(2.60%)"
+      },
+      {
+        "year": "2017",
+        "winner": "Dr. Pramod Sawant",
+        "winnerParty": "BJP",
+        "winnerVotes": "10,058",
+        "winnerPct": "42.44%",
+        "runnerUp": "Dharmesh Saglani (INC)",
+        "runnerUpVotes": "7,927",
+        "marginVotes": "+2,131",
+        "marginPct": "(8.99%)"
+      },
+      {
+        "year": "2012",
+        "winner": "Dr. Pramod Sawant",
+        "winnerParty": "BJP",
+        "winnerVotes": "18,398",
+        "winnerPct": "65.93%",
+        "runnerUp": "Gurudas P. Gauns (INC)",
+        "runnerUpVotes": "9,480",
+        "marginVotes": "+6,918",
+        "marginPct": "(31.99%)"
+      },
+      {
+        "year": "2007",
+        "winner": "Gurudas P. Gauns",
+        "winnerParty": "INC",
+        "winnerVotes": "7,768",
+        "winnerPct": "42.00%",
+        "runnerUp": "Dr. Pramod Sawant (BJP)",
+        "runnerUpVotes": "6,177",
+        "marginVotes": "+1,591",
+        "marginPct": "(8.60%)"
+      }
+    ],
+    "parliament_trend": [
+      {
+        "year": "1999",
+        "pct": 54.96
+      },
+      {
+        "year": "2004",
+        "pct": 56.84
+      },
+      {
+        "year": "2009",
+        "pct": 47.1
+      },
+      {
+        "year": "2014",
+        "pct": 58.51
+      },
+      {
+        "year": "2019",
+        "pct": 57.12
+      },
+      {
+        "year": "2024",
+        "pct": 56.43
+      }
+    ]
   },
   "spatial": {
     "viewBox": "0 0 1186 920",

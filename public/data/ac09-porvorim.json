@@ -515,7 +515,104 @@
           "margin": "-12260"
         }
       ]
-    }
+    },
+    "assembly_journey": {
+      "years": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "series": [
+        {
+          "party": "BJP",
+          "color": "#EA580C",
+          "data": [
+            36.5,
+            29.5,
+            55.16
+          ]
+        },
+        {
+          "party": "INC",
+          "color": "#2563EB",
+          "data": [
+            22.3,
+            8.4,
+            8.2
+          ]
+        },
+        {
+          "party": "IND / Others",
+          "color": "#16A34A",
+          "data": [
+            41.2,
+            47.9,
+            36.64
+          ]
+        }
+      ]
+    },
+    "assembly_history": [
+      {
+        "year": "2022",
+        "winner": "Rohan Khaunte",
+        "winnerParty": "BJP",
+        "winnerVotes": "11,714",
+        "winnerPct": "55.16%",
+        "runnerUp": "Vikas Prabhu (IND)",
+        "runnerUpVotes": "3,764",
+        "marginVotes": "+7,950",
+        "marginPct": "(37.44%)"
+      },
+      {
+        "year": "2017",
+        "winner": "Rohan Khaunte",
+        "winnerParty": "IND",
+        "winnerVotes": "11,174",
+        "winnerPct": "47.90%",
+        "runnerUp": "Guruprasad Pawaskar (BJP)",
+        "runnerUpVotes": "6,961",
+        "marginVotes": "+4,213",
+        "marginPct": "(18.40%)"
+      },
+      {
+        "year": "2012",
+        "winner": "Rohan Khaunte",
+        "winnerParty": "IND",
+        "winnerVotes": "7,972",
+        "winnerPct": "41.20%",
+        "runnerUp": "Govind Parvatkar (BJP)",
+        "runnerUpVotes": "7,071",
+        "marginVotes": "+901",
+        "marginPct": "(4.70%)"
+      }
+    ],
+    "parliament_trend": [
+      {
+        "year": "1999",
+        "pct": 54.96
+      },
+      {
+        "year": "2004",
+        "pct": 56.84
+      },
+      {
+        "year": "2009",
+        "pct": 47.1
+      },
+      {
+        "year": "2014",
+        "pct": 58.51
+      },
+      {
+        "year": "2019",
+        "pct": 57.12
+      },
+      {
+        "year": "2024",
+        "pct": 63.4
+      }
+    ]
   },
   "spatial": {
     "viewBox": "0 0 1186 1220",

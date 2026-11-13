@@ -507,7 +507,104 @@
           "margin": "-10400"
         }
       ]
-    }
+    },
+    "assembly_journey": {
+      "years": [
+        "2012",
+        "2017",
+        "2022"
+      ],
+      "series": [
+        {
+          "party": "BJP",
+          "color": "#EA580C",
+          "data": [
+            53.6,
+            42.44,
+            33.15
+          ]
+        },
+        {
+          "party": "INC",
+          "color": "#2563EB",
+          "data": [
+            37.1,
+            31.3,
+            41.22
+          ]
+        },
+        {
+          "party": "RGP / Others",
+          "color": "#16A34A",
+          "data": [
+            9.3,
+            26.26,
+            25.63
+          ]
+        }
+      ]
+    },
+    "assembly_history": [
+      {
+        "year": "2022",
+        "winner": "Adv. Carlos Ferreira",
+        "winnerParty": "INC",
+        "winnerVotes": "9,320",
+        "winnerPct": "41.22%",
+        "runnerUp": "Glenn Ticlo (BJP)",
+        "runnerUpVotes": "7,497",
+        "marginVotes": "+1,823",
+        "marginPct": "(8.07%)"
+      },
+      {
+        "year": "2017",
+        "winner": "Glenn Ticlo",
+        "winnerParty": "BJP",
+        "winnerVotes": "9,405",
+        "winnerPct": "42.44%",
+        "runnerUp": "Amarnath Panjikar (INC)",
+        "runnerUpVotes": "6,940",
+        "marginVotes": "+2,465",
+        "marginPct": "(11.10%)"
+      },
+      {
+        "year": "2012",
+        "winner": "Glenn Ticlo",
+        "winnerParty": "BJP",
+        "winnerVotes": "11,387",
+        "winnerPct": "53.60%",
+        "runnerUp": "Dayanand Narvekar (INC)",
+        "runnerUpVotes": "7,882",
+        "marginVotes": "+3,505",
+        "marginPct": "(16.50%)"
+      }
+    ],
+    "parliament_trend": [
+      {
+        "year": "1999",
+        "pct": 54.96
+      },
+      {
+        "year": "2004",
+        "pct": 56.84
+      },
+      {
+        "year": "2009",
+        "pct": 47.1
+      },
+      {
+        "year": "2014",
+        "pct": 58.51
+      },
+      {
+        "year": "2019",
+        "pct": 57.12
+      },
+      {
+        "year": "2024",
+        "pct": 51.8
+      }
+    ]
   },
   "spatial": {
     "viewBox": "0 0 1186 760",
