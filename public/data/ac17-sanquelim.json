@@ -645,7 +645,9 @@
         "category": "Safe",
         "cx": 520,
         "cy": 320,
-        "r": 90
+        "r": 90,
+        "x": 250,
+        "y": 236
       },
       {
         "name": "Arvalem",
@@ -657,7 +659,9 @@
         "category": "Safe",
         "cx": 700,
         "cy": 420,
-        "r": 85
+        "r": 85,
+        "x": 312,
+        "y": 175
       },
       {
         "name": "Pale",
@@ -693,14 +697,16 @@
         "category": "Safe",
         "cx": 360,
         "cy": 220,
-        "r": 130
+        "r": 130,
+        "x": 215,
+        "y": 192
       }
     ],
     "booths": [
       {
         "part_no": "1",
         "station_name": "Govt. Primary School Kharekhajan, Virdi",
-        "village": "Sanquelim",
+        "village": "Virdi",
         "voters": 399,
         "added": 9,
         "deleted": 1,
@@ -766,7 +772,7 @@
       {
         "part_no": "2",
         "station_name": "Govt Primary School Deulwada Virdi",
-        "village": "Sanquelim",
+        "village": "Virdi",
         "voters": 729,
         "added": 16,
         "deleted": 4,
@@ -971,7 +977,7 @@
         "families_count": 104,
         "margin_pct": -2.8,
         "winner": "BJP",
-        "category": "Weak",
+        "category": "Battle Ground",
         "x": 310,
         "y": 210,
         "elections": {
@@ -1019,17 +1025,17 @@
           },
           "Overall": {
             "margin": -2.8,
-            "category": "Weak",
-            "color": "#991B1B",
+            "category": "Battle Ground",
+            "color": "#D97706",
             "winner": "INC",
             "isDashed": false
           }
         },
-        "color": "#991B1B"
+        "color": "#D97706"
       },
       {
         "part_no": "6",
-        "station_name": "Govt. Higher Scondary School (East Wing)",
+        "station_name": "Govt. Higher Secondary School (East Wing)",
         "village": "Sanquelim",
         "voters": 578,
         "added": 25,
@@ -1162,7 +1168,7 @@
       {
         "part_no": "8",
         "station_name": "Govt. Primary School Maulinguem South",
-        "village": "Sanquelim",
+        "village": "Maulinguem",
         "voters": 469,
         "added": 10,
         "deleted": 9,

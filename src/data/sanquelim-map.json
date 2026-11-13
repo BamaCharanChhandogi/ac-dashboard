@@ -22,7 +22,7 @@
       "color": "#15803D",
       "isDashed": false,
       "station_name": "Govt. Primary School Kharekhajan, Virdi",
-      "village": "Sanquelim",
+      "village": "Virdi",
       "voters": 399,
       "margin_pct": 18.5,
       "added": 9,
@@ -88,7 +88,7 @@
       "color": "#15803D",
       "isDashed": false,
       "station_name": "Govt Primary School Deulwada Virdi",
-      "village": "Sanquelim",
+      "village": "Virdi",
       "voters": 729,
       "margin_pct": 22,
       "added": 16,
@@ -282,8 +282,8 @@
       "path": "M 232.48 163.88 L 245.86 176.50 L 257.85 175.60 L 264.16 170.19 L 259.38 156.88 L 247.24 150.02 L 235.74 154.80 L 232.48 163.88",
       "cx": 247.2,
       "cy": 160.5,
-      "category": "Weak",
-      "color": "#991B1B",
+      "category": "Battle Ground",
+      "color": "#D97706",
       "isDashed": false,
       "station_name": "Govt. Higher Secondary School (West Wing)",
       "village": "Sanquelim",
@@ -336,8 +336,8 @@
         },
         "Overall": {
           "margin": -2.8,
-          "category": "Weak",
-          "color": "#991B1B",
+          "category": "Battle Ground",
+          "color": "#D97706",
           "winner": "INC",
           "isDashed": false
         }
@@ -351,7 +351,7 @@
       "category": "Safe",
       "color": "#15803D",
       "isDashed": false,
-      "station_name": "Govt. Higher Scondary School (East Wing)",
+      "station_name": "Govt. Higher Secondary School (East Wing)",
       "village": "Sanquelim",
       "voters": 578,
       "margin_pct": 24.5,
@@ -484,7 +484,7 @@
       "color": "#15803D",
       "isDashed": false,
       "station_name": "Govt. Primary School Maulinguem South",
-      "village": "Sanquelim",
+      "village": "Maulinguem",
       "voters": 469,
       "margin_pct": 26.1,
       "added": 10,
@@ -3317,20 +3317,20 @@
   "villages": [
     {
       "name": "Sanquelim",
-      "x": 240.2,
-      "y": 164.5,
+      "x": 215,
+      "y": 192,
       "margin": "+20.7%"
     },
     {
       "name": "Arvalem",
-      "x": 322.1,
-      "y": 159.5,
+      "x": 312,
+      "y": 175,
       "margin": "+32.9%"
     },
     {
       "name": "Cudnem",
-      "x": 262.5,
-      "y": 228.4,
+      "x": 250,
+      "y": 236,
       "margin": "+35.0%"
     },
     {
