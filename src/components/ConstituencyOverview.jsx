@@ -188,40 +188,47 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
         meta={meta}
       />
 
-      {/* 2. Metadata Card (5 Distinct Columns) */}
+      {/* 2. Metadata Card (Proportional Layout with Complete Constituent Areas) */}
       <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-5 shadow-xs">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-4 divide-y md:divide-y-0 md:divide-x divide-slate-100 dark:divide-slate-800/80 text-[12px]">
-          <div className="pt-2 md:pt-0 md:pr-4">
+        <div className="grid grid-cols-2 lg:grid-cols-12 gap-4 divide-y lg:divide-y-0 lg:divide-x divide-slate-100 dark:divide-slate-800/80 text-[12px]">
+          <div className="pt-2 lg:pt-0 lg:pr-4 col-span-1 lg:col-span-2">
             <p className="text-[11px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider mb-1">PC (Lok Sabha)</p>
             <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">
               {meta.pc_no ? `${meta.pc_no} – ` : ''}{meta.pc_name || 'North Goa'}
             </p>
           </div>
 
-          <div className="pt-2 md:pt-0 md:px-4">
+          <div className="pt-2 lg:pt-0 lg:px-4 col-span-1 lg:col-span-2">
             <p className="text-[11px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider mb-1">District</p>
             <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">
               {meta.district || 'North Goa'}
             </p>
           </div>
 
-          <div className="pt-2 md:pt-0 md:px-4">
+          <div className="pt-2 lg:pt-0 lg:px-4 col-span-1 lg:col-span-2">
             <p className="text-[11px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider mb-1">Taluka</p>
             <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">
               {meta.taluka || 'Bicholim'}
             </p>
           </div>
 
-          <div className="pt-2 md:pt-0 md:px-4">
+          <div className="pt-2 lg:pt-0 lg:px-4 col-span-1 lg:col-span-2">
             <p className="text-[11px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider mb-1">Reservation</p>
             <p className="font-bold text-slate-900 dark:text-slate-100 text-[14px]">
               {meta.reservation || 'General'}
             </p>
           </div>
 
-          <div className="pt-2 md:pt-0 md:pl-4 col-span-2 md:col-span-1">
-            <p className="text-[11px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider mb-1">Constituent Areas</p>
-            <p className="font-medium text-slate-700 dark:text-slate-300 text-[12px] leading-snug truncate" title={villages.join(', ')}>
+          <div className="pt-2 lg:pt-0 lg:pl-5 col-span-2 lg:col-span-4">
+            <div className="flex items-center justify-between mb-1">
+              <p className="text-[11px] font-bold text-slate-400 dark:text-slate-400 uppercase tracking-wider">
+                Constituent Areas
+              </p>
+              <span className="text-[10px] font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950/60 border border-blue-100 dark:border-blue-900/50 px-1.5 py-0.5 rounded-md">
+                {villages.length} Areas
+              </span>
+            </div>
+            <p className="font-medium text-slate-700 dark:text-slate-300 text-[12.5px] leading-relaxed">
               {villages.join(', ')}
             </p>
           </div>
