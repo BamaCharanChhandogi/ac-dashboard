@@ -1,6 +1,7 @@
 import React, { useMemo } from 'react';
-import { Download, Printer } from 'lucide-react';
+import { Download, Printer, FileText } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
+import PageHeader from './PageHeader';
 
 export default function ReportsView({ data }) {
   const meta = data?.meta || {};
@@ -40,26 +41,25 @@ export default function ReportsView({ data }) {
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h2 className="font-serif text-[26px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
-            Constituency Intelligence Report
-          </h2>
-          <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
-            Executive dossier for {meta.ac_name || 'Sanquelim'} (AC {meta.ac_no || 17}) • SIR 2026 Revision
-          </p>
-        </div>
-
-        <div className="flex items-center gap-2">
+      {/* 1. Standardized Distinctive Page Header */}
+      <PageHeader
+        badgeLabel="Constituency Intelligence Dossier"
+        badgeIcon={FileText}
+        badgeColor="slate"
+        title="Constituency Intelligence Report"
+        subtitle={`Executive strategic dossier, key statutory benchmarks, and ECI SIR 2026 analytical brief for ${meta.ac_name || 'Sanquelim'} (AC ${meta.ac_no || 17})`}
+        meta={meta}
+        actions={
           <button
+            type="button"
             onClick={() => window.print()}
-            className="flex items-center gap-1.5 px-3.5 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-[12px] font-bold hover:bg-slate-50 dark:hover:bg-slate-750 shadow-xs transition-colors cursor-pointer"
+            className="flex items-center gap-1.5 px-3.5 py-2 bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-700 dark:text-slate-200 rounded-xl text-[12px] font-bold hover:bg-slate-50 dark:hover:bg-slate-750 shadow-xs transition-colors duration-150 cursor-pointer"
           >
             <Printer size={14} />
             <span>Print Report</span>
           </button>
-        </div>
-      </div>
+        }
+      />
 
       {/* Official Executive Briefing Sheet */}
       <div className="bg-white dark:bg-[#111C35] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-8 shadow-xs space-y-6">

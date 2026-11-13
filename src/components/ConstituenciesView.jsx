@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from 'react';
-import { Search, MapPin, Building2, User, ArrowRight, CheckCircle2, TrendingUp } from 'lucide-react';
+import { Search, MapPin, Building2, User, ArrowRight, CheckCircle2, TrendingUp, Compass } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
+import PageHeader from './PageHeader';
 
 export default function ConstituenciesView({
   currentSlug,
@@ -122,28 +123,25 @@ export default function ConstituenciesView({
 
   return (
     <div className="px-8 py-7 space-y-6 max-w-[1360px]">
-      {/* 1. Header Title & Subtitle */}
-      <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div>
-          <h2 className="font-serif text-[26px] font-bold text-slate-900 dark:text-slate-100 tracking-tight">
-            Nationwide Constituencies Directory
-          </h2>
-          <p className="text-[12.5px] text-slate-500 dark:text-slate-400 font-medium mt-0.5">
-            Cross-constituency intelligence directory, comparative benchmarks, and multi-seat analysis across India
-          </p>
-        </div>
-
-        {/* Global summary badge */}
-        <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 px-4 py-2.5 shadow-xs flex items-center gap-3">
-          <div className="w-8 h-8 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-[13px]">
-            {constituencies.length}
+      {/* 1. Standardized Distinctive Page Header */}
+      <PageHeader
+        badgeLabel="Nationwide Benchmark Directory"
+        badgeIcon={Compass}
+        badgeColor="blue"
+        title="Nationwide Constituencies Directory"
+        subtitle="Cross-constituency intelligence directory, comparative benchmarks, and multi-seat analytics across monitored Assembly Constituencies"
+        actions={
+          <div className="bg-white dark:bg-[#111C35] rounded-xl border border-slate-200/90 dark:border-slate-800/80 px-3.5 py-1.5 shadow-2xs flex items-center gap-2.5">
+            <div className="w-6 h-6 rounded-lg bg-blue-50 dark:bg-blue-950/60 text-blue-600 dark:text-blue-400 flex items-center justify-center font-bold text-[11.5px]">
+              {constituencies.length}
+            </div>
+            <div>
+              <p className="text-[9.5px] font-extrabold text-slate-400 dark:text-slate-500 uppercase tracking-wider leading-none">Monitored Seats</p>
+              <p className="text-[12px] font-bold text-slate-900 dark:text-slate-100 leading-tight">{formatIndianNumber(totalElectorsCombined)} Electors</p>
+            </div>
           </div>
-          <div>
-            <p className="text-[10px] font-bold text-slate-400 dark:text-slate-500 uppercase tracking-wider">Monitored Seats</p>
-            <p className="text-[13px] font-bold text-slate-900 dark:text-slate-100">{formatIndianNumber(totalElectorsCombined)} Electors</p>
-          </div>
-        </div>
-      </div>
+        }
+      />
 
       {/* 2. Top Aggregate KPI Strip */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -199,10 +197,10 @@ export default function ConstituenciesView({
                 key={st}
                 type="button"
                 onClick={() => setSelectedState(st)}
-                className={`px-3 py-1 rounded-lg text-[11px] font-bold transition-all cursor-pointer ${
+                className={`px-3 py-1 rounded-lg text-[11px] font-bold border transition-colors duration-150 cursor-pointer ${
                   selectedState === st
-                    ? 'bg-blue-600 text-white shadow-xs'
-                    : 'bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
+                    ? 'bg-blue-600 text-white border-blue-600 shadow-xs'
+                    : 'border-transparent bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700'
                 }`}
               >
                 {st}
