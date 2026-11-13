@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import { X, TrendingUp, Building2, Users, MapPin } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 
@@ -238,13 +239,22 @@ export default function VillageDetailModal({ villageName, constituentBooths = []
   const mlaName = meta.ac_no === 17 ? "Sawant's" : meta.ac_no === 9 ? "Khaunte's" : "MLA Candidate's";
   const mpName = "Naik's";
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/70 backdrop-blur-xs overflow-y-auto animate-in fade-in duration-200">
+  // Prevent body scrolling while modal is open
+  useEffect(() => {
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = prevOverflow;
+    };
+  }, []);
+
+  return createPortal(
+    <div className="fixed inset-0 z-[100] !m-0 flex items-center justify-center p-4 sm:p-6 bg-slate-950/75 backdrop-blur-sm overflow-y-auto animate-in fade-in duration-200">
       {/* Backdrop */}
       <div className="fixed inset-0" onClick={onClose} />
 
       {/* Modal Dialog Card */}
-      <div className="relative z-10 bg-white dark:bg-[#10192C] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden text-slate-900 dark:text-slate-100">
+      <div className="relative z-10 bg-white dark:bg-[#0D1527] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden text-slate-900 dark:text-slate-100">
         {/* 1. Header */}
         <div className="p-6 pb-4 border-b border-slate-100 dark:border-slate-800/80 flex items-start justify-between gap-4">
           <div>
@@ -492,7 +502,7 @@ export default function VillageDetailModal({ villageName, constituentBooths = []
         </div>
 
         {/* 4. Footer */}
-        <div className="p-4 px-6 bg-slate-50 dark:bg-[#0B1324] border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div className="p-4 px-6 bg-slate-50 dark:bg-[#070D1B] border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
           <p className="text-[11px] text-slate-400 dark:text-slate-500 italic">
             Official ECI Form-20 Electoral Geographic Intelligence
           </p>
@@ -505,6 +515,7 @@ export default function VillageDetailModal({ villageName, constituentBooths = []
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }

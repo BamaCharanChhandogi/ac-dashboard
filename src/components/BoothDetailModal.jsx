@@ -1,4 +1,5 @@
 import React, { useEffect, useMemo } from 'react';
+import { createPortal } from 'react-dom';
 import { X, TrendingUp, CheckCircle2, AlertTriangle, AlertCircle, Building2, Users, MapPin } from 'lucide-react';
 import { formatIndianNumber } from '../utils/formatters';
 
@@ -252,13 +253,13 @@ export default function BoothDetailModal({ booth, onClose, data }) {
   // Administrative sections / wadas
   const sectionsList = booth.sections || `1-${booth.village || 'Main Locality'}; 2-Gaonkarwada; 3-Harijanwada`;
 
-  return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 bg-slate-900/70 backdrop-blur-xs overflow-y-auto animate-in fade-in duration-200">
+  return createPortal(
+    <div className="fixed inset-0 z-[100] !m-0 flex items-center justify-center p-4 sm:p-6 bg-slate-950/75 backdrop-blur-sm overflow-y-auto animate-in fade-in duration-200">
       {/* Backdrop click dismiss */}
       <div className="fixed inset-0" onClick={onClose} />
 
       {/* Modal Dialog Card */}
-      <div className="relative z-10 bg-white dark:bg-[#10192C] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden text-slate-900 dark:text-slate-100">
+      <div className="relative z-10 bg-white dark:bg-[#0D1527] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[92vh] flex flex-col overflow-hidden text-slate-900 dark:text-slate-100">
         {/* 1. Modal Header */}
         <div className="p-6 pb-4 border-b border-slate-100 dark:border-slate-800/80 flex items-start justify-between gap-4">
           <div>
@@ -429,7 +430,7 @@ export default function BoothDetailModal({ booth, onClose, data }) {
         </div>
 
         {/* 4. Modal Footer */}
-        <div className="p-4 px-6 bg-slate-50 dark:bg-[#0B1324] border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+        <div className="p-4 px-6 bg-slate-50 dark:bg-[#070D1B] border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
           <p className="text-[11px] text-slate-400 dark:text-slate-500 italic">
             Form-20 audited returns across 6 consecutive election cycles • Corporate Chanakya Intelligence
           </p>
@@ -442,6 +443,7 @@ export default function BoothDetailModal({ booth, onClose, data }) {
           </button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
