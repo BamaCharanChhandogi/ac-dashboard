@@ -84,7 +84,7 @@ export default function BoothAnalysisView({ data }) {
 
   // Interactive Zoom State
   const [zoomLevel, setZoomLevel] = useState(1);
-  const [showVillageLabels, setShowVillageLabels] = useState(false);
+  const [showVillageLabels, setShowVillageLabels] = useState(true);
   const handleZoomIn = () => setZoomLevel((z) => Math.min(2.2, roundTo(z + 0.25, 2)));
   const handleZoomOut = () => setZoomLevel((z) => Math.max(0.8, roundTo(z - 0.25, 2)));
   const handleResetZoom = () => setZoomLevel(1);
