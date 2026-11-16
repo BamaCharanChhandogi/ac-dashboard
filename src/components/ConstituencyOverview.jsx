@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import {
   Users,
   Home,
@@ -18,6 +18,9 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
   const villagesCount = meta.constituent_areas?.length || 9;
   const totalFamilies = meta.total_families || 6041;
   const villages = meta.constituent_areas || [];
+
+  // Interactive Hover State for Stepper Timeline
+  const [hoveredStep, setHoveredStep] = useState(null);
 
   // Dynamic 5-Stage Stepper mapped from data.roll_progression
   const rawProgression = data?.roll_progression || [];
@@ -138,25 +141,72 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
     };
   }, [data?.asddo, meta?.asddo, meta?.sir_deleted, meta?.ac_no, currentSlug, data?.churn_records]);
 
-  // Dynamic Line Graph coordinates matching reference image
+  // Dynamic Line Graph coordinates with Fritsch-Carlson Monotone Spline (Google Analytics standard)
   const movementGraph = useMemo(() => {
     const counts = steps.map((s) => s.count);
     const minCount = Math.min(...counts);
     const maxCount = Math.max(...counts);
     const diff = (maxCount - minCount) || 100;
-    const topY = 22;
-    const bottomY = 92;
+
+    // Proportional headroom and baseline footroom for realistic trajectory
+    const padding = Math.max(diff * 0.35, 60);
+    const yMin = minCount - padding;
+    const yMax = maxCount + padding;
+    const totalRange = yMax - yMin;
+
+    const topY = 26;
+    const bottomY = 88;
     const yRange = bottomY - topY;
 
     // Width = 1000, 5 columns: centers at 100, 300, 500, 700, 900
     const pts = steps.map((s, idx) => {
       const x = 100 + idx * 200;
-      const y = bottomY - ((s.count - minCount) / diff) * yRange;
-      return { x, y, count: s.count, isLatest: s.isLatest };
+      const y = bottomY - ((s.count - yMin) / totalRange) * yRange;
+      return {
+        x: Math.round(x * 10) / 10,
+        y: Math.round(y * 10) / 10,
+        count: s.count,
+        label: s.label,
+        date: s.date,
+        added: s.added,
+        deleted: s.deleted,
+        delta: s.delta,
+        isLatest: s.isLatest
+      };
     });
 
-    const linePath = pts.reduce((acc, pt, i) => (i === 0 ? `M ${pt.x} ${pt.y}` : `${acc} L ${pt.x} ${pt.y}`), '');
-    const areaPath = `${linePath} L ${pts[pts.length - 1].x} 115 L ${pts[0].x} 115 Z`;
+    // Fritsch-Carlson Monotone Cubic Spline generator
+    const n = pts.length;
+    const d = [];
+    const m = [];
+
+    for (let i = 0; i < n - 1; i++) {
+      const dx = pts[i + 1].x - pts[i].x;
+      const dy = pts[i + 1].y - pts[i].y;
+      d.push(dy / dx);
+    }
+
+    m.push(d[0]);
+    for (let i = 1; i < n - 1; i++) {
+      if (d[i - 1] * d[i] <= 0) {
+        m.push(0);
+      } else {
+        m.push((d[i - 1] + d[i]) / 2);
+      }
+    }
+    m.push(d[n - 2]);
+
+    let linePath = `M ${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`;
+    for (let i = 0; i < n - 1; i++) {
+      const dx = pts[i + 1].x - pts[i].x;
+      const cp1x = pts[i].x + dx / 3;
+      const cp1y = pts[i].y + m[i] * (dx / 3);
+      const cp2x = pts[i + 1].x - dx / 3;
+      const cp2y = pts[i + 1].y - m[i + 1] * (dx / 3);
+      linePath += ` C ${cp1x.toFixed(1)} ${cp1y.toFixed(1)}, ${cp2x.toFixed(1)} ${cp2y.toFixed(1)}, ${pts[i + 1].x.toFixed(1)} ${pts[i + 1].y.toFixed(1)}`;
+    }
+
+    const areaPath = `${linePath} L ${pts[pts.length - 1].x.toFixed(1)} 115 L ${pts[0].x.toFixed(1)} 115 Z`;
 
     return { pts, linePath, areaPath };
   }, [steps]);
@@ -236,21 +286,44 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
       {/* 3. Electoral Roll Movement & ASDDO Deletion Purge Card (Matching Reference Design) */}
       <div className="bg-white dark:bg-[#0D1527] rounded-2xl border border-slate-200/90 dark:border-slate-800/80 p-6 md:p-7 shadow-xs dark:shadow-xl space-y-7">
         {/* Top Half: Electoral Roll Trajectory Line Graph */}
-        <div className="space-y-3">
-          {/* SVG Line Graph */}
-          <div className="w-full relative px-1">
-            <svg className="w-full h-[105px] overflow-visible" viewBox="0 0 1000 115" preserveAspectRatio="none">
+        <div className="space-y-4">
+          {/* SVG Line Graph + Perfectly Round Overlay Nodes */}
+          <div className="w-full relative h-[120px]">
+            {/* SVG Spline & Shaded Area */}
+            <svg
+              className="w-full h-full overflow-visible"
+              viewBox="0 0 1000 115"
+              preserveAspectRatio="none"
+            >
               <defs>
                 <linearGradient id="stepperLineGlow" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stopColor="#2563EB" stopOpacity="0.3" />
+                  <stop offset="0%" stopColor="#2563EB" stopOpacity="0.32" />
+                  <stop offset="60%" stopColor="#2563EB" stopOpacity="0.08" />
                   <stop offset="100%" stopColor="#2563EB" stopOpacity="0.0" />
                 </linearGradient>
+                <filter id="splineShadow" x="-10%" y="-10%" width="120%" height="130%">
+                  <feDropShadow dx="0" dy="2.5" stdDeviation="3.5" floodColor="#2563EB" floodOpacity="0.35" />
+                </filter>
               </defs>
 
-              {/* Shaded Area under the line */}
+              {/* Shaded Area under spline */}
               <path d={movementGraph.areaPath} fill="url(#stepperLineGlow)" />
 
-              {/* Connecting Line */}
+              {/* Vertical Guide Line under Latest Node */}
+              {movementGraph.pts.length > 0 && (
+                <line
+                  x1={movementGraph.pts[movementGraph.pts.length - 1].x}
+                  y1={movementGraph.pts[movementGraph.pts.length - 1].y}
+                  x2={movementGraph.pts[movementGraph.pts.length - 1].x}
+                  y2="115"
+                  stroke="#2563EB"
+                  strokeWidth="1.5"
+                  strokeDasharray="3 3"
+                  className="opacity-40 dark:opacity-50 dark:stroke-[#3B82F6]"
+                />
+              )}
+
+              {/* Smooth Monotone Spline Curve */}
               <path
                 d={movementGraph.linePath}
                 fill="none"
@@ -258,69 +331,144 @@ export default function ConstituencyOverview({ data, currentSlug, directory }) {
                 strokeWidth="3.5"
                 strokeLinecap="round"
                 strokeLinejoin="round"
+                filter="url(#splineShadow)"
                 className="dark:stroke-[#3B82F6]"
               />
-
-              {/* Node Circles */}
-              {movementGraph.pts.map((pt, idx) => (
-                <g key={idx}>
-                  {pt.isLatest ? (
-                    // Latest node has emerald glowing center inside blue ring
-                    <>
-                      <circle cx={pt.x} cy={pt.y} r="8.5" className="fill-white dark:fill-[#0D1527] stroke-[#2563EB] dark:stroke-[#3B82F6]" strokeWidth="3" />
-                      <circle cx={pt.x} cy={pt.y} r="5" fill="#10B981" />
-                    </>
-                  ) : (
-                    // Regular node circle with hollow center
-                    <circle cx={pt.x} cy={pt.y} r="8" className="fill-white dark:fill-[#0D1527] stroke-[#2563EB] dark:stroke-[#3B82F6]" strokeWidth="3" />
-                  )}
-                </g>
-              ))}
             </svg>
+
+            {/* 100% Guaranteed Round HTML Node Circles (Never Stretched into Ovals) */}
+            <div className="absolute inset-0 pointer-events-none">
+              {movementGraph.pts.map((pt, idx) => {
+                const isHovered = hoveredStep === idx;
+                return (
+                  <div
+                    key={idx}
+                    className="absolute -translate-x-1/2 -translate-y-1/2 pointer-events-auto cursor-pointer transition-all duration-200"
+                    style={{
+                      left: `${(pt.x / 1000) * 100}%`,
+                      top: `${(pt.y / 115) * 100}%`,
+                    }}
+                    onMouseEnter={() => setHoveredStep(idx)}
+                    onMouseLeave={() => setHoveredStep(null)}
+                  >
+                    {pt.isLatest ? (
+                      <div className="relative flex items-center justify-center">
+                        {/* Live Radar Ping */}
+                        <span className="absolute w-6 h-6 rounded-full bg-emerald-400/30 dark:bg-emerald-500/25 animate-ping" />
+                        {/* 100% Round Circle Container */}
+                        <div
+                          className={`w-5 h-5 rounded-full border-[2.5px] border-[#2563EB] dark:border-[#3B82F6] bg-white dark:bg-[#0D1527] flex items-center justify-center shadow-md transition-transform duration-200 ${
+                            isHovered ? 'scale-125 ring-4 ring-emerald-400/30' : ''
+                          }`}
+                        >
+                          <span className="w-2.5 h-2.5 rounded-full bg-[#10B981] shadow-xs" />
+                        </div>
+                      </div>
+                    ) : (
+                      <div
+                        className={`w-4 h-4 md:w-[18px] md:h-[18px] rounded-full border-[2.5px] border-[#2563EB] dark:border-[#3B82F6] bg-white dark:bg-[#0D1527] shadow-sm transition-all duration-200 ${
+                          isHovered
+                            ? 'scale-125 ring-4 ring-blue-500/25 border-blue-700 dark:border-blue-400'
+                            : 'hover:scale-110'
+                        }`}
+                      />
+                    )}
+
+                    {/* Floating Tooltip Card on Hover (Google Analytics style) */}
+                    {isHovered && (
+                      <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2.5 z-30 whitespace-nowrap bg-slate-900/95 dark:bg-slate-800/95 backdrop-blur-md text-white text-[11px] rounded-xl px-3 py-2 shadow-xl border border-slate-700/50 pointer-events-none animate-in fade-in zoom-in-95 duration-150">
+                        <div className="flex items-center gap-1.5 font-bold text-slate-200">
+                          <span>{pt.label}</span>
+                          <span className="text-slate-400">•</span>
+                          <span className="text-blue-300 font-semibold">{pt.date}</span>
+                        </div>
+                        <div className="text-[13px] font-bold text-white mt-0.5 tabular-nums">
+                          {formatIndianNumber(pt.count)} electors
+                        </div>
+                        {pt.added != null && pt.deleted != null && (
+                          <div className="flex items-center gap-2 mt-1 text-[10.5px] font-semibold text-slate-300 tabular-nums">
+                            <span className="text-emerald-400">+{formatIndianNumber(pt.added)}</span>
+                            <span>/</span>
+                            <span className="text-rose-400">−{formatIndianNumber(pt.deleted)}</span>
+                            <span className="text-slate-400">
+                              (Net: {pt.added - pt.deleted >= 0 ? `+${pt.added - pt.deleted}` : `−${Math.abs(pt.added - pt.deleted)}`})
+                            </span>
+                          </div>
+                        )}
+                        {/* Triangle arrow */}
+                        <div className="absolute top-full left-1/2 -translate-x-1/2 -mt-px border-4 border-transparent border-t-slate-900/95 dark:border-t-slate-800/95" />
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
 
-          {/* 5 Aligned Metric Columns */}
-          <div className="grid grid-cols-5 gap-2 text-center">
-            {steps.map((step, idx) => (
-              <div key={idx} className="flex flex-col items-center">
-                {/* Date */}
-                <span className="text-[11px] font-bold tracking-wider uppercase text-slate-400 dark:text-slate-400">
-                  {step.date}
-                </span>
-
-                {/* Stage Pill */}
-                <span className="inline-block px-3 py-0.5 rounded-full text-[11px] font-bold bg-blue-50 dark:bg-[#1E2E54] text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-700/60 mt-1 mb-2 shadow-2xs">
-                  {step.label}
-                </span>
-
-                {/* Elector Count Number */}
-                <p
-                  className={`font-serif text-[24px] sm:text-[28px] md:text-[30px] font-bold tabular-nums leading-tight ${
-                    step.isLatest
-                      ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-slate-900 dark:text-slate-100'
+          {/* 5 Aligned Metric Columns with Interactive Highlight on Hover */}
+          <div className="grid grid-cols-5 gap-2 text-center pt-2">
+            {steps.map((step, idx) => {
+              const isHovered = hoveredStep === idx;
+              return (
+                <div
+                  key={idx}
+                  className={`flex flex-col items-center py-2 px-1 rounded-xl transition-all duration-200 cursor-pointer ${
+                    isHovered
+                      ? 'bg-blue-50/70 dark:bg-blue-950/40 ring-1 ring-blue-300/60 dark:ring-blue-700/50'
+                      : 'hover:bg-slate-50/60 dark:hover:bg-slate-900/40'
                   }`}
+                  onMouseEnter={() => setHoveredStep(idx)}
+                  onMouseLeave={() => setHoveredStep(null)}
                 >
-                  {formatIndianNumber(step.count)}
-                </p>
-
-                {/* Sub-deltas (+ Added / - Deleted) */}
-                {step.added != null && step.deleted != null ? (
-                  <div className="flex items-center justify-center gap-1.5 mt-1.5 text-[11px] font-bold tabular-nums">
-                    <span className="px-1.5 py-0.2 rounded text-[#047857] dark:text-[#34D399] bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-800/60">
-                      +{formatIndianNumber(step.added)}
-                    </span>
-                    <span className="px-1.5 py-0.2 rounded text-[#BE123C] dark:text-[#FB7185] bg-rose-50 dark:bg-rose-950/80 border border-rose-200 dark:border-rose-800/60">
-                      −{formatIndianNumber(step.deleted)}
-                    </span>
-                  </div>
-                ) : (
-                  <span className="text-slate-400 dark:text-slate-500 font-bold mt-1.5 inline-block text-[13px]">
-                    —
+                  {/* Date */}
+                  <span className="text-[11px] font-bold tracking-wider uppercase text-slate-400 dark:text-slate-400">
+                    {step.date}
                   </span>
-                )}
-              </div>
-            ))}
+
+                  {/* Stage Pill */}
+                  <span
+                    className={`inline-block px-3 py-0.5 rounded-full text-[11px] font-bold mt-1.5 mb-2 shadow-2xs transition-colors duration-200 ${
+                      step.isLatest
+                        ? 'bg-blue-600 text-white border border-blue-600 shadow-sm'
+                        : isHovered
+                        ? 'bg-blue-100 dark:bg-[#253966] text-blue-800 dark:text-blue-200 border border-blue-300 dark:border-blue-600'
+                        : 'bg-blue-50 dark:bg-[#1E2E54] text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-700/60'
+                    }`}
+                  >
+                    {step.label}
+                  </span>
+
+                  {/* Elector Count Number */}
+                  <p
+                    className={`font-serif text-[24px] sm:text-[28px] md:text-[30px] font-bold tabular-nums leading-tight transition-colors duration-200 ${
+                      step.isLatest
+                        ? 'text-blue-600 dark:text-blue-400'
+                        : isHovered
+                        ? 'text-blue-900 dark:text-blue-100'
+                        : 'text-slate-900 dark:text-slate-100'
+                    }`}
+                  >
+                    {formatIndianNumber(step.count)}
+                  </p>
+
+                  {/* Sub-deltas (+ Added / - Deleted) */}
+                  {step.added != null && step.deleted != null ? (
+                    <div className="flex items-center justify-center gap-1.5 mt-2 text-[11px] font-bold tabular-nums">
+                      <span className="px-1.5 py-0.5 rounded text-[#047857] dark:text-[#34D399] bg-emerald-50 dark:bg-emerald-950/80 border border-emerald-200 dark:border-emerald-800/60">
+                        +{formatIndianNumber(step.added)}
+                      </span>
+                      <span className="px-1.5 py-0.5 rounded text-[#BE123C] dark:text-[#FB7185] bg-rose-50 dark:bg-rose-950/80 border border-rose-200 dark:border-rose-800/60">
+                        −{formatIndianNumber(step.deleted)}
+                      </span>
+                    </div>
+                  ) : (
+                    <span className="text-slate-400 dark:text-slate-500 font-bold mt-2 inline-block text-[13px]">
+                      —
+                    </span>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
